@@ -1,8 +1,8 @@
 {
-    "title": "OsteoJump1",
-    "logo": "OsteoJump1",
+    "title": "OsteoJump",
+    "logo": "OsteoJump",
     "hero": {
-        "title": "Willkommen bei OsteoJump1",
+        "title": "Willkommen bei OsteoJump",
         "text": "Innovative Lösung für Ihre Gesundheit und Ihr Wohlbefinden",
         "button": "Loslegen"
     },
@@ -26,7 +26,7 @@
         "text": "Wir sind spezialisiert auf die Bereitstellung qualitativ hochwertiger Dienstleistungen im Bereich Osteopathie und Rehabilitation. Unser Team von Fachleuten ist bereit, Ihnen zu helfen, optimale Gesundheit zu erreichen."
     },
     "footer": {
-        "text": "© 2024 OsteoJump1. Alle Rechte vorbehalten."
+        "text": "© 2024 OsteoJump. Alle Rechte vorbehalten."
     }
 }
 
