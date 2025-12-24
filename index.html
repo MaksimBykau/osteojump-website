@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <title data-i18n="title">OsteoJump+1</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
@@ -42,12 +45,14 @@
             document.documentElement.lang = lang;
             
             // Preload translation file for faster loading (with versioning)
+            // Use timestamp to ensure fresh load even if HTML is cached
             const translationsVersion = '3'; // Must match version in i18n.js
+            const timestamp = Date.now(); // Add timestamp to force refresh
             const link = document.createElement('link');
             link.rel = 'preload';
             link.as = 'fetch';
             link.crossOrigin = 'anonymous';
-            link.href = `locales/${lang}.json?v=${translationsVersion}`;
+            link.href = `locales/${lang}.json?v=${translationsVersion}&t=${timestamp}`;
             document.head.appendChild(link);
         })();
     </script>
