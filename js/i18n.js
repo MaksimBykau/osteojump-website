@@ -28,16 +28,34 @@ class I18n {
     }
 
     async init() {
-        await this.loadTranslations(this.currentLang);
-        this.updatePageContent();
-        this.setupLanguageSwitcher();
-        // Show content after translations are loaded
-        document.body.classList.add('i18n-ready');
+        try {
+            await this.loadTranslations(this.currentLang);
+            this.updatePageContent();
+            this.setupLanguageSwitcher();
+        } catch (error) {
+            console.error('Error initializing i18n:', error);
+            // Show content even if translations failed
+            this.updatePageContent();
+            this.setupLanguageSwitcher();
+        } finally {
+            // Always show content after initialization attempt
+            document.body.classList.add('i18n-ready');
+        }
     }
 
     async loadTranslations(lang) {
         try {
-            const response = await fetch(`locales/${lang}.json`);
+            // Try relative path first (for GitHub Pages with custom domain)
+            let response = await fetch(`locales/${lang}.json`);
+            
+            // If failed, try with repository name prefix (for GitHub Pages subpath)
+            if (!response.ok) {
+                const repoPath = window.location.pathname.split('/')[1];
+                if (repoPath && repoPath !== '') {
+                    response = await fetch(`/${repoPath}/locales/${lang}.json`);
+                }
+            }
+            
             if (!response.ok) {
                 throw new Error(`Failed to load translations for ${lang}`);
             }
@@ -48,6 +66,9 @@ class I18n {
             if (lang !== this.defaultLang) {
                 await this.loadTranslations(this.defaultLang);
                 this.currentLang = this.defaultLang;
+            } else {
+                // If even default language fails, use empty translations
+                this.translations = {};
             }
         }
     }

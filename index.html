@@ -13,6 +13,14 @@
         body.i18n-ready {
             visibility: visible;
         }
+        /* Fallback: show content after 3 seconds even if translations didn't load */
+        @keyframes showContent {
+            from { visibility: hidden; }
+            to { visibility: visible; }
+        }
+        body {
+            animation: showContent 0s 3s forwards;
+        }
     </style>
     <script>
         // Quick language detection before page loads
