@@ -6,14 +6,24 @@
     <title data-i18n="title">OsteoJump1</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
-        /* Content is visible immediately, translations will update it */
-        /* Optional: add smooth transition for text updates */
-        [data-i18n] {
-            transition: opacity 0.2s ease;
+        /* Hide content until translations are loaded */
+        body:not(.i18n-ready) {
+            visibility: hidden;
+        }
+        body.i18n-ready {
+            visibility: visible;
+        }
+        /* Fallback: show content after 1 second even if translations didn't load */
+        @keyframes showContent {
+            from { visibility: hidden; }
+            to { visibility: visible; }
+        }
+        body {
+            animation: showContent 0s 1s forwards;
         }
     </style>
     <script>
-        // Quick language detection before page loads
+        // Quick language detection and preload translations before page loads
         (function() {
             const supportedLangs = ['ru', 'en', 'de', 'pl', 'uk'];
             const savedLang = localStorage.getItem('language');
@@ -30,6 +40,14 @@
             
             // Set lang attribute immediately
             document.documentElement.lang = lang;
+            
+            // Preload translation file for faster loading
+            const link = document.createElement('link');
+            link.rel = 'preload';
+            link.as = 'fetch';
+            link.crossOrigin = 'anonymous';
+            link.href = `locales/${lang}.json`;
+            document.head.appendChild(link);
         })();
     </script>
 </head>

@@ -28,12 +28,13 @@ class I18n {
     }
 
     async init() {
-        // Show content immediately, then update with translations
         this.setupLanguageSwitcher();
         
         try {
             await this.loadTranslations(this.currentLang);
             this.updatePageContent();
+            // Show content after translations are loaded
+            document.body.classList.add('i18n-ready');
         } catch (error) {
             console.error('Error loading translations:', error);
             // Try to load default language translations
@@ -42,42 +43,33 @@ class I18n {
                     await this.loadTranslations(this.defaultLang);
                     this.currentLang = this.defaultLang;
                     this.updatePageContent();
+                    document.body.classList.add('i18n-ready');
                 } catch (defaultError) {
                     console.error('Error loading default translations:', defaultError);
-                    // Content stays with fallback text from HTML
+                    // Show content with fallback text from HTML
+                    document.body.classList.add('i18n-ready');
                 }
+            } else {
+                // Show content even if translations failed
+                document.body.classList.add('i18n-ready');
             }
         }
     }
 
     async loadTranslations(lang) {
-        try {
-            // Try relative path first (for GitHub Pages with custom domain)
-            let response = await fetch(`locales/${lang}.json`);
-            
-            // If failed, try with repository name prefix (for GitHub Pages subpath)
-            if (!response.ok) {
-                const repoPath = window.location.pathname.split('/')[1];
-                if (repoPath && repoPath !== '') {
-                    response = await fetch(`/${repoPath}/locales/${lang}.json`);
-                }
+        // Use relative path (works for custom domain GitHub Pages)
+        const response = await fetch(`locales/${lang}.json`, {
+            cache: 'default',
+            headers: {
+                'Accept': 'application/json'
             }
-            
-            if (!response.ok) {
-                throw new Error(`Failed to load translations for ${lang}`);
-            }
-            this.translations = await response.json();
-        } catch (error) {
-            console.error('Error loading translations:', error);
-            // Fallback to default language
-            if (lang !== this.defaultLang) {
-                await this.loadTranslations(this.defaultLang);
-                this.currentLang = this.defaultLang;
-            } else {
-                // If even default language fails, use empty translations
-                this.translations = {};
-            }
+        });
+        
+        if (!response.ok) {
+            throw new Error(`Failed to load translations for ${lang}: ${response.status}`);
         }
+        
+        this.translations = await response.json();
     }
 
     translate(key) {
