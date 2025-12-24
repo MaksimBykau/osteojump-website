@@ -28,18 +28,25 @@ class I18n {
     }
 
     async init() {
+        // Show content immediately, then update with translations
+        this.setupLanguageSwitcher();
+        
         try {
             await this.loadTranslations(this.currentLang);
             this.updatePageContent();
-            this.setupLanguageSwitcher();
         } catch (error) {
-            console.error('Error initializing i18n:', error);
-            // Show content even if translations failed
-            this.updatePageContent();
-            this.setupLanguageSwitcher();
-        } finally {
-            // Always show content after initialization attempt
-            document.body.classList.add('i18n-ready');
+            console.error('Error loading translations:', error);
+            // Try to load default language translations
+            if (this.currentLang !== this.defaultLang) {
+                try {
+                    await this.loadTranslations(this.defaultLang);
+                    this.currentLang = this.defaultLang;
+                    this.updatePageContent();
+                } catch (defaultError) {
+                    console.error('Error loading default translations:', defaultError);
+                    // Content stays with fallback text from HTML
+                }
+            }
         }
     }
 
