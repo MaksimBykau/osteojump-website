@@ -41,12 +41,13 @@
             // Set lang attribute immediately
             document.documentElement.lang = lang;
             
-            // Preload translation file for faster loading
+            // Preload translation file for faster loading (with versioning)
+            const translationsVersion = '2'; // Must match version in i18n.js
             const link = document.createElement('link');
             link.rel = 'preload';
             link.as = 'fetch';
             link.crossOrigin = 'anonymous';
-            link.href = `locales/${lang}.json`;
+            link.href = `locales/${lang}.json?v=${translationsVersion}`;
             document.head.appendChild(link);
         })();
     </script>

@@ -4,6 +4,7 @@ class I18n {
         this.defaultLang = 'en';
         this.currentLang = this.detectLanguage();
         this.translations = {};
+        this.translationsVersion = '2'; // Increment this when translations are updated
         this.init();
     }
 
@@ -57,9 +58,10 @@ class I18n {
     }
 
     async loadTranslations(lang) {
-        // Use relative path (works for custom domain GitHub Pages)
-        const response = await fetch(`locales/${lang}.json`, {
-            cache: 'default',
+        // Use relative path with versioning to prevent caching
+        const url = `locales/${lang}.json?v=${this.translationsVersion}`;
+        const response = await fetch(url, {
+            cache: 'no-cache',
             headers: {
                 'Accept': 'application/json'
             }
