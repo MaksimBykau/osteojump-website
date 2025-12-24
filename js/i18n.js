@@ -31,6 +31,8 @@ class I18n {
         await this.loadTranslations(this.currentLang);
         this.updatePageContent();
         this.setupLanguageSwitcher();
+        // Show content after translations are loaded
+        document.body.classList.add('i18n-ready');
     }
 
     async loadTranslations(lang) {

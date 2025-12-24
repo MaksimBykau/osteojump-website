@@ -5,6 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-i18n="title">OsteoJump</title>
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Hide content until translations are loaded */
+        body:not(.i18n-ready) {
+            visibility: hidden;
+        }
+        body.i18n-ready {
+            visibility: visible;
+        }
+    </style>
+    <script>
+        // Quick language detection before page loads
+        (function() {
+            const supportedLangs = ['ru', 'en', 'de', 'pl', 'uk'];
+            const savedLang = localStorage.getItem('language');
+            let lang = 'en'; // default
+            
+            if (savedLang && supportedLangs.includes(savedLang)) {
+                lang = savedLang;
+            } else {
+                const browserLang = (navigator.language || navigator.userLanguage).split('-')[0].toLowerCase();
+                if (supportedLangs.includes(browserLang)) {
+                    lang = browserLang;
+                }
+            }
+            
+            // Set lang attribute immediately
+            document.documentElement.lang = lang;
+        })();
+    </script>
 </head>
 <body>
     <header class="header">
