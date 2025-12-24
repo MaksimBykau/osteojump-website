@@ -1,0 +1,32 @@
+{
+    "title": "OsteoJump",
+    "logo": "OsteoJump",
+    "hero": {
+        "title": "Welcome to OsteoJump",
+        "text": "Innovative solution for your health and well-being",
+        "button": "Get Started"
+    },
+    "features": {
+        "title": "Our Features",
+        "item1": {
+            "title": "Quality",
+            "text": "High quality services and team professionalism"
+        },
+        "item2": {
+            "title": "Experience",
+            "text": "Years of experience in the healthcare field"
+        },
+        "item3": {
+            "title": "Support",
+            "text": "24/7 customer support and consultations"
+        }
+    },
+    "about": {
+        "title": "About Us",
+        "text": "We specialize in providing quality services in the field of osteopathy and rehabilitation. Our team of professionals is ready to help you achieve optimal health."
+    },
+    "footer": {
+        "text": "© 2024 OsteoJump. All rights reserved."
+    }
+}
+
