@@ -4,7 +4,7 @@ class I18n {
         this.defaultLang = 'en';
         this.currentLang = this.detectLanguage();
         this.translations = {};
-        this.translationsVersion = '2'; // Increment this when translations are updated
+        this.translationsVersion = '3'; // Increment this when translations are updated
         this.init();
     }
 
