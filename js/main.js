@@ -29,10 +29,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     // Mark active menu item based on current page
-    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    const currentPage = window.location.pathname.split('/').pop() || '';
     navMenu?.querySelectorAll('a').forEach(link => {
         const linkPage = link.getAttribute('href');
-        if (linkPage === currentPage || (currentPage === '' && linkPage === 'index.html')) {
+        // Check if it's the home page (empty, index.html, or /)
+        if ((currentPage === '' || currentPage === 'index.html') && (linkPage === '/' || linkPage === 'index.html')) {
+            link.classList.add('active');
+        } else if (linkPage === currentPage) {
             link.classList.add('active');
         }
     });
