@@ -1,6 +1,13 @@
 {
     "title": "OsteoJump+2",
     "logo": "OsteoJump+2",
+    "nav": {
+        "home": "Startseite",
+        "prices": "Preise",
+        "reviews": "Bewertungen",
+        "about": "Über mich",
+        "faq": "FAQ"
+    },
     "hero": {
         "title": "Willkommen bei OsteoJump+2",
         "text": "Innovative Lösung für Ihre Gesundheit und Ihr Wohlbefinden",
@@ -24,6 +31,26 @@
     "about": {
         "title": "Über uns",
         "text": "Wir sind spezialisiert auf die Bereitstellung qualitativ hochwertiger Dienstleistungen im Bereich Osteopathie und Rehabilitation. Unser Team von Fachleuten ist bereit, Ihnen zu helfen, optimale Gesundheit zu erreichen."
+    },
+    "prices": {
+        "title": "Preise",
+        "subtitle": "Preisinformationen kommen bald",
+        "content": "Diese Seite befindet sich in der Entwicklung. Bald werden hier Preisinformationen für Dienstleistungen veröffentlicht."
+    },
+    "reviews": {
+        "title": "Bewertungen",
+        "subtitle": "Kundenbewertungen kommen bald",
+        "content": "Diese Seite befindet sich in der Entwicklung. Bald werden hier Kundenbewertungen veröffentlicht."
+    },
+    "about_page": {
+        "title": "Über mich",
+        "subtitle": "Informationen über mich kommen bald",
+        "content": "Diese Seite befindet sich in der Entwicklung. Bald werden hier Informationen über mich und meine Berufserfahrung veröffentlicht."
+    },
+    "faq": {
+        "title": "FAQ",
+        "subtitle": "Häufig gestellte Fragen kommen bald",
+        "content": "Diese Seite befindet sich in der Entwicklung. Bald werden hier Antworten auf häufig gestellte Fragen veröffentlicht."
     },
     "footer": {
         "text": "© 2024 OsteoJump+2. Alle Rechte vorbehalten."
