@@ -202,7 +202,14 @@ body {
     line-height: 1.5;
     display: inline-flex;
     align-items: center;
-    gap: 0.25rem;
+    gap: 0.35rem;
+}
+
+.lang-select-text .flag-emoji {
+    font-size: 18px;
+    line-height: 1;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .lang-select-arrow {
@@ -265,7 +272,14 @@ body {
     transition: background-color 0.2s ease;
     display: flex;
     align-items: center;
-    gap: 0.25rem;
+    gap: 0.35rem;
+}
+
+.lang-select-option .flag-emoji {
+    font-size: 18px;
+    line-height: 1;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .lang-select-option:hover,

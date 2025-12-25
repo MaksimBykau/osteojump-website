@@ -145,14 +145,15 @@ class I18n {
         if (!langText) return;
         
         const langMap = {
-            'ru': '🇷🇺 RU',
-            'en': '🇬🇧 EN',
-            'de': '🇩🇪 DE',
-            'pl': '🇵🇱 PL',
-            'uk': '🇺🇦 UK'
+            'ru': { flag: '🇷🇺', code: 'RU' },
+            'en': { flag: '🇬🇧', code: 'EN' },
+            'de': { flag: '🇩🇪', code: 'DE' },
+            'pl': { flag: '🇵🇱', code: 'PL' },
+            'uk': { flag: '🇺🇦', code: 'UK' }
         };
         
-        langText.textContent = langMap[this.currentLang] || langMap[this.defaultLang];
+        const lang = langMap[this.currentLang] || langMap[this.defaultLang];
+        langText.innerHTML = `<span class="flag-emoji">${lang.flag}</span> ${lang.code}`;
     }
     
     closeDropdown() {
