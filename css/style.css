@@ -200,6 +200,9 @@ body {
 .lang-select-text {
     font-size: 14px;
     line-height: 1.5;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
 }
 
 .lang-select-arrow {
@@ -260,6 +263,9 @@ body {
     -moz-osx-font-smoothing: grayscale;
     font-feature-settings: "liga" 1, "kern" 1;
     transition: background-color 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
 }
 
 .lang-select-option:hover,
