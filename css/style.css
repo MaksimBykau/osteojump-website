@@ -170,8 +170,9 @@ body {
     cursor: pointer;
     border-radius: 6px;
     font-weight: 500;
-    font-size: 0.875rem;
-    line-height: 1.5;
+    /* Use exact pixel size for consistent emoji rendering */
+    font-size: 14px !important;
+    line-height: 1.5 !important;
     transition: all 0.3s ease;
     appearance: none;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%232563eb' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
@@ -179,32 +180,19 @@ body {
     background-position: right 0.75rem center;
     background-size: 12px;
     min-width: 100px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif !important;
     /* Force consistent emoji rendering */
-    font-variant-emoji: emoji;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-/* Ensure flags display at consistent size in select and options */
-.lang-select {
-    /* Force consistent emoji rendering in select */
-    font-size: 0.875rem !important;
-    line-height: 1.5 !important;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif !important;
-    font-weight: 500 !important;
     font-variant-emoji: emoji !important;
     text-rendering: optimizeLegibility !important;
     -webkit-font-smoothing: antialiased !important;
     -moz-osx-font-smoothing: grayscale !important;
-    /* Control emoji size */
-    font-feature-settings: "liga" 1, "kern" 1;
+    font-feature-settings: "liga" 1, "kern" 1 !important;
 }
 
+/* Ensure flags display at consistent size in options - use exact same values */
 .lang-select option {
-    /* Force same size for options */
-    font-size: 0.875rem !important;
+    /* Use exact same pixel size as select */
+    font-size: 14px !important;
     line-height: 1.5 !important;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif !important;
     font-weight: 500 !important;
@@ -212,14 +200,13 @@ body {
     text-rendering: optimizeLegibility !important;
     -webkit-font-smoothing: antialiased !important;
     -moz-osx-font-smoothing: grayscale !important;
-    font-feature-settings: "liga" 1, "kern" 1;
+    font-feature-settings: "liga" 1, "kern" 1 !important;
     padding: 0.5rem;
     background: white;
     color: var(--text-color);
-    /* Try to normalize emoji size */
-    display: block;
+    /* Ensure consistent height */
     height: auto;
-    min-height: 1.5em;
+    min-height: 21px; /* 14px * 1.5 line-height */
 }
 
 .lang-select:hover {
@@ -486,8 +473,12 @@ body {
     .lang-select {
         display: block;
         min-width: 90px;
-        font-size: 0.8rem;
+        font-size: 14px !important;
         padding: 0.4rem 2rem 0.4rem 0.75rem;
+    }
+    
+    .lang-select option {
+        font-size: 14px !important;
     }
 }
 
