@@ -55,6 +55,8 @@ body {
 .logo {
     display: flex;
     align-items: center;
+    order: 1;
+    flex-shrink: 0;
 }
 
 .logo a {
@@ -77,6 +79,7 @@ body {
     margin: 0;
     padding: 0;
     align-items: center;
+    order: 2;
 }
 
 .nav-menu li {
@@ -463,8 +466,13 @@ body {
     }
     
     .lang-select-wrapper {
-        margin-left: auto;
+        margin-left: 0;
         min-width: 90px;
+    }
+    
+    .menu-toggle {
+        margin-left: auto;
+        margin-right: var(--spacing-sm);
     }
 }
 
@@ -554,15 +562,24 @@ body {
     
     .logo {
         flex: 1;
+        order: 1;
     }
     
     .logo h1 {
         font-size: 1.25rem;
     }
     
+    .menu-toggle {
+        order: 3;
+        margin-left: auto;
+        margin-right: var(--spacing-sm);
+    }
+    
     .lang-select-wrapper {
         display: block;
         min-width: 85px;
+        order: 4;
+        margin-left: 0;
     }
     
     .lang-select-btn {
