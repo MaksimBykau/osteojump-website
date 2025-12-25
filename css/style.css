@@ -356,8 +356,12 @@ body {
     }
     
     .lang-select {
-        font-size: 0.9rem;
+        font-size: 14px !important;
         padding: 0.5rem 2.25rem 0.5rem 0.875rem;
+    }
+    
+    .lang-select option {
+        font-size: 14px !important;
     }
 }
 
@@ -499,7 +503,14 @@ body {
     }
     
     .lang-select {
-        display: none;
+        display: block;
+        min-width: 85px;
+        font-size: 14px !important;
+        padding: 0.35rem 1.75rem 0.35rem 0.65rem;
+    }
+    
+    .lang-select option {
+        font-size: 14px !important;
     }
     
     .hero {
