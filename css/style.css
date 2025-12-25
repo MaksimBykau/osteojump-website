@@ -176,7 +176,7 @@ body {
 
 .lang-select-btn {
     width: 100%;
-    padding: 0.5rem 1rem 0.5rem 1rem;
+    padding: 0.5rem 0.75rem 0.5rem 1rem;
     border: 2px solid var(--primary-color);
     background: white;
     color: var(--primary-color);
@@ -219,6 +219,7 @@ body {
     margin-left: 0.5rem;
     margin-right: 0;
     flex-shrink: 0;
+    padding: 0;
 }
 
 .lang-select-btn[aria-expanded="true"] .lang-select-arrow {
@@ -562,7 +563,7 @@ body {
     }
     
     .lang-select-btn {
-        padding: 0.4rem 0.75rem 0.4rem 0.75rem;
+        padding: 0.4rem 0.5rem 0.4rem 0.75rem;
     }
     
     .lang-select-text {
@@ -605,7 +606,7 @@ body {
     }
     
     .lang-select-btn {
-        padding: 0.35rem 0.65rem 0.35rem 0.65rem;
+        padding: 0.35rem 0.5rem 0.35rem 0.65rem;
     }
     
     .lang-select-text {
