@@ -170,8 +170,8 @@ body {
     cursor: pointer;
     border-radius: 6px;
     font-weight: 500;
-    /* Use exact pixel size for consistent emoji rendering */
-    font-size: 14px !important;
+    /* Larger font size for select (visible selected value) */
+    font-size: 16px !important;
     line-height: 1.5 !important;
     transition: all 0.3s ease;
     appearance: none;
