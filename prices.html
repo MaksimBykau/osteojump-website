@@ -75,13 +75,19 @@
                 <li><a href="about.html" data-i18n="nav.about">Обо мне</a></li>
                 <li><a href="faq.html" data-i18n="nav.faq">Вопросы</a></li>
             </ul>
-            <select class="lang-select" id="langSelect" aria-label="Select language">
-                <option value="ru">🇷🇺 RU</option>
-                <option value="en">🇬🇧 EN</option>
-                <option value="de">🇩🇪 DE</option>
-                <option value="pl">🇵🇱 PL</option>
-                <option value="uk">🇺🇦 UK</option>
-            </select>
+            <div class="lang-select-wrapper">
+                <button class="lang-select-btn" id="langSelectBtn" aria-label="Select language" aria-expanded="false">
+                    <span class="lang-select-text" id="langSelectText">🇬🇧 EN</span>
+                    <span class="lang-select-arrow">▼</span>
+                </button>
+                <div class="lang-select-dropdown" id="langSelectDropdown">
+                    <button class="lang-select-option" data-lang="ru">🇷🇺 RU</button>
+                    <button class="lang-select-option" data-lang="en">🇬🇧 EN</button>
+                    <button class="lang-select-option" data-lang="de">🇩🇪 DE</button>
+                    <button class="lang-select-option" data-lang="pl">🇵🇱 PL</button>
+                    <button class="lang-select-option" data-lang="uk">🇺🇦 UK</button>
+                </div>
+            </div>
         </nav>
     </header>
 
