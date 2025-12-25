@@ -1,6 +1,6 @@
 {
-    "title": "OsteoJump+2",
-    "logo": "OsteoJump+2",
+    "title": "OsteoJump",
+    "logo": "OsteoJump",
     "nav": {
         "home": "Strona główna",
         "prices": "Ceny",
@@ -9,7 +9,7 @@
         "faq": "FAQ"
     },
     "hero": {
-        "title": "Witamy w OsteoJump+2",
+        "title": "Witamy w OsteoJump",
         "text": "Innowacyjne rozwiązanie dla Twojego zdrowia i dobrego samopoczucia",
         "button": "Rozpocznij"
     },
@@ -53,7 +53,7 @@
         "content": "Ta strona jest w trakcie opracowywania. Wkrótce zostaną tutaj zamieszczone odpowiedzi na często zadawane pytania."
     },
     "footer": {
-        "text": "© 2024 OsteoJump+2. Wszelkie prawa zastrzeżone."
+        "text": "© 2024 OsteoJump. Wszelkie prawa zastrzeżone."
     }
 }
 
