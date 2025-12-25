@@ -25,15 +25,7 @@
             animation: showContent 0s 1s forwards;
         }
     </style>
-    <script>
-        // Clean URL: replace index.html with / for cleaner URLs
-        (function() {
-            if (window.location.pathname.endsWith('/index.html') || window.location.pathname.endsWith('index.html')) {
-                const cleanPath = window.location.pathname.replace(/\/index\.html$/, '/').replace(/index\.html$/, '/');
-                window.history.replaceState(null, '', cleanPath + window.location.search + window.location.hash);
-            }
-        })();
-    </script>
+    <script src="js/clean-url.js"></script>
     <script>
         // Quick language detection and set title immediately to prevent flickering
         (function() {
