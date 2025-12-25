@@ -26,7 +26,7 @@
         }
     </style>
     <script>
-        // Quick language detection and preload translations before page loads
+        // Quick language detection and set title immediately to prevent flickering
         (function() {
             const supportedLangs = ['ru', 'en', 'de', 'pl', 'uk'];
             const savedLang = localStorage.getItem('language');
@@ -43,6 +43,25 @@
             
             // Set lang attribute immediately
             document.documentElement.lang = lang;
+            
+            // Title translations map for immediate setting
+            const titleMap = {
+                'ru': { 'title': 'OsteoJump', 'prices.title': 'Цены - OsteoJump', 'reviews.title': 'Отзывы - OsteoJump', 'about_page.title': 'Обо мне - OsteoJump', 'faq.title': 'Вопросы - OsteoJump' },
+                'en': { 'title': 'OsteoJump', 'prices.title': 'Prices - OsteoJump', 'reviews.title': 'Reviews - OsteoJump', 'about_page.title': 'About Me - OsteoJump', 'faq.title': 'FAQ - OsteoJump' },
+                'de': { 'title': 'OsteoJump', 'prices.title': 'Preise - OsteoJump', 'reviews.title': 'Bewertungen - OsteoJump', 'about_page.title': 'Über mich - OsteoJump', 'faq.title': 'FAQ - OsteoJump' },
+                'pl': { 'title': 'OsteoJump', 'prices.title': 'Ceny - OsteoJump', 'reviews.title': 'Opinie - OsteoJump', 'about_page.title': 'O mnie - OsteoJump', 'faq.title': 'FAQ - OsteoJump' },
+                'uk': { 'title': 'OsteoJump', 'prices.title': 'Ціни - OsteoJump', 'reviews.title': 'Відгуки - OsteoJump', 'about_page.title': 'Про мене - OsteoJump', 'faq.title': 'Питання - OsteoJump' }
+            };
+            
+            // Set title immediately based on current page
+            const titleElement = document.querySelector('title');
+            if (titleElement) {
+                const titleKey = titleElement.getAttribute('data-i18n') || 'title';
+                const translations = titleMap[lang] || titleMap['en'];
+                if (translations[titleKey]) {
+                    titleElement.textContent = translations[titleKey];
+                }
+            }
             
             // Preload translation file for faster loading (with versioning)
             // Use timestamp to ensure fresh load even if HTML is cached
