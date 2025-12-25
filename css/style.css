@@ -322,6 +322,19 @@ body {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
+.photo-placeholder {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 4px solid var(--primary-color);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    background-color: var(--section-bg);
+}
+
 .doctor-info {
     flex: 1;
 }
