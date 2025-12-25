@@ -188,8 +188,8 @@ body {
 }
 
 /* Ensure flags display at consistent size in select and options */
-.lang-select,
-.lang-select option {
+.lang-select {
+    /* Force consistent emoji rendering in select */
     font-size: 0.875rem !important;
     line-height: 1.5 !important;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif !important;
@@ -198,16 +198,28 @@ body {
     text-rendering: optimizeLegibility !important;
     -webkit-font-smoothing: antialiased !important;
     -moz-osx-font-smoothing: grayscale !important;
-    /* Force emoji size consistency */
+    /* Control emoji size */
     font-feature-settings: "liga" 1, "kern" 1;
 }
 
 .lang-select option {
+    /* Force same size for options */
+    font-size: 0.875rem !important;
+    line-height: 1.5 !important;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif !important;
+    font-weight: 500 !important;
+    font-variant-emoji: emoji !important;
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+    font-feature-settings: "liga" 1, "kern" 1;
     padding: 0.5rem;
     background: white;
     color: var(--text-color);
-    /* Ensure option text renders same as select */
+    /* Try to normalize emoji size */
     display: block;
+    height: auto;
+    min-height: 1.5em;
 }
 
 .lang-select:hover {
