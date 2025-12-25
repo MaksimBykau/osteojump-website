@@ -104,7 +104,12 @@ class I18n {
             if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
                 element.placeholder = translation;
             } else if (element.tagName === 'TITLE') {
-                element.textContent = translation;
+                // For title, add " - OsteoJump" suffix if not already present
+                let titleText = translation;
+                if (!titleText.includes(' - OsteoJump') && titleText !== 'OsteoJump') {
+                    titleText = translation + ' - OsteoJump';
+                }
+                element.textContent = titleText;
             } else {
                 element.textContent = translation;
             }
