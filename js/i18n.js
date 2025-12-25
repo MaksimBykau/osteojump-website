@@ -126,14 +126,10 @@ class I18n {
         this.currentLang = lang;
         localStorage.setItem('language', lang);
         
-        // Update select values (both desktop and mobile) before loading translations
+        // Update select value before loading translations
         const langSelect = document.getElementById('langSelect');
         if (langSelect) {
             langSelect.value = lang;
-        }
-        const langSelectMobile = document.getElementById('langSelectMobile');
-        if (langSelectMobile) {
-            langSelectMobile.value = lang;
         }
         
         try {
@@ -144,29 +140,14 @@ class I18n {
             // Revert on error
             this.currentLang = previousLang;
             if (langSelect) langSelect.value = previousLang;
-            if (langSelectMobile) langSelectMobile.value = previousLang;
         }
     }
 
     setupLanguageSwitcher() {
-        // Desktop select
         const langSelect = document.getElementById('langSelect');
         if (langSelect) {
             langSelect.value = this.currentLang;
             langSelect.addEventListener('change', (e) => {
-                e.preventDefault();
-                const lang = e.target.value;
-                if (lang && lang !== this.currentLang) {
-                    this.changeLanguage(lang);
-                }
-            });
-        }
-        
-        // Mobile select
-        const langSelectMobile = document.getElementById('langSelectMobile');
-        if (langSelectMobile) {
-            langSelectMobile.value = this.currentLang;
-            langSelectMobile.addEventListener('change', (e) => {
                 e.preventDefault();
                 const lang = e.target.value;
                 if (lang && lang !== this.currentLang) {
