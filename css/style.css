@@ -430,9 +430,6 @@ body {
         padding: var(--spacing-sm) var(--spacing-md);
     }
     
-    .lang-select-btn {
-        padding: 0.5rem 0.625rem 0.5rem 0.875rem;
-    }
     
     .lang-select-text {
         font-size: 14px;
@@ -562,9 +559,6 @@ body {
         min-width: 90px;
     }
     
-    .lang-select-btn {
-        padding: 0.4rem 0.5rem 0.4rem 0.75rem;
-    }
     
     .lang-select-text {
         font-size: 14px;
@@ -605,9 +599,6 @@ body {
         margin-left: 0;
     }
     
-    .lang-select-btn {
-        padding: 0.35rem 0.5rem 0.35rem 0.65rem;
-    }
     
     .lang-select-text {
         font-size: 14px;
