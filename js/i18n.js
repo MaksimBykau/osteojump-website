@@ -29,6 +29,7 @@ class I18n {
     }
 
     async init() {
+        // Setup language switcher first
         this.setupLanguageSwitcher();
         
         try {
@@ -43,6 +44,11 @@ class I18n {
                 try {
                     await this.loadTranslations(this.defaultLang);
                     this.currentLang = this.defaultLang;
+                    // Update select values
+                    const langSelect = document.getElementById('langSelect');
+                    const langSelectMobile = document.getElementById('langSelectMobile');
+                    if (langSelect) langSelect.value = this.defaultLang;
+                    if (langSelectMobile) langSelectMobile.value = this.defaultLang;
                     this.updatePageContent();
                     document.body.classList.add('i18n-ready');
                 } catch (defaultError) {
@@ -112,14 +118,15 @@ class I18n {
     }
 
     async changeLanguage(lang) {
-        if (lang === this.currentLang || !this.supportedLangs.includes(lang)) {
+        if (!lang || lang === this.currentLang || !this.supportedLangs.includes(lang)) {
             return;
         }
         
+        const previousLang = this.currentLang;
         this.currentLang = lang;
         localStorage.setItem('language', lang);
         
-        // Update select values (both desktop and mobile)
+        // Update select values (both desktop and mobile) before loading translations
         const langSelect = document.getElementById('langSelect');
         if (langSelect) {
             langSelect.value = lang;
@@ -129,8 +136,16 @@ class I18n {
             langSelectMobile.value = lang;
         }
         
-        await this.loadTranslations(lang);
-        this.updatePageContent();
+        try {
+            await this.loadTranslations(lang);
+            this.updatePageContent();
+        } catch (error) {
+            console.error('Error changing language:', error);
+            // Revert on error
+            this.currentLang = previousLang;
+            if (langSelect) langSelect.value = previousLang;
+            if (langSelectMobile) langSelectMobile.value = previousLang;
+        }
     }
 
     setupLanguageSwitcher() {
@@ -139,8 +154,11 @@ class I18n {
         if (langSelect) {
             langSelect.value = this.currentLang;
             langSelect.addEventListener('change', (e) => {
+                e.preventDefault();
                 const lang = e.target.value;
-                this.changeLanguage(lang);
+                if (lang && lang !== this.currentLang) {
+                    this.changeLanguage(lang);
+                }
             });
         }
         
@@ -149,8 +167,11 @@ class I18n {
         if (langSelectMobile) {
             langSelectMobile.value = this.currentLang;
             langSelectMobile.addEventListener('change', (e) => {
+                e.preventDefault();
                 const lang = e.target.value;
-                this.changeLanguage(lang);
+                if (lang && lang !== this.currentLang) {
+                    this.changeLanguage(lang);
+                }
             });
         }
     }

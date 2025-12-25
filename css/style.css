@@ -476,9 +476,21 @@ body {
     }
 }
 
+/* Hide mobile select on desktop */
 @media (min-width: 992px) {
     .lang-select-mobile {
-        display: none;
+        display: none !important;
+    }
+    
+    .lang-select {
+        display: block;
+    }
+}
+
+/* Hide desktop select on mobile */
+@media (max-width: 991px) {
+    .lang-select {
+        display: none !important;
     }
 }
 
