@@ -45,7 +45,6 @@ body {
 
 .nav {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     padding: var(--spacing-sm) var(--spacing-sm);
     min-height: 80px;
@@ -139,6 +138,9 @@ body {
     padding: 0.5rem;
     gap: 4px;
     z-index: 1001;
+    margin-left: auto;
+    margin-right: var(--spacing-sm);
+    order: 3;
 }
 
 .menu-toggle span {
@@ -165,6 +167,8 @@ body {
 .lang-select-wrapper {
     position: relative;
     min-width: 100px;
+    order: 4;
+    margin-left: 0;
 }
 
 .lang-select-btn {
