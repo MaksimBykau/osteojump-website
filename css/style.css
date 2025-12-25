@@ -179,20 +179,22 @@ body {
     background-position: right 0.75rem center;
     background-size: 12px;
     min-width: 100px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
 }
 
-.lang-select option {
-    font-size: 0.875rem;
-    padding: 0.5rem;
-    line-height: 1.5;
-    font-family: inherit;
-}
-
-/* Ensure flags display at consistent size */
+/* Ensure flags display at consistent size in select and options */
 .lang-select,
 .lang-select option {
-    font-size: 0.875rem;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: 0.875rem !important;
+    line-height: 1.5 !important;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif !important;
+    font-weight: 500;
+}
+
+.lang-select option {
+    padding: 0.5rem;
+    background: white;
+    color: var(--text-color);
 }
 
 .lang-select:hover {
