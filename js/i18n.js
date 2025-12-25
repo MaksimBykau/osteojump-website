@@ -118,29 +118,41 @@ class I18n {
         
         this.currentLang = lang;
         localStorage.setItem('language', lang);
+        
+        // Update select values (both desktop and mobile)
+        const langSelect = document.getElementById('langSelect');
+        if (langSelect) {
+            langSelect.value = lang;
+        }
+        const langSelectMobile = document.getElementById('langSelectMobile');
+        if (langSelectMobile) {
+            langSelectMobile.value = lang;
+        }
+        
         await this.loadTranslations(lang);
         this.updatePageContent();
-        this.updateActiveButton();
     }
 
     setupLanguageSwitcher() {
-        document.querySelectorAll('.lang-btn').forEach(btn => {
-            btn.addEventListener('click', () => {
-                const lang = btn.getAttribute('data-lang');
+        // Desktop select
+        const langSelect = document.getElementById('langSelect');
+        if (langSelect) {
+            langSelect.value = this.currentLang;
+            langSelect.addEventListener('change', (e) => {
+                const lang = e.target.value;
                 this.changeLanguage(lang);
             });
-        });
-        this.updateActiveButton();
-    }
-
-    updateActiveButton() {
-        document.querySelectorAll('.lang-btn').forEach(btn => {
-            if (btn.getAttribute('data-lang') === this.currentLang) {
-                btn.classList.add('active');
-            } else {
-                btn.classList.remove('active');
-            }
-        });
+        }
+        
+        // Mobile select
+        const langSelectMobile = document.getElementById('langSelectMobile');
+        if (langSelectMobile) {
+            langSelectMobile.value = this.currentLang;
+            langSelectMobile.addEventListener('change', (e) => {
+                const lang = e.target.value;
+                this.changeLanguage(lang);
+            });
+        }
     }
 }
 
