@@ -30,12 +30,15 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Mark active menu item based on current page
     const currentPage = window.location.pathname.split('/').pop() || '';
+    const currentPageClean = currentPage.replace(/\.html$/, ''); // Remove .html if present
     navMenu?.querySelectorAll('a').forEach(link => {
         const linkPage = link.getAttribute('href');
+        const linkPageClean = linkPage.replace(/^\//, '').replace(/\.html$/, ''); // Remove leading / and .html
+        
         // Check if it's the home page (empty, index.html, or /)
-        if ((currentPage === '' || currentPage === 'index.html') && (linkPage === '/' || linkPage === 'index.html')) {
+        if ((currentPageClean === '' || currentPage === 'index.html') && (linkPage === '/' || linkPage === 'index.html' || linkPageClean === '')) {
             link.classList.add('active');
-        } else if (linkPage === currentPage) {
+        } else if (linkPageClean === currentPageClean || linkPage === '/' + currentPageClean) {
             link.classList.add('active');
         }
     });
