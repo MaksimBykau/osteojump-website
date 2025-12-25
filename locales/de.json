@@ -37,10 +37,30 @@
         "subtitle": "Preisinformationen kommen bald",
         "content": "Diese Seite befindet sich in der Entwicklung. Bald werden hier Preisinformationen für Dienstleistungen veröffentlicht."
     },
+    "doctor": {
+        "intro": "Ich bin Bykava Hanna, Osteopathin seit 2018. Ich glaube an die Menschen und mache diese Welt jeden Tag ein wenig besser.",
+        "book_button": "Termin vereinbaren"
+    },
+    "osteopathy": {
+        "title": "Osteopathie",
+        "text": "Osteopathie ist ein ganzheitlicher Ansatz zur Gesundheit, der auf dem Verständnis der Wechselbeziehungen aller Körpersysteme basiert. Jeder Mensch ist einzigartig, und ich gehe individuell auf die Behandlung ein und berücksichtige die Besonderheiten Ihres Körpers und Lebensstils."
+    },
     "reviews": {
         "title": "Bewertungen",
         "subtitle": "Kundenbewertungen kommen bald",
-        "content": "Diese Seite befindet sich in der Entwicklung. Bald werden hier Kundenbewertungen veröffentlicht."
+        "content": "Diese Seite befindet sich in der Entwicklung. Bald werden hier Kundenbewertungen veröffentlicht.",
+        "placeholder": "Bewertungen kommen bald"
+    },
+    "map": {
+        "title": "Wie Sie uns finden",
+        "address": "Siłaczki 3/9/local 212, 02-495 Warszawa",
+        "open_link": "In Google Maps öffnen"
+    },
+    "contacts": {
+        "title": "Kontakte",
+        "phone_label": "Telefon:",
+        "phone": "+48 123 456 789",
+        "call": "Anrufen"
     },
     "about_page": {
         "title": "Über mich",

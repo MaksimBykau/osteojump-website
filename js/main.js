@@ -60,15 +60,134 @@ document.addEventListener('DOMContentLoaded', () => {
     // Add click handler for CTA button
     const ctaButton = document.querySelector('.cta-button');
     if (ctaButton) {
-        ctaButton.addEventListener('click', () => {
-            const featuresSection = document.querySelector('.features');
-            if (featuresSection) {
-                featuresSection.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
+        ctaButton.addEventListener('click', (e) => {
+            // Placeholder link - will be updated later
+            if (ctaButton.getAttribute('href') === '#') {
+                e.preventDefault();
             }
         });
+    }
+    
+    // Reviews Carousel
+    const reviewsCarousel = document.getElementById('reviewsCarousel');
+    const reviewsTrack = document.getElementById('reviewsTrack');
+    const carouselPrev = document.getElementById('carouselPrev');
+    const carouselNext = document.getElementById('carouselNext');
+    const carouselDots = document.getElementById('carouselDots');
+    
+    if (reviewsCarousel && reviewsTrack) {
+        const reviewCards = reviewsTrack.querySelectorAll('.review-card');
+        let currentIndex = 0;
+        let autoplayInterval = null;
+        
+        // Create dots if there are multiple reviews
+        if (reviewCards.length > 1 && carouselDots) {
+            reviewCards.forEach((_, index) => {
+                const dot = document.createElement('button');
+                dot.classList.add('carousel-dot');
+                if (index === 0) dot.classList.add('active');
+                dot.setAttribute('aria-label', `Go to review ${index + 1}`);
+                dot.addEventListener('click', () => goToSlide(index));
+                carouselDots.appendChild(dot);
+            });
+        }
+        
+        function updateCarousel() {
+            const translateX = -currentIndex * 100;
+            reviewsTrack.style.transform = `translateX(${translateX}%)`;
+            
+            // Update dots
+            if (carouselDots) {
+                carouselDots.querySelectorAll('.carousel-dot').forEach((dot, index) => {
+                    dot.classList.toggle('active', index === currentIndex);
+                });
+            }
+            
+            // Show/hide navigation buttons
+            if (carouselPrev) carouselPrev.style.display = reviewCards.length > 1 ? 'flex' : 'none';
+            if (carouselNext) carouselNext.style.display = reviewCards.length > 1 ? 'flex' : 'none';
+        }
+        
+        function goToSlide(index) {
+            if (index < 0) {
+                currentIndex = reviewCards.length - 1;
+            } else if (index >= reviewCards.length) {
+                currentIndex = 0;
+            } else {
+                currentIndex = index;
+            }
+            updateCarousel();
+            resetAutoplay();
+        }
+        
+        function nextSlide() {
+            goToSlide(currentIndex + 1);
+        }
+        
+        function prevSlide() {
+            goToSlide(currentIndex - 1);
+        }
+        
+        function startAutoplay() {
+            if (reviewCards.length > 1) {
+                autoplayInterval = setInterval(nextSlide, 5000); // Change slide every 5 seconds
+            }
+        }
+        
+        function stopAutoplay() {
+            if (autoplayInterval) {
+                clearInterval(autoplayInterval);
+                autoplayInterval = null;
+            }
+        }
+        
+        function resetAutoplay() {
+            stopAutoplay();
+            startAutoplay();
+        }
+        
+        // Event listeners
+        if (carouselNext) {
+            carouselNext.addEventListener('click', () => {
+                nextSlide();
+            });
+        }
+        
+        if (carouselPrev) {
+            carouselPrev.addEventListener('click', () => {
+                prevSlide();
+            });
+        }
+        
+        // Pause autoplay on hover
+        reviewsCarousel.addEventListener('mouseenter', stopAutoplay);
+        reviewsCarousel.addEventListener('mouseleave', startAutoplay);
+        
+        // Touch/swipe support for mobile
+        let touchStartX = 0;
+        let touchEndX = 0;
+        
+        reviewsTrack.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+        
+        reviewsTrack.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+        
+        function handleSwipe() {
+            if (touchEndX < touchStartX - 50) {
+                nextSlide();
+            }
+            if (touchEndX > touchStartX + 50) {
+                prevSlide();
+            }
+        }
+        
+        // Initialize
+        updateCarousel();
+        startAutoplay();
     }
 });
 

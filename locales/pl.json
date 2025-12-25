@@ -37,10 +37,30 @@
         "subtitle": "Informacje o cenach wkrótce",
         "content": "Ta strona jest w trakcie opracowywania. Wkrótce zostaną tutaj zamieszczone informacje o cenach usług."
     },
+    "doctor": {
+        "intro": "Jestem Bykava Hanna, osteopata od 2018 roku. Wierzę w ludzi i każdego dnia czynię ten świat odrobinę lepszym.",
+        "book_button": "Umów wizytę"
+    },
+    "osteopathy": {
+        "title": "Osteopatia",
+        "text": "Osteopatia to holistyczne podejście do zdrowia, oparte na zrozumieniu wzajemnych powiązań wszystkich układów organizmu. Każdy człowiek jest wyjątkowy, dlatego podchodzę do leczenia indywidualnie, uwzględniając cechy Twojego ciała i stylu życia."
+    },
     "reviews": {
         "title": "Opinie",
         "subtitle": "Opinie klientów wkrótce",
-        "content": "Ta strona jest w trakcie opracowywania. Wkrótce zostaną tutaj zamieszczone opinie naszych klientów."
+        "content": "Ta strona jest w trakcie opracowywania. Wkrótce zostaną tutaj zamieszczone opinie naszych klientów.",
+        "placeholder": "Opinie wkrótce"
+    },
+    "map": {
+        "title": "Jak nas znaleźć",
+        "address": "Siłaczki 3/9/local 212, 02-495 Warszawa",
+        "open_link": "Otwórz w Google Maps"
+    },
+    "contacts": {
+        "title": "Kontakt",
+        "phone_label": "Telefon:",
+        "phone": "+48 123 456 789",
+        "call": "Zadzwoń"
     },
     "about_page": {
         "title": "O mnie",
