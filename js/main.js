@@ -68,31 +68,60 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     
-    // Reviews Carousel
+    // Reviews Carousel (mobile only) / Grid (desktop)
     const reviewsCarousel = document.getElementById('reviewsCarousel');
     const reviewsTrack = document.getElementById('reviewsTrack');
     const carouselPrev = document.getElementById('carouselPrev');
     const carouselNext = document.getElementById('carouselNext');
     const carouselDots = document.getElementById('carouselDots');
     
+    function isMobile() {
+        return window.innerWidth < 768;
+    }
+    
     if (reviewsCarousel && reviewsTrack) {
         const reviewCards = reviewsTrack.querySelectorAll('.review-card');
         let currentIndex = 0;
         let autoplayInterval = null;
         
-        // Create dots if there are multiple reviews
-        if (reviewCards.length > 1 && carouselDots) {
-            reviewCards.forEach((_, index) => {
-                const dot = document.createElement('button');
-                dot.classList.add('carousel-dot');
-                if (index === 0) dot.classList.add('active');
-                dot.setAttribute('aria-label', `Go to review ${index + 1}`);
-                dot.addEventListener('click', () => goToSlide(index));
-                carouselDots.appendChild(dot);
-            });
+        function initCarousel() {
+            if (!isMobile()) {
+                // Desktop: disable carousel, show grid
+                if (autoplayInterval) {
+                    clearInterval(autoplayInterval);
+                    autoplayInterval = null;
+                }
+                if (carouselPrev) carouselPrev.style.display = 'none';
+                if (carouselNext) carouselNext.style.display = 'none';
+                if (carouselDots) carouselDots.style.display = 'none';
+                reviewsTrack.style.transform = 'none';
+                return;
+            }
+            
+            // Mobile: enable carousel
+            if (carouselPrev) carouselPrev.style.display = 'flex';
+            if (carouselNext) carouselNext.style.display = 'flex';
+            if (carouselDots) carouselDots.style.display = 'flex';
+            
+            // Create dots if there are multiple reviews
+            if (reviewCards.length > 1 && carouselDots && carouselDots.children.length === 0) {
+                reviewCards.forEach((_, index) => {
+                    const dot = document.createElement('button');
+                    dot.classList.add('carousel-dot');
+                    if (index === 0) dot.classList.add('active');
+                    dot.setAttribute('aria-label', `Go to review ${index + 1}`);
+                    dot.addEventListener('click', () => goToSlide(index));
+                    carouselDots.appendChild(dot);
+                });
+            }
+            
+            updateCarousel();
+            startAutoplay();
         }
         
         function updateCarousel() {
+            if (!isMobile()) return;
+            
             const translateX = -currentIndex * 100;
             reviewsTrack.style.transform = `translateX(${translateX}%)`;
             
@@ -109,6 +138,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         function goToSlide(index) {
+            if (!isMobile()) return;
+            
             if (index < 0) {
                 currentIndex = reviewCards.length - 1;
             } else if (index >= reviewCards.length) {
@@ -121,14 +152,17 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         function nextSlide() {
+            if (!isMobile()) return;
             goToSlide(currentIndex + 1);
         }
         
         function prevSlide() {
+            if (!isMobile()) return;
             goToSlide(currentIndex - 1);
         }
         
         function startAutoplay() {
+            if (!isMobile()) return;
             if (reviewCards.length > 1) {
                 autoplayInterval = setInterval(nextSlide, 5000);
             }
@@ -159,19 +193,25 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
         
-        // Pause autoplay on hover
-        reviewsCarousel.addEventListener('mouseenter', stopAutoplay);
-        reviewsCarousel.addEventListener('mouseleave', startAutoplay);
+        // Pause autoplay on hover (mobile only)
+        reviewsCarousel.addEventListener('mouseenter', () => {
+            if (isMobile()) stopAutoplay();
+        });
+        reviewsCarousel.addEventListener('mouseleave', () => {
+            if (isMobile()) startAutoplay();
+        });
         
         // Touch/swipe support for mobile
         let touchStartX = 0;
         let touchEndX = 0;
         
         reviewsTrack.addEventListener('touchstart', (e) => {
+            if (!isMobile()) return;
             touchStartX = e.changedTouches[0].screenX;
         });
         
         reviewsTrack.addEventListener('touchend', (e) => {
+            if (!isMobile()) return;
             touchEndX = e.changedTouches[0].screenX;
             handleSwipe();
         });
@@ -185,9 +225,17 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
         
+        // Handle window resize
+        let resizeTimeout;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(() => {
+                initCarousel();
+            }, 100);
+        });
+        
         // Initialize
-        updateCarousel();
-        startAutoplay();
+        initCarousel();
     }
 });
 

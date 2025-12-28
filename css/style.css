@@ -515,6 +515,36 @@ body {
     border: 1px solid #e5e7eb;
 }
 
+/* Desktop: Grid layout */
+@media (min-width: 768px) {
+    .reviews-carousel {
+        overflow: visible;
+    }
+    
+    .reviews-track {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-md);
+        transform: none !important;
+    }
+    
+    .review-card {
+        min-width: auto;
+        width: 100%;
+    }
+    
+    .carousel-btn,
+    .carousel-dots {
+        display: none !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .reviews-track {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 .review-text {
     font-size: clamp(1rem, 2vw, 1.125rem);
     line-height: 1.8;
