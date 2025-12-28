@@ -70,18 +70,19 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Reviews Carousel
     const reviewsCarousel = document.getElementById('reviewsCarousel');
+    const reviewsTrack = document.getElementById('reviewsTrack');
     const carouselPrev = document.getElementById('carouselPrev');
     const carouselNext = document.getElementById('carouselNext');
     const carouselDots = document.getElementById('carouselDots');
     
-    if (reviewsCarousel) {
-        const reviewSlides = reviewsCarousel.querySelectorAll('.review-slide');
+    if (reviewsCarousel && reviewsTrack) {
+        const reviewCards = reviewsTrack.querySelectorAll('.review-card');
         let currentIndex = 0;
         let autoplayInterval = null;
         
         // Create dots if there are multiple reviews
-        if (reviewSlides.length > 1 && carouselDots) {
-            reviewSlides.forEach((_, index) => {
+        if (reviewCards.length > 1 && carouselDots) {
+            reviewCards.forEach((_, index) => {
                 const dot = document.createElement('button');
                 dot.classList.add('carousel-dot');
                 if (index === 0) dot.classList.add('active');
@@ -92,15 +93,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         function updateCarousel() {
-            // Hide all slides
-            reviewSlides.forEach((slide) => {
-                slide.classList.remove('active');
-            });
-            
-            // Show current slide
-            if (reviewSlides[currentIndex]) {
-                reviewSlides[currentIndex].classList.add('active');
-            }
+            const translateX = -currentIndex * 100;
+            reviewsTrack.style.transform = `translateX(${translateX}%)`;
             
             // Update dots
             if (carouselDots) {
@@ -110,14 +104,14 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             
             // Show/hide navigation buttons
-            if (carouselPrev) carouselPrev.style.display = reviewSlides.length > 1 ? 'flex' : 'none';
-            if (carouselNext) carouselNext.style.display = reviewSlides.length > 1 ? 'flex' : 'none';
+            if (carouselPrev) carouselPrev.style.display = reviewCards.length > 1 ? 'flex' : 'none';
+            if (carouselNext) carouselNext.style.display = reviewCards.length > 1 ? 'flex' : 'none';
         }
         
         function goToSlide(index) {
             if (index < 0) {
-                currentIndex = reviewSlides.length - 1;
-            } else if (index >= reviewSlides.length) {
+                currentIndex = reviewCards.length - 1;
+            } else if (index >= reviewCards.length) {
                 currentIndex = 0;
             } else {
                 currentIndex = index;
@@ -135,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         function startAutoplay() {
-            if (reviewSlides.length > 1) {
+            if (reviewCards.length > 1) {
                 autoplayInterval = setInterval(nextSlide, 5000);
             }
         }
@@ -173,11 +167,11 @@ document.addEventListener('DOMContentLoaded', () => {
         let touchStartX = 0;
         let touchEndX = 0;
         
-        reviewsCarousel.addEventListener('touchstart', (e) => {
+        reviewsTrack.addEventListener('touchstart', (e) => {
             touchStartX = e.changedTouches[0].screenX;
         });
         
-        reviewsCarousel.addEventListener('touchend', (e) => {
+        reviewsTrack.addEventListener('touchend', (e) => {
             touchEndX = e.changedTouches[0].screenX;
             handleSwipe();
         });

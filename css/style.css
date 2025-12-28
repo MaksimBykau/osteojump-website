@@ -492,41 +492,27 @@ body {
     background-color: var(--section-bg);
 }
 
-.reviews-wrapper {
+.reviews-carousel {
     position: relative;
     max-width: 1000px;
     margin: 0 auto;
-    width: 100%;
+    overflow: hidden;
 }
 
-.review-slide {
-    display: none;
-    width: 100%;
-}
-
-.review-slide.active {
-    display: block;
-    animation: fadeIn 0.5s ease;
-    width: 100%;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+.reviews-track {
+    display: flex;
+    transition: transform 0.5s ease;
 }
 
 .review-card {
+    min-width: 100%;
+    flex-shrink: 0;
     background: white;
     padding: var(--spacing-lg);
     display: flex;
     flex-direction: column;
     gap: var(--spacing-sm);
     border: 1px solid #e5e7eb;
-    width: 100%;
     box-sizing: border-box;
 }
 
