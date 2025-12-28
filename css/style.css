@@ -504,6 +504,14 @@ body {
     overflow: hidden;
 }
 
+.review-card,
+.review-card *,
+.review-card::before,
+.review-card::after {
+    box-shadow: none !important;
+    filter: none !important;
+}
+
 .review-card {
     min-width: 100%;
     background: white;
