@@ -49,7 +49,22 @@
         "title": "Reviews",
         "subtitle": "Customer reviews coming soon",
         "content": "This page is under development. Soon customer reviews will be posted here.",
-        "placeholder": "Reviews coming soon"
+        "placeholder": "Reviews coming soon",
+        "review1": {
+            "text": "Excellent specialist! Very helpful.",
+            "source": "Google Maps"
+        },
+        "review2": {
+            "text": "I recommend! Professional approach.",
+            "source": "Instagram"
+        },
+        "review3": {
+            "text": "Very satisfied with the result. Thank you!",
+            "source": "Google Maps"
+        },
+        "more_google": "View more reviews on Google",
+        "more_instagram": "View more reviews on Instagram",
+        "more_booksy": "View more reviews on Booksy"
     },
     "map": {
         "title": "How to Find Us",

@@ -49,7 +49,22 @@
         "title": "Bewertungen",
         "subtitle": "Kundenbewertungen kommen bald",
         "content": "Diese Seite befindet sich in der Entwicklung. Bald werden hier Kundenbewertungen veröffentlicht.",
-        "placeholder": "Bewertungen kommen bald"
+        "placeholder": "Bewertungen kommen bald",
+        "review1": {
+            "text": "Ausgezeichneter Spezialist! Sehr hilfreich.",
+            "source": "Google Maps"
+        },
+        "review2": {
+            "text": "Ich empfehle! Professioneller Ansatz.",
+            "source": "Instagram"
+        },
+        "review3": {
+            "text": "Sehr zufrieden mit dem Ergebnis. Vielen Dank!",
+            "source": "Google Maps"
+        },
+        "more_google": "Weitere Bewertungen auf Google ansehen",
+        "more_instagram": "Weitere Bewertungen auf Instagram ansehen",
+        "more_booksy": "Weitere Bewertungen auf Booksy ansehen"
     },
     "map": {
         "title": "Wie Sie uns finden",

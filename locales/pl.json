@@ -49,7 +49,22 @@
         "title": "Opinie",
         "subtitle": "Opinie klientów wkrótce",
         "content": "Ta strona jest w trakcie opracowywania. Wkrótce zostaną tutaj zamieszczone opinie naszych klientów.",
-        "placeholder": "Opinie wkrótce"
+        "placeholder": "Opinie wkrótce",
+        "review1": {
+            "text": "Doskonały specjalista! Bardzo pomocne.",
+            "source": "Google Maps"
+        },
+        "review2": {
+            "text": "Polecam! Profesjonalne podejście.",
+            "source": "Instagram"
+        },
+        "review3": {
+            "text": "Bardzo zadowolona z rezultatu. Dziękuję!",
+            "source": "Google Maps"
+        },
+        "more_google": "Zobacz więcej opinii na Google",
+        "more_instagram": "Zobacz więcej opinii na Instagram",
+        "more_booksy": "Zobacz więcej opinii na Booksy"
     },
     "map": {
         "title": "Jak nas znaleźć",

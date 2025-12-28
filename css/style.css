@@ -468,6 +468,170 @@ body {
     font-size: 0.875rem;
 }
 
+/* Osteopathy section */
+.osteopathy {
+    padding: var(--spacing-xl) var(--spacing-sm);
+    background-color: var(--bg-color);
+}
+
+.osteopathy-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.osteopathy-text {
+    font-size: clamp(1rem, 2vw, 1.125rem);
+    line-height: 1.8;
+    color: #4b5563;
+    text-align: center;
+}
+
+/* Reviews carousel section */
+.reviews-carousel-section {
+    padding: var(--spacing-xl) var(--spacing-sm);
+    background-color: var(--section-bg);
+}
+
+.reviews-carousel {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.reviews-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.review-card {
+    min-width: 100%;
+    background: white;
+    padding: var(--spacing-lg);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.review-text {
+    font-size: clamp(1rem, 2vw, 1.125rem);
+    line-height: 1.8;
+    color: var(--text-color);
+    flex: 1;
+    margin: 0;
+}
+
+.review-link {
+    font-size: 0.875rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: auto;
+    transition: color 0.3s ease;
+}
+
+.review-link:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+.reviews-more-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    justify-content: center;
+    margin-top: var(--spacing-lg);
+}
+
+.review-more-btn {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+}
+
+.review-more-btn:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+.review-more-btn:active {
+    transform: translateY(0);
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    z-index: 10;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-btn:hover {
+    background-color: var(--primary-color);
+    color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-btn:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+.carousel-prev {
+    left: 10px;
+}
+
+.carousel-next {
+    right: 10px;
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: var(--spacing-md);
+}
+
+.carousel-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: none;
+    background-color: #d1d5db;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    padding: 0;
+}
+
+.carousel-dot.active {
+    background-color: var(--primary-color);
+    transform: scale(1.2);
+}
+
+.carousel-dot:hover {
+    background-color: var(--accent-color);
+}
+
 /* Responsive breakpoints */
 /* Mobile first approach */
 
