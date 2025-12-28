@@ -492,35 +492,42 @@ body {
     background-color: var(--section-bg);
 }
 
-.reviews-carousel {
+.reviews-wrapper {
     position: relative;
     max-width: 1000px;
     margin: 0 auto;
+    width: 100%;
 }
 
-.reviews-track {
-    display: flex;
-    transition: transform 0.5s ease;
-    overflow: hidden;
+.review-slide {
+    display: none;
+    width: 100%;
 }
 
-.review-card,
-.review-card *,
-.review-card::before,
-.review-card::after {
-    box-shadow: none !important;
-    filter: none !important;
+.review-slide.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+    width: 100%;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .review-card {
-    min-width: 100%;
     background: white;
     padding: var(--spacing-lg);
-    border-radius: 0;
     display: flex;
     flex-direction: column;
     gap: var(--spacing-sm);
     border: 1px solid #e5e7eb;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .review-text {
@@ -618,7 +625,7 @@ body {
     justify-content: center;
     gap: 0.5rem;
     margin-top: var(--spacing-md);
-    padding: 0.5rem 0;
+    padding: 0.5rem 0 1rem 0;
 }
 
 .carousel-dot {
