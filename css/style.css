@@ -515,6 +515,7 @@ body {
     gap: var(--spacing-sm);
     overflow: hidden;
     border: 1px solid #e5e7eb;
+    box-shadow: none !important;
 }
 
 .review-text {
