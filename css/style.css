@@ -496,14 +496,10 @@ body {
     position: relative;
     max-width: 1000px;
     margin: 0 auto;
-    overflow: visible;
+    overflow: hidden;
+    padding-bottom: 3rem;
 }
 
-.reviews-carousel::after {
-    content: '';
-    display: block;
-    height: 3rem;
-}
 
 .reviews-track {
     display: flex;
