@@ -538,12 +538,23 @@ body {
     text-decoration: underline;
 }
 
+.reviews-more-section {
+    margin-top: var(--spacing-lg);
+    text-align: center;
+}
+
+.reviews-more-title {
+    font-size: clamp(1.25rem, 3vw, 1.75rem);
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: var(--spacing-md);
+}
+
 .reviews-more-buttons {
     display: flex;
     flex-wrap: wrap;
     gap: var(--spacing-md);
     justify-content: center;
-    margin-top: var(--spacing-lg);
 }
 
 .review-more-btn {
