@@ -496,15 +496,12 @@ body {
     position: relative;
     max-width: 1000px;
     margin: 0 auto;
-    overflow: visible;
-    box-shadow: none !important;
 }
 
 .reviews-track {
     display: flex;
     transition: transform 0.5s ease;
     overflow: hidden;
-    box-shadow: none !important;
 }
 
 .review-card {
@@ -515,9 +512,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-sm);
-    overflow: hidden;
     border: 1px solid #e5e7eb;
-    box-shadow: none !important;
 }
 
 .review-text {
