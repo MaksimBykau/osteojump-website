@@ -610,7 +610,6 @@ body {
     justify-content: center;
     gap: 0.5rem;
     margin-top: var(--spacing-md);
-    padding: 0.5rem 0 1rem 0;
 }
 
 .carousel-dot {
