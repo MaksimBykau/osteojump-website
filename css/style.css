@@ -497,6 +497,7 @@ body {
     max-width: 1000px;
     margin: 0 auto;
     overflow: hidden;
+    padding-bottom: 3rem;
 }
 
 .reviews-track {
