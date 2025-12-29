@@ -207,10 +207,16 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Expose methods for external use (before event listeners)
         globalCarouselAutoplay = {
-            stop: stopAutoplay,
+            stop: () => {
+                stopAutoplay();
+                autoplayPausedByUser = true; // Синхронизируем локальную переменную
+            },
             start: startAutoplay,
             reset: resetAutoplay,
-            paused: false
+            paused: false,
+            setPaused: (value) => {
+                autoplayPausedByUser = value; // Синхронизируем локальную переменную
+            }
         };
         
         reviewsCarousel._carouselInstance = {
@@ -327,7 +333,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (globalCarouselAutoplay) {
                         globalCarouselAutoplay.stop();
                         globalCarouselAutoplay.paused = true;
-                        autoplayPausedByUser = true;
                     }
                 }
             });

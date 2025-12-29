@@ -758,10 +758,6 @@ body {
     .features-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
-    .review-text-wrapper {
-        max-height: 200px;
-    }
 }
 
 /* Large devices (desktops, 992px and up) */
