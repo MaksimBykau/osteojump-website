@@ -157,13 +157,12 @@ document.addEventListener('DOMContentLoaded', () => {
             
             updateCarousel();
             if (!isAutoPlay) {
-                // Resume autoplay if it was paused by user
-                if (autoplayPausedByUser) {
-                    autoplayPausedByUser = false;
-                    resetAutoplay();
-                } else {
-                    resetAutoplay();
+                // Always resume autoplay when user manually navigates
+                autoplayPausedByUser = false;
+                if (globalCarouselAutoplay) {
+                    globalCarouselAutoplay.setPaused(false);
                 }
+                resetAutoplay();
             }
         }
         
@@ -338,6 +337,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                     // Re-check after collapse
                     setTimeout(checkTextHeight, 100);
+                    
+                    // Resume autoplay when user collapses review
+                    if (globalCarouselAutoplay) {
+                        globalCarouselAutoplay.setPaused(false);
+                        globalCarouselAutoplay.reset();
+                    }
                 } else {
                     card.classList.add('expanded');
                     // Get translation for "read_less"
