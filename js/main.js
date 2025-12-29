@@ -121,7 +121,6 @@ document.addEventListener('DOMContentLoaded', () => {
             // Collapse all reviews if user manually navigated
             if (!isAutoPlay) {
                 reviewCards.forEach(card => {
-                    const wasExpanded = card.classList.contains('expanded');
                     card.classList.remove('expanded');
                     const readMoreBtn = card.querySelector('.review-read-more');
                     if (readMoreBtn) {
@@ -130,24 +129,22 @@ document.addEventListener('DOMContentLoaded', () => {
                         } else {
                             readMoreBtn.textContent = 'Читать далее';
                         }
-                        // Re-check if button should be visible
-                        if (wasExpanded) {
-                            setTimeout(() => {
-                                const textWrapper = card.querySelector('.review-text-wrapper');
-                                const reviewText = card.querySelector('.review-text');
-                                if (textWrapper && reviewText) {
-                                    const computedStyle = window.getComputedStyle(reviewText);
-                                    const lineHeight = parseFloat(computedStyle.lineHeight);
-                                    const textHeight = reviewText.scrollHeight;
-                                    const wrapperHeight = textWrapper.clientHeight;
-                                    if (textHeight <= wrapperHeight + lineHeight) {
-                                        readMoreBtn.classList.add('hidden');
-                                    } else {
-                                        readMoreBtn.classList.remove('hidden');
-                                    }
+                        // Re-check if button should be visible after collapse
+                        setTimeout(() => {
+                            const textWrapper = card.querySelector('.review-text-wrapper');
+                            const reviewText = card.querySelector('.review-text');
+                            if (textWrapper && reviewText && readMoreBtn) {
+                                const computedStyle = window.getComputedStyle(reviewText);
+                                const lineHeight = parseFloat(computedStyle.lineHeight) || 1.8 * parseFloat(computedStyle.fontSize);
+                                const textHeight = reviewText.scrollHeight;
+                                const wrapperHeight = textWrapper.clientHeight;
+                                if (textHeight <= wrapperHeight + lineHeight) {
+                                    readMoreBtn.classList.add('hidden');
+                                } else {
+                                    readMoreBtn.classList.remove('hidden');
                                 }
-                            }, 50);
-                        }
+                            }
+                        }, 100);
                     }
                 });
                 
@@ -272,11 +269,13 @@ document.addEventListener('DOMContentLoaded', () => {
             const checkTextHeight = () => {
                 // Only check if not expanded
                 if (!card.classList.contains('expanded')) {
-                    readMoreBtn.classList.remove('hidden');
+                    // Force reflow to get accurate measurements
+                    void card.offsetHeight;
                     
                     // Get computed line height
                     const computedStyle = window.getComputedStyle(reviewText);
-                    const lineHeight = parseFloat(computedStyle.lineHeight);
+                    const fontSize = parseFloat(computedStyle.fontSize);
+                    const lineHeight = parseFloat(computedStyle.lineHeight) || fontSize * 1.8;
                     const textHeight = reviewText.scrollHeight;
                     const wrapperHeight = textWrapper.clientHeight;
                     
@@ -284,13 +283,26 @@ document.addEventListener('DOMContentLoaded', () => {
                     // This prevents cutting off half a line
                     if (textHeight <= wrapperHeight + lineHeight) {
                         readMoreBtn.classList.add('hidden');
+                    } else {
+                        readMoreBtn.classList.remove('hidden');
                     }
+                } else {
+                    // When expanded, always show "read less" button
+                    readMoreBtn.classList.remove('hidden');
                 }
             };
             
-            // Check on load and resize
+            // Check on load, resize, and after carousel transition
             checkTextHeight();
             window.addEventListener('resize', checkTextHeight);
+            
+            // Also check when this card becomes visible (after carousel transition)
+            const observer = new MutationObserver(() => {
+                if (!card.classList.contains('expanded')) {
+                    setTimeout(checkTextHeight, 50);
+                }
+            });
+            observer.observe(card, { attributes: true, attributeFilter: ['class'] });
             
             // Toggle expand/collapse
             readMoreBtn.addEventListener('click', () => {
@@ -315,13 +327,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                     
                     // Stop autoplay when user expands review
-                    const reviewsCarousel = document.getElementById('reviewsCarousel');
-                    if (reviewsCarousel) {
-                        const carouselInstance = reviewsCarousel._carouselInstance;
-                        if (carouselInstance) {
-                            carouselInstance.stopAutoplay();
-                            carouselInstance.autoplayPausedByUser = true;
-                        }
+                    const reviewsCarouselEl = document.getElementById('reviewsCarousel');
+                    if (reviewsCarouselEl && reviewsCarouselEl._carouselInstance) {
+                        reviewsCarouselEl._carouselInstance.stopAutoplay();
+                        reviewsCarouselEl._carouselInstance.autoplayPausedByUser = true;
                     }
                 }
             });
