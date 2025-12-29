@@ -186,7 +186,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         function startAutoplay() {
-            if (reviewCards.length > 1) {
+            if (reviewCards.length > 1 && !autoplayPausedByUser) {
                 autoplayInterval = setInterval(() => {
                     nextSlide(true); // Pass true to indicate autoplay
                 }, 5000);
