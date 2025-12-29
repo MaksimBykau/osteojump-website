@@ -121,10 +121,33 @@ document.addEventListener('DOMContentLoaded', () => {
             // Collapse all reviews if user manually navigated
             if (!isAutoPlay) {
                 reviewCards.forEach(card => {
+                    const wasExpanded = card.classList.contains('expanded');
                     card.classList.remove('expanded');
                     const readMoreBtn = card.querySelector('.review-read-more');
-                    if (readMoreBtn && window.i18n) {
-                        readMoreBtn.textContent = window.i18n.translate('reviews.read_more');
+                    if (readMoreBtn) {
+                        if (window.i18n) {
+                            readMoreBtn.textContent = window.i18n.translate('reviews.read_more');
+                        } else {
+                            readMoreBtn.textContent = 'Читать далее';
+                        }
+                        // Re-check if button should be visible
+                        if (wasExpanded) {
+                            setTimeout(() => {
+                                const textWrapper = card.querySelector('.review-text-wrapper');
+                                const reviewText = card.querySelector('.review-text');
+                                if (textWrapper && reviewText) {
+                                    const computedStyle = window.getComputedStyle(reviewText);
+                                    const lineHeight = parseFloat(computedStyle.lineHeight);
+                                    const textHeight = reviewText.scrollHeight;
+                                    const wrapperHeight = textWrapper.clientHeight;
+                                    if (textHeight <= wrapperHeight + lineHeight) {
+                                        readMoreBtn.classList.add('hidden');
+                                    } else {
+                                        readMoreBtn.classList.remove('hidden');
+                                    }
+                                }
+                            }, 50);
+                        }
                     }
                 });
             }
