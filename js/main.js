@@ -134,18 +134,10 @@ document.addEventListener('DOMContentLoaded', () => {
                         }
                         // Re-check if button should be visible after collapse
                         setTimeout(() => {
-                            const reviewText = card.querySelector('.review-text');
-                            if (reviewText && readMoreBtn) {
-                                const textLength = reviewText.textContent.trim().length;
-                                const isMobile = window.innerWidth < 768;
-                                const minChars = isMobile ? 100 : 150;
-                                if (textLength > minChars) {
-                                    readMoreBtn.classList.remove('hidden');
-                                } else {
-                                    readMoreBtn.classList.add('hidden');
-                                }
+                            if (window.checkAllReviewCards) {
+                                window.checkAllReviewCards();
                             }
-                        }, 100);
+                        }, 150);
                     }
                 });
                 
@@ -278,21 +270,40 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Review read more functionality
     const allReviewCards = document.querySelectorAll('.review-card');
+    const checkTextHeightFunctions = [];
+    
+    // Function to check all review cards
+    const checkAllReviewCards = () => {
+        checkTextHeightFunctions.forEach(checkFn => {
+            if (typeof checkFn === 'function') {
+                checkFn();
+            }
+        });
+    };
+    
     allReviewCards.forEach((card) => {
         const textWrapper = card.querySelector('.review-text-wrapper');
         const reviewText = card.querySelector('.review-text');
         const readMoreBtn = card.querySelector('.review-read-more');
         
         if (textWrapper && reviewText && readMoreBtn) {
-            // Check if text needs truncation - simplified approach
+            // Check if text needs truncation - check actual height
             const checkTextHeight = () => {
                 if (!card.classList.contains('expanded')) {
-                    const textLength = reviewText.textContent.trim().length;
-                    // Adaptive threshold based on screen size
-                    const isMobile = window.innerWidth < 768;
-                    const minChars = isMobile ? 100 : 150; // Fewer chars fit on mobile
+                    // Force reflow to get accurate measurements
+                    void card.offsetHeight;
                     
-                    if (textLength > minChars) {
+                    // Get computed styles
+                    const computedStyle = window.getComputedStyle(reviewText);
+                    const textHeight = reviewText.scrollHeight;
+                    const wrapperHeight = textWrapper.clientHeight;
+                    
+                    // Get line height for accurate comparison
+                    const lineHeight = parseFloat(computedStyle.lineHeight) || parseFloat(computedStyle.fontSize) * 1.8;
+                    
+                    // Show button if text exceeds wrapper height by at least half a line
+                    // This prevents cutting off mid-line
+                    if (textHeight > wrapperHeight + lineHeight * 0.5) {
                         readMoreBtn.classList.remove('hidden');
                     } else {
                         readMoreBtn.classList.add('hidden');
@@ -302,6 +313,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     readMoreBtn.classList.remove('hidden');
                 }
             };
+            
+            // Save function for external calls
+            checkTextHeightFunctions.push(checkTextHeight);
             
             // Check on load and resize
             checkTextHeight();
@@ -320,6 +334,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     } else {
                         readMoreBtn.textContent = 'Читать далее';
                     }
+                    // Re-check after collapse
+                    setTimeout(checkTextHeight, 100);
                 } else {
                     card.classList.add('expanded');
                     // Get translation for "read_less"
@@ -338,6 +354,47 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     });
+    
+    // Expose function for external calls (e.g., from carousel)
+    window.checkAllReviewCards = checkAllReviewCards;
+    
+    // Check after translations are loaded
+    const checkAfterTranslations = () => {
+        if (document.body.classList.contains('i18n-ready')) {
+            setTimeout(checkAllReviewCards, 100);
+        } else {
+            // Wait for i18n-ready class
+            const observer = new MutationObserver((mutations) => {
+                mutations.forEach((mutation) => {
+                    if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+                        if (document.body.classList.contains('i18n-ready')) {
+                            setTimeout(checkAllReviewCards, 100);
+                            observer.disconnect();
+                        }
+                    }
+                });
+            });
+            observer.observe(document.body, { attributes: true });
+        }
+    };
+    
+    checkAfterTranslations();
+    
+    // Also check when language changes - wait for i18n to be available
+    const setupI18nHook = () => {
+        if (window.i18n && window.i18n.updatePageContent) {
+            const originalUpdatePageContent = window.i18n.updatePageContent.bind(window.i18n);
+            window.i18n.updatePageContent = function() {
+                originalUpdatePageContent();
+                setTimeout(checkAllReviewCards, 100);
+            };
+        } else {
+            // Retry after a short delay if i18n is not ready yet
+            setTimeout(setupI18nHook, 100);
+        }
+    };
+    
+    setupI18nHook();
 });
 
 

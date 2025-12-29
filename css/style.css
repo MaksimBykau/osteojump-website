@@ -524,7 +524,7 @@ body {
     flex: 1;
     overflow: hidden;
     position: relative;
-    max-height: 150px;
+    max-height: calc(1em * 1.8 * 5); /* 5 строк текста */
     transition: max-height 0.3s ease;
 }
 
