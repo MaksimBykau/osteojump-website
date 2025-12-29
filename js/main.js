@@ -189,6 +189,50 @@ document.addEventListener('DOMContentLoaded', () => {
         updateCarousel();
         startAutoplay();
     }
+    
+    // Review read more functionality
+    const reviewCards = document.querySelectorAll('.review-card');
+    reviewCards.forEach((card) => {
+        const textWrapper = card.querySelector('.review-text-wrapper');
+        const reviewText = card.querySelector('.review-text');
+        const readMoreBtn = card.querySelector('.review-read-more');
+        
+        if (textWrapper && reviewText && readMoreBtn) {
+            // Check if text needs truncation
+            const checkTextHeight = () => {
+                // Reset to check natural height
+                card.classList.remove('expanded');
+                readMoreBtn.classList.remove('hidden');
+                
+                const textHeight = reviewText.scrollHeight;
+                const wrapperHeight = textWrapper.clientHeight;
+                
+                // If text fits within wrapper, hide button
+                if (textHeight <= wrapperHeight) {
+                    readMoreBtn.classList.add('hidden');
+                }
+            };
+            
+            // Check on load and resize
+            checkTextHeight();
+            window.addEventListener('resize', checkTextHeight);
+            
+            // Toggle expand/collapse
+            readMoreBtn.addEventListener('click', () => {
+                const isExpanded = card.classList.contains('expanded');
+                
+                if (isExpanded) {
+                    card.classList.remove('expanded');
+                    readMoreBtn.textContent = readMoreBtn.getAttribute('data-i18n') ? 
+                        readMoreBtn.getAttribute('data-i18n') : 'Читать далее';
+                } else {
+                    card.classList.add('expanded');
+                    readMoreBtn.textContent = readMoreBtn.getAttribute('data-i18n-collapse') ? 
+                        readMoreBtn.getAttribute('data-i18n-collapse') : 'Свернуть';
+                }
+            });
+        }
+    });
 });
 
 

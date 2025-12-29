@@ -515,14 +515,51 @@ body {
     flex-direction: column;
     gap: var(--spacing-sm);
     border: 1px solid #e5e7eb;
+    max-height: 400px;
+    overflow: hidden;
+}
+
+.review-text-wrapper {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
 }
 
 .review-text {
     font-size: clamp(1rem, 2vw, 1.125rem);
     line-height: 1.8;
     color: var(--text-color);
-    flex: 1;
     margin: 0;
+}
+
+.review-card.expanded {
+    max-height: none;
+}
+
+.review-card.expanded .review-text-wrapper {
+    overflow: visible;
+}
+
+.review-read-more {
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 0.5rem 0;
+    text-align: left;
+    transition: color 0.3s ease;
+    align-self: flex-start;
+}
+
+.review-read-more:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+.review-read-more.hidden {
+    display: none;
 }
 
 .review-link {
