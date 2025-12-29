@@ -223,12 +223,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 if (isExpanded) {
                     card.classList.remove('expanded');
-                    readMoreBtn.textContent = readMoreBtn.getAttribute('data-i18n') ? 
-                        readMoreBtn.getAttribute('data-i18n') : 'Читать далее';
+                    // Get translation for "read_more"
+                    const readMoreKey = readMoreBtn.getAttribute('data-i18n');
+                    if (readMoreKey && window.i18n) {
+                        readMoreBtn.textContent = window.i18n.translate(readMoreKey);
+                    } else {
+                        readMoreBtn.textContent = 'Читать далее';
+                    }
                 } else {
                     card.classList.add('expanded');
-                    readMoreBtn.textContent = readMoreBtn.getAttribute('data-i18n-collapse') ? 
-                        readMoreBtn.getAttribute('data-i18n-collapse') : 'Свернуть';
+                    // Get translation for "read_less"
+                    if (window.i18n) {
+                        readMoreBtn.textContent = window.i18n.translate('reviews.read_less');
+                    } else {
+                        readMoreBtn.textContent = 'Свернуть';
+                    }
                 }
             });
         }
