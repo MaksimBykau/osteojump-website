@@ -517,6 +517,7 @@ body {
     border: 1px solid #e5e7eb;
     max-height: 400px;
     overflow: hidden;
+    transition: max-height 0.3s ease;
 }
 
 .review-text-wrapper {
@@ -524,6 +525,11 @@ body {
     overflow: hidden;
     position: relative;
     max-height: 200px;
+    transition: max-height 0.3s ease;
+}
+
+.review-card.expanded {
+    max-height: none;
 }
 
 .review-card.expanded .review-text-wrapper {
