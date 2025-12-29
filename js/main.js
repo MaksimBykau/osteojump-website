@@ -150,6 +150,19 @@ document.addEventListener('DOMContentLoaded', () => {
                         }
                     }
                 });
+                
+                // Scroll to reviews section after collapse animation
+                setTimeout(() => {
+                    const reviewsSection = document.querySelector('.reviews-carousel-section');
+                    if (reviewsSection) {
+                        const headerHeight = document.querySelector('.header')?.offsetHeight || 0;
+                        const targetPosition = reviewsSection.getBoundingClientRect().top + window.pageYOffset - headerHeight - 20;
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                }, 100);
             }
             
             updateCarousel();
