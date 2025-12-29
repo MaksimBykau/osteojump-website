@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const reviewCards = reviewsTrack.querySelectorAll('.review-card');
         let currentIndex = 0;
         let autoplayInterval = null;
-        let isUserAction = false; // Track if user manually navigated
+        let autoplayPausedByUser = false; // Track if autoplay was paused by user action
         
         // Create dots if there are multiple reviews
         if (reviewCards.length > 1 && carouselDots) {
@@ -167,7 +167,13 @@ document.addEventListener('DOMContentLoaded', () => {
             
             updateCarousel();
             if (!isAutoPlay) {
-                resetAutoplay();
+                // Resume autoplay if it was paused by user
+                if (autoplayPausedByUser) {
+                    autoplayPausedByUser = false;
+                    resetAutoplay();
+                } else {
+                    resetAutoplay();
+                }
             }
         }
         
@@ -295,6 +301,16 @@ document.addEventListener('DOMContentLoaded', () => {
                         readMoreBtn.textContent = window.i18n.translate('reviews.read_less');
                     } else {
                         readMoreBtn.textContent = 'Свернуть';
+                    }
+                    
+                    // Stop autoplay when user expands review
+                    const reviewsCarousel = document.getElementById('reviewsCarousel');
+                    if (reviewsCarousel) {
+                        const carouselInstance = reviewsCarousel._carouselInstance;
+                        if (carouselInstance) {
+                            carouselInstance.stopAutoplay();
+                            carouselInstance.autoplayPausedByUser = true;
+                        }
                     }
                 }
             });
