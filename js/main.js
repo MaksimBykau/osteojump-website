@@ -250,8 +250,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     // Review read more functionality
-    const reviewCards = document.querySelectorAll('.review-card');
-    reviewCards.forEach((card) => {
+    const allReviewCards = document.querySelectorAll('.review-card');
+    allReviewCards.forEach((card) => {
         const textWrapper = card.querySelector('.review-text-wrapper');
         const reviewText = card.querySelector('.review-text');
         const readMoreBtn = card.querySelector('.review-read-more');
