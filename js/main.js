@@ -1,4 +1,7 @@
 // Main application logic
+// Global carousel autoplay control
+let globalCarouselAutoplay = null;
+
 document.addEventListener('DOMContentLoaded', () => {
     // Mobile menu toggle
     const menuToggle = document.querySelector('.menu-toggle');
@@ -131,17 +134,15 @@ document.addEventListener('DOMContentLoaded', () => {
                         }
                         // Re-check if button should be visible after collapse
                         setTimeout(() => {
-                            const textWrapper = card.querySelector('.review-text-wrapper');
                             const reviewText = card.querySelector('.review-text');
-                            if (textWrapper && reviewText && readMoreBtn) {
-                                const computedStyle = window.getComputedStyle(reviewText);
-                                const lineHeight = parseFloat(computedStyle.lineHeight) || 1.8 * parseFloat(computedStyle.fontSize);
-                                const textHeight = reviewText.scrollHeight;
-                                const wrapperHeight = textWrapper.clientHeight;
-                                if (textHeight <= wrapperHeight + lineHeight) {
-                                    readMoreBtn.classList.add('hidden');
-                                } else {
+                            if (reviewText && readMoreBtn) {
+                                const textLength = reviewText.textContent.trim().length;
+                                const isMobile = window.innerWidth < 768;
+                                const minChars = isMobile ? 100 : 150;
+                                if (textLength > minChars) {
                                     readMoreBtn.classList.remove('hidden');
+                                } else {
+                                    readMoreBtn.classList.add('hidden');
                                 }
                             }
                         }, 100);
@@ -205,12 +206,24 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         // Expose methods for external use (before event listeners)
+        globalCarouselAutoplay = {
+            stop: stopAutoplay,
+            start: startAutoplay,
+            reset: resetAutoplay,
+            paused: false
+        };
+        
         reviewsCarousel._carouselInstance = {
             stopAutoplay: stopAutoplay,
             startAutoplay: startAutoplay,
             resetAutoplay: resetAutoplay,
             get autoplayPausedByUser() { return autoplayPausedByUser; },
-            set autoplayPausedByUser(value) { autoplayPausedByUser = value; }
+            set autoplayPausedByUser(value) { 
+                autoplayPausedByUser = value;
+                if (globalCarouselAutoplay) {
+                    globalCarouselAutoplay.paused = value;
+                }
+            }
         };
         
         // Event listeners
@@ -265,26 +278,18 @@ document.addEventListener('DOMContentLoaded', () => {
         const readMoreBtn = card.querySelector('.review-read-more');
         
         if (textWrapper && reviewText && readMoreBtn) {
-            // Check if text needs truncation
+            // Check if text needs truncation - simplified approach
             const checkTextHeight = () => {
-                // Only check if not expanded
                 if (!card.classList.contains('expanded')) {
-                    // Force reflow to get accurate measurements
-                    void card.offsetHeight;
+                    const textLength = reviewText.textContent.trim().length;
+                    // Adaptive threshold based on screen size
+                    const isMobile = window.innerWidth < 768;
+                    const minChars = isMobile ? 100 : 150; // Fewer chars fit on mobile
                     
-                    // Get computed line height
-                    const computedStyle = window.getComputedStyle(reviewText);
-                    const fontSize = parseFloat(computedStyle.fontSize);
-                    const lineHeight = parseFloat(computedStyle.lineHeight) || fontSize * 1.8;
-                    const textHeight = reviewText.scrollHeight;
-                    const wrapperHeight = textWrapper.clientHeight;
-                    
-                    // Check if text exceeds wrapper height by at least one line
-                    // This prevents cutting off half a line
-                    if (textHeight <= wrapperHeight + lineHeight) {
-                        readMoreBtn.classList.add('hidden');
-                    } else {
+                    if (textLength > minChars) {
                         readMoreBtn.classList.remove('hidden');
+                    } else {
+                        readMoreBtn.classList.add('hidden');
                     }
                 } else {
                     // When expanded, always show "read less" button
@@ -292,17 +297,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             };
             
-            // Check on load, resize, and after carousel transition
+            // Check on load and resize
             checkTextHeight();
             window.addEventListener('resize', checkTextHeight);
-            
-            // Also check when this card becomes visible (after carousel transition)
-            const observer = new MutationObserver(() => {
-                if (!card.classList.contains('expanded')) {
-                    setTimeout(checkTextHeight, 50);
-                }
-            });
-            observer.observe(card, { attributes: true, attributeFilter: ['class'] });
             
             // Toggle expand/collapse
             readMoreBtn.addEventListener('click', () => {
@@ -327,10 +324,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                     
                     // Stop autoplay when user expands review
-                    const reviewsCarouselEl = document.getElementById('reviewsCarousel');
-                    if (reviewsCarouselEl && reviewsCarouselEl._carouselInstance) {
-                        reviewsCarouselEl._carouselInstance.stopAutoplay();
-                        reviewsCarouselEl._carouselInstance.autoplayPausedByUser = true;
+                    if (globalCarouselAutoplay) {
+                        globalCarouselAutoplay.stop();
+                        globalCarouselAutoplay.paused = true;
+                        autoplayPausedByUser = true;
                     }
                 }
             });
