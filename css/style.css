@@ -523,6 +523,11 @@ body {
     flex: 1;
     overflow: hidden;
     position: relative;
+    max-height: 200px;
+}
+
+.review-card.expanded .review-text-wrapper {
+    max-height: none;
 }
 
 .review-text {
