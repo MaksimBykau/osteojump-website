@@ -202,8 +202,19 @@ document.addEventListener('DOMContentLoaded', () => {
         
         function resetAutoplay() {
             stopAutoplay();
-            startAutoplay();
+            if (!autoplayPausedByUser) {
+                startAutoplay();
+            }
         }
+        
+        // Expose methods for external use (before event listeners)
+        reviewsCarousel._carouselInstance = {
+            stopAutoplay: stopAutoplay,
+            startAutoplay: startAutoplay,
+            resetAutoplay: resetAutoplay,
+            get autoplayPausedByUser() { return autoplayPausedByUser; },
+            set autoplayPausedByUser(value) { autoplayPausedByUser = value; }
+        };
         
         // Event listeners
         if (carouselNext) {
