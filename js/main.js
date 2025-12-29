@@ -195,10 +195,10 @@ document.addEventListener('DOMContentLoaded', () => {
         
         function handleSwipe() {
             if (touchEndX < touchStartX - 50) {
-                nextSlide();
+                nextSlide(false); // User action
             }
             if (touchEndX > touchStartX + 50) {
-                prevSlide();
+                prevSlide(false); // User action
             }
         }
         
