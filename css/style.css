@@ -524,7 +524,6 @@ body {
     flex: 1;
     overflow: hidden;
     position: relative;
-    max-height: calc(1em * 1.8 * 5); /* 5 строк текста */
     transition: max-height 0.3s ease;
 }
 
@@ -541,6 +540,16 @@ body {
     line-height: 1.8;
     color: var(--text-color);
     margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.review-card.expanded .review-text {
+    -webkit-line-clamp: unset;
+    display: block;
+    overflow: visible;
 }
 
 .review-card.expanded {

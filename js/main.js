@@ -287,7 +287,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const readMoreBtn = card.querySelector('.review-read-more');
         
         if (textWrapper && reviewText && readMoreBtn) {
-            // Check if text needs truncation - check actual height
+            // Check if text needs truncation - check if text is actually clamped
             const checkTextHeight = () => {
                 if (!card.classList.contains('expanded')) {
                     // Force reflow to get accurate measurements
@@ -296,14 +296,16 @@ document.addEventListener('DOMContentLoaded', () => {
                     // Get computed styles
                     const computedStyle = window.getComputedStyle(reviewText);
                     const textHeight = reviewText.scrollHeight;
-                    const wrapperHeight = textWrapper.clientHeight;
+                    const textClientHeight = reviewText.clientHeight;
                     
                     // Get line height for accurate comparison
                     const lineHeight = parseFloat(computedStyle.lineHeight) || parseFloat(computedStyle.fontSize) * 1.8;
+                    const fontSize = parseFloat(computedStyle.fontSize);
+                    const expectedHeight = lineHeight * 5; // 5 lines
                     
-                    // Show button if text exceeds wrapper height by at least half a line
-                    // This prevents cutting off mid-line
-                    if (textHeight > wrapperHeight + lineHeight * 0.5) {
+                    // Show button if text height exceeds 5 lines
+                    // Use a small threshold to account for rounding
+                    if (textHeight > expectedHeight + lineHeight * 0.1) {
                         readMoreBtn.classList.remove('hidden');
                     } else {
                         readMoreBtn.classList.add('hidden');
