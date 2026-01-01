@@ -82,7 +82,17 @@
         "title": "Контакты",
         "phone_label": "Телефон:",
         "phone": "+48 571 397 199",
-        "call": "Позвонить"
+        "call": "Позвонить",
+        "whatsapp": "WhatsApp",
+        "facebook": "Facebook",
+        "instagram": "Instagram",
+        "telegram": "Telegram",
+        "map": "Карта"
+    },
+    "action_bar": {
+        "book": "Записаться",
+        "contacts": "Контакты",
+        "directions": "Как добраться"
     },
     "about_page": {
         "title": "Обо мне",

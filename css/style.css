@@ -760,9 +760,6 @@ body {
         padding: var(--spacing-xl) var(--spacing-md);
     }
     
-    .contacts-section {
-        padding: var(--spacing-xl) var(--spacing-md);
-    }
     
     .features-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -964,9 +961,6 @@ body {
         height: 300px;
     }
     
-    .contacts-section {
-        padding: var(--spacing-lg) var(--spacing-sm);
-    }
     
     .carousel-btn {
         width: 35px;
@@ -989,6 +983,246 @@ body {
     
     .feature-card {
         padding: var(--spacing-sm);
+    }
+}
+
+/* Fixed Action Bar */
+.fixed-action-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-sm);
+    background-color: var(--bg-color);
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    border-top: 1px solid #e5e7eb;
+}
+
+.action-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+    font-size: 0.95rem;
+}
+
+.action-icon {
+    font-size: 1.25rem;
+    line-height: 1;
+}
+
+.action-text {
+    white-space: nowrap;
+}
+
+/* Primary button - Book Appointment */
+.action-book {
+    padding: 1rem 2rem;
+    background-color: var(--primary-color);
+    color: white;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+    flex: 1;
+    max-width: 300px;
+}
+
+.action-book:hover {
+    background-color: var(--secondary-color);
+    box-shadow: 0 6px 16px rgba(37, 99, 235, 0.4);
+    transform: translateY(-2px);
+}
+
+.action-book:active {
+    transform: translateY(0);
+}
+
+/* Secondary buttons - Contacts and Directions */
+.action-contacts,
+.action-directions {
+    padding: 0.75rem 1.5rem;
+    background-color: #f3f4f6;
+    color: var(--text-color);
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    flex: 0 1 auto;
+}
+
+.action-contacts:hover,
+.action-directions:hover {
+    background-color: #e5e7eb;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-1px);
+}
+
+.action-contacts:active,
+.action-directions:active {
+    transform: translateY(0);
+}
+
+/* Mobile styles */
+@media (max-width: 767px) {
+    .fixed-action-bar {
+        padding: 0.75rem var(--spacing-xs);
+        gap: var(--spacing-xs);
+    }
+
+    /* Primary button - full with text and icon on mobile */
+    .action-book {
+        padding: 0.875rem 1.25rem;
+        max-width: none;
+        flex: 1;
+        flex-direction: row;
+        gap: 0.5rem;
+    }
+
+    .action-book .action-text {
+        display: inline;
+        font-size: 0.9rem;
+    }
+
+    .action-book .action-icon {
+        font-size: 1.25rem;
+    }
+
+    /* Secondary buttons - icons only on mobile */
+    .action-contacts,
+    .action-directions {
+        flex-direction: column;
+        gap: 0.25rem;
+        padding: 0.75rem;
+        flex: 0 1 auto;
+        min-width: 60px;
+    }
+
+    .action-contacts .action-text,
+    .action-directions .action-text {
+        display: none;
+    }
+
+    .action-contacts .action-icon,
+    .action-directions .action-icon {
+        font-size: 1.25rem;
+    }
+}
+
+/* Contacts Section */
+.contacts-section {
+    padding: var(--spacing-xl) var(--spacing-sm);
+    background-color: var(--section-bg);
+}
+
+.contacts-content {
+    margin-top: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    align-items: center;
+}
+
+.contact-phone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+.contact-label {
+    font-size: 1rem;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.contact-value {
+    font-size: 1.25rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.contact-value:hover {
+    color: var(--secondary-color);
+}
+
+.contacts-social {
+    display: flex;
+    gap: var(--spacing-md);
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: var(--bg-color);
+    border: 1px solid #e5e7eb;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.social-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-color: var(--primary-color);
+}
+
+.social-link:active {
+    transform: translateY(0);
+}
+
+.social-link img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+/* Mobile styles for contacts */
+@media (max-width: 767px) {
+    .contacts-social {
+        gap: var(--spacing-sm);
+    }
+
+    .social-link {
+        width: 44px;
+        height: 44px;
+    }
+
+    .social-link img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .contact-value {
+        font-size: 1.125rem;
+    }
+}
+
+/* Add padding to main content to prevent content from being hidden behind fixed bar */
+@media (max-width: 767px) {
+    .main {
+        padding-bottom: 80px;
+    }
+}
+
+@media (min-width: 768px) {
+    .main {
+        padding-bottom: 90px;
     }
 }
 

@@ -82,7 +82,17 @@
         "title": "Kontakte",
         "phone_label": "Telefon:",
         "phone": "+48 571 397 199",
-        "call": "Anrufen"
+        "call": "Anrufen",
+        "whatsapp": "WhatsApp",
+        "facebook": "Facebook",
+        "instagram": "Instagram",
+        "telegram": "Telegram",
+        "map": "Karte"
+    },
+    "action_bar": {
+        "book": "Termin buchen",
+        "contacts": "Kontakte",
+        "directions": "Wegbeschreibung"
     },
     "about_page": {
         "title": "Über mich",

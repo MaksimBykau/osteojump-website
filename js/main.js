@@ -415,6 +415,45 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     
     setupI18nHook();
+
+    // Fixed Action Bar handlers
+    const actionBook = document.getElementById('actionBook');
+    const actionContacts = document.getElementById('actionContacts');
+    const actionDirections = document.getElementById('actionDirections');
+
+    if (actionBook) {
+        actionBook.addEventListener('click', () => {
+            window.open('https://cdl.booksy.com/hwJaWJhtmNb', '_blank', 'noopener,noreferrer');
+        });
+    }
+
+    if (actionContacts) {
+        actionContacts.addEventListener('click', () => {
+            const contactsSection = document.querySelector('.contacts-section');
+            if (contactsSection) {
+                const headerHeight = document.querySelector('.header')?.offsetHeight || 0;
+                const targetPosition = contactsSection.getBoundingClientRect().top + window.pageYOffset - headerHeight - 20;
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    }
+
+    if (actionDirections) {
+        actionDirections.addEventListener('click', () => {
+            const mapSection = document.querySelector('.map-section');
+            if (mapSection) {
+                const headerHeight = document.querySelector('.header')?.offsetHeight || 0;
+                const targetPosition = mapSection.getBoundingClientRect().top + window.pageYOffset - headerHeight - 20;
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    }
 });
 
 

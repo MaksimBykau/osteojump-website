@@ -124,7 +124,6 @@
                     </div>
                     <div class="doctor-info">
                         <p class="doctor-text" data-i18n="doctor.intro">Я — Bykava Hanna, врач-остеопат в профессии с 2018 года. Верю в людей и делаю этот мир чуточку лучше каждый день.</p>
-                        <a href="https://cdl.booksy.com/hwJaWJhtmNb" target="_blank" rel="noopener noreferrer" class="cta-button" data-i18n="doctor.book_button">Записаться</a>
                     </div>
                 </div>
             </div>
@@ -224,14 +223,22 @@
             <div class="container">
                 <h2 class="section-title" data-i18n="contacts.title">Контакты</h2>
                 <div class="contacts-content">
-                    <div class="contact-item">
+                    <div class="contact-phone">
                         <span class="contact-label" data-i18n="contacts.phone_label">Телефон:</span>
                         <a href="tel:+48571397199" class="contact-value" data-i18n="contacts.phone">+48 571 397 199</a>
                     </div>
-                    <div class="contact-actions">
-                        <a href="tel:+48571397199" class="contact-btn phone-btn" aria-label="Позвонить">
-                            <span class="contact-icon">📞</span>
-                            <span data-i18n="contacts.call">Позвонить</span>
+                    <div class="contacts-social">
+                        <a href="https://www.instagram.com/hannabykavaosteopata/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <img src="/images/icons/instagram-icon.png" alt="Instagram">
+                        </a>
+                        <a href="https://www.facebook.com/HannaBykavaOsteopata" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                            <img src="/images/icons/facebook-icon.png" alt="Facebook">
+                        </a>
+                        <a href="https://wa.me/+48572404770" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                            <img src="/images/icons/whatsapp-icon.png" alt="WhatsApp">
+                        </a>
+                        <a href="https://t.me/hannabykavaosteopata" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+                            <img src="/images/icons/telegram-icon.png" alt="Telegram">
                         </a>
                     </div>
                 </div>
@@ -244,6 +251,22 @@
             <p data-i18n="footer.text">&copy; 2024 OsteoJump. Все права защищены.</p>
         </div>
     </footer>
+
+    <!-- Fixed Action Bar -->
+    <div class="fixed-action-bar" id="fixedActionBar">
+        <button class="action-btn action-book" id="actionBook" aria-label="Book appointment">
+            <span class="action-icon">📅</span>
+            <span class="action-text" data-i18n="action_bar.book">Записаться</span>
+        </button>
+        <button class="action-btn action-contacts" id="actionContacts" aria-label="View contacts">
+            <span class="action-icon">📞</span>
+            <span class="action-text" data-i18n="action_bar.contacts">Контакты</span>
+        </button>
+        <button class="action-btn action-directions" id="actionDirections" aria-label="Get directions">
+            <span class="action-icon">📍</span>
+            <span class="action-text" data-i18n="action_bar.directions">Как добраться</span>
+        </button>
+    </div>
 
     <script src="js/i18n.js"></script>
     <script src="js/main.js"></script>
