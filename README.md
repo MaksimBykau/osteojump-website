@@ -49,14 +49,32 @@ cd osteojump
 
 2. Запустите локальный сервер:
 ```bash
-# Python 3
-python3 -m http.server 8000
+# Рекомендуемый способ - с поддержкой clean URLs
+make server
 
-# Или Node.js
-npx http-server
+# Или напрямую через Python скрипт
+python3 server.py
+
+# Или простой HTTP сервер (без поддержки clean URLs)
+make server-simple
+# или
+python3 -m http.server 8000
 ```
 
 3. Откройте в браузере: `http://localhost:8000`
+
+### Дополнительные команды
+
+```bash
+# Показать все доступные команды
+make help
+
+# Создать превьюшки для дипломов (оптимизация изображений)
+make thumbnails
+
+# Удалить созданные превьюшки
+make clean
+```
 
 ## Деплой
 
