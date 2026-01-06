@@ -48,7 +48,7 @@ body {
     align-items: center;
     padding: var(--spacing-sm) var(--spacing-sm);
     min-height: 80px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: var(--spacing-sm);
 }
 
@@ -75,28 +75,33 @@ body {
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: 0;
+    gap: 0.5rem;
     margin: 0;
     padding: 0;
     align-items: center;
     order: 2;
+    flex-wrap: nowrap;
+    overflow: visible;
+    flex-shrink: 0;
 }
 
 .nav-menu li {
     margin: 0;
     position: relative;
+    flex-shrink: 0;
 }
 
 .nav-menu a {
     color: var(--text-color);
     text-decoration: none;
     font-weight: 500;
-    padding: 0.75rem 1.25rem;
+    padding: 0.75rem 1rem;
     border-radius: 6px;
     transition: all 0.3s ease;
     display: block;
     position: relative;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
+    white-space: nowrap;
 }
 
 .nav-menu a::after {
@@ -141,9 +146,8 @@ body {
     padding: 0.5rem;
     gap: 4px;
     z-index: 1001;
-    margin-left: auto;
-    margin-right: var(--spacing-sm);
     order: 3;
+    flex-shrink: 0;
 }
 
 .menu-toggle span {
@@ -171,7 +175,8 @@ body {
     position: relative;
     min-width: 100px;
     order: 4;
-    margin-left: 0;
+    margin-left: auto;
+    flex-shrink: 0;
 }
 
 .lang-select-btn {
@@ -293,69 +298,6 @@ body {
 
 .lang-select-option:active {
     background-color: rgba(37, 99, 235, 0.15);
-}
-
-/* Adaptive Navigation Overflow Menu */
-.nav-overflow-btn {
-    display: none;
-    background: transparent;
-    border: none;
-    color: var(--text-color);
-    cursor: pointer;
-    padding: 0.75rem 1.25rem;
-    font-weight: 500;
-    font-size: 1.25rem;
-    border-radius: 6px;
-    transition: all 0.3s ease;
-    align-items: center;
-    justify-content: center;
-}
-
-.nav-overflow-btn:hover {
-    color: var(--primary-color);
-    background-color: rgba(37, 99, 235, 0.05);
-}
-
-.nav-overflow-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background: white;
-    border: 2px solid var(--primary-color);
-    border-radius: 6px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    min-width: 200px;
-    z-index: 1000;
-    margin-top: 0.5rem;
-    overflow: hidden;
-}
-
-.nav-overflow-menu.active {
-    display: block;
-}
-
-.nav-overflow-menu li {
-    list-style: none;
-}
-
-.nav-overflow-menu a {
-    padding: 0.75rem 1.25rem;
-    display: block;
-    color: var(--text-color);
-    text-decoration: none;
-    font-weight: 500;
-    transition: background-color 0.2s ease;
-    border-radius: 0;
-}
-
-.nav-overflow-menu a::after {
-    display: none;
-}
-
-.nav-overflow-menu a:hover {
-    background-color: rgba(37, 99, 235, 0.1);
-    color: var(--primary-color);
 }
 
 /* Hero Doctor section */
@@ -930,52 +872,62 @@ body {
     }
 }
 
+/* Overflow sidebar for hamburger menu */
+.nav-overflow-sidebar {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background-color: var(--bg-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+    max-height: calc(100vh - 70px);
+    overflow-y: auto;
+    display: none;
+    flex-direction: column;
+    padding: var(--spacing-md);
+}
+
+.nav-overflow-sidebar.active {
+    display: flex;
+    transform: translateX(0);
+}
+
+.nav-overflow-sidebar li {
+    width: 100%;
+    list-style: none;
+}
+
+.nav-overflow-sidebar a {
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+    display: block;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.nav-overflow-sidebar a:hover {
+    color: var(--primary-color);
+    background-color: rgba(37, 99, 235, 0.05);
+}
+
 /* Mobile specific adjustments */
 @media (max-width: 991px) {
-    .menu-toggle {
-        display: flex;
-    }
-    
-    .nav-menu {
-        position: fixed;
-        top: 70px;
-        left: 0;
-        right: 0;
-        background-color: var(--bg-color);
-        flex-direction: column;
-        padding: var(--spacing-md);
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        transform: translateX(-100%);
-        transition: transform 0.3s ease;
-        z-index: 1000;
-        max-height: calc(100vh - 70px);
-        overflow-y: auto;
-    }
-    
-    .nav-menu.active {
-        transform: translateX(0);
-    }
-    
-    .nav-menu li {
-        width: 100%;
-    }
-    
-    .nav-menu a {
-        width: 100%;
-        padding: 1rem;
-        text-align: center;
-    }
-    
     .lang-select-wrapper {
         display: block;
         min-width: 90px;
     }
-    
-    
+
     .lang-select-text {
         font-size: 14px;
     }
-    
+
     .lang-select-option {
         font-size: 14px;
     }

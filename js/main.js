@@ -3,30 +3,38 @@
 let globalCarouselAutoplay = null;
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Mobile menu toggle
+    // Hamburger menu toggle for overflow sidebar
     const menuToggle = document.querySelector('.menu-toggle');
     const navMenu = document.querySelector('.nav-menu');
-    
-    if (menuToggle && navMenu) {
+    let overflowSidebar = document.querySelector('.nav-overflow-sidebar');
+
+    // Create overflow sidebar if it doesn't exist
+    if (!overflowSidebar) {
+        overflowSidebar = document.createElement('div');
+        overflowSidebar.className = 'nav-overflow-sidebar';
+        document.body.appendChild(overflowSidebar);
+    }
+
+    if (menuToggle && overflowSidebar) {
         menuToggle.addEventListener('click', () => {
             const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
             menuToggle.setAttribute('aria-expanded', !isExpanded);
-            navMenu.classList.toggle('active');
+            overflowSidebar.classList.toggle('active');
         });
-        
+
         // Close menu when clicking on a link
-        navMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
+        overflowSidebar.addEventListener('click', (e) => {
+            if (e.target.tagName === 'A') {
                 menuToggle.setAttribute('aria-expanded', 'false');
-                navMenu.classList.remove('active');
-            });
+                overflowSidebar.classList.remove('active');
+            }
         });
-        
+
         // Close menu when clicking outside
         document.addEventListener('click', (e) => {
-            if (!navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+            if (!overflowSidebar.contains(e.target) && !menuToggle.contains(e.target)) {
                 menuToggle.setAttribute('aria-expanded', 'false');
-                navMenu.classList.remove('active');
+                overflowSidebar.classList.remove('active');
             }
         });
     }
@@ -52,46 +60,21 @@ document.addEventListener('DOMContentLoaded', () => {
         const navMenu = document.querySelector('.nav-menu');
         const menuToggle = document.querySelector('.menu-toggle');
         const langSelectWrapper = document.querySelector('.lang-select-wrapper');
+        const overflowSidebar = document.querySelector('.nav-overflow-sidebar');
 
-        if (!nav || !navMenu) return;
-
-        // Create overflow button and menu if they don't exist
-        let overflowBtn = document.getElementById('navOverflowBtn');
-        let overflowMenu = document.getElementById('navOverflowMenu');
-
-        if (!overflowBtn) {
-            overflowBtn = document.createElement('button');
-            overflowBtn.id = 'navOverflowBtn';
-            overflowBtn.className = 'nav-overflow-btn';
-            overflowBtn.setAttribute('aria-label', 'More menu items');
-            overflowBtn.setAttribute('aria-expanded', 'false');
-            overflowBtn.style.display = 'none';
-            overflowBtn.innerHTML = '<span>⋯</span>';
-            navMenu.parentElement.insertBefore(overflowBtn, langSelectWrapper);
-        }
-
-        if (!overflowMenu) {
-            overflowMenu = document.createElement('div');
-            overflowMenu.id = 'navOverflowMenu';
-            overflowMenu.className = 'nav-overflow-menu';
-            overflowBtn.parentElement.appendChild(overflowMenu);
-        }
+        if (!nav || !navMenu || !overflowSidebar) return;
 
         let resizeTimeout;
 
         function checkMenuOverflow() {
             const navRect = nav.getBoundingClientRect();
             const langSelectorWidth = langSelectWrapper ? langSelectWrapper.getBoundingClientRect().width : 100;
-            const menuToggleWidth = menuToggle ? menuToggle.getBoundingClientRect().width : 0;
+            const menuToggleWidth = 50; // Always reserve space for hamburger button
 
-            // Calculate available width: total nav width minus logo, language selector, and menu toggle
-            const logoWidth = 150; // Approximate logo width
-            const reservedSpace = logoWidth + langSelectorWidth + menuToggleWidth + 60; // 60px for padding/margins
+            // Calculate available width
+            const logoWidth = 150;
+            const reservedSpace = logoWidth + langSelectorWidth + menuToggleWidth + 60;
             const availableWidth = navRect.width - reservedSpace;
-
-            // Reserve space for overflow button if needed
-            const overflowBtnWidth = 60;
-            const effectiveWidth = availableWidth - overflowBtnWidth;
 
             const menuItems = Array.from(navMenu.querySelectorAll('li'));
 
@@ -103,11 +86,11 @@ document.addEventListener('DOMContentLoaded', () => {
             let currentWidth = 0;
             let overflowIndex = -1;
 
-            // Calculate which items fit
+            // Calculate which items fit (gap is 0.5rem = 8px)
             menuItems.forEach((item, index) => {
-                const itemWidth = item.getBoundingClientRect().width + 16; // Include gap (var(--spacing-md) = 1rem = 16px)
+                const itemWidth = item.getBoundingClientRect().width + 8;
 
-                if (currentWidth + itemWidth > effectiveWidth && overflowIndex === -1) {
+                if (currentWidth + itemWidth > availableWidth && overflowIndex === -1) {
                     overflowIndex = index;
                 }
 
@@ -116,23 +99,24 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
 
-            // Move overflow items to dropdown
-            if (overflowIndex > 0 && overflowIndex < menuItems.length) {
-                overflowBtn.style.display = 'flex';
-                // Clear overflow menu first
-                overflowMenu.innerHTML = '';
-                // Move items starting from overflow index
+            // Move overflow items to hamburger sidebar
+            if (overflowIndex >= 0 && overflowIndex < menuItems.length) {
+                // Show hamburger button
+                if (menuToggle) menuToggle.style.display = 'flex';
+                // Clear sidebar
+                overflowSidebar.innerHTML = '';
+                // Add overflow items to sidebar
                 menuItems.slice(overflowIndex).forEach(item => {
-                    overflowMenu.appendChild(item.cloneNode(true));
+                    overflowSidebar.appendChild(item.cloneNode(true));
                     item.style.display = 'none';
                 });
             } else {
-                overflowBtn.style.display = 'none';
-                // Show all items
+                // All items fit, hide hamburger
+                if (menuToggle) menuToggle.style.display = 'none';
+                overflowSidebar.innerHTML = '';
                 menuItems.forEach(item => {
                     item.style.display = '';
                 });
-                overflowMenu.innerHTML = '';
             }
         }
 
@@ -140,24 +124,6 @@ document.addEventListener('DOMContentLoaded', () => {
         window.addEventListener('resize', () => {
             clearTimeout(resizeTimeout);
             resizeTimeout = setTimeout(checkMenuOverflow, 150);
-        });
-
-        // Overflow button click handler
-        if (overflowBtn) {
-            overflowBtn.addEventListener('click', (e) => {
-                e.stopPropagation();
-                const isExpanded = overflowBtn.getAttribute('aria-expanded') === 'true';
-                overflowBtn.setAttribute('aria-expanded', !isExpanded);
-                overflowMenu.classList.toggle('active');
-            });
-        }
-
-        // Close overflow menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (overflowMenu && !overflowMenu.contains(e.target) && e.target !== overflowBtn) {
-                overflowBtn.setAttribute('aria-expanded', 'false');
-                overflowMenu.classList.remove('active');
-            }
         });
 
         // Initial check
