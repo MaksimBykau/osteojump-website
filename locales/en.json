@@ -6,7 +6,8 @@
         "prices": "Prices",
         "reviews": "Reviews",
         "about": "About Me",
-        "faq": "FAQ"
+        "faq": "FAQ",
+        "education": "Education"
     },
     "hero": {
         "title": "Welcome to OsteoJump",
@@ -110,7 +111,13 @@
         "diplomas_title": "Education & Certificates",
         "diplomas_prev": "Previous",
         "diplomas_next": "Next",
-        "diplomas_close": "Close"
+        "diplomas_close": "Close",
+        "see_education": "For more details about education and certificates, visit the Education page."
+    },
+    "education": {
+        "title": "Education - OsteoJump",
+        "page_title": "Education & Certificates",
+        "intro": "Professional education and continuous learning in osteopathy, from foundational training to advanced specialized techniques."
     },
     "faq": {
         "title": "FAQ",

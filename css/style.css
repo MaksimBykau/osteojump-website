@@ -295,6 +295,69 @@ body {
     background-color: rgba(37, 99, 235, 0.15);
 }
 
+/* Adaptive Navigation Overflow Menu */
+.nav-overflow-btn {
+    display: none;
+    background: transparent;
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+    padding: 0.75rem 1.25rem;
+    font-weight: 500;
+    font-size: 1.25rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-overflow-btn:hover {
+    color: var(--primary-color);
+    background-color: rgba(37, 99, 235, 0.05);
+}
+
+.nav-overflow-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    border: 2px solid var(--primary-color);
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    min-width: 200px;
+    z-index: 1000;
+    margin-top: 0.5rem;
+    overflow: hidden;
+}
+
+.nav-overflow-menu.active {
+    display: block;
+}
+
+.nav-overflow-menu li {
+    list-style: none;
+}
+
+.nav-overflow-menu a {
+    padding: 0.75rem 1.25rem;
+    display: block;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+    border-radius: 0;
+}
+
+.nav-overflow-menu a::after {
+    display: none;
+}
+
+.nav-overflow-menu a:hover {
+    background-color: rgba(37, 99, 235, 0.1);
+    color: var(--primary-color);
+}
+
 /* Hero Doctor section */
 .hero-doctor {
     padding: var(--spacing-xl) var(--spacing-sm);

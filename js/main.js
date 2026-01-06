@@ -45,7 +45,121 @@ document.addEventListener('DOMContentLoaded', () => {
             link.classList.add('active');
         }
     });
-    
+
+    // Adaptive Navigation Menu with Overflow Detection
+    function initAdaptiveMenu() {
+        const nav = document.querySelector('.nav');
+        const navMenu = document.querySelector('.nav-menu');
+        const menuToggle = document.querySelector('.menu-toggle');
+        const langSelectWrapper = document.querySelector('.lang-select-wrapper');
+
+        if (!nav || !navMenu) return;
+
+        // Create overflow button and menu if they don't exist
+        let overflowBtn = document.getElementById('navOverflowBtn');
+        let overflowMenu = document.getElementById('navOverflowMenu');
+
+        if (!overflowBtn) {
+            overflowBtn = document.createElement('button');
+            overflowBtn.id = 'navOverflowBtn';
+            overflowBtn.className = 'nav-overflow-btn';
+            overflowBtn.setAttribute('aria-label', 'More menu items');
+            overflowBtn.setAttribute('aria-expanded', 'false');
+            overflowBtn.style.display = 'none';
+            overflowBtn.innerHTML = '<span>⋯</span>';
+            navMenu.parentElement.insertBefore(overflowBtn, langSelectWrapper);
+        }
+
+        if (!overflowMenu) {
+            overflowMenu = document.createElement('div');
+            overflowMenu.id = 'navOverflowMenu';
+            overflowMenu.className = 'nav-overflow-menu';
+            overflowBtn.parentElement.appendChild(overflowMenu);
+        }
+
+        let resizeTimeout;
+
+        function checkMenuOverflow() {
+            // Only apply on desktop (> 768px)
+            if (window.innerWidth <= 768) {
+                overflowBtn.style.display = 'none';
+                overflowMenu.classList.remove('active');
+                // Restore all items to main menu
+                const overflowItems = overflowMenu.querySelectorAll('li');
+                overflowItems.forEach(item => {
+                    navMenu.appendChild(item);
+                });
+                return;
+            }
+
+            const navRect = nav.getBoundingClientRect();
+            const langSelectorWidth = langSelectWrapper ? langSelectWrapper.getBoundingClientRect().width : 100;
+            const availableWidth = navRect.width - 300 - langSelectorWidth; // Reserve space for logo and language selector
+            const menuItems = Array.from(navMenu.querySelectorAll('li'));
+
+            let currentWidth = 0;
+            let overflowIndex = -1;
+
+            // Calculate which items fit
+            menuItems.forEach((item, index) => {
+                const itemWidth = item.getBoundingClientRect().width + 20; // Include gap
+                currentWidth += itemWidth;
+
+                if (currentWidth > availableWidth && overflowIndex === -1) {
+                    overflowIndex = index;
+                }
+            });
+
+            // Move overflow items to dropdown
+            if (overflowIndex > 0 && overflowIndex < menuItems.length) {
+                overflowBtn.style.display = 'flex';
+                // Clear overflow menu first
+                overflowMenu.innerHTML = '';
+                // Move items starting from overflow index
+                menuItems.slice(overflowIndex).forEach(item => {
+                    overflowMenu.appendChild(item.cloneNode(true));
+                    item.style.display = 'none';
+                });
+            } else {
+                overflowBtn.style.display = 'none';
+                // Show all items
+                menuItems.forEach(item => {
+                    item.style.display = '';
+                });
+            }
+        }
+
+        // Debounced resize handler
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(checkMenuOverflow, 150);
+        });
+
+        // Overflow button click handler
+        if (overflowBtn) {
+            overflowBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const isExpanded = overflowBtn.getAttribute('aria-expanded') === 'true';
+                overflowBtn.setAttribute('aria-expanded', !isExpanded);
+                overflowMenu.classList.toggle('active');
+            });
+        }
+
+        // Close overflow menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (overflowMenu && !overflowMenu.contains(e.target) && e.target !== overflowBtn) {
+                overflowBtn.setAttribute('aria-expanded', 'false');
+                overflowMenu.classList.remove('active');
+            }
+        });
+
+        // Initial check
+        checkMenuOverflow();
+    }
+
+    // Initialize adaptive menu
+    initAdaptiveMenu();
+
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {

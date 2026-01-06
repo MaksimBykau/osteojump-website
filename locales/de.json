@@ -6,7 +6,8 @@
         "prices": "Preise",
         "reviews": "Bewertungen",
         "about": "Über mich",
-        "faq": "FAQ"
+        "faq": "FAQ",
+        "education": "Ausbildung"
     },
     "hero": {
         "title": "Willkommen bei OsteoJump",
@@ -110,7 +111,13 @@
         "diplomas_title": "Ausbildung & Zertifikate",
         "diplomas_prev": "Vorherige",
         "diplomas_next": "Nächste",
-        "diplomas_close": "Schließen"
+        "diplomas_close": "Schließen",
+        "see_education": "Weitere Informationen zu Ausbildung und Zertifikaten finden Sie auf der Seite Ausbildung."
+    },
+    "education": {
+        "title": "Ausbildung - OsteoJump",
+        "page_title": "Ausbildung & Zertifikate",
+        "intro": "Professionelle Ausbildung und kontinuierliche Weiterbildung in Osteopathie — von der Grundausbildung bis zu fortgeschrittenen spezialisierten Techniken."
     },
     "faq": {
         "title": "FAQ",

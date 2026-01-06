@@ -6,7 +6,8 @@
         "prices": "Ceny",
         "reviews": "Opinie",
         "about": "O mnie",
-        "faq": "FAQ"
+        "faq": "FAQ",
+        "education": "Wykształcenie"
     },
     "hero": {
         "title": "Witamy w OsteoJump",
@@ -110,7 +111,13 @@
         "diplomas_title": "Wykształcenie i certyfikaty",
         "diplomas_prev": "Poprzedni",
         "diplomas_next": "Następny",
-        "diplomas_close": "Zamknij"
+        "diplomas_close": "Zamknij",
+        "see_education": "Więcej informacji o wykształceniu i certyfikatach znajdziesz na stronie Wykształcenie."
+    },
+    "education": {
+        "title": "Wykształcenie - OsteoJump",
+        "page_title": "Wykształcenie i certyfikaty",
+        "intro": "Profesjonalne wykształcenie i ciągłe doskonalenie w dziedzinie osteopatii — od podstawowego szkolenia po zaawansowane techniki specjalistyczne."
     },
     "faq": {
         "title": "FAQ",
