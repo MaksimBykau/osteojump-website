@@ -67,42 +67,38 @@ document.addEventListener('DOMContentLoaded', () => {
         let resizeTimeout;
 
         function checkMenuOverflow() {
-            const navRect = nav.getBoundingClientRect();
-            const langSelectorWidth = langSelectWrapper ? langSelectWrapper.getBoundingClientRect().width : 100;
-            const menuToggleWidth = 50; // Always reserve space for hamburger button
-
-            // Calculate available width
-            const logoWidth = 150;
-            const reservedSpace = logoWidth + langSelectorWidth + menuToggleWidth + 60;
-            const availableWidth = navRect.width - reservedSpace;
+            // Get the actual width allocated to nav-menu by flexbox
+            const navMenuRect = navMenu.getBoundingClientRect();
+            const availableWidth = navMenuRect.width;
 
             const menuItems = Array.from(navMenu.querySelectorAll('li'));
 
-            // First, show all items to get their natural widths
-            menuItems.forEach(item => {
-                item.style.display = '';
+            // Show all items temporarily to get accurate measurements
+            menuItems.forEach(item => item.style.display = '');
+
+            // Measure all items at once (single reflow)
+            const itemWidths = menuItems.map((item, index) => {
+                const itemWidth = item.getBoundingClientRect().width;
+                const gapAfterItem = (index < menuItems.length - 1) ? 8 : 0;
+                return itemWidth + gapAfterItem;
             });
 
+            // Find overflow point
             let currentWidth = 0;
             let overflowIndex = -1;
 
-            // Calculate which items fit (gap is 0.5rem = 8px)
-            menuItems.forEach((item, index) => {
-                const itemWidth = item.getBoundingClientRect().width + 8;
-
-                if (currentWidth + itemWidth > availableWidth && overflowIndex === -1) {
-                    overflowIndex = index;
+            for (let i = 0; i < itemWidths.length; i++) {
+                if (currentWidth + itemWidths[i] > availableWidth) {
+                    overflowIndex = i;
+                    break;
                 }
-
-                if (overflowIndex === -1) {
-                    currentWidth += itemWidth;
-                }
-            });
+                currentWidth += itemWidths[i];
+            }
 
             // Move overflow items to hamburger sidebar
             if (overflowIndex >= 0 && overflowIndex < menuItems.length) {
                 // Show hamburger button
-                if (menuToggle) menuToggle.style.display = 'flex';
+                if (menuToggle) menuToggle.classList.add('visible');
                 // Clear sidebar
                 overflowSidebar.innerHTML = '';
                 // Add overflow items to sidebar
@@ -112,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             } else {
                 // All items fit, hide hamburger
-                if (menuToggle) menuToggle.style.display = 'none';
+                if (menuToggle) menuToggle.classList.remove('visible');
                 overflowSidebar.innerHTML = '';
                 menuItems.forEach(item => {
                     item.style.display = '';
