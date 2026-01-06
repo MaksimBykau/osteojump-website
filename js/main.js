@@ -80,33 +80,39 @@ document.addEventListener('DOMContentLoaded', () => {
         let resizeTimeout;
 
         function checkMenuOverflow() {
-            // Only apply on desktop (> 768px)
-            if (window.innerWidth <= 768) {
-                overflowBtn.style.display = 'none';
-                overflowMenu.classList.remove('active');
-                // Restore all items to main menu
-                const overflowItems = overflowMenu.querySelectorAll('li');
-                overflowItems.forEach(item => {
-                    navMenu.appendChild(item);
-                });
-                return;
-            }
-
             const navRect = nav.getBoundingClientRect();
             const langSelectorWidth = langSelectWrapper ? langSelectWrapper.getBoundingClientRect().width : 100;
-            const availableWidth = navRect.width - 300 - langSelectorWidth; // Reserve space for logo and language selector
+            const menuToggleWidth = menuToggle ? menuToggle.getBoundingClientRect().width : 0;
+
+            // Calculate available width: total nav width minus logo, language selector, and menu toggle
+            const logoWidth = 150; // Approximate logo width
+            const reservedSpace = logoWidth + langSelectorWidth + menuToggleWidth + 60; // 60px for padding/margins
+            const availableWidth = navRect.width - reservedSpace;
+
+            // Reserve space for overflow button if needed
+            const overflowBtnWidth = 60;
+            const effectiveWidth = availableWidth - overflowBtnWidth;
+
             const menuItems = Array.from(navMenu.querySelectorAll('li'));
+
+            // First, show all items to get their natural widths
+            menuItems.forEach(item => {
+                item.style.display = '';
+            });
 
             let currentWidth = 0;
             let overflowIndex = -1;
 
             // Calculate which items fit
             menuItems.forEach((item, index) => {
-                const itemWidth = item.getBoundingClientRect().width + 20; // Include gap
-                currentWidth += itemWidth;
+                const itemWidth = item.getBoundingClientRect().width + 16; // Include gap (var(--spacing-md) = 1rem = 16px)
 
-                if (currentWidth > availableWidth && overflowIndex === -1) {
+                if (currentWidth + itemWidth > effectiveWidth && overflowIndex === -1) {
                     overflowIndex = index;
+                }
+
+                if (overflowIndex === -1) {
+                    currentWidth += itemWidth;
                 }
             });
 
@@ -126,6 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 menuItems.forEach(item => {
                     item.style.display = '';
                 });
+                overflowMenu.innerHTML = '';
             }
         }
 
