@@ -97,7 +97,20 @@
     "about_page": {
         "title": "Über mich",
         "subtitle": "Informationen über mich kommen bald",
-        "content": "Diese Seite befindet sich in der Entwicklung. Bald werden hier Informationen über mich und meine Berufserfahrung veröffentlicht."
+        "content": "Diese Seite befindet sich in der Entwicklung. Bald werden hier Informationen über mich und meine Berufserfahrung veröffentlicht.",
+        "intro": "Osteopathie ist in meinem Herzen, in meinen Händen und in meinem Denken.",
+        "education": "Von Grundausbildung bin ich Hebamme und Ärztin für Labordiagnostik, was mir ein tiefes Verständnis für Physiologie, biochemische Prozesse und Zusammenhänge im menschlichen Körper gibt.",
+        "experience": "Ich praktiziere Osteopathie seit 2018 professionell.",
+        "location": "Ich lebe und arbeite in Warschau, wo ich Erwachsene und Kinder behandle.",
+        "approach_title": "In meiner Praxis verwende ich einen umfassenden osteopathischen Ansatz, einschließlich:",
+        "technique1": "strukturelle Techniken",
+        "technique2": "viszerale Techniken",
+        "technique3": "kraniale Techniken",
+        "conclusion": "Jeder Patient ist für mich einzigartig. In meiner Arbeit bemühe ich mich nicht nur, die Symptome zu lindern, sondern auch die Ursache der Störungen zu finden und dem Körper zu helfen, das Gleichgewicht wiederherzustellen und seine eigenen Ressourcen zur Selbstheilung zu aktivieren.",
+        "diplomas_title": "Ausbildung & Zertifikate",
+        "diplomas_prev": "Vorherige",
+        "diplomas_next": "Nächste",
+        "diplomas_close": "Schließen"
     },
     "faq": {
         "title": "FAQ",

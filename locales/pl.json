@@ -97,7 +97,20 @@
     "about_page": {
         "title": "O mnie",
         "subtitle": "Informacje o mnie wkrótce",
-        "content": "Ta strona jest w trakcie opracowywania. Wkrótce zostaną tutaj zamieszczone informacje o mnie i moim doświadczeniu zawodowym."
+        "content": "Ta strona jest w trakcie opracowywania. Wkrótce zostaną tutaj zamieszczone informacje o mnie i moim doświadczeniu zawodowym.",
+        "intro": "Osteopatia jest w moim sercu, w moich dłoniach i w moim myśleniu.",
+        "education": "Z wykształcenia jestem położną i lekarzem diagnostyki laboratoryjnej, co daje mi głębokie zrozumienie fizjologii, procesów biochemicznych i powiązań w organizmie człowieka.",
+        "experience": "Zajmuję się osteopatią zawodowo od 2018 roku.",
+        "location": "Mieszkam i pracuję w Warszawie, gdzie przyjmuję dorosłych i dzieci.",
+        "approach_title": "W swojej praktyce stosuję kompleksowe podejście osteopatyczne, w tym:",
+        "technique1": "techniki strukturalne",
+        "technique2": "techniki wisceralne",
+        "technique3": "techniki kranialne",
+        "conclusion": "Każdy pacjent jest dla mnie wyjątkowy. W swojej pracy dążę nie tylko do złagodzenia objawów, ale także do znalezienia pierwotnej przyczyny zaburzeń, pomagając organizmowi przywrócić równowagę i aktywować własne zasoby do samoleczenia.",
+        "diplomas_title": "Wykształcenie i certyfikaty",
+        "diplomas_prev": "Poprzedni",
+        "diplomas_next": "Następny",
+        "diplomas_close": "Zamknij"
     },
     "faq": {
         "title": "FAQ",

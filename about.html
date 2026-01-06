@@ -115,18 +115,98 @@
     </header>
 
     <main class="main">
-        <section class="hero">
+        <!-- Hero section with doctor photo -->
+        <section class="hero-doctor">
             <div class="container">
-                <h1 class="hero-title" data-i18n="about_page.title">Обо мне</h1>
-                <p class="hero-text" data-i18n="about_page.subtitle">Информация обо мне скоро появится</p>
+                <div class="doctor-intro">
+                    <div class="doctor-photo-wrapper">
+                        <img src="/images/hanna-photo.avif" alt="Bykava Hanna" class="doctor-photo" id="doctorPhoto" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'photo-placeholder\'>📷</div>';">
+                    </div>
+                    <div class="doctor-info">
+                        <h1 class="doctor-title" data-i18n="about_page.title">Обо мне</h1>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section class="about">
             <div class="container">
-                <p class="about-text" data-i18n="about_page.content">Страница находится в разработке. Скоро здесь будет размещена информация обо мне и моем опыте работы.</p>
+                <p class="about-text" data-i18n="about_page.intro">Остеопатия — в моём сердце, в моих руках и в моём мышлении.</p>
+                <p class="about-text" data-i18n="about_page.education">По базовому образованию я акушерка и врач лабораторной диагностики, что даёт мне глубокое понимание физиологии, биохимических процессов и взаимосвязей в организме человека.</p>
+                <p class="about-text" data-i18n="about_page.experience">Остеопатией я профессионально занимаюсь с 2018 года.</p>
+                <p class="about-text" data-i18n="about_page.location">Живу и работаю в Варшаве, где принимаю взрослых и детей.</p>
+                <p class="about-text" data-i18n="about_page.approach_title">В своей практике использую комплексный остеопатический подход, включая:</p>
+                <ul class="about-techniques">
+                    <li data-i18n="about_page.technique1">структуральные техники</li>
+                    <li data-i18n="about_page.technique2">висцеральные техники</li>
+                    <li data-i18n="about_page.technique3">краниальные техники</li>
+                </ul>
+                <p class="about-text" data-i18n="about_page.conclusion">Каждый пациент для меня — уникален. В работе я стремлюсь не только облегчить симптомы, но и найти первопричину нарушений, помогая организму восстановить баланс и активировать собственные ресурсы к самовосстановлению.</p>
             </div>
         </section>
+
+        <!-- Diplomas Carousel Section -->
+        <section class="diplomas-section">
+            <div class="container">
+                <h2 class="diplomas-title" data-i18n="about_page.diplomas_title">Образование и сертификаты</h2>
+                <div class="diplomas-carousel">
+                    <button class="carousel-btn carousel-prev" aria-label="Previous diploma">
+                        <span>&lt;</span>
+                    </button>
+                    <div class="carousel-track-container">
+                        <div class="carousel-track">
+                            <div class="diploma-slide" data-full="/images/diplomas/diplom_bgmc_crop_08_2009.jpg">
+                                <img src="/images/diplomas/thumbs/diplom_bgmc_crop_08_2009_thumb.jpg" alt="Diploma BGMC 08/2009" loading="lazy" onerror="this.src='/images/diplomas/diplom_bgmc_crop_08_2009.jpg'">
+                            </div>
+                            <div class="diploma-slide" data-full="/images/diplomas/diplom_bgmi_06_2015.jpg">
+                                <img src="/images/diplomas/thumbs/diplom_bgmi_06_2015_thumb.jpg" alt="Diploma BGMI 06/2015" loading="lazy" onerror="this.src='/images/diplomas/diplom_bgmi_06_2015.jpg'">
+                            </div>
+                            <div class="diploma-slide" data-full="/images/diplomas/certificate_upledger_cst1_03_2019.jpeg">
+                                <img src="/images/diplomas/thumbs/certificate_upledger_cst1_03_2019_thumb.jpeg" alt="Certificate Upledger CST1 03/2019" loading="lazy" onerror="this.src='/images/diplomas/certificate_upledger_cst1_03_2019.jpeg'">
+                            </div>
+                            <div class="diploma-slide" data-full="/images/diplomas/certificate_upledger_cst2_05_2019.jpeg">
+                                <img src="/images/diplomas/thumbs/certificate_upledger_cst2_05_2019_thumb.jpeg" alt="Certificate Upledger CST2 05/2019" loading="lazy" onerror="this.src='/images/diplomas/certificate_upledger_cst2_05_2019.jpeg'">
+                            </div>
+                            <div class="diploma-slide" data-full="/images/diplomas/certificate_upledger_SER1_10_2019.jpeg">
+                                <img src="/images/diplomas/thumbs/certificate_upledger_SER1_10_2019_thumb.jpeg" alt="Certificate Upledger SER1 10/2019" loading="lazy" onerror="this.src='/images/diplomas/certificate_upledger_SER1_10_2019.jpeg'">
+                            </div>
+                            <div class="diploma-slide" data-full="/images/diplomas/certificate_barral_VM1_02_2020.jpeg">
+                                <img src="/images/diplomas/thumbs/certificate_barral_VM1_02_2020_thumb.jpeg" alt="Certificate Barral VM1 02/2020" loading="lazy" onerror="this.src='/images/diplomas/certificate_barral_VM1_02_2020.jpeg'">
+                            </div>
+                            <div class="diploma-slide" data-full="/images/diplomas/certificate_upledger_pregnancy_08_2021.jpeg">
+                                <img src="/images/diplomas/thumbs/certificate_upledger_pregnancy_08_2021_thumb.jpeg" alt="Certificate Upledger Pregnancy 08/2021" loading="lazy" onerror="this.src='/images/diplomas/certificate_upledger_pregnancy_08_2021.jpeg'">
+                            </div>
+                            <div class="diploma-slide" data-full="/images/diplomas/certificate_cst_pediatrics_08_2021.jpeg">
+                                <img src="/images/diplomas/thumbs/certificate_cst_pediatrics_08_2021_thumb.jpeg" alt="Certificate CST Pediatrics 08/2021" loading="lazy" onerror="this.src='/images/diplomas/certificate_cst_pediatrics_08_2021.jpeg'">
+                            </div>
+                            <div class="diploma-slide" data-full="/images/diplomas/kinesio_02_2022.jpeg">
+                                <img src="/images/diplomas/thumbs/kinesio_02_2022_thumb.jpeg" alt="Certificate Kinesio 02/2022" loading="lazy" onerror="this.src='/images/diplomas/kinesio_02_2022.jpeg'">
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-btn carousel-next" aria-label="Next diploma">
+                        <span>&gt;</span>
+                    </button>
+                </div>
+                <div class="carousel-dots" id="diplomaCarouselDots"></div>
+            </div>
+        </section>
+
+        <!-- Fullscreen Modal -->
+        <div class="diploma-modal" id="diplomaModal">
+            <button class="modal-close" aria-label="Close modal">
+                <span>&times;</span>
+            </button>
+            <button class="modal-prev" aria-label="Previous diploma">
+                <span>&lt;</span>
+            </button>
+            <button class="modal-next" aria-label="Next diploma">
+                <span>&gt;</span>
+            </button>
+            <div class="modal-content">
+                <img src="" alt="Diploma fullscreen" id="modalImage">
+            </div>
+        </div>
     </main>
 
     <footer class="footer">

@@ -454,6 +454,233 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // Diplomas Carousel - Simple Implementation
+    const diplomasCarousel = document.querySelector('.diplomas-carousel');
+    if (diplomasCarousel) {
+        const track = diplomasCarousel.querySelector('.carousel-track');
+        const slides = Array.from(track.querySelectorAll('.diploma-slide'));
+        const prevBtn = diplomasCarousel.querySelector('.carousel-prev');
+        const nextBtn = diplomasCarousel.querySelector('.carousel-next');
+        const dotsContainer = document.getElementById('diplomaCarouselDots');
+        const modal = document.getElementById('diplomaModal');
+        const modalImage = document.getElementById('modalImage');
+        const modalClose = modal?.querySelector('.modal-close');
+        const modalPrev = modal?.querySelector('.modal-prev');
+        const modalNext = modal?.querySelector('.modal-next');
+
+        let currentSlide = 0;
+        let currentModalIndex = 0;
+        let autoscrollInterval = null;
+
+        // Create dots - one per slide
+        function createDots() {
+            if (!dotsContainer) return;
+            dotsContainer.innerHTML = '';
+            slides.forEach((_, index) => {
+                const dot = document.createElement('button');
+                dot.classList.add('carousel-dot');
+                if (index === 0) dot.classList.add('active');
+                dot.setAttribute('aria-label', `Go to slide ${index + 1}`);
+                dot.addEventListener('click', () => goToSlide(index));
+                dotsContainer.appendChild(dot);
+            });
+        }
+
+        // Update carousel position - simple percentage-based
+        function updateCarousel() {
+            if (slides.length === 0) return;
+
+            // Move by 100% per slide (simple and reliable)
+            const moveAmount = currentSlide * 100;
+            track.style.transform = `translateX(-${moveAmount}%)`;
+
+            // Update dots
+            if (dotsContainer) {
+                const dots = dotsContainer.querySelectorAll('.carousel-dot');
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === currentSlide);
+                });
+            }
+        }
+
+        // Go to specific slide
+        function goToSlide(index) {
+            currentSlide = Math.max(0, Math.min(index, slides.length - 1));
+            updateCarousel();
+            resetAutoscroll();
+        }
+
+        // Navigate carousel
+        function nextSlide() {
+            if (currentSlide < slides.length - 1) {
+                currentSlide++;
+            } else {
+                currentSlide = 0; // Loop back to start
+            }
+            updateCarousel();
+        }
+
+        function prevSlide() {
+            if (currentSlide > 0) {
+                currentSlide--;
+            } else {
+                currentSlide = slides.length - 1; // Loop to end
+            }
+            updateCarousel();
+        }
+
+        // Autoscroll functions
+        function startAutoscroll() {
+            stopAutoscroll();
+            autoscrollInterval = setInterval(() => {
+                nextSlide();
+            }, 4000); // Change slide every 4 seconds
+        }
+
+        function stopAutoscroll() {
+            if (autoscrollInterval) {
+                clearInterval(autoscrollInterval);
+                autoscrollInterval = null;
+            }
+        }
+
+        function resetAutoscroll() {
+            stopAutoscroll();
+            startAutoscroll();
+        }
+
+        // Event listeners for carousel navigation
+        if (prevBtn) {
+            prevBtn.addEventListener('click', () => {
+                prevSlide();
+                resetAutoscroll();
+            });
+        }
+
+        if (nextBtn) {
+            nextBtn.addEventListener('click', () => {
+                nextSlide();
+                resetAutoscroll();
+            });
+        }
+
+        // Pause autoscroll on hover
+        diplomasCarousel.addEventListener('mouseenter', stopAutoscroll);
+        diplomasCarousel.addEventListener('mouseleave', startAutoscroll);
+
+        // Touch/swipe support
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        track.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+            stopAutoscroll();
+        });
+
+        track.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            const swipeThreshold = 50;
+            if (touchEndX < touchStartX - swipeThreshold) {
+                nextSlide();
+            }
+            if (touchEndX > touchStartX + swipeThreshold) {
+                prevSlide();
+            }
+            resetAutoscroll();
+        });
+
+        // Fullscreen modal functionality
+        function openModal(index) {
+            if (!modal || !modalImage) return;
+
+            stopAutoscroll(); // Stop autoscroll when modal opens
+            currentModalIndex = index;
+            const fullImagePath = slides[index]?.getAttribute('data-full');
+            if (fullImagePath) {
+                modalImage.src = fullImagePath;
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden'; // Prevent scrolling
+            }
+        }
+
+        function closeModal() {
+            if (!modal) return;
+            modal.classList.remove('active');
+            document.body.style.overflow = ''; // Restore scrolling
+            startAutoscroll(); // Resume autoscroll when modal closes
+        }
+
+        function modalNextSlide() {
+            currentModalIndex = (currentModalIndex + 1) % slides.length;
+            const fullImagePath = slides[currentModalIndex]?.getAttribute('data-full');
+            if (fullImagePath && modalImage) {
+                modalImage.src = fullImagePath;
+            }
+        }
+
+        function modalPrevSlide() {
+            currentModalIndex = (currentModalIndex - 1 + slides.length) % slides.length;
+            const fullImagePath = slides[currentModalIndex]?.getAttribute('data-full');
+            if (fullImagePath && modalImage) {
+                modalImage.src = fullImagePath;
+            }
+        }
+
+        // Click on slide to open modal
+        slides.forEach((slide, index) => {
+            slide.addEventListener('click', () => openModal(index));
+        });
+
+        // Modal event listeners
+        if (modalClose) {
+            modalClose.addEventListener('click', closeModal);
+        }
+
+        if (modalPrev) {
+            modalPrev.addEventListener('click', modalPrevSlide);
+        }
+
+        if (modalNext) {
+            modalNext.addEventListener('click', modalNextSlide);
+        }
+
+        // Close modal on background click
+        if (modal) {
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    closeModal();
+                }
+            });
+        }
+
+        // Keyboard navigation in modal
+        document.addEventListener('keydown', (e) => {
+            if (!modal?.classList.contains('active')) return;
+
+            if (e.key === 'Escape') {
+                closeModal();
+            } else if (e.key === 'ArrowLeft') {
+                modalPrevSlide();
+            } else if (e.key === 'ArrowRight') {
+                modalNextSlide();
+            }
+        });
+
+        // Update carousel on window resize
+        let resizeTimeout;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(() => {
+                updateCarousel();
+            }, 150);
+        });
+
+        // Initialize
+        createDots();
+        updateCarousel();
+        startAutoscroll();
+    }
 });
 
 

@@ -97,7 +97,20 @@
     "about_page": {
         "title": "About Me",
         "subtitle": "Information about me coming soon",
-        "content": "This page is under development. Soon information about me and my work experience will be posted here."
+        "content": "This page is under development. Soon information about me and my work experience will be posted here.",
+        "intro": "Osteopathy is in my heart, in my hands, and in my thinking.",
+        "education": "By basic education, I am a midwife and a laboratory diagnostics doctor, which gives me a deep understanding of physiology, biochemical processes, and interconnections in the human body.",
+        "experience": "I have been practicing osteopathy professionally since 2018.",
+        "location": "I live and work in Warsaw, where I see adults and children.",
+        "approach_title": "In my practice, I use a comprehensive osteopathic approach, including:",
+        "technique1": "structural techniques",
+        "technique2": "visceral techniques",
+        "technique3": "cranial techniques",
+        "conclusion": "Every patient is unique to me. In my work, I strive not only to alleviate symptoms but also to find the root cause of disorders, helping the body restore balance and activate its own resources for self-healing.",
+        "diplomas_title": "Education & Certificates",
+        "diplomas_prev": "Previous",
+        "diplomas_next": "Next",
+        "diplomas_close": "Close"
     },
     "faq": {
         "title": "FAQ",
