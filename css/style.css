@@ -19,11 +19,19 @@
     --spacing-xl: 6rem;
 }
 
+html {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--bg-color);
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
 }
 
 /* Container with responsive max-width */
@@ -46,10 +54,11 @@ body {
 .nav {
     display: flex;
     align-items: center;
-    padding: var(--spacing-sm) var(--spacing-sm);
+    padding: var(--spacing-sm) 0;
     min-height: 80px;
     flex-wrap: nowrap;
     gap: var(--spacing-sm);
+    max-width: 100%;
 }
 
 .logo {
@@ -756,9 +765,9 @@ body {
     .container {
         padding: 0 var(--spacing-md);
     }
-    
+
     .nav {
-        padding: var(--spacing-sm) var(--spacing-md);
+        padding: var(--spacing-sm) 0;
     }
     
     
@@ -937,7 +946,6 @@ body {
     .nav {
         flex-direction: row;
         gap: var(--spacing-sm);
-        padding: var(--spacing-sm);
         position: relative;
     }
     
