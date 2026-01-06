@@ -34,12 +34,11 @@ body {
     flex-direction: column;
     min-height: 100vh;
     min-height: 100dvh; /* Dynamic viewport height for mobile browsers */
-    padding-bottom: env(safe-area-inset-bottom); /* iOS safe area */
 }
 
 .main {
     flex: 1;
-    padding-bottom: env(safe-area-inset-bottom); /* Ensure content doesn't go under browser UI */
+    margin-bottom: 80px; /* Reserve space for sticky action bar */
 }
 
 /* Container with responsive max-width */
@@ -519,6 +518,7 @@ body {
     background-color: var(--text-color);
     color: white;
     padding: var(--spacing-md) var(--spacing-sm);
+    padding-bottom: calc(var(--spacing-md) + env(safe-area-inset-bottom));
     text-align: center;
     display: flex;
     align-items: center;
