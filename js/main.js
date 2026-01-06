@@ -122,8 +122,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Debounced resize handler
         window.addEventListener('resize', () => {
+            checkMenuOverflow(); // Immediate call for responsiveness
             clearTimeout(resizeTimeout);
-            resizeTimeout = setTimeout(checkMenuOverflow, 150);
+            resizeTimeout = setTimeout(checkMenuOverflow, 50); // Reduced debounce delay
         });
 
         // Initial check
