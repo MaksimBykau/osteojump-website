@@ -768,17 +768,6 @@ body {
 /* Responsive breakpoints */
 /* Mobile first approach */
 
-/* Small devices (phones, 576px and up) */
-@media (min-width: 576px) {
-    .lang-select-text {
-        font-size: 14px;
-    }
-    
-    .lang-select-option {
-        font-size: 14px;
-    }
-}
-
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
     .hero {
@@ -824,35 +813,9 @@ body {
     .features-grid {
         grid-template-columns: repeat(3, 1fr);
     }
-    
+
     .hero-title {
         font-size: 3.5rem;
-    }
-    
-    .nav {
-        flex-wrap: nowrap;
-        gap: var(--spacing-lg);
-    }
-    
-    .nav-menu {
-        flex: 1;
-        justify-content: center;
-        gap: 0.5rem;
-    }
-    
-    .nav-menu a {
-        padding: 0.75rem 1.5rem;
-        font-size: 1rem;
-    }
-    
-    .lang-select-wrapper {
-        margin-left: 0;
-        min-width: 90px;
-    }
-    
-    .menu-toggle {
-        margin-left: auto;
-        margin-right: var(--spacing-sm);
     }
 }
 
@@ -913,59 +876,7 @@ body {
 }
 
 /* Mobile specific adjustments */
-@media (max-width: 991px) {
-    .lang-select-wrapper {
-        display: block;
-        min-width: 90px;
-    }
-
-    .lang-select-text {
-        font-size: 14px;
-    }
-
-    .lang-select-option {
-        font-size: 14px;
-    }
-}
-
 @media (max-width: 575px) {
-    .nav {
-        flex-direction: row;
-        gap: var(--spacing-sm);
-        position: relative;
-    }
-    
-    .logo {
-        flex: 1;
-        order: 1;
-    }
-    
-    .logo h1 {
-        font-size: 1.25rem;
-    }
-    
-    .menu-toggle {
-        order: 3;
-        margin-left: auto;
-        margin-right: var(--spacing-sm);
-    }
-    
-    .lang-select-wrapper {
-        display: block;
-        min-width: 85px;
-        order: 4;
-        margin-left: 0;
-    }
-    
-    
-    .lang-select-text {
-        font-size: 14px;
-    }
-    
-    .lang-select-option {
-        font-size: 14px;
-    }
-    
     .hero {
         padding: var(--spacing-lg) var(--spacing-sm);
         min-height: 50vh;
