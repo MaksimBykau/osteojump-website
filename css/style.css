@@ -39,6 +39,7 @@ body {
 
 .main {
     flex: 1;
+    padding-bottom: calc(var(--action-bar-height) + env(safe-area-inset-bottom));
 }
 
 /* Container with responsive max-width */
@@ -518,7 +519,6 @@ body {
     background-color: var(--text-color);
     color: white;
     padding: var(--spacing-md) var(--spacing-sm);
-    padding-bottom: calc(var(--action-bar-height) + env(safe-area-inset-bottom));
     text-align: center;
     display: flex;
     align-items: center;
