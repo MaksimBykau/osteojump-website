@@ -519,6 +519,7 @@ body {
     background-color: var(--text-color);
     color: white;
     padding: var(--spacing-md) var(--spacing-sm);
+    padding-bottom: calc(var(--spacing-md) + var(--action-bar-height) + env(safe-area-inset-bottom));
     text-align: center;
     display: flex;
     align-items: center;
