@@ -35,11 +35,11 @@ body {
     flex-direction: column;
     min-height: 100vh;
     min-height: 100dvh; /* Dynamic viewport height for mobile browsers */
-    padding-bottom: calc(var(--action-bar-height) + env(safe-area-inset-bottom));
 }
 
 .main {
     flex: 1;
+    padding-bottom: calc(var(--action-bar-height) + env(safe-area-inset-bottom));
 }
 
 /* Container with responsive max-width */
