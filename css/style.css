@@ -833,6 +833,7 @@ body {
     justify-content: center;
     gap: var(--spacing-xs);
     padding: var(--spacing-sm);
+    padding-bottom: calc(var(--spacing-sm) + env(safe-area-inset-bottom));
     background-color: var(--bg-color);
     box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
     z-index: 1001;
@@ -909,6 +910,7 @@ body {
 @media (max-width: 767px) {
     .fixed-action-bar {
         padding: 0.75rem var(--spacing-xs);
+        padding-bottom: calc(0.75rem + env(safe-area-inset-bottom));
         gap: var(--spacing-xs);
     }
 
