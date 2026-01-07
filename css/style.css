@@ -17,7 +17,6 @@
     --spacing-md: 2rem;
     --spacing-lg: 4rem;
     --spacing-xl: 6rem;
-    --action-bar-height: 72px;
 }
 
 html {
@@ -518,7 +517,7 @@ body {
     background-color: var(--text-color);
     color: white;
     padding: var(--spacing-md) var(--spacing-sm);
-    padding-bottom: calc(var(--spacing-md) + var(--action-bar-height) + env(safe-area-inset-bottom));
+    padding-bottom: max(var(--spacing-md), env(safe-area-inset-bottom));
     text-align: center;
     display: flex;
     align-items: center;
@@ -832,8 +831,6 @@ body {
     left: 0;
     right: 0;
     width: 100%;
-    min-height: var(--action-bar-height);
-    margin-top: calc(-1 * (var(--action-bar-height) + env(safe-area-inset-bottom)));
     display: flex;
     align-items: center;
     justify-content: center;
@@ -914,10 +911,6 @@ body {
 
 /* Mobile styles */
 @media (max-width: 767px) {
-    :root {
-        --action-bar-height: 64px;
-    }
-
     .fixed-action-bar {
         padding: 0.75rem var(--spacing-xs);
         padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
