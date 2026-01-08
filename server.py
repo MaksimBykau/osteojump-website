@@ -30,10 +30,13 @@ class CustomHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
             path = 'index.html'
         # If path doesn't have an extension and file doesn't exist, try adding .html
         elif not os.path.exists(path) and not '.' in os.path.basename(path):
-            # Check if .html version exists
-            html_path = path + '.html'
-            if os.path.exists(html_path):
-                path = html_path
+            # Check if .html version exists in pages/ folder
+            pages_path = os.path.join('pages', path + '.html')
+            if os.path.exists(pages_path):
+                path = pages_path
+            # Check if .html version exists in root
+            elif os.path.exists(path + '.html'):
+                path = path + '.html'
             else:
                 # If still not found, try index.html in that directory
                 if os.path.isdir(path) and os.path.exists(os.path.join(path, 'index.html')):

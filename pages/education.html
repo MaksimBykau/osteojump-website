@@ -6,11 +6,11 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
-    <title data-i18n="faq.title">Вопросы - OsteoJump</title>
-    <link rel="icon" type="image/png" href="/favicon.png">
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="apple-touch-icon" href="/favicon.png">
-    <link rel="stylesheet" href="css/style.css">
+    <title data-i18n="education.title">Образование - OsteoJump</title>
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="apple-touch-icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="../css/style.css">
     <style>
         /* Hide content until translations are loaded */
         body:not(.i18n-ready) {
@@ -28,14 +28,14 @@
             animation: showContent 0s 1s forwards;
         }
     </style>
-    <script src="js/clean-url.js"></script>
+    <script src="../js/clean-url.js"></script>
     <script>
         // Quick language detection and set title immediately to prevent flickering
         (function() {
             const supportedLangs = ['ru', 'en', 'de', 'pl', 'uk'];
             const savedLang = localStorage.getItem('language');
             let lang = 'en'; // default
-            
+
             if (savedLang && supportedLangs.includes(savedLang)) {
                 lang = savedLang;
             } else {
@@ -44,10 +44,10 @@
                     lang = browserLang;
                 }
             }
-            
+
             // Set lang attribute immediately
             document.documentElement.lang = lang;
-            
+
             // Title translations map for immediate setting
             const titleMap = {
                 'ru': { 'title': 'OsteoJump', 'prices.title': 'Цены - OsteoJump', 'reviews.title': 'Отзывы - OsteoJump', 'about_page.title': 'Обо мне - OsteoJump', 'faq.title': 'Вопросы - OsteoJump', 'education.title': 'Образование - OsteoJump' },
@@ -56,7 +56,7 @@
                 'pl': { 'title': 'OsteoJump', 'prices.title': 'Ceny - OsteoJump', 'reviews.title': 'Opinie - OsteoJump', 'about_page.title': 'O mnie - OsteoJump', 'faq.title': 'FAQ - OsteoJump', 'education.title': 'Wykształcenie - OsteoJump' },
                 'uk': { 'title': 'OsteoJump', 'prices.title': 'Ціни - OsteoJump', 'reviews.title': 'Відгуки - OsteoJump', 'about_page.title': 'Про мене - OsteoJump', 'faq.title': 'Питання - OsteoJump', 'education.title': 'Освіта - OsteoJump' }
             };
-            
+
             // Set title immediately based on current page
             const titleElement = document.querySelector('title');
             if (titleElement) {
@@ -66,7 +66,7 @@
                     titleElement.textContent = translations[titleKey];
                 }
             }
-            
+
             // Preload translation file for faster loading (with versioning)
             // Use timestamp to ensure fresh load even if HTML is cached
             const translationsVersion = '5'; // Must match version in i18n.js
@@ -116,18 +116,88 @@
     </header>
 
     <main class="main">
-        <section class="hero">
+        <!-- Hero section with page title -->
+        <section class="hero-doctor">
             <div class="container">
-                <h1 class="hero-title" data-i18n="faq.title">Вопросы</h1>
-                <p class="hero-text" data-i18n="faq.subtitle">Часто задаваемые вопросы скоро появятся</p>
+                <div class="doctor-intro">
+                    <div class="doctor-photo-wrapper">
+                        <img src="/images/hanna-photo.avif" alt="Bykava Hanna" class="doctor-photo" id="doctorPhoto" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'photo-placeholder\'>📷</div>';">
+                    </div>
+                    <div class="doctor-info">
+                        <h1 class="doctor-title" data-i18n="education.page_title">Образование и сертификаты</h1>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section class="about">
             <div class="container">
-                <p class="about-text" data-i18n="faq.content">Страница находится в разработке. Скоро здесь будут размещены ответы на часто задаваемые вопросы.</p>
+                <p class="about-text" data-i18n="education.intro">Профессиональное образование и непрерывное обучение в области остеопатии — от базовой подготовки до продвинутых специализированных техник.</p>
             </div>
         </section>
+
+        <!-- Diplomas Carousel Section -->
+        <section class="diplomas-section">
+            <div class="container">
+                <h2 class="diplomas-title" data-i18n="about_page.diplomas_title">Образование и сертификаты</h2>
+                <div class="diplomas-carousel">
+                    <button class="carousel-btn carousel-prev" aria-label="Previous diploma">
+                        <span>&lt;</span>
+                    </button>
+                    <div class="carousel-track-container">
+                        <div class="carousel-track">
+                            <div class="diploma-slide" data-full="/images/diplomas/diplom_bgmc_crop_08_2009.jpg">
+                                <img src="/images/diplomas/thumbs/diplom_bgmc_crop_08_2009_thumb.jpg" alt="Diploma BGMC 08/2009" loading="lazy" onerror="this.src='/images/diplomas/diplom_bgmc_crop_08_2009.jpg'">
+                            </div>
+                            <div class="diploma-slide" data-full="/images/diplomas/diplom_bgmi_06_2015.jpg">
+                                <img src="/images/diplomas/thumbs/diplom_bgmi_06_2015_thumb.jpg" alt="Diploma BGMI 06/2015" loading="lazy" onerror="this.src='/images/diplomas/diplom_bgmi_06_2015.jpg'">
+                            </div>
+                            <div class="diploma-slide" data-full="/images/diplomas/certificate_upledger_cst1_03_2019.jpeg">
+                                <img src="/images/diplomas/thumbs/certificate_upledger_cst1_03_2019_thumb.jpeg" alt="Certificate Upledger CST1 03/2019" loading="lazy" onerror="this.src='/images/diplomas/certificate_upledger_cst1_03_2019.jpeg'">
+                            </div>
+                            <div class="diploma-slide" data-full="/images/diplomas/certificate_upledger_cst2_05_2019.jpeg">
+                                <img src="/images/diplomas/thumbs/certificate_upledger_cst2_05_2019_thumb.jpeg" alt="Certificate Upledger CST2 05/2019" loading="lazy" onerror="this.src='/images/diplomas/certificate_upledger_cst2_05_2019.jpeg'">
+                            </div>
+                            <div class="diploma-slide" data-full="/images/diplomas/certificate_upledger_SER1_10_2019.jpeg">
+                                <img src="/images/diplomas/thumbs/certificate_upledger_SER1_10_2019_thumb.jpeg" alt="Certificate Upledger SER1 10/2019" loading="lazy" onerror="this.src='/images/diplomas/certificate_upledger_SER1_10_2019.jpeg'">
+                            </div>
+                            <div class="diploma-slide" data-full="/images/diplomas/certificate_barral_VM1_02_2020.jpeg">
+                                <img src="/images/diplomas/thumbs/certificate_barral_VM1_02_2020_thumb.jpeg" alt="Certificate Barral VM1 02/2020" loading="lazy" onerror="this.src='/images/diplomas/certificate_barral_VM1_02_2020.jpeg'">
+                            </div>
+                            <div class="diploma-slide" data-full="/images/diplomas/certificate_upledger_pregnancy_08_2021.jpeg">
+                                <img src="/images/diplomas/thumbs/certificate_upledger_pregnancy_08_2021_thumb.jpeg" alt="Certificate Upledger Pregnancy 08/2021" loading="lazy" onerror="this.src='/images/diplomas/certificate_upledger_pregnancy_08_2021.jpeg'">
+                            </div>
+                            <div class="diploma-slide" data-full="/images/diplomas/certificate_cst_pediatrics_08_2021.jpeg">
+                                <img src="/images/diplomas/thumbs/certificate_cst_pediatrics_08_2021_thumb.jpeg" alt="Certificate CST Pediatrics 08/2021" loading="lazy" onerror="this.src='/images/diplomas/certificate_cst_pediatrics_08_2021.jpeg'">
+                            </div>
+                            <div class="diploma-slide" data-full="/images/diplomas/kinesio_02_2022.jpeg">
+                                <img src="/images/diplomas/thumbs/kinesio_02_2022_thumb.jpeg" alt="Certificate Kinesio 02/2022" loading="lazy" onerror="this.src='/images/diplomas/kinesio_02_2022.jpeg'">
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-btn carousel-next" aria-label="Next diploma">
+                        <span>&gt;</span>
+                    </button>
+                </div>
+                <div class="carousel-dots" id="diplomaCarouselDots"></div>
+            </div>
+        </section>
+
+        <!-- Fullscreen Modal -->
+        <div class="diploma-modal" id="diplomaModal">
+            <button class="modal-close" aria-label="Close modal">
+                <span>&times;</span>
+            </button>
+            <button class="modal-prev" aria-label="Previous diploma">
+                <span>&lt;</span>
+            </button>
+            <button class="modal-next" aria-label="Next diploma">
+                <span>&gt;</span>
+            </button>
+            <div class="modal-content">
+                <img src="" alt="Diploma fullscreen" id="modalImage">
+            </div>
+        </div>
     </main>
 
     <footer class="footer">
@@ -152,8 +222,7 @@
         </button>
     </div>
 
-    <script src="js/i18n.js"></script>
-    <script src="js/main.js"></script>
+    <script src="../js/i18n.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 </html>
-
