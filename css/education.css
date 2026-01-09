@@ -1,0 +1,205 @@
+/* Education Page - Variant A: Three Columns */
+
+.timeline-section {
+    padding: var(--spacing-lg) var(--spacing-sm);
+    background-color: var(--section-bg);
+}
+
+.timeline-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Column styles */
+.timeline-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.column-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 2px solid #e5e7eb;
+}
+
+.column-icon {
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.column-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin: 0;
+}
+
+/* Timeline items */
+.timeline-items {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    position: relative;
+}
+
+.timeline-items::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, #e5e7eb 0%, #d1d5db 100%);
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: var(--spacing-md);
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 1px;
+    transform: translateX(-50%);
+    top: 8px;
+    width: 12px;
+    height: 12px;
+    background-color: #d1d5db;
+    border-radius: 50%;
+    border: 2px solid var(--bg-color);
+}
+
+/* Osteopathy highlight */
+.timeline-item.osteopathy-highlight::before {
+    background-color: var(--primary-color);
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.2);
+}
+
+.timeline-item.osteopathy-highlight .timeline-card {
+    border-left: 3px solid var(--primary-color);
+}
+
+/* Year label */
+.timeline-year {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #6b7280;
+    margin-bottom: 0.5rem;
+}
+
+/* Card styles */
+.timeline-card {
+    background: white;
+    border-radius: 8px;
+    padding: var(--spacing-sm);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.timeline-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin: 0 0 0.25rem 0;
+    line-height: 1.4;
+}
+
+.card-subtitle {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin: 0;
+}
+
+.card-status {
+    font-size: 0.75rem;
+    color: var(--primary-color);
+    font-style: italic;
+    margin: 0.5rem 0 0 0;
+}
+
+/* Osteopathy badge */
+.osteo-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--primary-color), #3b82f6);
+    color: white;
+    font-size: 0.65rem;
+    font-weight: 600;
+    padding: 0.2rem 0.5rem;
+    border-radius: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.5rem;
+}
+
+/* Diploma thumbnail */
+.card-diploma {
+    margin-top: 0.75rem;
+    cursor: pointer;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: transform 0.2s ease;
+}
+
+.card-diploma:hover {
+    transform: scale(1.02);
+}
+
+.card-diploma img {
+    width: 100%;
+    max-width: 120px;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .timeline-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+
+    .timeline-column {
+        border-bottom: 1px solid #e5e7eb;
+        padding-bottom: var(--spacing-lg);
+    }
+
+    .timeline-column:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .timeline-section {
+        padding: var(--spacing-md) var(--spacing-xs);
+    }
+
+    .column-header {
+        justify-content: center;
+    }
+
+    .column-title {
+        font-size: 1.25rem;
+    }
+
+    .timeline-item {
+        padding-left: var(--spacing-sm);
+    }
+
+    .card-diploma img {
+        max-width: 100px;
+    }
+}
