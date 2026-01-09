@@ -28,23 +28,19 @@ class CustomHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
         # If path is empty or just '/', serve index.html
         if path == '' or path == '/':
             path = 'index.html'
-        # If path doesn't have an extension and file doesn't exist, try adding .html
+        # If path doesn't have an extension and file doesn't exist, try folder/index.html or .html
         elif not os.path.exists(path) and not '.' in os.path.basename(path):
-            # Check if .html version exists in pages/ folder
-            pages_path = os.path.join('pages', path + '.html')
-            if os.path.exists(pages_path):
-                path = pages_path
-            # Check if .html version exists in root
+            # Check if folder/index.html exists
+            folder_index = os.path.join(path, 'index.html')
+            if os.path.exists(folder_index):
+                path = folder_index
+            # Check if .html version exists
             elif os.path.exists(path + '.html'):
                 path = path + '.html'
             else:
-                # If still not found, try index.html in that directory
-                if os.path.isdir(path) and os.path.exists(os.path.join(path, 'index.html')):
-                    path = os.path.join(path, 'index.html')
-                else:
-                    # Return 404
-                    self.send_error(404, "File not found")
-                    return
+                # Return 404
+                self.send_error(404, "File not found")
+                return
         
         # Set the path
         self.path = '/' + path

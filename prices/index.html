@@ -1,12 +1,159 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0;url=/pages/prices.html">
-    <link rel="canonical" href="/pages/prices.html">
-    <title>Redirecting...</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title data-i18n="prices.title">Цены - OsteoJump</title>
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="apple-touch-icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        /* Hide content until translations are loaded */
+        body:not(.i18n-ready) {
+            visibility: hidden;
+        }
+        body.i18n-ready {
+            visibility: visible;
+        }
+        /* Fallback: show content after 1 second even if translations didn't load */
+        @keyframes showContent {
+            from { visibility: hidden; }
+            to { visibility: visible; }
+        }
+        body {
+            animation: showContent 0s 1s forwards;
+        }
+    </style>
+    <script src="../js/clean-url.js"></script>
+    <script>
+        // Quick language detection and set title immediately to prevent flickering
+        (function() {
+            const supportedLangs = ['ru', 'en', 'de', 'pl', 'uk'];
+            const savedLang = localStorage.getItem('language');
+            let lang = 'en'; // default
+            
+            if (savedLang && supportedLangs.includes(savedLang)) {
+                lang = savedLang;
+            } else {
+                const browserLang = (navigator.language || navigator.userLanguage).split('-')[0].toLowerCase();
+                if (supportedLangs.includes(browserLang)) {
+                    lang = browserLang;
+                }
+            }
+            
+            // Set lang attribute immediately
+            document.documentElement.lang = lang;
+            
+            // Title translations map for immediate setting
+            const titleMap = {
+                'ru': { 'title': 'OsteoJump', 'prices.title': 'Цены - OsteoJump', 'reviews.title': 'Отзывы - OsteoJump', 'about_page.title': 'Обо мне - OsteoJump', 'faq.title': 'Вопросы - OsteoJump', 'education.title': 'Образование - OsteoJump' },
+                'en': { 'title': 'OsteoJump', 'prices.title': 'Prices - OsteoJump', 'reviews.title': 'Reviews - OsteoJump', 'about_page.title': 'About Me - OsteoJump', 'faq.title': 'FAQ - OsteoJump', 'education.title': 'Education - OsteoJump' },
+                'de': { 'title': 'OsteoJump', 'prices.title': 'Preise - OsteoJump', 'reviews.title': 'Bewertungen - OsteoJump', 'about_page.title': 'Über mich - OsteoJump', 'faq.title': 'FAQ - OsteoJump', 'education.title': 'Ausbildung - OsteoJump' },
+                'pl': { 'title': 'OsteoJump', 'prices.title': 'Ceny - OsteoJump', 'reviews.title': 'Opinie - OsteoJump', 'about_page.title': 'O mnie - OsteoJump', 'faq.title': 'FAQ - OsteoJump', 'education.title': 'Wykształcenie - OsteoJump' },
+                'uk': { 'title': 'OsteoJump', 'prices.title': 'Ціни - OsteoJump', 'reviews.title': 'Відгуки - OsteoJump', 'about_page.title': 'Про мене - OsteoJump', 'faq.title': 'Питання - OsteoJump', 'education.title': 'Освіта - OsteoJump' }
+            };
+            
+            // Set title immediately based on current page
+            const titleElement = document.querySelector('title');
+            if (titleElement) {
+                const titleKey = titleElement.getAttribute('data-i18n') || 'title';
+                const translations = titleMap[lang] || titleMap['en'];
+                if (translations[titleKey]) {
+                    titleElement.textContent = translations[titleKey];
+                }
+            }
+            
+            // Preload translation file for faster loading (with versioning)
+            // Use timestamp to ensure fresh load even if HTML is cached
+            const translationsVersion = '5'; // Must match version in i18n.js
+            const timestamp = Date.now(); // Add timestamp to force refresh
+            const link = document.createElement('link');
+            link.rel = 'preload';
+            link.as = 'fetch';
+            link.crossOrigin = 'anonymous';
+            link.href = `locales/${lang}.json?v=${translationsVersion}&t=${timestamp}`;
+            document.head.appendChild(link);
+        })();
+    </script>
 </head>
 <body>
-    <script>window.location.replace('/pages/prices.html');</script>
+    <header class="header">
+        <nav class="nav container">
+            <div class="logo">
+                <a href="/"><h1 data-i18n="logo">OsteoJump</h1></a>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="/" data-i18n="nav.home">Главная</a></li>
+                <li><a href="/prices" data-i18n="nav.prices">Цены</a></li>
+                <li><a href="/reviews" data-i18n="nav.reviews">Отзывы</a></li>
+                <li><a href="/about" data-i18n="nav.about">Обо мне</a></li>
+                <li><a href="/faq" data-i18n="nav.faq">Вопросы</a></li>
+                <li><a href="/education" data-i18n="nav.education">Образование</a></li>
+            </ul>
+            <div class="lang-select-wrapper">
+                <button class="lang-select-btn" id="langSelectBtn" aria-label="Select language" aria-expanded="false">
+                    <span class="lang-select-text" id="langSelectText"><span class="flag-emoji">🇬🇧</span> EN</span>
+                    <span class="lang-select-arrow">▼</span>
+                </button>
+                <div class="lang-select-dropdown" id="langSelectDropdown">
+                    <button class="lang-select-option" data-lang="ru"><span class="flag-emoji">🇷🇺</span> RU</button>
+                    <button class="lang-select-option" data-lang="en"><span class="flag-emoji">🇬🇧</span> EN</button>
+                    <button class="lang-select-option" data-lang="de"><span class="flag-emoji">🇩🇪</span> DE</button>
+                    <button class="lang-select-option" data-lang="pl"><span class="flag-emoji">🇵🇱</span> PL</button>
+                    <button class="lang-select-option" data-lang="uk"><span class="flag-emoji">🇺🇦</span> UK</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="hero">
+            <div class="container">
+                <h1 class="hero-title" data-i18n="prices.title">Цены</h1>
+                <p class="hero-text" data-i18n="prices.subtitle">Информация о ценах скоро появится</p>
+            </div>
+        </section>
+
+        <section class="about">
+            <div class="container">
+                <p class="about-text" data-i18n="prices.content">Страница находится в разработке. Скоро здесь будет размещена информация о ценах на услуги.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p data-i18n="footer.text">&copy; 2024 OsteoJump. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <!-- Fixed Action Bar -->
+    <div class="fixed-action-bar" id="fixedActionBar">
+        <button class="action-btn action-book" id="actionBook" aria-label="Book appointment">
+            <span class="action-icon">📅</span>
+            <span class="action-text" data-i18n="action_bar.book">Записаться</span>
+        </button>
+        <button class="action-btn action-contacts" id="actionContacts" aria-label="View contacts">
+            <span class="action-icon">📞</span>
+            <span class="action-text" data-i18n="action_bar.contacts">Контакты</span>
+        </button>
+        <button class="action-btn action-directions" id="actionDirections" aria-label="Get directions">
+            <span class="action-icon">📍</span>
+            <span class="action-text" data-i18n="action_bar.directions">Как добраться</span>
+        </button>
+    </div>
+
+    <script src="../js/i18n.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 </html>
+
