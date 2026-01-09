@@ -64,7 +64,7 @@ class I18n {
         // Use relative path with versioning and timestamp to prevent caching
         // Timestamp ensures fresh load even if HTML is cached
         const timestamp = Date.now();
-        const url = `locales/${lang}.json?v=${this.translationsVersion}&t=${timestamp}`;
+        const url = `/locales/${lang}.json?v=${this.translationsVersion}&t=${timestamp}`;
         const response = await fetch(url, {
             cache: 'no-cache',
             headers: {
