@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title data-i18n="location.title">Как добраться - OsteoJump</title>
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="apple-touch-icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/location.css">
+    <style>
+        /* Hide content until translations are loaded */
+        body:not(.i18n-ready) {
+            visibility: hidden;
+        }
+        body.i18n-ready {
+            visibility: visible;
+        }
+        /* Fallback: show content after 1 second even if translations didn't load */
+        @keyframes showContent {
+            from { visibility: hidden; }
+            to { visibility: visible; }
+        }
+        body {
+            animation: showContent 0s 1s forwards;
+        }
+    </style>
+    <script src="../js/clean-url.js"></script>
+    <script>
+        // Quick language detection and set title immediately to prevent flickering
+        (function() {
+            const supportedLangs = ['ru', 'en', 'de', 'pl', 'uk'];
+            const savedLang = localStorage.getItem('language');
+            let lang = 'en'; // default
+
+            if (savedLang && supportedLangs.includes(savedLang)) {
+                lang = savedLang;
+            } else {
+                const browserLang = (navigator.language || navigator.userLanguage).split('-')[0].toLowerCase();
+                if (supportedLangs.includes(browserLang)) {
+                    lang = browserLang;
+                }
+            }
+
+            // Set lang attribute immediately
+            document.documentElement.lang = lang;
+
+            // Title translations map for immediate setting
+            const titleMap = {
+                'ru': { 'title': 'OsteoJump', 'location.title': 'Как добраться - OsteoJump' },
+                'en': { 'title': 'OsteoJump', 'location.title': 'How to Find Us - OsteoJump' },
+                'de': { 'title': 'OsteoJump', 'location.title': 'Anfahrt - OsteoJump' },
+                'pl': { 'title': 'OsteoJump', 'location.title': 'Jak dojechac - OsteoJump' },
+                'uk': { 'title': 'OsteoJump', 'location.title': 'Як дістатися - OsteoJump' }
+            };
+
+            // Set title immediately based on current page
+            const titleElement = document.querySelector('title');
+            if (titleElement) {
+                const titleKey = titleElement.getAttribute('data-i18n') || 'title';
+                const translations = titleMap[lang] || titleMap['en'];
+                if (translations[titleKey]) {
+                    titleElement.textContent = translations[titleKey];
+                }
+            }
+
+            // Preload translation file for faster loading (with versioning)
+            const translationsVersion = '5';
+            const timestamp = Date.now();
+            const link = document.createElement('link');
+            link.rel = 'preload';
+            link.as = 'fetch';
+            link.crossOrigin = 'anonymous';
+            link.href = `/locales/${lang}.json?v=${translationsVersion}&t=${timestamp}`;
+            document.head.appendChild(link);
+        })();
+    </script>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <div class="logo">
+                <a href="/"><h1 data-i18n="logo">OsteoJump</h1></a>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="/" data-i18n="nav.home">Главная</a></li>
+                <li><a href="/prices" data-i18n="nav.prices">Цены</a></li>
+                <li><a href="/reviews" data-i18n="nav.reviews">Отзывы</a></li>
+                <li><a href="/about" data-i18n="nav.about">Обо мне</a></li>
+                <li><a href="/faq" data-i18n="nav.faq">Вопросы</a></li>
+                <li><a href="/education" data-i18n="nav.education">Образование</a></li>
+                <li><a href="/location" data-i18n="nav.location">Как добраться</a></li>
+            </ul>
+            <div class="lang-select-wrapper">
+                <button class="lang-select-btn" id="langSelectBtn" aria-label="Select language" aria-expanded="false">
+                    <span class="lang-select-text" id="langSelectText"><span class="flag-emoji">🇬🇧</span> EN</span>
+                    <span class="lang-select-arrow">▼</span>
+                </button>
+                <div class="lang-select-dropdown" id="langSelectDropdown">
+                    <button class="lang-select-option" data-lang="ru"><span class="flag-emoji">🇷🇺</span> RU</button>
+                    <button class="lang-select-option" data-lang="en"><span class="flag-emoji">🇬🇧</span> EN</button>
+                    <button class="lang-select-option" data-lang="de"><span class="flag-emoji">🇩🇪</span> DE</button>
+                    <button class="lang-select-option" data-lang="pl"><span class="flag-emoji">🇵🇱</span> PL</button>
+                    <button class="lang-select-option" data-lang="uk"><span class="flag-emoji">🇺🇦</span> UK</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <!-- Intro Section -->
+        <section class="location-intro">
+            <div class="container">
+                <h1 class="location-address" data-i18n="location.address">Silaczki 3/9, kabinet 212</h1>
+                <p class="location-subtitle" data-i18n="location.subtitle">02-495 Warszawa, Polska</p>
+            </div>
+        </section>
+
+        <!-- Google Maps Section -->
+        <section class="map-section">
+            <div class="container">
+                <div class="map-wrapper">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2445.5625965969243!2d20.8756512126467!3d52.196822971861394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47193540aabbe591%3A0x180bf6eb6fa5bb9c!2sOsteoJump%20-%20Osteopata%20dla%20doros%C5%82ych%20i%20dzieci!5e0!3m2!1sru!2spl!4v1766688809445!5m2!1sru!2spl"
+                        width="100%"
+                        height="400"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        class="map-iframe"
+                        title="OsteoJump location">
+                    </iframe>
+                    <div class="map-info">
+                        <a href="https://maps.app.goo.gl/nisp2LjM92sZRDYz9" target="_blank" rel="noopener noreferrer" class="map-link" data-i18n="map.open_link">Открыть в Google Maps</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step-by-step Guide -->
+        <section class="steps-section">
+            <div class="container">
+                <h2 class="steps-title" data-i18n="location.steps_title">Пошаговая навигация</h2>
+
+                <div class="steps-timeline">
+                    <!-- Step 1 -->
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <img
+                                src="/images/location/thumbs/step1_thumb.jpg"
+                                data-full="/images/location/step1.jpeg"
+                                alt="Step 1"
+                                class="step-image location-image"
+                                loading="lazy">
+                            <div class="step-text">
+                                <h3 data-i18n="location.step1_title">Найдите здание</h3>
+                                <p data-i18n="location.step1_desc">Красное здание с номером 39. У здания два входа — вам нужен левый</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <img
+                                src="/images/location/thumbs/step2_thumb.jpg"
+                                data-full="/images/location/step2.jpeg"
+                                alt="Step 2"
+                                class="step-image location-image"
+                                loading="lazy">
+                            <div class="step-text">
+                                <h3 data-i18n="location.step2_title">Войдите в здание</h3>
+                                <p data-i18n="location.step2_desc">Главный вход под деревянным козырьком, табличка «Silaczki 3/9»</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <img
+                                src="/images/location/thumbs/step3_thumb.jpg"
+                                data-full="/images/location/step3.jpg"
+                                alt="Step 3"
+                                class="step-image location-image"
+                                loading="lazy">
+                            <div class="step-text">
+                                <h3 data-i18n="location.step3_title">Пройдите к лифту</h3>
+                                <p data-i18n="location.step3_desc">Лифт находится напротив входа</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="step-item">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <img
+                                src="/images/location/thumbs/step4_thumb.jpg"
+                                data-full="/images/location/step4.jpg"
+                                alt="Step 4"
+                                class="step-image location-image"
+                                loading="lazy">
+                            <div class="step-text">
+                                <h3 data-i18n="location.step4_title">Нажмите 2 этаж</h3>
+                                <p data-i18n="location.step4_desc">В лифте нажмите кнопку «2»</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 5 -->
+                    <div class="step-item">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <img
+                                src="/images/location/thumbs/step5_thumb.jpg"
+                                data-full="/images/location/step5.jpg"
+                                alt="Step 5"
+                                class="step-image location-image"
+                                loading="lazy">
+                            <div class="step-text">
+                                <h3 data-i18n="location.step5_title">Выйдите и поверните налево</h3>
+                                <p data-i18n="location.step5_desc">На 2 этаже выйдите из лифта, через 2 метра поверните налево</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 6 -->
+                    <div class="step-item">
+                        <div class="step-number">6</div>
+                        <div class="step-content">
+                            <img
+                                src="/images/location/thumbs/step6_thumb.jpg"
+                                data-full="/images/location/step6.jpg"
+                                alt="Step 6"
+                                class="step-image location-image"
+                                loading="lazy">
+                            <div class="step-text">
+                                <h3 data-i18n="location.step6_title">Идите по коридору</h3>
+                                <p data-i18n="location.step6_desc">Прямо по коридору, затем поверните налево</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 7 -->
+                    <div class="step-item">
+                        <div class="step-number">7</div>
+                        <div class="step-content">
+                            <img
+                                src="/images/location/thumbs/step7_thumb.jpg"
+                                data-full="/images/location/step7.jpeg"
+                                alt="Step 7"
+                                class="step-image location-image"
+                                loading="lazy">
+                            <div class="step-text">
+                                <h3 data-i18n="location.step7_title">Кабинет 212</h3>
+                                <p data-i18n="location.step7_desc">Аккуратно постучите в дверь в назначенное время. Рядом есть стулья для ожидания</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Location Image Modal (reusing diploma-modal structure) -->
+    <div class="diploma-modal" id="locationModal">
+        <button class="modal-close" aria-label="Close">&times;</button>
+        <button class="modal-prev" aria-label="Previous">&#10094;</button>
+        <div class="modal-content">
+            <img src="" alt="Location step" id="locationModalImage">
+        </div>
+        <button class="modal-next" aria-label="Next">&#10095;</button>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p data-i18n="footer.text">&copy; 2024 OsteoJump. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <!-- Fixed Action Bar -->
+    <div class="fixed-action-bar" id="fixedActionBar">
+        <button class="action-btn action-book" id="actionBook" aria-label="Book appointment">
+            <span class="action-icon">📅</span>
+            <span class="action-text" data-i18n="action_bar.book">Записаться</span>
+        </button>
+        <button class="action-btn action-contacts" id="actionContacts" aria-label="View contacts">
+            <span class="action-icon">📞</span>
+            <span class="action-text" data-i18n="action_bar.contacts">Контакты</span>
+        </button>
+        <button class="action-btn action-directions" id="actionDirections" aria-label="Get directions">
+            <span class="action-icon">📍</span>
+            <span class="action-text" data-i18n="action_bar.directions">Как добраться</span>
+        </button>
+    </div>
+
+    <script src="../js/i18n.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

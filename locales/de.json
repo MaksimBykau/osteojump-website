@@ -7,7 +7,8 @@
         "reviews": "Bewertungen",
         "about": "Über mich",
         "faq": "FAQ",
-        "education": "Ausbildung"
+        "education": "Ausbildung",
+        "location": "Anfahrt"
     },
     "hero": {
         "title": "Willkommen bei OsteoJump",
@@ -77,7 +78,8 @@
     "map": {
         "title": "Wie Sie uns finden",
         "address": "Siłaczki 3/9/local 212, 02-495 Warszawa",
-        "open_link": "In Google Maps öffnen"
+        "open_link": "In Google Maps öffnen",
+        "directions_btn": "Mehr Details"
     },
     "contacts": {
         "title": "Kontakte",
@@ -150,6 +152,26 @@
         "course7_title": "Kraniosakrale Therapie für Kinder",
         "course8_title": "KST für Schwangerschaft und Geburt",
         "course9_title": "Kinesio-Taping"
+    },
+    "location": {
+        "title": "Anfahrt - OsteoJump",
+        "address": "Siłaczki 3/9, Büro 212",
+        "subtitle": "02-495 Warschau, Polen",
+        "steps_title": "Schritt-für-Schritt-Navigation",
+        "step1_title": "Finden Sie das Gebäude",
+        "step1_desc": "Rotes Gebäude mit Nummer 39. Es gibt zwei Eingänge — Sie brauchen den linken",
+        "step2_title": "Betreten Sie das Gebäude",
+        "step2_desc": "Haupteingang unter dem Holzvordach, Schild «Siłaczki 3/9»",
+        "step3_title": "Gehen Sie zum Aufzug",
+        "step3_desc": "Der Aufzug befindet sich direkt gegenüber dem Eingang",
+        "step4_title": "Drücken Sie Etage 2",
+        "step4_desc": "Drücken Sie im Aufzug die Taste «2»",
+        "step5_title": "Aussteigen und links abbiegen",
+        "step5_desc": "Steigen Sie im 2. Stock aus dem Aufzug, biegen Sie nach 2 Metern links ab",
+        "step6_title": "Gehen Sie den Flur entlang",
+        "step6_desc": "Geradeaus durch den Flur, dann links abbiegen",
+        "step7_title": "Büro 212",
+        "step7_desc": "Klopfen Sie zur vereinbarten Zeit vorsichtig an die Tür. Es gibt Stühle zum Warten in der Nähe"
     },
     "faq": {
         "title": "FAQ",

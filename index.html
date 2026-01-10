@@ -50,11 +50,11 @@
             
             // Title translations map for immediate setting
             const titleMap = {
-                'ru': { 'title': 'OsteoJump', 'prices.title': 'Цены - OsteoJump', 'reviews.title': 'Отзывы - OsteoJump', 'about_page.title': 'Обо мне - OsteoJump', 'faq.title': 'Вопросы - OsteoJump', 'education.title': 'Образование - OsteoJump' },
-                'en': { 'title': 'OsteoJump', 'prices.title': 'Prices - OsteoJump', 'reviews.title': 'Reviews - OsteoJump', 'about_page.title': 'About Me - OsteoJump', 'faq.title': 'FAQ - OsteoJump', 'education.title': 'Education - OsteoJump' },
-                'de': { 'title': 'OsteoJump', 'prices.title': 'Preise - OsteoJump', 'reviews.title': 'Bewertungen - OsteoJump', 'about_page.title': 'Über mich - OsteoJump', 'faq.title': 'FAQ - OsteoJump', 'education.title': 'Ausbildung - OsteoJump' },
-                'pl': { 'title': 'OsteoJump', 'prices.title': 'Ceny - OsteoJump', 'reviews.title': 'Opinie - OsteoJump', 'about_page.title': 'O mnie - OsteoJump', 'faq.title': 'FAQ - OsteoJump', 'education.title': 'Wykształcenie - OsteoJump' },
-                'uk': { 'title': 'OsteoJump', 'prices.title': 'Ціни - OsteoJump', 'reviews.title': 'Відгуки - OsteoJump', 'about_page.title': 'Про мене - OsteoJump', 'faq.title': 'Питання - OsteoJump', 'education.title': 'Освіта - OsteoJump' }
+                'ru': { 'title': 'OsteoJump', 'prices.title': 'Цены - OsteoJump', 'reviews.title': 'Отзывы - OsteoJump', 'about_page.title': 'Обо мне - OsteoJump', 'faq.title': 'Вопросы - OsteoJump', 'education.title': 'Образование - OsteoJump', 'location.title': 'Как добраться - OsteoJump' },
+                'en': { 'title': 'OsteoJump', 'prices.title': 'Prices - OsteoJump', 'reviews.title': 'Reviews - OsteoJump', 'about_page.title': 'About Me - OsteoJump', 'faq.title': 'FAQ - OsteoJump', 'education.title': 'Education - OsteoJump', 'location.title': 'Directions - OsteoJump' },
+                'de': { 'title': 'OsteoJump', 'prices.title': 'Preise - OsteoJump', 'reviews.title': 'Bewertungen - OsteoJump', 'about_page.title': 'Über mich - OsteoJump', 'faq.title': 'FAQ - OsteoJump', 'education.title': 'Ausbildung - OsteoJump', 'location.title': 'Anfahrt - OsteoJump' },
+                'pl': { 'title': 'OsteoJump', 'prices.title': 'Ceny - OsteoJump', 'reviews.title': 'Opinie - OsteoJump', 'about_page.title': 'O mnie - OsteoJump', 'faq.title': 'FAQ - OsteoJump', 'education.title': 'Wykształcenie - OsteoJump', 'location.title': 'Jak dojechać - OsteoJump' },
+                'uk': { 'title': 'OsteoJump', 'prices.title': 'Ціни - OsteoJump', 'reviews.title': 'Відгуки - OsteoJump', 'about_page.title': 'Про мене - OsteoJump', 'faq.title': 'Питання - OsteoJump', 'education.title': 'Освіта - OsteoJump', 'location.title': 'Як дістатися - OsteoJump' }
             };
             
             // Set title immediately based on current page
@@ -98,6 +98,7 @@
                 <li><a href="/about" data-i18n="nav.about">Обо мне</a></li>
                 <li><a href="/faq" data-i18n="nav.faq">Вопросы</a></li>
                 <li><a href="/education" data-i18n="nav.education">Образование</a></li>
+                <li><a href="/location" data-i18n="nav.location">Как добраться</a></li>
             </ul>
             <div class="lang-select-wrapper">
                 <button class="lang-select-btn" id="langSelectBtn" aria-label="Select language" aria-expanded="false">
@@ -214,6 +215,7 @@
                     <div class="map-info">
                         <p class="map-address" data-i18n="map.address">Siłaczki 3/9/local 212, 02-495 Warszawa</p>
                         <a href="https://maps.app.goo.gl/nisp2LjM92sZRDYz9" target="_blank" rel="noopener noreferrer" class="map-link" data-i18n="map.open_link">Открыть в Google Maps</a>
+                        <a href="/location" class="map-directions-btn" data-i18n="map.directions_btn">Подробнее</a>
                     </div>
                 </div>
             </div>

@@ -7,7 +7,8 @@
         "reviews": "Opinie",
         "about": "O mnie",
         "faq": "FAQ",
-        "education": "Wykształcenie"
+        "education": "Wykształcenie",
+        "location": "Jak dojechać"
     },
     "hero": {
         "title": "Witamy w OsteoJump",
@@ -77,7 +78,8 @@
     "map": {
         "title": "Jak nas znaleźć",
         "address": "Siłaczki 3/9/local 212, 02-495 Warszawa",
-        "open_link": "Otwórz w Google Maps"
+        "open_link": "Otwórz w Google Maps",
+        "directions_btn": "Więcej szczegółów"
     },
     "contacts": {
         "title": "Kontakt",
@@ -150,6 +152,26 @@
         "course7_title": "Terapia czaszkowo-krzyżowa dla dzieci",
         "course8_title": "TCK dla ciąży i porodu",
         "course9_title": "Kinesiotaping"
+    },
+    "location": {
+        "title": "Jak dojechać - OsteoJump",
+        "address": "Siłaczki 3/9, gabinet 212",
+        "subtitle": "02-495 Warszawa, Polska",
+        "steps_title": "Nawigacja krok po kroku",
+        "step1_title": "Znajdź budynek",
+        "step1_desc": "Czerwony budynek z numerem 39. Są dwa wejścia — potrzebujesz lewego",
+        "step2_title": "Wejdź do budynku",
+        "step2_desc": "Główne wejście pod drewnianym zadaszeniem, tabliczka «Siłaczki 3/9»",
+        "step3_title": "Idź do windy",
+        "step3_desc": "Winda znajduje się naprzeciwko wejścia",
+        "step4_title": "Naciśnij piętro 2",
+        "step4_desc": "W windzie naciśnij przycisk «2»",
+        "step5_title": "Wyjdź i skręć w lewo",
+        "step5_desc": "Na 2 piętrze wyjdź z windy, po 2 metrach skręć w lewo",
+        "step6_title": "Idź korytarzem",
+        "step6_desc": "Prosto korytarzem, potem skręć w lewo",
+        "step7_title": "Gabinet 212",
+        "step7_desc": "Delikatnie zapukaj do drzwi o umówionej godzinie. Obok są krzesła do oczekiwania"
     },
     "faq": {
         "title": "FAQ",

@@ -527,15 +527,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (actionDirections) {
         actionDirections.addEventListener('click', () => {
-            const mapSection = document.querySelector('.map-section');
-            if (mapSection) {
-                const headerHeight = document.querySelector('.header')?.offsetHeight || 0;
-                const targetPosition = mapSection.getBoundingClientRect().top + window.pageYOffset - headerHeight - 20;
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
-            }
+            window.location.href = '/location';
         });
     }
 
@@ -764,6 +756,89 @@ document.addEventListener('DOMContentLoaded', () => {
         createDots();
         updateCarousel();
         startAutoscroll();
+    }
+
+    // Location Page - Image Lightbox
+    const locationImages = document.querySelectorAll('.location-image');
+    const locationModal = document.getElementById('locationModal');
+
+    if (locationImages.length > 0 && locationModal) {
+        const locationModalImage = document.getElementById('locationModalImage');
+        const locationModalClose = locationModal.querySelector('.modal-close');
+        const locationModalPrev = locationModal.querySelector('.modal-prev');
+        const locationModalNext = locationModal.querySelector('.modal-next');
+
+        let currentLocationIndex = 0;
+        const locationImageArray = Array.from(locationImages);
+
+        function openLocationModal(index) {
+            currentLocationIndex = index;
+            const fullImagePath = locationImageArray[index]?.getAttribute('data-full');
+            if (fullImagePath && locationModalImage) {
+                locationModalImage.src = fullImagePath;
+                locationModal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeLocationModal() {
+            locationModal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function locationModalNextSlide() {
+            currentLocationIndex = (currentLocationIndex + 1) % locationImageArray.length;
+            const fullImagePath = locationImageArray[currentLocationIndex]?.getAttribute('data-full');
+            if (fullImagePath && locationModalImage) {
+                locationModalImage.src = fullImagePath;
+            }
+        }
+
+        function locationModalPrevSlide() {
+            currentLocationIndex = (currentLocationIndex - 1 + locationImageArray.length) % locationImageArray.length;
+            const fullImagePath = locationImageArray[currentLocationIndex]?.getAttribute('data-full');
+            if (fullImagePath && locationModalImage) {
+                locationModalImage.src = fullImagePath;
+            }
+        }
+
+        // Click on image to open modal
+        locationImageArray.forEach((img, index) => {
+            img.addEventListener('click', () => openLocationModal(index));
+        });
+
+        // Modal event listeners
+        if (locationModalClose) {
+            locationModalClose.addEventListener('click', closeLocationModal);
+        }
+
+        if (locationModalPrev) {
+            locationModalPrev.addEventListener('click', locationModalPrevSlide);
+        }
+
+        if (locationModalNext) {
+            locationModalNext.addEventListener('click', locationModalNextSlide);
+        }
+
+        // Close on background click
+        locationModal.addEventListener('click', (e) => {
+            if (e.target === locationModal) {
+                closeLocationModal();
+            }
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (!locationModal.classList.contains('active')) return;
+
+            if (e.key === 'Escape') {
+                closeLocationModal();
+            } else if (e.key === 'ArrowLeft') {
+                locationModalPrevSlide();
+            } else if (e.key === 'ArrowRight') {
+                locationModalNextSlide();
+            }
+        });
     }
 });
 

@@ -7,7 +7,8 @@
         "reviews": "Reviews",
         "about": "About Me",
         "faq": "FAQ",
-        "education": "Education"
+        "education": "Education",
+        "location": "Directions"
     },
     "hero": {
         "title": "Welcome to OsteoJump",
@@ -77,7 +78,8 @@
     "map": {
         "title": "How to Find Us",
         "address": "Siłaczki 3/9/local 212, 02-495 Warszawa",
-        "open_link": "Open in Google Maps"
+        "open_link": "Open in Google Maps",
+        "directions_btn": "More details"
     },
     "contacts": {
         "title": "Contacts",
@@ -150,6 +152,26 @@
         "course7_title": "Craniosacral Therapy for Children",
         "course8_title": "CST for Pregnancy and Childbirth",
         "course9_title": "Kinesio Taping"
+    },
+    "location": {
+        "title": "How to Find Us - OsteoJump",
+        "address": "Siłaczki 3/9, office 212",
+        "subtitle": "02-495 Warsaw, Poland",
+        "steps_title": "Step-by-step navigation",
+        "step1_title": "Find the building",
+        "step1_desc": "Red building with number 39. There are two entrances — you need the left one",
+        "step2_title": "Enter the building",
+        "step2_desc": "Main entrance under the wooden canopy, sign «Siłaczki 3/9»",
+        "step3_title": "Go to the elevator",
+        "step3_desc": "The elevator is right in front of the entrance",
+        "step4_title": "Press floor 2",
+        "step4_desc": "Press button «2» in the elevator",
+        "step5_title": "Exit and turn left",
+        "step5_desc": "On the 2nd floor, exit the elevator, turn left after 2 meters",
+        "step6_title": "Walk down the corridor",
+        "step6_desc": "Straight down the corridor, then turn left",
+        "step7_title": "Office 212",
+        "step7_desc": "Gently knock on the door at your appointment time. There are chairs nearby for waiting"
     },
     "faq": {
         "title": "FAQ",
