@@ -40,16 +40,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     // Mark active menu item based on current page
-    const currentPage = window.location.pathname.split('/').pop() || '';
-    const currentPageClean = currentPage.replace(/\.html$/, ''); // Remove .html if present
+    const pathname = window.location.pathname.replace(/\/$/, ''); // Remove trailing slash
+    const currentPageClean = pathname.split('/').filter(Boolean).pop() || ''; // Get last non-empty segment
     navMenu?.querySelectorAll('a').forEach(link => {
         const linkPage = link.getAttribute('href');
-        const linkPageClean = linkPage.replace(/^\//, '').replace(/\.html$/, ''); // Remove leading / and .html
-        
-        // Check if it's the home page (empty, index.html, or /)
-        if ((currentPageClean === '' || currentPage === 'index.html') && (linkPage === '/' || linkPage === 'index.html' || linkPageClean === '')) {
+        const linkPageClean = linkPage.replace(/^\//, '').replace(/\/$/, ''); // Remove leading and trailing /
+
+        // Check if it's the home page
+        if (currentPageClean === '' && (linkPage === '/' || linkPageClean === '')) {
             link.classList.add('active');
-        } else if (linkPageClean === currentPageClean || linkPage === '/' + currentPageClean) {
+        } else if (linkPageClean === currentPageClean) {
             link.classList.add('active');
         }
     });
