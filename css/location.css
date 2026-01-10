@@ -36,22 +36,32 @@
 
 /* Timeline Container */
 .steps-timeline {
-    max-width: 700px;
+    max-width: 450px;
     margin: 0 auto;
     position: relative;
     padding-left: 60px;
 }
 
-/* Vertical Line */
+/* Vertical Line - hidden, each step has its own connector */
 .steps-timeline::before {
+    display: none;
+}
+
+/* Line connector from each step to next */
+.step-item::before {
     content: '';
     position: absolute;
-    left: 24px;
-    top: 24px;
-    bottom: 24px;
+    left: -36px;
+    top: 50%;
+    height: calc(100% + var(--spacing-lg));
     width: 3px;
     background: linear-gradient(to bottom, var(--primary-color), #10b981);
     border-radius: 2px;
+}
+
+/* Hide line after last step */
+.step-item:last-child::before {
+    display: none;
 }
 
 /* Step Item */
@@ -68,7 +78,8 @@
 .step-number {
     position: absolute;
     left: -60px;
-    top: 0;
+    top: 50%;
+    transform: translateY(-50%);
     width: 48px;
     height: 48px;
     background: var(--primary-color);
@@ -108,18 +119,28 @@
     border: 2px solid #10b981;
 }
 
+/* Step Image Container */
+.step-image-wrapper {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    position: relative;
+}
+
 /* Step Image */
 .step-image {
     width: 100%;
-    height: 220px;
+    height: 100%;
     object-fit: cover;
+    object-position: center;
     cursor: pointer;
-    transition: opacity 0.3s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease;
     display: block;
 }
 
 .step-image:hover {
-    opacity: 0.9;
+    opacity: 0.95;
+    transform: scale(1.02);
 }
 
 /* Step Text */
@@ -147,8 +168,9 @@
         padding-left: 50px;
     }
 
-    .steps-timeline::before {
-        left: 19px;
+    .step-item::before {
+        left: -30px;
+        height: calc(100% + var(--spacing-md));
     }
 
     .step-number {
@@ -158,8 +180,8 @@
         font-size: 1rem;
     }
 
-    .step-image {
-        height: 180px;
+    .step-image-wrapper {
+        aspect-ratio: 3 / 4;
     }
 
     .step-text {
@@ -184,8 +206,8 @@
         padding-left: 44px;
     }
 
-    .steps-timeline::before {
-        left: 16px;
+    .step-item::before {
+        left: -27px;
         width: 2px;
     }
 
@@ -196,7 +218,7 @@
         font-size: 0.875rem;
     }
 
-    .step-image {
-        height: 160px;
+    .step-image-wrapper {
+        aspect-ratio: 3 / 4;
     }
 }
