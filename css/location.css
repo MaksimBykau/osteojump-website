@@ -37,9 +37,24 @@
     padding-bottom: var(--spacing-md);
 }
 
+/* Peek-эффект: карта не занимает весь экран, виден заголовок следующей секции */
+.location-intro + .map-section .map-iframe {
+    height: calc(100dvh - 280px);
+    min-height: 200px;
+    max-height: 350px;
+}
+
+@media (max-width: 767px) {
+    .location-intro + .map-section .map-iframe {
+        height: calc(100dvh - 420px); /* header + address + link + action bar + title peek */
+        min-height: 150px;
+        max-height: 220px;
+    }
+}
+
 /* Steps Section */
 .steps-section {
-    padding: var(--spacing-lg) var(--spacing-sm);
+    padding: var(--spacing-md) var(--spacing-sm);
     background-color: var(--section-bg);
 }
 
@@ -47,7 +62,7 @@
     text-align: center;
     font-size: clamp(1.5rem, 3vw, 2rem);
     font-weight: 700;
-    margin-bottom: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
     color: var(--text-color);
 }
 
