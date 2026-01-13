@@ -1,0 +1,708 @@
+/* About Page Styles */
+
+/* ============================================
+   Hero Section
+   ============================================ */
+.about-hero {
+    position: relative;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.about-hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.about-hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%;
+}
+
+.about-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.3) 0%,
+        rgba(0, 0, 0, 0.5) 100%
+    );
+}
+
+.about-hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    padding: var(--spacing-xl) var(--spacing-md);
+}
+
+.about-hero-title {
+    font-size: clamp(2.5rem, 8vw, 4rem);
+    font-weight: 700;
+    margin-bottom: var(--spacing-xs);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.about-hero-subtitle {
+    font-size: clamp(1.25rem, 4vw, 1.75rem);
+    font-weight: 500;
+    margin-bottom: var(--spacing-sm);
+    opacity: 0.95;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.about-hero-tagline {
+    font-size: clamp(1rem, 3vw, 1.25rem);
+    font-weight: 400;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+    opacity: 0.9;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* ============================================
+   Specializations Section
+   ============================================ */
+.about-specializations {
+    padding: var(--spacing-xl) var(--spacing-sm);
+    background-color: var(--bg-color);
+}
+
+.specialization-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+}
+
+.specialization-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.specialization-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Photo Collage */
+.specialization-collage {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 4px;
+    height: 280px;
+    padding: 4px;
+    background: #f0f0f0;
+}
+
+.collage-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+}
+
+.specialization-card:hover .collage-img {
+    transform: scale(1.02);
+}
+
+.collage-img-1 { grid-area: 1 / 1 / 2 / 2; }
+.collage-img-2 { grid-area: 1 / 2 / 2 / 3; }
+.collage-img-3 { grid-area: 2 / 1 / 3 / 2; }
+.collage-img-4 { grid-area: 2 / 2 / 3 / 3; }
+
+.specialization-content {
+    padding: var(--spacing-md);
+}
+
+.specialization-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: var(--spacing-sm);
+}
+
+.specialization-text {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #4b5563;
+    margin-bottom: var(--spacing-sm);
+}
+
+.specialization-text:last-child {
+    margin-bottom: 0;
+}
+
+.specialization-text-accent {
+    color: var(--primary-color);
+    font-style: italic;
+}
+
+/* ============================================
+   Journey Section
+   ============================================ */
+.about-journey {
+    padding: var(--spacing-xl) var(--spacing-sm);
+    background-color: var(--section-bg);
+}
+
+.journey-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+    align-items: center;
+}
+
+.section-title-left {
+    text-align: left;
+}
+
+.journey-content {
+    max-width: 600px;
+}
+
+.journey-text p {
+    font-size: 1.0625rem;
+    line-height: 1.8;
+    color: #4b5563;
+    margin-bottom: var(--spacing-md);
+}
+
+.journey-text p:last-child {
+    margin-bottom: 0;
+}
+
+/* Journey Collage */
+.journey-collage {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 12px;
+    height: 450px;
+}
+
+.journey-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.journey-img:hover {
+    transform: scale(1.02);
+}
+
+.journey-img-1 {
+    grid-area: 1 / 1 / 3 / 2;
+}
+
+.journey-img-2 {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.journey-img-3 {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+/* ============================================
+   Motivation Section
+   ============================================ */
+.about-motivation {
+    padding: var(--spacing-xl) var(--spacing-sm);
+    background: linear-gradient(135deg, #f8fafc 0%, #eef2f7 100%);
+}
+
+.motivation-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.motivation-text p {
+    font-size: 1.0625rem;
+    line-height: 1.9;
+    color: #4b5563;
+    margin-bottom: var(--spacing-md);
+}
+
+.motivation-conclusion {
+    font-weight: 500;
+    color: var(--primary-color);
+    font-style: italic;
+    font-size: 1.125rem !important;
+    border-left: 3px solid var(--primary-color);
+    padding-left: var(--spacing-md);
+    margin-top: var(--spacing-lg) !important;
+}
+
+/* ============================================
+   Approach Section
+   ============================================ */
+.about-approach {
+    padding: var(--spacing-xl) var(--spacing-sm);
+    background-color: var(--bg-color);
+}
+
+.approach-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+    align-items: start;
+    margin-top: var(--spacing-lg);
+}
+
+.approach-text-content p {
+    font-size: 1.0625rem;
+    line-height: 1.8;
+    color: #4b5563;
+    margin-bottom: var(--spacing-md);
+}
+
+.approach-principles {
+    margin-top: var(--spacing-lg);
+    padding: var(--spacing-md);
+    background: var(--section-bg);
+    border-radius: 12px;
+}
+
+.principles-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: var(--spacing-sm);
+}
+
+.principles-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.principles-list li {
+    padding: var(--spacing-xs) 0;
+    padding-left: 1.5rem;
+    position: relative;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #4b5563;
+}
+
+.principles-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.8rem;
+    width: 8px;
+    height: 8px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+}
+
+.principles-list li strong {
+    color: var(--text-color);
+}
+
+/* ============================================
+   Work Slider
+   ============================================ */
+.approach-slider {
+    position: relative;
+}
+
+.slider-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.slider-track {
+    display: flex;
+    transition: transform 0.4s ease;
+}
+
+.slider-slide {
+    min-width: 100%;
+    aspect-ratio: 4 / 3;
+}
+
+.slider-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.95);
+    color: var(--primary-color);
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.slider-btn:hover {
+    background: var(--primary-color);
+    color: white;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.slider-prev {
+    left: 12px;
+}
+
+.slider-next {
+    right: 12px;
+}
+
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: var(--spacing-sm);
+}
+
+.slider-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #d1d5db;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+.slider-dot:hover {
+    background: #9ca3af;
+}
+
+.slider-dot.active {
+    background: var(--primary-color);
+    width: 24px;
+    border-radius: 5px;
+}
+
+/* ============================================
+   Education Section
+   ============================================ */
+.about-education {
+    padding: var(--spacing-xl) var(--spacing-sm);
+    background-color: var(--section-bg);
+}
+
+.education-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+}
+
+.education-block {
+    background: white;
+    padding: var(--spacing-md);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.education-subtitle {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-sm);
+    padding-bottom: var(--spacing-xs);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.education-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.education-list li {
+    padding: var(--spacing-xs) 0;
+    padding-left: 1.25rem;
+    position: relative;
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    color: #4b5563;
+}
+
+.education-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.75rem;
+    width: 6px;
+    height: 6px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+}
+
+.education-list-courses {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 var(--spacing-sm);
+}
+
+.education-languages {
+    text-align: center;
+    margin-top: var(--spacing-lg);
+    font-size: 1.0625rem;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.education-link-wrapper {
+    text-align: center;
+    margin-top: var(--spacing-md);
+}
+
+.education-link-btn {
+    display: inline-block;
+    padding: 0.875rem 2rem;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+}
+
+.education-link-btn:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(37, 99, 235, 0.35);
+}
+
+/* ============================================
+   CTA Section
+   ============================================ */
+.about-cta {
+    padding: var(--spacing-xl) var(--spacing-sm);
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+}
+
+.cta-content {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.cta-title {
+    font-size: clamp(1.75rem, 5vw, 2.5rem);
+    font-weight: 700;
+    margin-bottom: var(--spacing-md);
+}
+
+.cta-text {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    opacity: 0.95;
+    margin-bottom: var(--spacing-sm);
+}
+
+.cta-location {
+    font-size: 1rem;
+    opacity: 0.9;
+    margin-bottom: var(--spacing-lg);
+}
+
+.cta-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    justify-content: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.cta-btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.cta-btn-primary {
+    background: white;
+    color: var(--primary-color);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.cta-btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cta-btn-secondary {
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.cta-btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: white;
+}
+
+.cta-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    background: rgba(255, 255, 255, 0.15);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+}
+
+.badge-rating {
+    background: #fbbf24;
+    color: #1f2937;
+    font-weight: 700;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.875rem;
+}
+
+.badge-text {
+    font-size: 0.875rem;
+    opacity: 0.95;
+}
+
+/* ============================================
+   Responsive Styles
+   ============================================ */
+@media (max-width: 1024px) {
+    .journey-layout {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+
+    .journey-collage {
+        height: 350px;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .approach-layout {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+
+    .approach-slider {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 767px) {
+    .about-hero {
+        min-height: 60vh;
+    }
+
+    .about-hero-content {
+        padding: var(--spacing-lg) var(--spacing-sm);
+    }
+
+    .specialization-cards {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+
+    .specialization-collage {
+        height: 220px;
+    }
+
+    .journey-collage {
+        height: 280px;
+    }
+
+    .section-title-left {
+        text-align: center;
+    }
+
+    .motivation-conclusion {
+        padding-left: var(--spacing-sm);
+    }
+
+    .education-list-courses {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cta-btn {
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-hero {
+        min-height: 50vh;
+    }
+
+    .specialization-collage {
+        height: 180px;
+    }
+
+    .journey-collage {
+        height: 240px;
+        gap: 8px;
+    }
+
+    .slider-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 20px;
+    }
+
+    .slider-prev {
+        left: 8px;
+    }
+
+    .slider-next {
+        right: 8px;
+    }
+}

@@ -6,11 +6,14 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
-    <title data-i18n="about_page.title">Обо мне - OsteoJump</title>
+    <meta name="description" content="Врач-остеопат Анна Быкова. Работаю с детьми от рождения, мамами и взрослыми. Мягкие техники, индивидуальный подход. Приём в Варшаве.">
+    <meta name="keywords" content="остеопат Варшава, детский остеопат, остеопат для беременных, краниосакральная терапия, Анна Быкова">
+    <title data-i18n="about_page.meta_title">Анна Быкова — врач-остеопат в Варшаве | OsteoJump</title>
     <link rel="icon" type="image/png" href="/images/favicon.png">
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link rel="apple-touch-icon" href="/images/favicon.png">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/about.css">
     <style>
         /* Hide content until translations are loaded */
         body:not(.i18n-ready) {
@@ -35,7 +38,7 @@
             const supportedLangs = ['ru', 'en', 'de', 'pl', 'uk'];
             const savedLang = localStorage.getItem('language');
             let lang = 'en'; // default
-            
+
             if (savedLang && supportedLangs.includes(savedLang)) {
                 lang = savedLang;
             } else {
@@ -44,19 +47,19 @@
                     lang = browserLang;
                 }
             }
-            
+
             // Set lang attribute immediately
             document.documentElement.lang = lang;
-            
+
             // Title translations map for immediate setting
             const titleMap = {
-                'ru': { 'title': 'OsteoJump', 'prices.title': 'Цены - OsteoJump', 'reviews.title': 'Отзывы - OsteoJump', 'about_page.title': 'Обо мне - OsteoJump', 'faq.title': 'Вопросы - OsteoJump', 'education.title': 'Образование - OsteoJump', 'location.title': 'Как добраться - OsteoJump' },
-                'en': { 'title': 'OsteoJump', 'prices.title': 'Prices - OsteoJump', 'reviews.title': 'Reviews - OsteoJump', 'about_page.title': 'About Me - OsteoJump', 'faq.title': 'FAQ - OsteoJump', 'education.title': 'Education - OsteoJump', 'location.title': 'Directions - OsteoJump' },
-                'de': { 'title': 'OsteoJump', 'prices.title': 'Preise - OsteoJump', 'reviews.title': 'Bewertungen - OsteoJump', 'about_page.title': 'Über mich - OsteoJump', 'faq.title': 'FAQ - OsteoJump', 'education.title': 'Ausbildung - OsteoJump', 'location.title': 'Anfahrt - OsteoJump' },
-                'pl': { 'title': 'OsteoJump', 'prices.title': 'Ceny - OsteoJump', 'reviews.title': 'Opinie - OsteoJump', 'about_page.title': 'O mnie - OsteoJump', 'faq.title': 'FAQ - OsteoJump', 'education.title': 'Wykształcenie - OsteoJump', 'location.title': 'Jak dojechać - OsteoJump' },
-                'uk': { 'title': 'OsteoJump', 'prices.title': 'Ціни - OsteoJump', 'reviews.title': 'Відгуки - OsteoJump', 'about_page.title': 'Про мене - OsteoJump', 'faq.title': 'Питання - OsteoJump', 'education.title': 'Освіта - OsteoJump', 'location.title': 'Як дістатися - OsteoJump' }
+                'ru': { 'title': 'OsteoJump', 'prices.title': 'Цены - OsteoJump', 'reviews.title': 'Отзывы - OsteoJump', 'about_page.title': 'Обо мне - OsteoJump', 'about_page.meta_title': 'Анна Быкова — врач-остеопат в Варшаве | OsteoJump', 'faq.title': 'Вопросы - OsteoJump', 'education.title': 'Образование - OsteoJump', 'location.title': 'Как добраться - OsteoJump' },
+                'en': { 'title': 'OsteoJump', 'prices.title': 'Prices - OsteoJump', 'reviews.title': 'Reviews - OsteoJump', 'about_page.title': 'About Me - OsteoJump', 'about_page.meta_title': 'Anna Bykova — Osteopath in Warsaw | OsteoJump', 'faq.title': 'FAQ - OsteoJump', 'education.title': 'Education - OsteoJump', 'location.title': 'Directions - OsteoJump' },
+                'de': { 'title': 'OsteoJump', 'prices.title': 'Preise - OsteoJump', 'reviews.title': 'Bewertungen - OsteoJump', 'about_page.title': 'Über mich - OsteoJump', 'about_page.meta_title': 'Anna Bykova — Osteopathin in Warschau | OsteoJump', 'faq.title': 'FAQ - OsteoJump', 'education.title': 'Ausbildung - OsteoJump', 'location.title': 'Anfahrt - OsteoJump' },
+                'pl': { 'title': 'OsteoJump', 'prices.title': 'Ceny - OsteoJump', 'reviews.title': 'Opinie - OsteoJump', 'about_page.title': 'O mnie - OsteoJump', 'about_page.meta_title': 'Anna Bykova — Osteopata w Warszawie | OsteoJump', 'faq.title': 'FAQ - OsteoJump', 'education.title': 'Wykształcenie - OsteoJump', 'location.title': 'Jak dojechać - OsteoJump' },
+                'uk': { 'title': 'OsteoJump', 'prices.title': 'Ціни - OsteoJump', 'reviews.title': 'Відгуки - OsteoJump', 'about_page.title': 'Про мене - OsteoJump', 'about_page.meta_title': 'Анна Бикова — лікар-остеопат у Варшаві | OsteoJump', 'faq.title': 'Питання - OsteoJump', 'education.title': 'Освіта - OsteoJump', 'location.title': 'Як дістатися - OsteoJump' }
             };
-            
+
             // Set title immediately based on current page
             const titleElement = document.querySelector('title');
             if (titleElement) {
@@ -66,11 +69,10 @@
                     titleElement.textContent = translations[titleKey];
                 }
             }
-            
+
             // Preload translation file for faster loading (with versioning)
-            // Use timestamp to ensure fresh load even if HTML is cached
-            const translationsVersion = '5'; // Must match version in i18n.js
-            const timestamp = Date.now(); // Add timestamp to force refresh
+            const translationsVersion = '5';
+            const timestamp = Date.now();
             const link = document.createElement('link');
             link.rel = 'preload';
             link.as = 'fetch';
@@ -117,42 +119,220 @@
     </header>
 
     <main class="main">
-        <!-- Hero section with doctor photo -->
-        <section class="hero-doctor">
+        <!-- Hero Section -->
+        <section class="about-hero">
+            <div class="about-hero-bg">
+                <img src="/images/about/hero1.jpg" alt="Анна Быкова — врач-остеопат" class="about-hero-image">
+                <div class="about-hero-overlay"></div>
+            </div>
+            <div class="container about-hero-content">
+                <h1 class="about-hero-title" data-i18n="about_page.hero_title">Анна Быкова</h1>
+                <p class="about-hero-subtitle" data-i18n="about_page.hero_subtitle">Врач-остеопат</p>
+                <p class="about-hero-tagline" data-i18n="about_page.hero_tagline">Помогаю малышам, мамам и взрослым мягко и бережно</p>
+            </div>
+        </section>
+
+        <!-- What I Work With Section -->
+        <section class="about-specializations">
             <div class="container">
-                <div class="doctor-intro">
-                    <div class="doctor-photo-wrapper">
-                        <img src="/images/hanna-photo.avif" alt="Bykava Hanna" class="doctor-photo" id="doctorPhoto" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'photo-placeholder\'>📷</div>';">
+                <h2 class="section-title" data-i18n="about_page.specializations_title">С чем я работаю</h2>
+                <div class="specialization-cards">
+                    <!-- Children Card -->
+                    <div class="specialization-card">
+                        <div class="specialization-collage specialization-collage-children">
+                            <img src="/images/about/child1.jpg" alt="" class="collage-img collage-img-1">
+                            <img src="/images/about/child2.jpg" alt="" class="collage-img collage-img-2">
+                            <img src="/images/about/child3.jpg" alt="" class="collage-img collage-img-3">
+                            <img src="/images/about/child4.jpeg" alt="" class="collage-img collage-img-4">
+                        </div>
+                        <div class="specialization-content">
+                            <h3 class="specialization-title" data-i18n="about_page.children_title">Дети от рождения</h3>
+                            <p class="specialization-text" data-i18n="about_page.children_text">Работаю с малышами с первых дней жизни. Помогаю при последствиях сложных родов, нарушениях тонуса, кривошее, проблемах со сном и коликах.</p>
+                            <p class="specialization-text specialization-text-accent" data-i18n="about_page.children_experience">За плечами — опыт акушерки в родильном доме. Я знаю, через что проходит ребёнок во время родов, и понимаю, как это может отразиться на его теле.</p>
+                        </div>
                     </div>
-                    <div class="doctor-info">
-                        <h1 class="doctor-title" data-i18n="about_page.title">Обо мне</h1>
+
+                    <!-- Mothers Card -->
+                    <div class="specialization-card">
+                        <div class="specialization-collage specialization-collage-mothers">
+                            <img src="/images/about/pregnant.jpg" alt="" class="collage-img collage-img-1">
+                            <img src="/images/about/mother1.jpg" alt="" class="collage-img collage-img-2">
+                            <img src="/images/about/mother2.jpg" alt="" class="collage-img collage-img-3">
+                            <img src="/images/about/mother4.JPG" alt="" class="collage-img collage-img-4">
+                        </div>
+                        <div class="specialization-content">
+                            <h3 class="specialization-title" data-i18n="about_page.mothers_title">Мамы</h3>
+                            <p class="specialization-text" data-i18n="about_page.mothers_text">Беременность, роды и первые месяцы с малышом — это огромная нагрузка на тело. Помогаю будущим мамам подготовиться к родам, а после — восстановить таз, спину и рёбра.</p>
+                            <p class="specialization-text specialization-text-accent" data-i18n="about_page.mothers_experience">Я сама мама дочки, поэтому хорошо понимаю, через что вы проходите.</p>
+                        </div>
+                    </div>
+
+                    <!-- Adults Card -->
+                    <div class="specialization-card">
+                        <div class="specialization-collage specialization-collage-adults">
+                            <img src="/images/about/adult1.jpg" alt="" class="collage-img collage-img-1">
+                            <img src="/images/about/adult2.jpg" alt="" class="collage-img collage-img-2">
+                            <img src="/images/about/adult3.jpg" alt="" class="collage-img collage-img-3">
+                            <img src="/images/about/adult4.jpg" alt="" class="collage-img collage-img-4">
+                        </div>
+                        <div class="specialization-content">
+                            <h3 class="specialization-title" data-i18n="about_page.adults_title">Взрослые</h3>
+                            <p class="specialization-text" data-i18n="about_page.adults_text">Боли в спине и шее, головные боли, последствия травм, хроническое напряжение — частые причины обращения. Работаю с телом целостно, ищу первопричину, а не только снимаю симптомы.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="about">
+        <!-- My Journey Section -->
+        <section class="about-journey">
             <div class="container">
-                <p class="about-text" data-i18n="about_page.intro">Остеопатия — в моём сердце, в моих руках и в моём мышлении.</p>
-                <p class="about-text" data-i18n="about_page.education">По базовому образованию я акушерка и врач лабораторной диагностики, что даёт мне глубокое понимание физиологии, биохимических процессов и взаимосвязей в организме человека.</p>
-                <p class="about-text" data-i18n="about_page.experience">Остеопатией я профессионально занимаюсь с 2018 года.</p>
-                <p class="about-text" data-i18n="about_page.location">Живу и работаю в Варшаве, где принимаю взрослых и детей.</p>
-                <p class="about-text" data-i18n="about_page.approach_title">В своей практике использую комплексный остеопатический подход, включая:</p>
-                <ul class="about-techniques">
-                    <li data-i18n="about_page.technique1">структуральные техники</li>
-                    <li data-i18n="about_page.technique2">висцеральные техники</li>
-                    <li data-i18n="about_page.technique3">краниальные техники</li>
-                </ul>
-                <p class="about-text" data-i18n="about_page.conclusion">Каждый пациент для меня — уникален. В работе я стремлюсь не только облегчить симптомы, но и найти первопричину нарушений, помогая организму восстановить баланс и активировать собственные ресурсы к самовосстановлению.</p>
+                <div class="journey-layout">
+                    <div class="journey-content">
+                        <h2 class="section-title section-title-left" data-i18n="about_page.journey_title">Как я пришла в остеопатию</h2>
+                        <div class="journey-text">
+                            <p data-i18n="about_page.journey_text1">Мой путь в медицину начался с акушерства. Работая в родильном доме, я каждый день видела, как рождаются дети, — и как по-разному это может происходить. Тогда я начала понимать, как важно то, что происходит с телом малыша в первые минуты и дни жизни.</p>
+                            <p data-i18n="about_page.journey_text2">Позже я получила диплом врача лабораторной диагностики в Белорусском государственном медицинском университете. Но мне хотелось работать с людьми напрямую — помогать руками, а не только анализами.</p>
+                            <p data-i18n="about_page.journey_text3">Всё изменилось, когда я открыла для себя остеопатию. Меня впечатлило, как мягкие техники могут давать такие результаты. С 2018 года я практикую остеопатию, постоянно учусь и совершенствуюсь.</p>
+                            <p data-i18n="about_page.journey_text4">Сейчас я живу в Варшаве, воспитываю дочку и помогаю пациентам — от новорождённых до взрослых.</p>
+                        </div>
+                    </div>
+                    <div class="journey-collage">
+                        <img src="/images/about/mother3.JPG" alt="" class="journey-img journey-img-1">
+                        <img src="/images/about/mother5.jpg" alt="" class="journey-img journey-img-2">
+                        <img src="/images/about/child5.jpeg" alt="" class="journey-img journey-img-3">
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- Education Link Section -->
-        <section class="education-link">
+        <!-- Why Osteopathy Section -->
+        <section class="about-motivation">
             <div class="container">
-                <p class="about-text" data-i18n="about_page.see_education">
-                    Подробнее об образовании и сертификатах смотрите на странице <a href="/education" data-i18n="nav.education">Образование</a>.
-                </p>
+                <div class="motivation-content">
+                    <h2 class="section-title" data-i18n="about_page.motivation_title">Почему остеопатия</h2>
+                    <div class="motivation-text">
+                        <p data-i18n="about_page.motivation_text1">Современная медицина спасает жизни — и я искренне благодарна за всё, чему она меня научила. Протоколы, стандарты, специализации — всё это создано, чтобы помогать миллионам людей. И это работает.</p>
+                        <p data-i18n="about_page.motivation_text2">Но иногда мне хотелось большего. Не потому что система плоха — она просто устроена для другого масштаба. Когда перед вами сотни пациентов, сложно уделить каждому столько внимания, сколько хотелось бы. Это не чья-то вина — просто реальность.</p>
+                        <p data-i18n="about_page.motivation_text3">Работая в родильном доме, я видела, как по-разному могут проходить роды. Видела малышей, которым было непросто в первые дни. Видела мам, которым нужна была поддержка. И часто чувствовала: мне хочется помочь больше, чем позволяют рамки, в которых я нахожусь.</p>
+                        <p data-i18n="about_page.motivation_text4">Когда я сама стала мамой, это чувство только усилилось. Я поняла, как важно, чтобы кто-то посмотрел на тебя — именно на тебя, а не на диагноз или протокол.</p>
+                        <p data-i18n="about_page.motivation_text5">Остеопатия дала мне эту возможность. Здесь я могу не торопиться. Могу видеть человека целиком — его историю, его тело, его потребности. Могу работать без шаблонов, подбирая то, что нужно именно вам.</p>
+                        <p class="motivation-conclusion" data-i18n="about_page.motivation_conclusion">Это не отказ от медицины — это её продолжение. Просто в другом формате, более личном.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- My Approach Section -->
+        <section class="about-approach">
+            <div class="container">
+                <h2 class="section-title" data-i18n="about_page.approach_title_main">Как проходит приём</h2>
+                <div class="approach-layout">
+                    <div class="approach-text-content">
+                        <p data-i18n="about_page.approach_text1">Каждый приём начинается с разговора. Мне важно понять вашу историю, жалобы, образ жизни. Затем — диагностика руками: я оцениваю подвижность тканей, ищу напряжения и ограничения.</p>
+                        <p data-i18n="about_page.approach_text2">Работаю мягко. Использую краниальные, висцеральные и структуральные техники — в зависимости от того, что нужно именно вам. Моя задача — не заставить тело, а помочь ему восстановить баланс.</p>
+                        <p data-i18n="about_page.approach_text3">После сеанса я объясняю, что обнаружила и что можно делать дома для поддержания результата.</p>
+
+                        <div class="approach-principles">
+                            <h3 class="principles-title" data-i18n="about_page.principles_title">Принципы работы</h3>
+                            <ul class="principles-list">
+                                <li>
+                                    <strong data-i18n="about_page.principle1_title">Мягкость</strong>
+                                    <span data-i18n="about_page.principle1_text"> — деликатные техники, подходящие даже новорождённым</span>
+                                </li>
+                                <li>
+                                    <strong data-i18n="about_page.principle2_title">Индивидуальность</strong>
+                                    <span data-i18n="about_page.principle2_text"> — нет шаблонных протоколов, только ваше тело и его потребности</span>
+                                </li>
+                                <li>
+                                    <strong data-i18n="about_page.principle3_title">Целостность</strong>
+                                    <span data-i18n="about_page.principle3_text"> — смотрю на организм как на единую систему</span>
+                                </li>
+                                <li>
+                                    <strong data-i18n="about_page.principle4_title">Честность</strong>
+                                    <span data-i18n="about_page.principle4_text"> — не обещаю того, чего не могу гарантировать</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Work Process Slider -->
+                    <div class="approach-slider">
+                        <div class="slider-container" id="workSlider">
+                            <div class="slider-track" id="workSliderTrack">
+                                <div class="slider-slide"><img src="/images/about/work1.jpg" alt="Разговор с пациентом"></div>
+                                <div class="slider-slide"><img src="/images/about/work2.jpg" alt="Диагностика"></div>
+                                <div class="slider-slide"><img src="/images/about/work3.jpg" alt="Работа с телом"></div>
+                                <div class="slider-slide"><img src="/images/about/work4.jpg" alt="Остеопатические техники"></div>
+                                <div class="slider-slide"><img src="/images/about/work5.jpg" alt="Краниальные техники"></div>
+                                <div class="slider-slide"><img src="/images/about/work6.jpg" alt="Висцеральные техники"></div>
+                                <div class="slider-slide"><img src="/images/about/work7.jpg" alt="Завершение сеанса"></div>
+                            </div>
+                            <button class="slider-btn slider-prev" id="workSliderPrev" aria-label="Previous">&#8249;</button>
+                            <button class="slider-btn slider-next" id="workSliderNext" aria-label="Next">&#8250;</button>
+                        </div>
+                        <div class="slider-dots" id="workSliderDots"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section class="about-education">
+            <div class="container">
+                <h2 class="section-title" data-i18n="about_page.education_title">Образование и квалификация</h2>
+                <div class="education-grid">
+                    <div class="education-block">
+                        <h3 class="education-subtitle" data-i18n="about_page.medical_edu_title">Медицинское образование</h3>
+                        <ul class="education-list">
+                            <li data-i18n="about_page.medical_edu1">Минский государственный медицинский колледж — фельдшер-акушер</li>
+                            <li data-i18n="about_page.medical_edu2">Белорусский государственный медицинский университет — врач</li>
+                        </ul>
+                    </div>
+                    <div class="education-block">
+                        <h3 class="education-subtitle" data-i18n="about_page.osteo_edu_title">Остеопатия</h3>
+                        <ul class="education-list">
+                            <li data-i18n="about_page.osteo_edu1">Варшавская медицинская академия — доктор остеопатии</li>
+                            <li data-i18n="about_page.osteo_edu2">Практика с 2018 года (7+ лет опыта)</li>
+                        </ul>
+                    </div>
+                    <div class="education-block">
+                        <h3 class="education-subtitle" data-i18n="about_page.courses_title">Специализированные курсы</h3>
+                        <ul class="education-list education-list-courses">
+                            <li data-i18n="about_page.course1">Краниосакральная терапия (CST 1, CST 2)</li>
+                            <li data-i18n="about_page.course2">Краниосакральная терапия для детей</li>
+                            <li data-i18n="about_page.course3">Работа с беременными и роженицами</li>
+                            <li data-i18n="about_page.course4">Висцеральная терапия</li>
+                            <li data-i18n="about_page.course5">Сомато-эмоциональный релиз</li>
+                            <li data-i18n="about_page.course6">Кинезиотейпирование</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="education-languages">
+                    <p data-i18n="about_page.languages">Принимаю на русском, украинском и польском языке.</p>
+                </div>
+                <div class="education-link-wrapper">
+                    <a href="/education" class="education-link-btn" data-i18n="about_page.see_diplomas">Смотреть дипломы и сертификаты</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="about-cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="cta-title" data-i18n="about_page.cta_title">Есть вопросы?</h2>
+                    <p class="cta-text" data-i18n="about_page.cta_text">Если вы не уверены, подходит ли вам остеопатия, или хотите узнать больше — напишите мне. Я с радостью отвечу.</p>
+                    <p class="cta-location" data-i18n="about_page.cta_location">Принимаю в Варшаве, район Ursus. Записаться можно через Booksy, WhatsApp или Telegram.</p>
+                    <div class="cta-buttons">
+                        <a href="https://booksy.com/pl-pl/262212_osteojump_zdrowie_3_warszawa" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn-primary" data-i18n="about_page.cta_book">Записаться на приём</a>
+                        <a href="https://wa.me/+48572404770" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn-secondary" data-i18n="about_page.cta_whatsapp">Написать в WhatsApp</a>
+                    </div>
+                    <div class="cta-badge">
+                        <span class="badge-rating">5.0</span>
+                        <span class="badge-text" data-i18n="about_page.booksy_rating">на Booksy — все отзывы положительные</span>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -181,6 +361,6 @@
 
     <script src="../js/i18n.js"></script>
     <script src="../js/main.js"></script>
+    <script src="../js/about.js"></script>
 </body>
 </html>
-
