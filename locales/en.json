@@ -97,6 +97,9 @@
         "contacts": "Contacts",
         "directions": "Get Directions"
     },
+    "booking": {
+        "confirmation": "Your appointment is confirmed. We look forward to seeing you!"
+    },
     "about_page": {
         "title": "About Me",
         "subtitle": "Information about me coming soon",

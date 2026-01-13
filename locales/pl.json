@@ -97,6 +97,9 @@
         "contacts": "Kontakt",
         "directions": "Jak dojechać"
     },
+    "booking": {
+        "confirmation": "Twoja wizyta została potwierdzona. Czekamy na Ciebie!"
+    },
     "about_page": {
         "title": "O mnie",
         "subtitle": "Informacje o mnie wkrótce",

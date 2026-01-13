@@ -97,6 +97,9 @@
         "contacts": "Kontakte",
         "directions": "Wegbeschreibung"
     },
+    "booking": {
+        "confirmation": "Ihr Termin ist bestatigt. Wir freuen uns auf Sie!"
+    },
     "about_page": {
         "title": "Über mich",
         "subtitle": "Informationen über mich kommen bald",
