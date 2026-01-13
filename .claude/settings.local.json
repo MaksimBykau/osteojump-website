@@ -5,7 +5,18 @@
       "Bash(xargs:*)",
       "Bash(git commit:*)",
       "Bash(git add:*)",
-      "Bash(git push)"
+      "Bash(git push)",
+      "Bash(mv:*)",
+      "WebFetch(domain:osteojump.pl)",
+      "Bash(identify:*)",
+      "Bash(file:*)",
+      "Bash(md5sum:*)",
+      "Bash(shasum:*)",
+      "Bash(exiftool:*)",
+      "mcp__playwright__browser_navigate",
+      "mcp__playwright__browser_resize",
+      "mcp__playwright__browser_wait_for",
+      "mcp__playwright__browser_take_screenshot"
     ]
   }
 }
