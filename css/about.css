@@ -237,9 +237,15 @@
     background: linear-gradient(135deg, #f8fafc 0%, #eef2f7 100%);
 }
 
+.motivation-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+    align-items: center;
+}
+
 .motivation-content {
-    max-width: 800px;
-    margin: 0 auto;
+    max-width: 600px;
 }
 
 .motivation-text p {
@@ -257,6 +263,19 @@
     border-left: 3px solid var(--primary-color);
     padding-left: var(--spacing-md);
     margin-top: var(--spacing-lg) !important;
+}
+
+.motivation-photo {
+    display: flex;
+    justify-content: center;
+}
+
+.motivation-img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 }
 
 /* ============================================
@@ -647,6 +666,27 @@
         height: 350px;
         max-width: 500px;
         margin: 0 auto;
+    }
+
+    .motivation-layout {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+
+    .motivation-photo {
+        order: -1;
+    }
+
+    .motivation-img {
+        max-width: 350px;
+    }
+
+    .motivation-content {
+        max-width: 100%;
+    }
+
+    .section-title-left {
+        text-align: center;
     }
 
     .approach-layout {
