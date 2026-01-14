@@ -20,7 +20,14 @@
       "WebFetch(domain:www.instagram.com)",
       "Bash(pkill:*)",
       "WebSearch",
-      "WebFetch(domain:www.google.com)"
+      "WebFetch(domain:www.google.com)",
+      "Bash(for img in images/about/hero1.jpg images/about/child2.jpg images/about/child4.jpeg images/about/child5.jpeg images/about/mother4.JPG images/about/work5.jpg images/about/work6.jpg images/about/work7.jpg)",
+      "Bash(do echo \"Processing $img...\")",
+      "Bash(sips:*)",
+      "Bash(done)",
+      "mcp__playwright__browser_close",
+      "mcp__playwright__browser_snapshot",
+      "Bash(git checkout:*)"
     ]
   }
 }
