@@ -4,15 +4,15 @@
    Hero Section - Split Layout
    ============================================ */
 .about-hero {
-    padding: var(--spacing-xl) var(--spacing-sm);
-    padding-top: calc(var(--spacing-xl) + 60px); /* Account for fixed header */
+    padding: var(--spacing-lg) var(--spacing-sm);
+    padding-top: calc(var(--spacing-lg) + 60px); /* Account for fixed header */
     background: linear-gradient(135deg, #f8fafc 0%, #eef2f7 100%);
 }
 
 .about-hero-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-xl);
+    gap: var(--spacing-lg);
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
@@ -24,13 +24,13 @@
 
 .about-hero-image {
     width: 100%;
-    max-width: 500px;
+    max-width: 360px;
     height: auto;
     aspect-ratio: 3 / 4;
     object-fit: cover;
     object-position: center 20%;
-    border-radius: 24px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
 }
 
 .about-hero-content {
@@ -64,7 +64,7 @@
    Specializations Section
    ============================================ */
 .about-specializations {
-    padding: var(--spacing-xl) var(--spacing-sm);
+    padding: var(--spacing-lg) var(--spacing-sm);
     background-color: var(--bg-color);
 }
 
@@ -161,14 +161,14 @@
    Journey Section
    ============================================ */
 .about-journey {
-    padding: var(--spacing-xl) var(--spacing-sm);
+    padding: var(--spacing-lg) var(--spacing-sm);
     background-color: var(--section-bg);
 }
 
 .journey-layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-xl);
+    gap: var(--spacing-lg);
     align-items: center;
 }
 
@@ -233,14 +233,14 @@
    Motivation Section
    ============================================ */
 .about-motivation {
-    padding: var(--spacing-xl) var(--spacing-sm);
+    padding: var(--spacing-lg) var(--spacing-sm);
     background: linear-gradient(135deg, #f8fafc 0%, #eef2f7 100%);
 }
 
 .motivation-layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-xl);
+    gap: var(--spacing-lg);
     align-items: center;
 }
 
@@ -272,26 +272,26 @@
 
 .motivation-img {
     width: 100%;
-    max-width: 400px;
+    max-width: 360px;
     height: auto;
-    border-radius: 16px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    border-radius: 20px;
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
 }
 
 /* ============================================
    Approach Section
    ============================================ */
 .about-approach {
-    padding: var(--spacing-xl) var(--spacing-sm);
+    padding: var(--spacing-lg) var(--spacing-sm);
     background-color: var(--bg-color);
 }
 
 .approach-layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-xl);
+    gap: var(--spacing-lg);
     align-items: start;
-    margin-top: var(--spacing-lg);
+    margin-top: var(--spacing-md);
 }
 
 .approach-text-content p {
@@ -441,7 +441,7 @@
    Education Section
    ============================================ */
 .about-education {
-    padding: var(--spacing-xl) var(--spacing-sm);
+    padding: var(--spacing-lg) var(--spacing-sm);
     background-color: var(--section-bg);
 }
 
@@ -536,7 +536,7 @@
    CTA Section
    ============================================ */
 .about-cta {
-    padding: var(--spacing-xl) var(--spacing-sm);
+    padding: var(--spacing-lg) var(--spacing-sm);
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     color: white;
 }
@@ -646,7 +646,7 @@
     }
 
     .about-hero-image {
-        max-width: 400px;
+        max-width: 320px;
     }
 
     .about-hero-content {
@@ -678,7 +678,7 @@
     }
 
     .motivation-img {
-        max-width: 350px;
+        max-width: 320px;
     }
 
     .motivation-content {
@@ -702,12 +702,17 @@
 
 @media (max-width: 767px) {
     .about-hero {
-        padding-top: calc(var(--spacing-lg) + 60px);
+        padding-top: calc(var(--spacing-md) + 60px);
     }
 
     .about-hero-image {
-        max-width: 320px;
-        border-radius: 20px;
+        max-width: 280px;
+        border-radius: 16px;
+    }
+
+    .motivation-img {
+        max-width: 280px;
+        border-radius: 16px;
     }
 
     .specialization-cards {
@@ -751,12 +756,17 @@
 @media (max-width: 480px) {
     .about-hero {
         padding: var(--spacing-md) var(--spacing-sm);
-        padding-top: calc(var(--spacing-md) + 60px);
+        padding-top: calc(var(--spacing-sm) + 60px);
     }
 
     .about-hero-image {
-        max-width: 280px;
-        border-radius: 16px;
+        max-width: 240px;
+        border-radius: 12px;
+    }
+
+    .motivation-img {
+        max-width: 240px;
+        border-radius: 12px;
     }
 
     .specialization-collage,
