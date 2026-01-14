@@ -27,7 +27,9 @@
       "Bash(done)",
       "mcp__playwright__browser_close",
       "mcp__playwright__browser_snapshot",
-      "Bash(git checkout:*)"
+      "Bash(git checkout:*)",
+      "Bash(curl:*)",
+      "Bash(grep:*)"
     ]
   }
 }

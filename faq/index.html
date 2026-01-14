@@ -11,6 +11,7 @@
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link rel="apple-touch-icon" href="/images/favicon.png">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/faq.css">
     <style>
         /* Hide content until translations are loaded */
         body:not(.i18n-ready) {
@@ -99,6 +100,7 @@
                 <li><a href="/faq" data-i18n="nav.faq">Вопросы</a></li>
                 <li><a href="/education" data-i18n="nav.education">Образование</a></li>
                 <li><a href="/location" data-i18n="nav.location">Как добраться</a></li>
+                <li><a href="/appointment" data-i18n="nav.appointment">Как проходит прием</a></li>
             </ul>
             <div class="lang-select-wrapper">
                 <button class="lang-select-btn" id="langSelectBtn" aria-label="Select language" aria-expanded="false">
@@ -117,16 +119,96 @@
     </header>
 
     <main class="main">
-        <section class="hero">
+        <!-- Hero Section -->
+        <section class="faq-hero">
             <div class="container">
-                <h1 class="hero-title" data-i18n="faq.title">Вопросы</h1>
-                <p class="hero-text" data-i18n="faq.subtitle">Часто задаваемые вопросы скоро появятся</p>
+                <h1 class="faq-hero-title" data-i18n="faq.hero_title">Часто задаваемые вопросы</h1>
+                <p class="faq-hero-subtitle" data-i18n="faq.hero_subtitle">Ответы на популярные вопросы об остеопатии</p>
             </div>
         </section>
 
-        <section class="about">
+        <!-- FAQ Section -->
+        <section class="faq-section">
             <div class="container">
-                <p class="about-text" data-i18n="faq.content">Страница находится в разработке. Скоро здесь будут размещены ответы на часто задаваемые вопросы.</p>
+                <div class="faq-list">
+                    <!-- Question 1 - How does the session work -->
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span data-i18n="faq.q1_title">Как проходит прием?</span>
+                            <span class="faq-icon"></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p data-i18n="faq.q1_answer">Прием начинается с разговора и сбора анамнеза, затем — диагностика руками и мягкая остеопатическая работа. Сеанс длится 45-60 минут для взрослых и 30-45 минут для детей.</p>
+                            <a href="/appointment" class="faq-link" data-i18n="faq.q1_link">Подробнее о приеме</a>
+                        </div>
+                    </div>
+
+                    <!-- Question 2 - What is osteopathy -->
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span data-i18n="faq.q2_title">Что такое остеопатия?</span>
+                            <span class="faq-icon"></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p data-i18n="faq.q2_answer">Остеопатия — это метод ручной диагностики и лечения, основанный на понимании взаимосвязи всех структур организма. Остеопат работает с мышцами, фасциями, органами, костями черепа и позвоночника, помогая телу восстановить естественный баланс.</p>
+                        </div>
+                    </div>
+
+                    <!-- Question 3 - Is it painful -->
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span data-i18n="faq.q3_title">Это больно?</span>
+                            <span class="faq-icon"></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p data-i18n="faq.q3_answer">Нет, остеопатические техники мягкие и безболезненные. Работа ведется деликатно, с учетом реакции вашего тела. Техники подходят даже новорожденным и беременным.</p>
+                        </div>
+                    </div>
+
+                    <!-- Question 4 - How many sessions needed -->
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span data-i18n="faq.q4_title">Сколько сеансов нужно?</span>
+                            <span class="faq-icon"></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p data-i18n="faq.q4_answer">Это зависит от вашей проблемы и состояния здоровья. Часто уже после первого сеанса чувствуется улучшение. Для устойчивого результата обычно рекомендуется 3-5 сеансов с интервалом 1-2 недели.</p>
+                        </div>
+                    </div>
+
+                    <!-- Question 5 - What to wear -->
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span data-i18n="faq.q5_title">Что надеть на прием?</span>
+                            <span class="faq-icon"></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p data-i18n="faq.q5_answer">Удобную одежду, которая не сковывает движения. Подойдут хлопковая футболка и легкие брюки или леггинсы. Работа проводится в одежде, раздеваться не нужно.</p>
+                        </div>
+                    </div>
+
+                    <!-- Question 6 - Can children be treated -->
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span data-i18n="faq.q6_title">Можно ли лечить детей?</span>
+                            <span class="faq-icon"></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p data-i18n="faq.q6_answer">Да, остеопатия безопасна для детей любого возраста, включая новорожденных. Детские техники еще более мягкие и адаптированы под особенности растущего организма.</p>
+                        </div>
+                    </div>
+
+                    <!-- Question 7 - How to book -->
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span data-i18n="faq.q7_title">Как записаться на прием?</span>
+                            <span class="faq-icon"></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p data-i18n="faq.q7_answer">Записаться можно через Booksy, WhatsApp или позвонив по телефону. Кнопка «Записаться» находится внизу страницы.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -155,6 +237,15 @@
 
     <script src="../js/i18n.js"></script>
     <script src="../js/main.js"></script>
+    <script>
+        // FAQ Accordion functionality
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const isExpanded = button.getAttribute('aria-expanded') === 'true';
+                button.setAttribute('aria-expanded', !isExpanded);
+            });
+        });
+    </script>
 </body>
 </html>
 

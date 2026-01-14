@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="description" content="Как проходит прием у остеопата. Этапы приема: разговор, диагностика, работа с телом. Мягкие техники, индивидуальный подход.">
+    <meta name="keywords" content="остеопат прием, как проходит остеопатия, остеопатический сеанс, остеопат Варшава">
+    <title data-i18n="appointment_page.title">Как проходит прием - OsteoJump</title>
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="apple-touch-icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/about.css">
+    <link rel="stylesheet" href="../css/appointment.css">
+    <style>
+        /* Hide content until translations are loaded */
+        body:not(.i18n-ready) {
+            visibility: hidden;
+        }
+        body.i18n-ready {
+            visibility: visible;
+        }
+        /* Fallback: show content after 1 second even if translations didn't load */
+        @keyframes showContent {
+            from { visibility: hidden; }
+            to { visibility: visible; }
+        }
+        body {
+            animation: showContent 0s 1s forwards;
+        }
+    </style>
+    <script src="../js/clean-url.js"></script>
+    <script>
+        // Quick language detection and set title immediately to prevent flickering
+        (function() {
+            const supportedLangs = ['ru', 'en', 'de', 'pl', 'uk'];
+            const savedLang = localStorage.getItem('language');
+            let lang = 'en'; // default
+
+            if (savedLang && supportedLangs.includes(savedLang)) {
+                lang = savedLang;
+            } else {
+                const browserLang = (navigator.language || navigator.userLanguage).split('-')[0].toLowerCase();
+                if (supportedLangs.includes(browserLang)) {
+                    lang = browserLang;
+                }
+            }
+
+            // Set lang attribute immediately
+            document.documentElement.lang = lang;
+
+            // Title translations map for immediate setting
+            const titleMap = {
+                'ru': { 'title': 'OsteoJump', 'prices.title': 'Цены - OsteoJump', 'reviews.title': 'Отзывы - OsteoJump', 'about_page.title': 'Обо мне - OsteoJump', 'about_page.meta_title': 'Анна Быкова — врач-остеопат в Варшаве | OsteoJump', 'faq.title': 'Вопросы - OsteoJump', 'education.title': 'Образование - OsteoJump', 'location.title': 'Как добраться - OsteoJump', 'appointment_page.title': 'Как проходит прием - OsteoJump' },
+                'en': { 'title': 'OsteoJump', 'prices.title': 'Prices - OsteoJump', 'reviews.title': 'Reviews - OsteoJump', 'about_page.title': 'About Me - OsteoJump', 'about_page.meta_title': 'Anna Bykova — Osteopath in Warsaw | OsteoJump', 'faq.title': 'FAQ - OsteoJump', 'education.title': 'Education - OsteoJump', 'location.title': 'Directions - OsteoJump', 'appointment_page.title': 'How a Session Works - OsteoJump' },
+                'de': { 'title': 'OsteoJump', 'prices.title': 'Preise - OsteoJump', 'reviews.title': 'Bewertungen - OsteoJump', 'about_page.title': 'Über mich - OsteoJump', 'about_page.meta_title': 'Anna Bykova — Osteopathin in Warschau | OsteoJump', 'faq.title': 'FAQ - OsteoJump', 'education.title': 'Ausbildung - OsteoJump', 'location.title': 'Anfahrt - OsteoJump', 'appointment_page.title': 'Wie eine Sitzung abläuft - OsteoJump' },
+                'pl': { 'title': 'OsteoJump', 'prices.title': 'Ceny - OsteoJump', 'reviews.title': 'Opinie - OsteoJump', 'about_page.title': 'O mnie - OsteoJump', 'about_page.meta_title': 'Anna Bykova — Osteopata w Warszawie | OsteoJump', 'faq.title': 'FAQ - OsteoJump', 'education.title': 'Wykształcenie - OsteoJump', 'location.title': 'Jak dojechać - OsteoJump', 'appointment_page.title': 'Jak przebiega wizyta - OsteoJump' },
+                'uk': { 'title': 'OsteoJump', 'prices.title': 'Ціни - OsteoJump', 'reviews.title': 'Відгуки - OsteoJump', 'about_page.title': 'Про мене - OsteoJump', 'about_page.meta_title': 'Анна Бикова — лікар-остеопат у Варшаві | OsteoJump', 'faq.title': 'Питання - OsteoJump', 'education.title': 'Освіта - OsteoJump', 'location.title': 'Як дістатися - OsteoJump', 'appointment_page.title': 'Як проходить прийом - OsteoJump' }
+            };
+
+            // Set title immediately based on current page
+            const titleElement = document.querySelector('title');
+            if (titleElement) {
+                const titleKey = titleElement.getAttribute('data-i18n') || 'title';
+                const translations = titleMap[lang] || titleMap['en'];
+                if (translations[titleKey]) {
+                    titleElement.textContent = translations[titleKey];
+                }
+            }
+
+            // Preload translation file for faster loading (with versioning)
+            const translationsVersion = '5';
+            const timestamp = Date.now();
+            const link = document.createElement('link');
+            link.rel = 'preload';
+            link.as = 'fetch';
+            link.crossOrigin = 'anonymous';
+            link.href = `/locales/${lang}.json?v=${translationsVersion}&t=${timestamp}`;
+            document.head.appendChild(link);
+        })();
+    </script>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <div class="logo">
+                <a href="/"><h1 data-i18n="logo">OsteoJump</h1></a>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="/" data-i18n="nav.home">Главная</a></li>
+                <li><a href="/prices" data-i18n="nav.prices">Цены</a></li>
+                <li><a href="/reviews" data-i18n="nav.reviews">Отзывы</a></li>
+                <li><a href="/about" data-i18n="nav.about">Обо мне</a></li>
+                <li><a href="/faq" data-i18n="nav.faq">Вопросы</a></li>
+                <li><a href="/education" data-i18n="nav.education">Образование</a></li>
+                <li><a href="/location" data-i18n="nav.location">Как добраться</a></li>
+                <li><a href="/appointment" data-i18n="nav.appointment">Как проходит прием</a></li>
+            </ul>
+            <div class="lang-select-wrapper">
+                <button class="lang-select-btn" id="langSelectBtn" aria-label="Select language" aria-expanded="false">
+                    <span class="lang-select-text" id="langSelectText"><span class="flag-emoji">🇬🇧</span> EN</span>
+                    <span class="lang-select-arrow">▼</span>
+                </button>
+                <div class="lang-select-dropdown" id="langSelectDropdown">
+                    <button class="lang-select-option" data-lang="ru"><span class="flag-emoji">🇷🇺</span> RU</button>
+                    <button class="lang-select-option" data-lang="en"><span class="flag-emoji">🇬🇧</span> EN</button>
+                    <button class="lang-select-option" data-lang="de"><span class="flag-emoji">🇩🇪</span> DE</button>
+                    <button class="lang-select-option" data-lang="pl"><span class="flag-emoji">🇵🇱</span> PL</button>
+                    <button class="lang-select-option" data-lang="uk"><span class="flag-emoji">🇺🇦</span> UK</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="appointment-hero">
+            <div class="container">
+                <h1 class="appointment-hero-title" data-i18n="appointment_page.hero_title">Как проходит прием</h1>
+                <p class="appointment-hero-subtitle" data-i18n="appointment_page.hero_subtitle">Что ожидать от сеанса остеопатии</p>
+            </div>
+        </section>
+
+        <!-- Session Steps Section -->
+        <section class="appointment-steps">
+            <div class="container">
+                <div class="steps-grid">
+                    <!-- Step 1: Conversation -->
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3 class="step-title" data-i18n="appointment_page.step1_title">Разговор</h3>
+                            <p class="step-text" data-i18n="appointment_page.step1_text">Каждый прием начинается с разговора. Мне важно понять вашу историю, жалобы, образ жизни. Это помогает составить полную картину и найти первопричину проблемы.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Diagnostics -->
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3 class="step-title" data-i18n="appointment_page.step2_title">Диагностика</h3>
+                            <p class="step-text" data-i18n="appointment_page.step2_text">Затем я провожу диагностику руками: оцениваю подвижность тканей, ищу напряжения и ограничения. Это позволяет понять, какие техники будут наиболее эффективны.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Treatment -->
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3 class="step-title" data-i18n="appointment_page.step3_title">Работа с телом</h3>
+                            <p class="step-text" data-i18n="appointment_page.step3_text">Работаю мягко. Использую краниальные, висцеральные и структуральные техники — в зависимости от того, что нужно именно вам. Моя задача — не заставить тело, а помочь ему восстановить баланс.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 4: Recommendations -->
+                    <div class="step-card">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3 class="step-title" data-i18n="appointment_page.step4_title">Рекомендации</h3>
+                            <p class="step-text" data-i18n="appointment_page.step4_text">После сеанса я объясняю, что обнаружила и что можно делать дома для поддержания результата. При необходимости рекомендую план дальнейших визитов.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Work Process Section with Slider -->
+        <section class="appointment-process">
+            <div class="container">
+                <h2 class="section-title" data-i18n="appointment_page.process_title">Процесс работы</h2>
+
+                <div class="process-layout">
+                    <div class="process-text-content">
+                        <p data-i18n="appointment_page.process_text1">Каждый сеанс остеопатии уникален, потому что каждый человек уникален. Я не использую шаблонные протоколы — работаю с тем, что показывает мне ваше тело в данный момент.</p>
+                        <p data-i18n="appointment_page.process_text2">Остеопатические техники могут быть направлены на разные структуры: мышцы и фасции, внутренние органы, череп и крестец. Выбор техники зависит от вашей проблемы и индивидуальных особенностей.</p>
+                        <p data-i18n="appointment_page.process_text3">Продолжительность сеанса обычно составляет 45-60 минут для взрослых и 30-45 минут для детей.</p>
+                    </div>
+
+                    <!-- Work Process Slider -->
+                    <div class="approach-slider">
+                        <div class="slider-container" id="workSlider">
+                            <div class="slider-track" id="workSliderTrack">
+                                <div class="slider-slide"><img src="/images/about/work1.jpg" alt="Разговор с пациентом"></div>
+                                <div class="slider-slide"><img src="/images/about/work2.jpg" alt="Диагностика"></div>
+                                <div class="slider-slide"><img src="/images/about/work3.jpg" alt="Работа с телом"></div>
+                                <div class="slider-slide"><img src="/images/about/work4.jpg" alt="Остеопатические техники"></div>
+                                <div class="slider-slide"><img src="/images/about/work5.jpg" alt="Краниальные техники"></div>
+                                <div class="slider-slide"><img src="/images/about/work6.jpg" alt="Висцеральные техники"></div>
+                                <div class="slider-slide"><img src="/images/about/work7.jpg" alt="Завершение сеанса"></div>
+                            </div>
+                            <button class="slider-btn slider-prev" id="workSliderPrev" aria-label="Previous">&#8249;</button>
+                            <button class="slider-btn slider-next" id="workSliderNext" aria-label="Next">&#8250;</button>
+                        </div>
+                        <div class="slider-dots" id="workSliderDots"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Principles Section -->
+        <section class="appointment-principles">
+            <div class="container">
+                <h2 class="section-title" data-i18n="appointment_page.principles_title">Принципы работы</h2>
+                <div class="principles-grid">
+                    <div class="principle-card">
+                        <div class="principle-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"></path>
+                                <path d="M8.5 8.5v.01"></path>
+                                <path d="M16 15.5v.01"></path>
+                                <path d="M12 12v.01"></path>
+                                <path d="M11 17v.01"></path>
+                                <path d="M7 14v.01"></path>
+                            </svg>
+                        </div>
+                        <h3 class="principle-title" data-i18n="appointment_page.principle1_title">Мягкость</h3>
+                        <p class="principle-text" data-i18n="appointment_page.principle1_text">Деликатные техники, подходящие даже новорожденным. Работа с телом без боли и дискомфорта.</p>
+                    </div>
+
+                    <div class="principle-card">
+                        <div class="principle-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <h3 class="principle-title" data-i18n="appointment_page.principle2_title">Индивидуальность</h3>
+                        <p class="principle-text" data-i18n="appointment_page.principle2_text">Нет шаблонных протоколов, только ваше тело и его потребности. Каждый сеанс адаптируется под вас.</p>
+                    </div>
+
+                    <div class="principle-card">
+                        <div class="principle-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+                                <path d="M2 12h20"></path>
+                            </svg>
+                        </div>
+                        <h3 class="principle-title" data-i18n="appointment_page.principle3_title">Целостность</h3>
+                        <p class="principle-text" data-i18n="appointment_page.principle3_text">Смотрю на организм как на единую систему. Ищу первопричину, а не только снимаю симптомы.</p>
+                    </div>
+
+                    <div class="principle-card">
+                        <div class="principle-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path>
+                                <path d="m9 12 2 2 4-4"></path>
+                            </svg>
+                        </div>
+                        <h3 class="principle-title" data-i18n="appointment_page.principle4_title">Честность</h3>
+                        <p class="principle-text" data-i18n="appointment_page.principle4_text">Не обещаю того, чего не могу гарантировать. Честно говорю о возможностях и ограничениях.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="appointment-cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="cta-title" data-i18n="appointment_page.cta_title">Готовы записаться?</h2>
+                    <p class="cta-text" data-i18n="appointment_page.cta_text">Если у вас остались вопросы о том, как проходит прием, или вы хотите записаться — свяжитесь со мной.</p>
+                    <div class="cta-buttons">
+                        <a href="https://booksy.com/pl-pl/262212_osteojump_zdrowie_3_warszawa" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn-primary" data-i18n="appointment_page.cta_book">Записаться на прием</a>
+                        <a href="https://wa.me/+48572404770" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn-secondary" data-i18n="appointment_page.cta_whatsapp">Написать в WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p data-i18n="footer.text">&copy; 2024 OsteoJump. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <!-- Fixed Action Bar -->
+    <div class="fixed-action-bar" id="fixedActionBar">
+        <button class="action-btn action-book" id="actionBook" aria-label="Book appointment">
+            <span class="action-icon">📅</span>
+            <span class="action-text" data-i18n="action_bar.book">Записаться</span>
+        </button>
+        <button class="action-btn action-contacts" id="actionContacts" aria-label="View contacts">
+            <span class="action-icon">📞</span>
+            <span class="action-text" data-i18n="action_bar.contacts">Контакты</span>
+        </button>
+        <button class="action-btn action-directions" id="actionDirections" aria-label="Get directions">
+            <span class="action-icon">📍</span>
+            <span class="action-text" data-i18n="action_bar.directions">Как добраться</span>
+        </button>
+    </div>
+
+    <script src="../js/i18n.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/about.js"></script>
+</body>
+</html>
