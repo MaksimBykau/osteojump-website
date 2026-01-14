@@ -1,52 +1,7 @@
-/* Education Page Styles */
+/* Education Page - Variant A: Three Columns */
 
-/* ============================================
-   Education-specific Hero Overrides
-   Peek-эффект: hero не занимает весь экран
-   ============================================ */
-.hero-doctor {
-    padding: var(--spacing-md) var(--spacing-sm);
-    padding-top: calc(var(--spacing-md) + 60px); /* Account for fixed header */
-    padding-bottom: var(--spacing-sm);
-    background-color: var(--bg-color);
-    /* Peek-эффект: ограничиваем высоту чтобы было видно контент ниже */
-    max-height: calc(100dvh - 180px);
-    display: flex;
-    align-items: center;
-}
-
-.hero-doctor .container {
-    width: 100%;
-}
-
-.hero-doctor .doctor-photo {
-    width: 180px;
-    height: 180px;
-}
-
-/* ============================================
-   Education-specific About Section
-   ============================================ */
-.about {
-    padding: var(--spacing-sm) var(--spacing-sm) var(--spacing-md);
-    background-color: var(--bg-color);
-}
-
-/* ============================================
-   Diplomas Section - Peek Effect
-   Shows hint of timeline section below
-   ============================================ */
-.diplomas-section {
-    padding: var(--spacing-md) var(--spacing-sm);
-    padding-bottom: var(--spacing-sm);
-    background-color: var(--section-bg);
-}
-
-/* ============================================
-   Timeline Section - Three Columns
-   ============================================ */
 .timeline-section {
-    padding: var(--spacing-md) var(--spacing-sm) var(--spacing-lg);
+    padding: var(--spacing-lg) var(--spacing-sm);
     background-color: var(--section-bg);
 }
 
@@ -69,19 +24,19 @@
     align-items: center;
     gap: var(--spacing-sm);
     margin-bottom: var(--spacing-md);
-    padding-bottom: var(--spacing-xs);
-    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 2px solid #e5e7eb;
 }
 
 .column-icon {
-    font-size: 1.75rem;
+    font-size: 2rem;
     line-height: 1;
 }
 
 .column-title {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: var(--primary-color);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-color);
     margin: 0;
 }
 
@@ -139,18 +94,18 @@
     margin-bottom: 0.5rem;
 }
 
-/* Card styles - matches About page education blocks */
+/* Card styles */
 .timeline-card {
     background: white;
-    border-radius: 12px;
+    border-radius: 8px;
     padding: var(--spacing-sm);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .timeline-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .card-title {
@@ -211,25 +166,14 @@
 
 /* Responsive */
 @media (max-width: 1024px) {
-    .hero-doctor {
-        padding-top: calc(var(--spacing-sm) + 60px);
-        padding-bottom: var(--spacing-xs);
-        max-height: calc(100dvh - 150px);
-    }
-
-    .hero-doctor .doctor-photo {
-        width: 160px;
-        height: 160px;
-    }
-
     .timeline-grid {
         grid-template-columns: 1fr;
-        gap: var(--spacing-md);
+        gap: var(--spacing-lg);
     }
 
     .timeline-column {
         border-bottom: 1px solid #e5e7eb;
-        padding-bottom: var(--spacing-md);
+        padding-bottom: var(--spacing-lg);
     }
 
     .timeline-column:last-child {
@@ -239,27 +183,8 @@
 }
 
 @media (max-width: 767px) {
-    .hero-doctor {
-        padding: var(--spacing-sm) var(--spacing-sm);
-        padding-top: calc(var(--spacing-xs) + 60px);
-        max-height: calc(100dvh - 120px);
-    }
-
-    .hero-doctor .doctor-photo {
-        width: 140px;
-        height: 140px;
-    }
-
-    .about {
-        padding: var(--spacing-xs) var(--spacing-sm) var(--spacing-sm);
-    }
-
-    .diplomas-section {
-        padding: var(--spacing-sm) var(--spacing-xs);
-    }
-
     .timeline-section {
-        padding: var(--spacing-sm) var(--spacing-xs) var(--spacing-md);
+        padding: var(--spacing-md) var(--spacing-xs);
     }
 
     .column-header {
@@ -267,7 +192,7 @@
     }
 
     .column-title {
-        font-size: 1.125rem;
+        font-size: 1.25rem;
     }
 
     .timeline-item {
@@ -276,25 +201,5 @@
 
     .card-diploma img {
         max-width: 100px;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-doctor {
-        padding-top: calc(var(--spacing-xs) + 56px);
-        max-height: calc(100dvh - 100px);
-    }
-
-    .hero-doctor .doctor-photo {
-        width: 120px;
-        height: 120px;
-    }
-
-    .timeline-grid {
-        gap: var(--spacing-sm);
-    }
-
-    .timeline-column {
-        padding-bottom: var(--spacing-sm);
     }
 }

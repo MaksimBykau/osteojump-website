@@ -24,13 +24,13 @@
 
 .about-hero-image {
     width: 100%;
-    max-width: 360px;
+    max-width: 400px;
     height: auto;
     aspect-ratio: 3 / 4;
     object-fit: cover;
     object-position: center 20%;
-    border-radius: 20px;
-    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 }
 
 .about-hero-content {
@@ -191,13 +191,14 @@
     margin-bottom: 0;
 }
 
-/* Journey Collage */
+/* Journey Collage - уменьшен до размера одиночного фото */
 .journey-collage {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 12px;
-    height: 450px;
+    gap: 8px;
+    max-width: 400px;
+    aspect-ratio: 1 / 1;
 }
 
 .journey-img {
@@ -272,10 +273,10 @@
 
 .motivation-img {
     width: 100%;
-    max-width: 360px;
+    max-width: 400px;
     height: auto;
-    border-radius: 20px;
-    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 }
 
 /* ============================================
@@ -646,7 +647,7 @@
     }
 
     .about-hero-image {
-        max-width: 320px;
+        max-width: 350px;
     }
 
     .about-hero-content {
@@ -659,18 +660,17 @@
 
     .journey-layout {
         grid-template-columns: 1fr;
-        gap: var(--spacing-lg);
+        gap: var(--spacing-md);
     }
 
     .journey-collage {
-        height: 350px;
-        max-width: 500px;
+        max-width: 350px;
         margin: 0 auto;
     }
 
     .motivation-layout {
         grid-template-columns: 1fr;
-        gap: var(--spacing-lg);
+        gap: var(--spacing-md);
     }
 
     .motivation-photo {
@@ -678,7 +678,7 @@
     }
 
     .motivation-img {
-        max-width: 320px;
+        max-width: 350px;
     }
 
     .motivation-content {
@@ -706,13 +706,8 @@
     }
 
     .about-hero-image {
-        max-width: 280px;
-        border-radius: 16px;
-    }
-
-    .motivation-img {
-        max-width: 280px;
-        border-radius: 16px;
+        max-width: 300px;
+        border-radius: 14px;
     }
 
     .specialization-cards {
@@ -726,7 +721,11 @@
     }
 
     .journey-collage {
-        height: 280px;
+        max-width: 300px;
+    }
+
+    .motivation-img {
+        max-width: 300px;
     }
 
     .section-title-left {
@@ -755,17 +754,12 @@
 
 @media (max-width: 480px) {
     .about-hero {
-        padding: var(--spacing-md) var(--spacing-sm);
+        padding: var(--spacing-sm) var(--spacing-sm);
         padding-top: calc(var(--spacing-sm) + 60px);
     }
 
     .about-hero-image {
-        max-width: 240px;
-        border-radius: 12px;
-    }
-
-    .motivation-img {
-        max-width: 240px;
+        max-width: 260px;
         border-radius: 12px;
     }
 
@@ -775,8 +769,12 @@
     }
 
     .journey-collage {
-        height: 240px;
-        gap: 8px;
+        max-width: 260px;
+        gap: 6px;
+    }
+
+    .motivation-img {
+        max-width: 260px;
     }
 
     .slider-btn {
