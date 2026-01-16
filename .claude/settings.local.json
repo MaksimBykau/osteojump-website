@@ -29,7 +29,12 @@
       "mcp__playwright__browser_snapshot",
       "Bash(git checkout:*)",
       "Bash(curl:*)",
-      "Bash(grep:*)"
+      "Bash(grep:*)",
+      "Bash(claude mcp add:*)",
+      "WebFetch(domain:github.com)",
+      "Bash(npx -y @modelcontextprotocol/server-sequential-thinking --help)",
+      "Bash(npm cache clean:*)",
+      "Bash(claude mcp list:*)"
     ]
   }
 }

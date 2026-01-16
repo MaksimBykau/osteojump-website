@@ -2,6 +2,9 @@
 
 Сайт остеопата Bykava Hanna. Статический сайт на HTML/CSS/JS с мультиязычной поддержкой.
 
+# Context7
+Always use Context7 MCP when I need library/API documentation, code generation, setup or configuration steps without me having to explicitly ask.
+
 ## Структура проекта
 
 ```
