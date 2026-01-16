@@ -11,36 +11,40 @@
 
 .hero-top-layout {
     display: grid;
-    grid-template-columns: 300px 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: var(--spacing-lg);
     align-items: center;
-    max-width: 900px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
 .hero-top-image-wrapper {
-    display: flex;
-    justify-content: center;
+    position: relative;
 }
 
 .hero-top-image {
     width: 100%;
-    max-width: 300px;
+    max-width: 400px;
     height: auto;
-    border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 }
 
 .hero-top-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: flex-start;
+    padding: var(--spacing-lg);
+    height: 100%;
 }
 
 .hero-top-text {
-    font-size: 1.125rem;
-    line-height: 1.8;
-    color: #374151;
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    font-weight: 400;
+    line-height: 1.7;
+    color: #4b5563;
+    max-width: 450px;
     margin: 0;
 }
 
@@ -314,25 +318,24 @@
 
 @media (max-width: 1024px) {
     .hero-top-layout {
-        grid-template-columns: 250px 1fr;
-        gap: var(--spacing-md);
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+        text-align: center;
+    }
+
+    .hero-top-image-wrapper {
+        order: -1;
     }
 
     .hero-top-image {
-        max-width: 250px;
+        max-width: 350px;
     }
 }
 
 @media (max-width: 767px) {
-    .hero-top-layout {
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: var(--spacing-md);
-    }
-
     .hero-top-image {
-        max-width: 220px;
-        margin: 0 auto;
+        max-width: 300px;
+        border-radius: 14px;
     }
 
     .hero-top-text {
@@ -375,7 +378,8 @@
 
 @media (max-width: 480px) {
     .hero-top-image {
-        max-width: 180px;
+        max-width: 260px;
+        border-radius: 12px;
     }
 
     .diplomas-track-container {

@@ -190,6 +190,7 @@
     grid-template-columns: 1fr 1fr;
     gap: var(--spacing-lg);
     align-items: center;
+    margin-top: var(--spacing-md);
 }
 
 .section-title-left {
@@ -263,6 +264,7 @@
     grid-template-columns: 1fr 1fr;
     gap: var(--spacing-lg);
     align-items: center;
+    margin-top: var(--spacing-md);
 }
 
 .motivation-content {
