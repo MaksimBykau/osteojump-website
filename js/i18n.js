@@ -100,7 +100,7 @@ class I18n {
         document.querySelectorAll('[data-i18n]').forEach(element => {
             const key = element.getAttribute('data-i18n');
             const translation = this.translate(key);
-            
+
             if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
                 element.placeholder = translation;
             } else if (element.tagName === 'TITLE') {
@@ -114,7 +114,14 @@ class I18n {
                 element.textContent = translation;
             }
         });
-        
+
+        // Handle elements with HTML content (data-i18n-html)
+        document.querySelectorAll('[data-i18n-html]').forEach(element => {
+            const key = element.getAttribute('data-i18n-html');
+            const translation = this.translate(key);
+            element.innerHTML = translation;
+        });
+
         // Update HTML lang attribute
         document.documentElement.lang = this.currentLang;
     }
