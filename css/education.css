@@ -278,7 +278,7 @@
    ============================================ */
 .education-next {
     padding: var(--spacing-lg) var(--spacing-sm);
-    background: linear-gradient(135deg, #f8fafc 0%, #eef2f7 100%);
+    background-color: var(--bg-color);
     text-align: center;
 }
 
@@ -397,7 +397,7 @@
 
 .timeline-section {
     padding: var(--spacing-lg) var(--spacing-sm);
-    background-color: var(--section-bg);
+    background: linear-gradient(135deg, #f8fafc 0%, #eef2f7 100%);
 }
 
 .timeline-grid {
