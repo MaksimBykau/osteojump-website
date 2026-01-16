@@ -225,16 +225,12 @@
         "exp4_year": "2019-heute",
         "osteo_badge": "Osteopathie",
         "in_progress": "In Ausbildung",
-        "course1_title": "Massagekurse",
-        "course1_subtitle": "Klassisch, therapeutisch",
-        "course2_title": "Gesichtsmassagekurs",
         "course3_title": "Kraniosakrale Therapie 1",
         "course4_title": "Kraniosakrale Therapie 2",
         "course5_title": "Somato-emotionale Entspannung",
         "course6_title": "Viszerale Therapie",
         "course7_title": "Kraniosakrale Therapie für Kinder",
-        "course8_title": "KST für Schwangerschaft und Geburt",
-        "course9_title": "Kinesio-Taping"
+        "course8_title": "KST für Schwangerschaft und Geburt"
     },
     "location": {
         "title": "Anfahrt - OsteoJump",

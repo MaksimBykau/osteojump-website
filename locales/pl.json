@@ -225,16 +225,12 @@
         "exp4_year": "2019-obecnie",
         "osteo_badge": "Osteopatia",
         "in_progress": "W trakcie nauki",
-        "course1_title": "Kursy masażu",
-        "course1_subtitle": "Klasyczny, leczniczy",
-        "course2_title": "Kurs masażu twarzy",
         "course3_title": "Terapia czaszkowo-krzyżowa 1",
         "course4_title": "Terapia czaszkowo-krzyżowa 2",
         "course5_title": "Uwolnienie somatyczno-emocjonalne",
         "course6_title": "Terapia wisceralna",
         "course7_title": "Terapia czaszkowo-krzyżowa dla dzieci",
-        "course8_title": "TCK dla ciąży i porodu",
-        "course9_title": "Kinesiotaping"
+        "course8_title": "TCK dla ciąży i porodu"
     },
     "location": {
         "title": "Jak dojechać - OsteoJump",

@@ -225,16 +225,12 @@
         "exp4_year": "2019-present",
         "osteo_badge": "Osteopathy",
         "in_progress": "Currently studying",
-        "course1_title": "Massage Courses",
-        "course1_subtitle": "Classic, therapeutic",
-        "course2_title": "Facial Massage Course",
         "course3_title": "Craniosacral Therapy 1",
         "course4_title": "Craniosacral Therapy 2",
         "course5_title": "Somato-Emotional Release",
         "course6_title": "Visceral Therapy",
         "course7_title": "Craniosacral Therapy for Children",
-        "course8_title": "CST for Pregnancy and Childbirth",
-        "course9_title": "Kinesio Taping"
+        "course8_title": "CST for Pregnancy and Childbirth"
     },
     "location": {
         "title": "How to Find Us - OsteoJump",
