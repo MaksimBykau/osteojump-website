@@ -139,8 +139,8 @@
    Full-Width Diplomas Carousel
    ============================================ */
 .diplomas-section-fullwidth {
-    padding: var(--spacing-lg) 0;
-    background: linear-gradient(135deg, #f8fafc 0%, #eef2f7 100%);
+    padding: var(--spacing-sm) 0;
+    background-color: var(--bg-color);
     overflow: hidden;
 }
 
@@ -151,7 +151,7 @@
 
 .diplomas-track-container {
     overflow: hidden;
-    height: 180px;
+    height: 120px;
     width: 100%;
 }
 
@@ -340,7 +340,7 @@
     }
 
     .diplomas-track-container {
-        height: 140px;
+        height: 100px;
     }
 
     .carousel-nav {
@@ -379,7 +379,7 @@
     }
 
     .diplomas-track-container {
-        height: 120px;
+        height: 80px;
     }
 
     .carousel-nav {
