@@ -186,26 +186,8 @@
     background-color: var(--section-bg);
 }
 
-.journey-layout {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: var(--spacing-lg);
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
 .section-title-left {
     text-align: left;
-}
-
-.journey-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 0 var(--spacing-lg);
 }
 
 .journey-text p {
@@ -260,24 +242,6 @@
 .about-motivation {
     padding: var(--spacing-lg) var(--spacing-sm);
     background: linear-gradient(135deg, #f8fafc 0%, #eef2f7 100%);
-}
-
-.motivation-layout {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: var(--spacing-lg);
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.motivation-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 0 var(--spacing-lg);
 }
 
 .motivation-text p {
@@ -731,19 +695,9 @@
         margin-top: var(--spacing-md);
     }
 
-    .journey-layout {
-        grid-template-columns: 1fr;
-        gap: var(--spacing-md);
-    }
-
     .journey-collage {
         max-width: 350px;
         margin: 0 auto;
-    }
-
-    .motivation-layout {
-        grid-template-columns: 1fr;
-        gap: var(--spacing-md);
     }
 
     .motivation-photo {
@@ -752,10 +706,6 @@
 
     .motivation-img {
         max-width: 350px;
-    }
-
-    .motivation-content {
-        max-width: 100%;
     }
 
     .section-title-left {
@@ -803,11 +753,6 @@
 
     .motivation-conclusion {
         padding-left: var(--spacing-sm);
-    }
-
-    .journey-content,
-    .motivation-content {
-        padding: 0;
     }
 
     .education-list-courses {
