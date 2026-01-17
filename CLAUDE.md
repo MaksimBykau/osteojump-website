@@ -39,6 +39,65 @@ make thumbnails    # Сгенерировать превью для диплом
 
 ---
 
+## Правила работы со стилями CSS
+
+### Принцип DRY (Don't Repeat Yourself)
+
+**ВСЕГДА переиспользуй общие стили** вместо создания дублирующихся классов для разных страниц/секций.
+
+### Общие классы в style.css
+
+Используй эти классы для секций с изображением + текстом:
+
+```css
+/* Базовый layout */
+.section-layout                 /* grid контейнер */
+.section-layout--img-left       /* картинка слева, текст справа */
+.section-layout--img-right      /* текст слева, картинка справа */
+.section-content                /* текстовый блок (центрирован) */
+```
+
+### Пример использования в HTML
+
+```html
+<section class="about-motivation">
+    <div class="container">
+        <h2 class="section-title">Заголовок</h2>
+        <div class="section-layout section-layout--img-left">
+            <div class="photo-wrapper">
+                <img src="..." class="photo-img">
+            </div>
+            <div class="section-content">
+                <p>Текст...</p>
+            </div>
+        </div>
+    </div>
+</section>
+```
+
+### Чек-лист при добавлении новых секций
+
+1. **Проверь** — есть ли уже похожий layout в style.css?
+2. **Используй** общие классы `.section-layout`, `.section-content`
+3. **Не создавай** новые классы типа `.page-name-layout`, `.page-name-content`
+4. **Специфичные стили** (цвета, отступы секции) — в файле страницы
+5. **Layout и выравнивание** — в style.css
+
+### Что хранить где
+
+| style.css (общее) | page.css (специфичное) |
+|-------------------|------------------------|
+| `.section-layout` | `.about-hero` (padding, background) |
+| `.section-content` | `.motivation-text p` (font-size) |
+| `.section-title` | `.journey-collage` (специфичный коллаж) |
+| Респонсив для layout | Респонсив для специфичных элементов |
+
+### Отладка стилей
+
+Для проверки применения стилей временно добавляй `background: red;` к общему классу в style.css — если стиль переиспользуется правильно, все элементы станут красными.
+
+---
+
 ## /translate - Translation Agent
 
 Агент для работы с переводами сайта.

@@ -9,15 +9,6 @@
     background: linear-gradient(135deg, #f8fafc 0%, #eef2f7 100%);
 }
 
-.about-hero-container {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: var(--spacing-lg);
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
 .about-hero-photo {
     position: relative;
 }
@@ -31,15 +22,6 @@
     object-position: center 20%;
     border-radius: 16px;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-}
-
-.about-hero-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: var(--spacing-lg);
-    text-align: center;
 }
 
 .about-hero-title {
@@ -667,12 +649,6 @@
    Responsive Styles
    ============================================ */
 @media (max-width: 1024px) {
-    .about-hero-container {
-        grid-template-columns: 1fr;
-        gap: var(--spacing-lg);
-        text-align: center;
-    }
-
     .about-hero-photo {
         order: -1;
         display: flex;
@@ -681,10 +657,6 @@
 
     .about-hero-image {
         max-width: 350px;
-    }
-
-    .about-hero-content {
-        padding: var(--spacing-md) 0;
     }
 
     .about-hero-tagline {
