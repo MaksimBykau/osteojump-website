@@ -196,7 +196,7 @@
     gap: var(--spacing-lg);
     align-items: center;
     max-width: 1200px;
-    margin: var(--spacing-md) auto 0;
+    margin: 0 auto;
 }
 
 .section-title-left {
@@ -209,7 +209,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: var(--spacing-lg);
+    padding: 0 var(--spacing-lg);
 }
 
 .journey-text p {
@@ -277,7 +277,7 @@
     gap: var(--spacing-lg);
     align-items: center;
     max-width: 1200px;
-    margin: var(--spacing-md) auto 0;
+    margin: 0 auto;
 }
 
 .motivation-content {
@@ -286,7 +286,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: var(--spacing-lg);
+    padding: 0 var(--spacing-lg);
 }
 
 .motivation-text p {
@@ -812,6 +812,11 @@
 
     .motivation-conclusion {
         padding-left: var(--spacing-sm);
+    }
+
+    .journey-content,
+    .motivation-content {
+        padding: 0;
     }
 
     .education-list-courses {
