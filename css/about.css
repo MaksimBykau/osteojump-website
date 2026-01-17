@@ -118,32 +118,28 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    gap: 4px;
+    gap: 3px;
     aspect-ratio: 16 / 10;
-    padding: 4px;
-    background: #f0f0f0;
+    overflow: hidden;
 }
 
 .collage-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 4px;
     transition: transform 0.3s ease;
 }
 
 /* Single Image (instead of collage) */
 .specialization-single-image {
     aspect-ratio: 16 / 10;
-    padding: 4px;
-    background: #f0f0f0;
+    overflow: hidden;
 }
 
 .specialization-single-image .single-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 4px;
 }
 
 .specialization-card:hover .collage-img {
@@ -228,7 +224,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 8px;
+    gap: 3px;
     max-width: 400px;
     aspect-ratio: 3 / 4;
     border-radius: 16px;
@@ -240,11 +236,6 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.journey-img:hover {
-    transform: scale(1.05);
 }
 
 .journey-img-1 {
@@ -853,7 +844,6 @@
 
     .journey-collage {
         max-width: 260px;
-        gap: 6px;
     }
 
     .motivation-img {
