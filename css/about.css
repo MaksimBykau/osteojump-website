@@ -11,7 +11,7 @@
 
 .about-hero-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto 1fr;
     gap: var(--spacing-lg);
     align-items: center;
     max-width: 1200px;
@@ -34,7 +34,12 @@
 }
 
 .about-hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: var(--spacing-lg);
+    text-align: center;
 }
 
 .about-hero-title {
@@ -187,10 +192,11 @@
 
 .journey-layout {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr auto;
     gap: var(--spacing-lg);
     align-items: center;
-    margin-top: var(--spacing-md);
+    max-width: 1200px;
+    margin: var(--spacing-md) auto 0;
 }
 
 .section-title-left {
@@ -198,11 +204,16 @@
 }
 
 .journey-content {
-    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: var(--spacing-lg);
 }
 
 .journey-text p {
-    font-size: 1.0625rem;
+    font-size: clamp(1rem, 2.5vw, 1.125rem);
     line-height: 1.8;
     color: #4b5563;
     margin-bottom: var(--spacing-md);
@@ -212,27 +223,28 @@
     margin-bottom: 0;
 }
 
-/* Journey Collage - уменьшен до размера одиночного фото */
+/* Journey Collage - размер как hero */
 .journey-collage {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 8px;
-    max-width: 300px;
-    aspect-ratio: 1 / 1;
+    max-width: 400px;
+    aspect-ratio: 3 / 4;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 }
 
 .journey-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
 
 .journey-img:hover {
-    transform: scale(1.02);
+    transform: scale(1.05);
 }
 
 .journey-img-1 {
@@ -261,14 +273,20 @@
 
 .motivation-layout {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto 1fr;
     gap: var(--spacing-lg);
     align-items: center;
-    margin-top: var(--spacing-md);
+    max-width: 1200px;
+    margin: var(--spacing-md) auto 0;
 }
 
 .motivation-content {
-    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: var(--spacing-lg);
 }
 
 .motivation-text p {
@@ -289,16 +307,17 @@
 }
 
 .motivation-photo {
-    display: flex;
-    justify-content: center;
+    position: relative;
 }
 
 .motivation-img {
     width: 100%;
-    max-width: 300px;
+    max-width: 400px;
     height: auto;
-    border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 }
 
 /* ============================================
