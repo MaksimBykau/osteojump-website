@@ -12,10 +12,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Review data with original links
     const reviewLinks = {
-        review1: 'https://booksy.com/pl-pl/185614_osteojump_osteopatia_3_warszawa#ba_s=seo',
-        review2: 'https://booksy.com/pl-pl/185614_osteojump_osteopatia_3_warszawa#ba_s=seo',
-        review3: 'https://booksy.com/pl-pl/185614_osteojump_osteopatia_3_warszawa#ba_s=seo',
-        review4: 'https://booksy.com/pl-pl/185614_osteojump_osteopatia_3_warszawa#ba_s=seo'
+        review1: 'https://maps.app.goo.gl/akVwseGDdxJizPSQ9',
+        review2: 'https://www.instagram.com/s/aGlnaGxpZ2h0OjE3ODU4NzU5MjU1Mjc3NTU0?story_media_id=3732375181076488393&igsh=YnFnaGh4eGthc2pu',
+        review3: 'https://maps.app.goo.gl/AbSQWRuFB8o8RLwRA',
+        review4: 'https://maps.app.goo.gl/2W3duk2WpGFVNusf9',
+        review5: 'https://maps.app.goo.gl/ZhVLGZGVvj73BZgp6',
+        review6: 'https://maps.app.goo.gl/UbwsFba9kWLKyWRy7'
     };
 
     // Open modal
