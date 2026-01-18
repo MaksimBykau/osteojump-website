@@ -532,4 +532,26 @@
         flex-direction: column;
         gap: 0.25rem;
     }
+
+    /* Stars and rating text on separate lines */
+    .reviews-hero .hero-rating {
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+
+    /* Award badges: logo on first row, medals on second */
+    .award-badges {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.75rem;
+    }
+
+    .award-badges .award-logo {
+        flex: 0 0 100%;
+        max-width: 125px;
+    }
+
+    .award-badges .award-medal {
+        width: 55px;
+    }
 }
