@@ -84,6 +84,12 @@
     height: auto;
 }
 
+.award-medals {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
 .award-title-link {
     display: inline-block;
     font-size: clamp(1.5rem, 3vw, 2rem);
@@ -541,17 +547,8 @@
 
     /* Award badges: logo on first row, medals on second */
     .award-badges {
-        flex-wrap: wrap;
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
         gap: 0.75rem;
-    }
-
-    .award-badges .award-logo {
-        flex: 0 0 100%;
-        max-width: 125px;
-    }
-
-    .award-badges .award-medal {
-        width: 55px;
     }
 }
