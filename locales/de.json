@@ -36,9 +36,63 @@
         "text": "Wir sind spezialisiert auf die Bereitstellung qualitativ hochwertiger Dienstleistungen im Bereich Osteopathie und Rehabilitation. Unser Team von Fachleuten ist bereit, Ihnen zu helfen, optimale Gesundheit zu erreichen."
     },
     "prices": {
-        "title": "Preise",
-        "subtitle": "Preisinformationen kommen bald",
-        "content": "Diese Seite befindet sich in der Entwicklung. Bald werden hier Preisinformationen für Dienstleistungen veröffentlicht."
+        "title": "Preise - OsteoJump",
+        "hero_title": "Preise für Leistungen",
+        "hero_subtitle": "Transparente Preise, keine versteckten Kosten",
+        "individual_title": "Einzelsitzungen",
+        "adult": {
+            "title": "Osteopathie für Erwachsene",
+            "description": "Umfassende Körperarbeit: Diagnostik, sanfte Techniken, Empfehlungen. Geeignet bei Rücken-, Nacken-, Kopfschmerzen und Unfallfolgen.",
+            "duration": "55 Min",
+            "price_eur": "(~60 EUR)"
+        },
+        "child": {
+            "title": "Osteopathie für Kinder",
+            "description": "Behutsame Arbeit mit Babys ab Geburt. Hilfe bei Folgen schwieriger Geburten, Tonusstörungen, Schiefhals, Koliken, Schlafproblemen.",
+            "duration": "55 Min",
+            "price_eur": "(~60 EUR)"
+        },
+        "pregnant": {
+            "title": "Osteopathie für Schwangere",
+            "description": "Sanfte und sichere Arbeit während der Schwangerschaft. Hilfe bei Rückenschmerzen, Schwellungen, Vorbereitung des Körpers auf die Geburt.",
+            "duration": "55 Min",
+            "price_eur": "(~60 EUR)"
+        },
+        "family_title": "Familienpakete",
+        "family_subtitle": "Sparen bei gemeinsamer Buchung",
+        "family_couple": {
+            "title": "Mann + Frau",
+            "description": "Zwei Osteopathie-Sitzungen in einem Besuch. Ideal für Paare, die gemeinsam auf ihre Gesundheit achten.",
+            "duration": "1 Std. 50 Min",
+            "price_eur": "(~113 EUR)"
+        },
+        "family_mother_child": {
+            "title": "Mutter + Kind",
+            "description": "Sitzung für Mutter und Baby in einem Besuch. Bequem und zeitsparend.",
+            "duration": "1 Std. 50 Min",
+            "price_eur": "(~113 EUR)"
+        },
+        "family_three": {
+            "title": "Familie (3 Personen)",
+            "description": "Drei Osteopathie-Sitzungen für die ganze Familie. Maximale Ersparnis für größere Familien.",
+            "duration": "2 Std. 50 Min",
+            "price_eur": "(~167 EUR)"
+        },
+        "consultation_title": "Beratung",
+        "consultation": {
+            "title": "Beratung & Diagnostik",
+            "description": "Ruhiges, persönliches Gespräch mit dem Osteopathen zur Besprechung von Problemen und Diagnostik. Ideal, wenn Sie erfahren möchten, ob Osteopathie Ihnen helfen kann.",
+            "duration": "20 Min",
+            "price_eur": "(~28 EUR)"
+        },
+        "cta_title": "Bereit zu buchen?",
+        "cta_text": "Wählen Sie einen passenden Termin über Booksy oder kontaktieren Sie mich direkt",
+        "book_btn": "Auf Booksy buchen",
+        "contact_btn": "Nachricht auf WhatsApp",
+        "note_text": "Preise sind in Polnischen Złoty (PLN) angegeben. Die Euro-Umrechnung ist ungefähr.",
+        "promo_banner": "🎉 10% Rabatt bis Ende Januar!",
+        "price_was": "Vorher",
+        "price_savings": "Sie sparen"
     },
     "doctor": {
         "intro": "Ich bin Bykava Hanna, Osteopathin seit 2018. Ich glaube an die Menschen und mache diese Welt jeden Tag ein wenig besser.",

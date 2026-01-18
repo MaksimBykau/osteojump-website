@@ -11,6 +11,7 @@
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link rel="apple-touch-icon" href="/images/favicon.png">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/prices.css">
     <style>
         /* Hide content until translations are loaded */
         body:not(.i18n-ready) {
@@ -35,7 +36,7 @@
             const supportedLangs = ['ru', 'en', 'de', 'pl', 'uk'];
             const savedLang = localStorage.getItem('language');
             let lang = 'en'; // default
-            
+
             if (savedLang && supportedLangs.includes(savedLang)) {
                 lang = savedLang;
             } else {
@@ -44,10 +45,10 @@
                     lang = browserLang;
                 }
             }
-            
+
             // Set lang attribute immediately
             document.documentElement.lang = lang;
-            
+
             // Title translations map for immediate setting
             const titleMap = {
                 'ru': { 'title': 'OsteoJump', 'prices.title': 'Цены - OsteoJump', 'reviews.title': 'Отзывы - OsteoJump', 'about_page.title': 'Обо мне - OsteoJump', 'faq.title': 'Вопросы - OsteoJump', 'education.title': 'Образование - OsteoJump', 'location.title': 'Как добраться - OsteoJump' },
@@ -56,7 +57,7 @@
                 'pl': { 'title': 'OsteoJump', 'prices.title': 'Ceny - OsteoJump', 'reviews.title': 'Opinie - OsteoJump', 'about_page.title': 'O mnie - OsteoJump', 'faq.title': 'FAQ - OsteoJump', 'education.title': 'Wykształcenie - OsteoJump', 'location.title': 'Jak dojechać - OsteoJump' },
                 'uk': { 'title': 'OsteoJump', 'prices.title': 'Ціни - OsteoJump', 'reviews.title': 'Відгуки - OsteoJump', 'about_page.title': 'Про мене - OsteoJump', 'faq.title': 'Питання - OsteoJump', 'education.title': 'Освіта - OsteoJump', 'location.title': 'Як дістатися - OsteoJump' }
             };
-            
+
             // Set title immediately based on current page
             const titleElement = document.querySelector('title');
             if (titleElement) {
@@ -66,7 +67,7 @@
                     titleElement.textContent = translations[titleKey];
                 }
             }
-            
+
             // Preload translation file for faster loading (with versioning)
             // Use timestamp to ensure fresh load even if HTML is cached
             const translationsVersion = '5'; // Must match version in i18n.js
@@ -118,16 +119,213 @@
     </header>
 
     <main class="main">
-        <section class="hero">
+        <!-- Hero Section -->
+        <section class="prices-hero">
             <div class="container">
-                <h1 class="hero-title" data-i18n="prices.title">Цены</h1>
-                <p class="hero-text" data-i18n="prices.subtitle">Информация о ценах скоро появится</p>
+                <h1 class="prices-hero-title" data-i18n="prices.hero_title">Цены на услуги</h1>
+                <p class="prices-hero-subtitle" data-i18n="prices.hero_subtitle">Прозрачные цены, никаких скрытых платежей</p>
+                <div class="promo-banner" data-i18n="prices.promo_banner">🎉 Скидка 10% до конца января!</div>
             </div>
         </section>
 
-        <section class="about">
+        <!-- Individual Services -->
+        <section class="prices-services">
             <div class="container">
-                <p class="about-text" data-i18n="prices.content">Страница находится в разработке. Скоро здесь будет размещена информация о ценах на услуги.</p>
+                <h2 class="section-title" data-i18n="prices.individual_title">Индивидуальные приёмы</h2>
+                <div class="services-grid">
+                    <!-- Adult -->
+                    <article class="service-card">
+                        <div class="service-card-image">
+                            <img src="/images/prices/adult.jpg" alt="" loading="lazy">
+                        </div>
+                        <div class="service-card-content">
+                            <h3 class="service-card-title" data-i18n="prices.adult.title">Остеопатия для взрослых</h3>
+                            <p class="service-card-description" data-i18n="prices.adult.description">Комплексная работа с телом: диагностика, мягкие техники, рекомендации. Подходит при болях в спине, шее, головных болях, последствиях травм.</p>
+                            <div class="service-card-meta">
+                                <span class="meta-icon">⏱</span>
+                                <span data-i18n="prices.adult.duration">55 мин</span>
+                            </div>
+                            <div class="price-block">
+                                <span class="price-old"><span data-i18n="prices.price_was">Было</span>: 290 zł</span>
+                                <div class="price-current">
+                                    <span class="price-main">261 zł</span>
+                                    <span class="price-secondary" data-i18n="prices.adult.price_eur">(~60 EUR)</span>
+                                </div>
+                                <span class="price-savings"><span data-i18n="prices.price_savings">Экономия</span>: 29 zł</span>
+                            </div>
+                            <a href="https://booksy.com/pl-pl/262212_osteojump_zdrowie_3_warszawa" target="_blank" rel="noopener" class="service-card-btn" data-i18n="prices.book_btn">Записаться</a>
+                        </div>
+                    </article>
+
+                    <!-- Child -->
+                    <article class="service-card">
+                        <div class="service-card-image">
+                            <img src="/images/prices/child.jpg" alt="" loading="lazy">
+                        </div>
+                        <div class="service-card-content">
+                            <h3 class="service-card-title" data-i18n="prices.child.title">Остеопатия для детей</h3>
+                            <p class="service-card-description" data-i18n="prices.child.description">Бережная работа с малышами от рождения. Помощь при последствиях сложных родов, нарушениях тонуса, кривошее, коликах, проблемах со сном.</p>
+                            <div class="service-card-meta">
+                                <span class="meta-icon">⏱</span>
+                                <span data-i18n="prices.child.duration">55 мин</span>
+                            </div>
+                            <div class="price-block">
+                                <span class="price-old"><span data-i18n="prices.price_was">Было</span>: 290 zł</span>
+                                <div class="price-current">
+                                    <span class="price-main">261 zł</span>
+                                    <span class="price-secondary" data-i18n="prices.child.price_eur">(~60 EUR)</span>
+                                </div>
+                                <span class="price-savings"><span data-i18n="prices.price_savings">Экономия</span>: 29 zł</span>
+                            </div>
+                            <a href="https://booksy.com/pl-pl/262212_osteojump_zdrowie_3_warszawa" target="_blank" rel="noopener" class="service-card-btn" data-i18n="prices.book_btn">Записаться</a>
+                        </div>
+                    </article>
+
+                    <!-- Pregnant -->
+                    <article class="service-card">
+                        <div class="service-card-image">
+                            <img src="/images/prices/pregnant.jpg" alt="" loading="lazy">
+                        </div>
+                        <div class="service-card-content">
+                            <h3 class="service-card-title" data-i18n="prices.pregnant.title">Остеопатия для беременных</h3>
+                            <p class="service-card-description" data-i18n="prices.pregnant.description">Мягкая и безопасная работа во время беременности. Помощь при болях в спине, отёках, подготовка тела к родам.</p>
+                            <div class="service-card-meta">
+                                <span class="meta-icon">⏱</span>
+                                <span data-i18n="prices.pregnant.duration">55 мин</span>
+                            </div>
+                            <div class="price-block">
+                                <span class="price-old"><span data-i18n="prices.price_was">Было</span>: 290 zł</span>
+                                <div class="price-current">
+                                    <span class="price-main">261 zł</span>
+                                    <span class="price-secondary" data-i18n="prices.pregnant.price_eur">(~60 EUR)</span>
+                                </div>
+                                <span class="price-savings"><span data-i18n="prices.price_savings">Экономия</span>: 29 zł</span>
+                            </div>
+                            <a href="https://booksy.com/pl-pl/262212_osteojump_zdrowie_3_warszawa" target="_blank" rel="noopener" class="service-card-btn" data-i18n="prices.book_btn">Записаться</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Family Packages -->
+        <section class="prices-family">
+            <div class="container">
+                <h2 class="section-title" data-i18n="prices.family_title">Семейные пакеты</h2>
+                <p class="section-subtitle" data-i18n="prices.family_subtitle">Выгодно при записи вместе</p>
+                <div class="family-grid">
+                    <!-- Couple -->
+                    <article class="family-card">
+                        <div class="family-card-icon">👫</div>
+                        <h3 class="family-card-title" data-i18n="prices.family_couple.title">Муж + жена</h3>
+                        <p class="family-card-description" data-i18n="prices.family_couple.description">Два сеанса остеопатии в одно посещение. Идеально для пар, которые заботятся о здоровье вместе.</p>
+                        <div class="family-card-meta">
+                            <span class="meta-icon">⏱</span>
+                            <span data-i18n="prices.family_couple.duration">1 ч 50 мин</span>
+                        </div>
+                        <div class="price-block">
+                            <span class="price-old"><span data-i18n="prices.price_was">Было</span>: 540 zł</span>
+                            <div class="price-current">
+                                <span class="price-main">486 zł</span>
+                                <span class="price-secondary" data-i18n="prices.family_couple.price_eur">(~113 EUR)</span>
+                            </div>
+                            <span class="price-savings"><span data-i18n="prices.price_savings">Экономия</span>: 54 zł</span>
+                        </div>
+                        <a href="https://booksy.com/pl-pl/262212_osteojump_zdrowie_3_warszawa" target="_blank" rel="noopener" class="family-card-btn" data-i18n="prices.book_btn">Записаться</a>
+                    </article>
+
+                    <!-- Mother + Child -->
+                    <article class="family-card">
+                        <div class="family-card-icon">👩‍👧</div>
+                        <h3 class="family-card-title" data-i18n="prices.family_mother_child.title">Мама + ребёнок</h3>
+                        <p class="family-card-description" data-i18n="prices.family_mother_child.description">Сеанс для мамы и малыша в одно посещение. Удобно и экономит время.</p>
+                        <div class="family-card-meta">
+                            <span class="meta-icon">⏱</span>
+                            <span data-i18n="prices.family_mother_child.duration">1 ч 50 мин</span>
+                        </div>
+                        <div class="price-block">
+                            <span class="price-old"><span data-i18n="prices.price_was">Было</span>: 540 zł</span>
+                            <div class="price-current">
+                                <span class="price-main">486 zł</span>
+                                <span class="price-secondary" data-i18n="prices.family_mother_child.price_eur">(~113 EUR)</span>
+                            </div>
+                            <span class="price-savings"><span data-i18n="prices.price_savings">Экономия</span>: 54 zł</span>
+                        </div>
+                        <a href="https://booksy.com/pl-pl/262212_osteojump_zdrowie_3_warszawa" target="_blank" rel="noopener" class="family-card-btn" data-i18n="prices.book_btn">Записаться</a>
+                    </article>
+
+                    <!-- Family of 3 -->
+                    <article class="family-card">
+                        <div class="family-card-icon">👨‍👩‍👧</div>
+                        <h3 class="family-card-title" data-i18n="prices.family_three.title">Семья (3 человека)</h3>
+                        <p class="family-card-description" data-i18n="prices.family_three.description">Три сеанса остеопатии для всей семьи. Максимальная выгода для большой семьи.</p>
+                        <div class="family-card-meta">
+                            <span class="meta-icon">⏱</span>
+                            <span data-i18n="prices.family_three.duration">2 ч 50 мин</span>
+                        </div>
+                        <div class="price-block">
+                            <span class="price-old"><span data-i18n="prices.price_was">Было</span>: 800 zł</span>
+                            <div class="price-current">
+                                <span class="price-main">720 zł</span>
+                                <span class="price-secondary" data-i18n="prices.family_three.price_eur">(~167 EUR)</span>
+                            </div>
+                            <span class="price-savings"><span data-i18n="prices.price_savings">Экономия</span>: 80 zł</span>
+                        </div>
+                        <a href="https://booksy.com/pl-pl/262212_osteojump_zdrowie_3_warszawa" target="_blank" rel="noopener" class="family-card-btn" data-i18n="prices.book_btn">Записаться</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Consultation -->
+        <section class="prices-consultation">
+            <div class="container">
+                <h2 class="section-title" data-i18n="prices.consultation_title">Консультация</h2>
+                <div class="consultation-card">
+                    <div class="consultation-icon">💬</div>
+                    <div class="consultation-content">
+                        <h3 class="consultation-title" data-i18n="prices.consultation.title">Консультация и диагностика</h3>
+                        <p class="consultation-description" data-i18n="prices.consultation.description">Спокойная индивидуальная встреча с врачом-остеопатом для обсуждения проблем и диагностики. Подходит, если вы хотите узнать, поможет ли вам остеопатия.</p>
+                        <div class="consultation-meta">
+                            <span class="meta-icon">⏱</span>
+                            <span data-i18n="prices.consultation.duration">20 мин</span>
+                        </div>
+                        <div class="price-block">
+                            <span class="price-old"><span data-i18n="prices.price_was">Было</span>: 133 zł</span>
+                            <div class="price-current">
+                                <span class="price-main">120 zł</span>
+                                <span class="price-secondary" data-i18n="prices.consultation.price_eur">(~28 EUR)</span>
+                            </div>
+                            <span class="price-savings"><span data-i18n="prices.price_savings">Экономия</span>: 13 zł</span>
+                        </div>
+                    </div>
+                    <a href="https://booksy.com/pl-pl/262212_osteojump_zdrowie_3_warszawa" target="_blank" rel="noopener" class="consultation-btn" data-i18n="prices.book_btn">Записаться</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="prices-cta">
+            <div class="container">
+                <h2 class="prices-cta-title" data-i18n="prices.cta_title">Готовы записаться?</h2>
+                <p class="prices-cta-text" data-i18n="prices.cta_text">Выберите удобное время через Booksy или свяжитесь со мной напрямую</p>
+                <div class="cta-buttons">
+                    <a href="https://booksy.com/pl-pl/262212_osteojump_zdrowie_3_warszawa" target="_blank" rel="noopener" class="cta-btn cta-btn-primary">
+                        <span class="cta-icon">📅</span>
+                        <span data-i18n="prices.book_btn">Записаться на Booksy</span>
+                    </a>
+                    <a href="https://wa.me/48732008898" target="_blank" rel="noopener" class="cta-btn cta-btn-secondary">
+                        <span class="cta-icon">💬</span>
+                        <span data-i18n="prices.contact_btn">Написать в WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Note -->
+        <section class="prices-note">
+            <div class="container">
+                <p data-i18n="prices.note_text">Цены указаны в польских злотых (PLN). Конвертация в евро приблизительная.</p>
             </div>
         </section>
     </main>
@@ -158,4 +356,3 @@
     <script src="../js/main.js"></script>
 </body>
 </html>
-
