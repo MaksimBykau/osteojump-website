@@ -103,10 +103,20 @@
         "text": "Osteopathy is a holistic approach to health based on understanding the interconnections of all body systems. Every person is unique, and I approach treatment individually, taking into account the characteristics of your body and lifestyle."
     },
     "reviews": {
-        "title": "Reviews",
-        "subtitle": "Customer reviews coming soon",
-        "content": "This page is under development. Soon customer reviews will be posted here.",
-        "placeholder": "Reviews coming soon",
+        "title": "Reviews - OsteoJump",
+        "hero_title": "Reviews",
+        "hero_rating": "All reviews rated 5.0",
+        "hero_platforms": "40+ on Booksy • 10+ on Google • 100+ on Instagram",
+        "award_title": "Orły Medycyny 2025",
+        "award_subtitle": "Laureate of Orły Medycyny 2025 in Warsaw",
+        "award_description": "This award is given for high ratings in the medical field. Thank you to all clients for your trust and reviews!",
+        "award_link": "View on orlymedycyny.pl",
+        "featured_title": "Detailed Reviews",
+        "short_title": "Client Impressions",
+        "cta_thanks_title": "Thank you for your reviews!",
+        "cta_thanks_text": "Your reviews help others and inspire me to grow.",
+        "cta_more": "See more reviews:",
+        "view_original": "View original",
         "review1": {
             "text": "Anna is a wonderful specialist, a true professional and a very pleasant person. I contacted her twice during the year. The first time was for my persistent back pain at that time. After the second session it became easier, after the fourth I forgot what a sore back was. Recently there was a problem with my neck. I didn't buy any ointments or pills, I immediately turned to Anna. Everything is fine now! I recommend everyone who is not yet familiar with osteopathy to come to Anna for an appointment.",
             "source": "View original review"
@@ -123,8 +133,24 @@
             "text": "I came with neck problems and a feeling of suffocation. After two or three sessions, I felt significant relief. Very glad I found Anna) Thanks to her wonderful hands, I feel much better! Thank you so much❤️",
             "source": "View original review"
         },
-        "read_more": "Read more",
+        "read_more": "Read full review",
         "read_less": "Show less",
+        "short1": {
+            "text": "\"I liked it\"",
+            "author": "— Client"
+        },
+        "short2": {
+            "text": "\"Anna is a great professional, very kind person\"",
+            "author": "— Maria"
+        },
+        "short3": {
+            "text": "\"Thank you Anna for the session, everything was great!\"",
+            "author": "— Olga"
+        },
+        "short4": {
+            "text": "\"Perfect!\"",
+            "author": "— Alex"
+        },
         "more_title": "View more reviews",
         "more_google": "Reviews on Google",
         "more_instagram": "Reviews on Instagram",

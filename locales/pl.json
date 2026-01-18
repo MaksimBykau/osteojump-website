@@ -103,10 +103,20 @@
         "text": "Osteopatia to holistyczne podejście do zdrowia, oparte na zrozumieniu wzajemnych powiązań wszystkich układów organizmu. Każdy człowiek jest wyjątkowy, dlatego podchodzę do leczenia indywidualnie, uwzględniając cechy Twojego ciała i stylu życia."
     },
     "reviews": {
-        "title": "Opinie",
-        "subtitle": "Opinie klientów wkrótce",
-        "content": "Ta strona jest w trakcie opracowywania. Wkrótce zostaną tutaj zamieszczone opinie naszych klientów.",
-        "placeholder": "Opinie wkrótce",
+        "title": "Opinie - OsteoJump",
+        "hero_title": "Opinie",
+        "hero_rating": "Wszystkie opinie na 5.0",
+        "hero_platforms": "40+ na Booksy • 10+ na Google • 100+ na Instagram",
+        "award_title": "Orły Medycyny 2025",
+        "award_subtitle": "Laureat konkursu Orły Medycyny 2025 w Warszawie",
+        "award_description": "Ta nagroda jest przyznawana za wysokie oceny w dziedzinie medycyny. Dziękuję wszystkim klientom za zaufanie i opinie!",
+        "award_link": "Zobacz na orlymedycyny.pl",
+        "featured_title": "Szczegółowe opinie",
+        "short_title": "Wrażenia klientów",
+        "cta_thanks_title": "Dziękuję za Wasze opinie!",
+        "cta_thanks_text": "Wasze opinie pomagają innym i inspirują mnie do rozwoju.",
+        "cta_more": "Zobacz więcej opinii:",
+        "view_original": "Zobacz oryginał",
         "review1": {
             "text": "Anna to wspaniały specjalista, prawdziwy profesjonalista i bardzo miła osoba. Kontaktowałam się z nią dwukrotnie w ciągu roku. Pierwszy raz z powodu mojego uporczywego bólu pleców w tamtym czasie. Po drugiej sesji stało się łatwiej, po czwartej zapomniałam, co to jest bolące plecy. Niedawno był problem z szyją. Nie kupowałam żadnych maści ani tabletek, od razu zwróciłam się do Anny. Teraz wszystko w porządku! Polecam wszystkim, którzy nie znają jeszcze osteopatii, aby przyszli do Anny na wizytę.",
             "source": "Zobacz oryginalną opinię"
@@ -123,8 +133,24 @@
             "text": "Zgłosiłam się z problemami szyi i uczuciem duszności. Po dwóch, trzech sesjach poczułam znaczną ulgę. Bardzo się cieszę, że trafiłam do Anny) Dzięki jej wspaniałym dłoniom czuję się o wiele lepiej! Wielkie Dzięki❤️",
             "source": "Zobacz oryginalną opinię"
         },
-        "read_more": "Czytaj dalej",
+        "read_more": "Czytaj całość",
         "read_less": "Zwiń",
+        "short1": {
+            "text": "\"Podobało mi się\"",
+            "author": "— Klient"
+        },
+        "short2": {
+            "text": "\"Anna to świetny profesjonalista, bardzo miła osoba\"",
+            "author": "— Maria"
+        },
+        "short3": {
+            "text": "\"Dziękuję Annie za sesję, wszystko super!\"",
+            "author": "— Olga"
+        },
+        "short4": {
+            "text": "\"Perfect!\"",
+            "author": "— Alex"
+        },
         "more_title": "Zobacz więcej opinii",
         "more_google": "Opinie na Google",
         "more_instagram": "Opinie na Instagram",

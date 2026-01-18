@@ -11,6 +11,7 @@
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link rel="apple-touch-icon" href="/images/favicon.png">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/reviews.css">
     <style>
         /* Hide content until translations are loaded */
         body:not(.i18n-ready) {
@@ -35,7 +36,7 @@
             const supportedLangs = ['ru', 'en', 'de', 'pl', 'uk'];
             const savedLang = localStorage.getItem('language');
             let lang = 'en'; // default
-            
+
             if (savedLang && supportedLangs.includes(savedLang)) {
                 lang = savedLang;
             } else {
@@ -44,10 +45,10 @@
                     lang = browserLang;
                 }
             }
-            
+
             // Set lang attribute immediately
             document.documentElement.lang = lang;
-            
+
             // Title translations map for immediate setting
             const titleMap = {
                 'ru': { 'title': 'OsteoJump', 'prices.title': 'Цены - OsteoJump', 'reviews.title': 'Отзывы - OsteoJump', 'about_page.title': 'Обо мне - OsteoJump', 'faq.title': 'Вопросы - OsteoJump', 'education.title': 'Образование - OsteoJump', 'location.title': 'Как добраться - OsteoJump' },
@@ -56,7 +57,7 @@
                 'pl': { 'title': 'OsteoJump', 'prices.title': 'Ceny - OsteoJump', 'reviews.title': 'Opinie - OsteoJump', 'about_page.title': 'O mnie - OsteoJump', 'faq.title': 'FAQ - OsteoJump', 'education.title': 'Wykształcenie - OsteoJump', 'location.title': 'Jak dojechać - OsteoJump' },
                 'uk': { 'title': 'OsteoJump', 'prices.title': 'Ціни - OsteoJump', 'reviews.title': 'Відгуки - OsteoJump', 'about_page.title': 'Про мене - OsteoJump', 'faq.title': 'Питання - OsteoJump', 'education.title': 'Освіта - OsteoJump', 'location.title': 'Як дістатися - OsteoJump' }
             };
-            
+
             // Set title immediately based on current page
             const titleElement = document.querySelector('title');
             if (titleElement) {
@@ -66,7 +67,7 @@
                     titleElement.textContent = translations[titleKey];
                 }
             }
-            
+
             // Preload translation file for faster loading (with versioning)
             // Use timestamp to ensure fresh load even if HTML is cached
             const translationsVersion = '5'; // Must match version in i18n.js
@@ -118,19 +119,176 @@
     </header>
 
     <main class="main">
-        <section class="hero">
+        <!-- Hero Section -->
+        <section class="reviews-hero">
             <div class="container">
-                <h1 class="hero-title" data-i18n="reviews.title">Отзывы</h1>
-                <p class="hero-text" data-i18n="reviews.subtitle">Отзывы клиентов скоро появятся</p>
+                <div class="hero-subtitle">
+                    <div class="hero-rating">
+                        <span class="rating-stars">★★★★★</span>
+                        <span data-i18n="reviews.hero_rating">Все отзывы на 5.0</span>
+                    </div>
+                    <div class="hero-platforms" data-i18n="reviews.hero_platforms">40+ на Booksy • 10+ на Google • 100+ в Instagram</div>
+                </div>
             </div>
         </section>
 
-        <section class="about">
+        <!-- Featured Reviews Section -->
+        <section class="reviews-featured">
             <div class="container">
-                <p class="about-text" data-i18n="reviews.content">Страница находится в разработке. Скоро здесь будут размещены отзывы наших клиентов.</p>
+                <h2 class="section-title" data-i18n="reviews.featured_title">Подробные отзывы</h2>
+                <div class="featured-grid">
+                    <!-- Review 1 -->
+                    <div class="featured-card" data-review-id="review1" data-full-text="">
+                        <div class="featured-stars">★★★★★</div>
+                        <p class="featured-text" data-i18n="reviews.review1.text">Анна - прекрасный специалист, профессионал своего дела и очень приятный человек. Дважды обращалась к ней в течение года...</p>
+                        <button class="featured-read-more" onclick="openReviewModal('review1')" data-i18n="reviews.read_more">Читать полностью</button>
+                        <div class="featured-footer">
+                            <span class="featured-author">— Booksy</span>
+                        </div>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="featured-card" data-review-id="review2" data-full-text="">
+                        <div class="featured-stars">★★★★★</div>
+                        <p class="featured-text" data-i18n="reviews.review2.text">Здравствуйте! Мы к Вам в 2022 году обращались с дочкой по поводу заикания...</p>
+                        <button class="featured-read-more" onclick="openReviewModal('review2')" data-i18n="reviews.read_more">Читать полностью</button>
+                        <div class="featured-footer">
+                            <span class="featured-author">— Booksy</span>
+                        </div>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="featured-card" data-review-id="review3" data-full-text="">
+                        <div class="featured-stars">★★★★★</div>
+                        <p class="featured-text" data-i18n="reviews.review3.text">У Анны легкие руки!! Весь сеанс одно удовольствие! Анна поставила мне таз и ребра на место после беременности...</p>
+                        <button class="featured-read-more" onclick="openReviewModal('review3')" data-i18n="reviews.read_more">Читать полностью</button>
+                        <div class="featured-footer">
+                            <span class="featured-author">— Booksy</span>
+                        </div>
+                    </div>
+
+                    <!-- Review 4 -->
+                    <div class="featured-card" data-review-id="review4" data-full-text="">
+                        <div class="featured-stars">★★★★★</div>
+                        <p class="featured-text" data-i18n="reviews.review4.text">Обратилась с проблемами шеи и чувством удушья. После двух, трех сеансов почувствовала значительное облегчение...</p>
+                        <button class="featured-read-more" onclick="openReviewModal('review4')" data-i18n="reviews.read_more">Читать полностью</button>
+                        <div class="featured-footer">
+                            <span class="featured-author">— Booksy</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Award Section -->
+        <section class="reviews-award">
+            <div class="container">
+                <div class="section-layout section-layout--img-left">
+                    <div class="photo-wrapper">
+                        <img src="/images/reviews/feedback_photo.jpeg" alt="Orły Medycyny 2025" class="award-photo">
+                    </div>
+                    <div class="section-content award-content">
+                        <div class="award-badges">
+                            <img src="/images/reviews/orly-medycyny-logo.png" alt="Orły Medycyny" class="award-logo">
+                            <img src="/images/reviews/gold-medal-2025.png" alt="Gold Medal 2025" class="award-medal">
+                            <img src="/images/reviews/laureate-medal-2025.png" alt="Laureate Medal 2025" class="award-medal">
+                        </div>
+                        <a href="https://www.orlymedycyny.pl/profile-892351-osteojump" target="_blank" rel="noopener" class="award-title-link" data-i18n="reviews.award_subtitle">Лауреат конкурса Orły Medycyny 2025 в Варшаве</a>
+                        <p class="award-description" data-i18n="reviews.award_description">Эта награда присуждается за высокие оценки в сфере медицины. Благодарю всех клиентов за доверие и отзывы!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Short Reviews Section -->
+        <section class="reviews-short">
+            <div class="container">
+                <h2 class="section-title" data-i18n="reviews.short_title">Короткие отзывы</h2>
+                <div class="short-grid">
+                    <div class="short-card">
+                        <div class="short-stars">★★★★★</div>
+                        <p class="short-text" data-i18n="reviews.short1.text">"Мне понравилось"</p>
+                        <span class="short-author" data-i18n="reviews.short1.author">— Январь 2026</span>
+                    </div>
+                    <div class="short-card">
+                        <div class="short-stars">★★★★★</div>
+                        <p class="short-text" data-i18n="reviews.short2.text">"Анна отличный профессионал, очень милый человек"</p>
+                        <span class="short-author" data-i18n="reviews.short2.author">— Январь 2026</span>
+                    </div>
+                    <div class="short-card">
+                        <div class="short-stars">★★★★★</div>
+                        <p class="short-text" data-i18n="reviews.short3.text">"Спасибо Анне за сеанс, все супер!"</p>
+                        <span class="short-author" data-i18n="reviews.short3.author">— Январь 2026</span>
+                    </div>
+                    <div class="short-card">
+                        <div class="short-stars">★★★★★</div>
+                        <p class="short-text" data-i18n="reviews.short4.text">"Perfect!"</p>
+                        <span class="short-author" data-i18n="reviews.short4.author">— Alex, Декабрь 2025</span>
+                    </div>
+                    <div class="short-card">
+                        <div class="short-stars">★★★★★</div>
+                        <p class="short-text">"Super 🔥🔥🔥"</p>
+                        <span class="short-author">— Dmitry R.</span>
+                    </div>
+                    <div class="short-card">
+                        <div class="short-stars">★★★★★</div>
+                        <p class="short-text">"Polecam z całego serca! Poprawa samopoczucia od razu"</p>
+                        <span class="short-author">— Weronika</span>
+                    </div>
+                    <div class="short-card">
+                        <div class="short-stars">★★★★★</div>
+                        <p class="short-text">"polecam!"</p>
+                        <span class="short-author">— Joanna</span>
+                    </div>
+                    <div class="short-card">
+                        <div class="short-stars">★★★★★</div>
+                        <p class="short-text">"Wszystko było wspaniale, sztywność i ból zniknęły"</p>
+                        <span class="short-author">— Anastasia K.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews CTA Section -->
+        <section class="reviews-cta">
+            <div class="container">
+                <h2 class="cta-title" data-i18n="reviews.cta_thanks_title">Спасибо вам за отзывы!</h2>
+                <p class="cta-text" data-i18n="reviews.cta_thanks_text">Ваши отзывы помогают другим людям и вдохновляют меня на развитие.</p>
+                <p class="cta-subtitle" data-i18n="reviews.cta_more">Смотрите больше отзывов:</p>
+                <div class="platform-buttons">
+                    <a href="https://booksy.com/pl-pl/185614_osteojump_osteopatia_3_warszawa#ba_s=seo" target="_blank" rel="noopener" class="platform-btn platform-btn--booksy">
+                        <span data-i18n="reviews.more_booksy">Отзывы на Booksy</span>
+                    </a>
+                    <a href="https://www.google.com/maps/place/OsteoJump/@52.1923,20.8935,17z" target="_blank" rel="noopener" class="platform-btn platform-btn--google">
+                        <span data-i18n="reviews.more_google">Отзывы на Google</span>
+                    </a>
+                    <a href="https://www.instagram.com/stories/highlights/17858759255277554/" target="_blank" rel="noopener" class="platform-btn platform-btn--instagram">
+                        <span data-i18n="reviews.more_instagram">Отзывы в Instagram</span>
+                    </a>
+                </div>
             </div>
         </section>
     </main>
+
+    <!-- Review Modal -->
+    <div class="review-modal" id="reviewModal">
+        <div class="review-modal-content">
+            <div class="review-modal-header">
+                <span class="review-modal-stars">★★★★★</span>
+                <button class="review-modal-close" aria-label="Close">×</button>
+            </div>
+            <div class="review-modal-body">
+                <p class="review-modal-text" id="modalText"></p>
+                <p class="review-modal-author" id="modalAuthor"></p>
+                <p class="review-modal-source" id="modalSource"></p>
+            </div>
+            <div class="review-modal-footer">
+                <a href="#" target="_blank" rel="noopener" class="review-modal-original" id="modalOriginalLink">
+                    <span data-i18n="reviews.view_original">Смотреть оригинал</span> →
+                </a>
+            </div>
+        </div>
+    </div>
 
     <footer class="footer">
         <div class="container">
@@ -156,6 +314,25 @@
 
     <script src="../js/i18n.js"></script>
     <script src="../js/main.js"></script>
+    <script src="../js/reviews.js"></script>
+    <script>
+        // Populate full text data attributes after translations load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Wait for translations to be ready
+            const checkTranslations = setInterval(function() {
+                if (document.body.classList.contains('i18n-ready')) {
+                    clearInterval(checkTranslations);
+
+                    // Update data-full-text for each review card
+                    document.querySelectorAll('.featured-card').forEach(function(card) {
+                        const textEl = card.querySelector('.featured-text');
+                        if (textEl) {
+                            card.dataset.fullText = textEl.textContent;
+                        }
+                    });
+                }
+            }, 100);
+        });
+    </script>
 </body>
 </html>
-

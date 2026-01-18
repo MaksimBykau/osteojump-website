@@ -103,10 +103,20 @@
         "text": "Osteopathie ist ein ganzheitlicher Ansatz zur Gesundheit, der auf dem Verständnis der Wechselbeziehungen aller Körpersysteme basiert. Jeder Mensch ist einzigartig, und ich gehe individuell auf die Behandlung ein und berücksichtige die Besonderheiten Ihres Körpers und Lebensstils."
     },
     "reviews": {
-        "title": "Bewertungen",
-        "subtitle": "Kundenbewertungen kommen bald",
-        "content": "Diese Seite befindet sich in der Entwicklung. Bald werden hier Kundenbewertungen veröffentlicht.",
-        "placeholder": "Bewertungen kommen bald",
+        "title": "Bewertungen - OsteoJump",
+        "hero_title": "Bewertungen",
+        "hero_rating": "Alle Bewertungen 5.0",
+        "hero_platforms": "40+ auf Booksy • 10+ auf Google • 100+ auf Instagram",
+        "award_title": "Orły Medycyny 2025",
+        "award_subtitle": "Preisträgerin des Wettbewerbs Orły Medycyny 2025 in Warschau",
+        "award_description": "Diese Auszeichnung wird für hohe Bewertungen im medizinischen Bereich verliehen. Vielen Dank an alle Kunden für Ihr Vertrauen und Ihre Bewertungen!",
+        "award_link": "Auf orlymedycyny.pl ansehen",
+        "featured_title": "Ausführliche Bewertungen",
+        "short_title": "Kundeneindrücke",
+        "cta_thanks_title": "Vielen Dank für Ihre Bewertungen!",
+        "cta_thanks_text": "Ihre Bewertungen helfen anderen und inspirieren mich zur Weiterentwicklung.",
+        "cta_more": "Mehr Bewertungen ansehen:",
+        "view_original": "Original ansehen",
         "review1": {
             "text": "Anna ist eine wunderbare Spezialistin, eine echte Profi und eine sehr angenehme Person. Ich habe mich zweimal im Jahr an sie gewandt. Das erste Mal wegen meiner damals anhaltenden Rückenschmerzen. Nach der zweiten Sitzung wurde es leichter, nach der vierten hatte ich vergessen, was ein schmerzender Rücken ist. Kürzlich gab es ein Problem mit meinem Nacken. Ich habe keine Salben oder Tabletten gekauft, ich habe mich sofort an Anna gewandt. Jetzt ist alles in Ordnung! Ich empfehle allen, die noch nicht mit Osteopathie vertraut sind, zu Anna zu kommen.",
             "source": "Originalbewertung ansehen"
@@ -123,8 +133,24 @@
             "text": "Ich kam mit Nackenproblemen und einem Gefühl der Erstickung. Nach zwei, drei Sitzungen spürte ich eine erhebliche Erleichterung. Sehr froh, dass ich zu Anna gekommen bin) Dank ihrer wunderbaren Hände fühle ich mich viel besser! Vielen Dank❤️",
             "source": "Originalbewertung ansehen"
         },
-        "read_more": "Weiterlesen",
+        "read_more": "Vollständig lesen",
         "read_less": "Weniger anzeigen",
+        "short1": {
+            "text": "\"Hat mir gefallen\"",
+            "author": "— Kunde"
+        },
+        "short2": {
+            "text": "\"Anna ist eine großartige Fachfrau, sehr nette Person\"",
+            "author": "— Maria"
+        },
+        "short3": {
+            "text": "\"Danke Anna für die Sitzung, alles war super!\"",
+            "author": "— Olga"
+        },
+        "short4": {
+            "text": "\"Perfect!\"",
+            "author": "— Alex"
+        },
         "more_title": "Weitere Bewertungen ansehen",
         "more_google": "Bewertungen auf Google",
         "more_instagram": "Bewertungen auf Instagram",
