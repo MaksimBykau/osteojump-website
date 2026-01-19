@@ -6,7 +6,7 @@
 .about-hero {
     padding: var(--spacing-lg) var(--spacing-sm);
     padding-top: calc(var(--spacing-lg) + 60px); /* Account for fixed header */
-    background: linear-gradient(135deg, #f8fafc 0%, #eef2f7 100%);
+    background: var(--gradient-hero);
 }
 
 .about-hero-photo {
@@ -20,8 +20,8 @@
     aspect-ratio: 3 / 4;
     object-fit: cover;
     object-position: center 20%;
-    border-radius: 16px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
 }
 
 .about-hero-title {
@@ -42,7 +42,7 @@
 .about-hero-tagline {
     font-size: clamp(1rem, 2.5vw, 1.25rem);
     font-weight: 400;
-    color: #4b5563;
+    color: var(--text-secondary);
     line-height: 1.7;
     max-width: 450px;
 }
@@ -54,17 +54,17 @@
     background-color: var(--primary-color);
     color: white;
     text-decoration: none;
-    border-radius: 8px;
+    border-radius: var(--radius-sm);
     font-weight: 500;
     font-size: 1rem;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+    box-shadow: 0 4px 12px var(--primary-color-25);
 }
 
 .about-hero-btn:hover {
     background-color: var(--secondary-color);
     transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(37, 99, 235, 0.35);
+    box-shadow: 0 6px 16px var(--primary-color-35);
 }
 
 /* ============================================
@@ -83,16 +83,16 @@
 }
 
 .specialization-card {
-    background: white;
-    border-radius: 16px;
+    background: var(--bg-color);
+    border-radius: var(--radius-lg);
     overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: var(--shadow-md);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .specialization-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    box-shadow: var(--shadow-lg);
 }
 
 /* Photo Collage */
@@ -147,7 +147,7 @@
 .specialization-text {
     font-size: 1rem;
     line-height: 1.7;
-    color: #4b5563;
+    color: var(--text-secondary);
     margin-bottom: var(--spacing-sm);
 }
 
@@ -175,7 +175,7 @@
 .journey-text p {
     font-size: clamp(1rem, 2.5vw, 1.125rem);
     line-height: 1.8;
-    color: #4b5563;
+    color: var(--text-secondary);
     margin-bottom: var(--spacing-md);
 }
 
@@ -191,9 +191,9 @@
     gap: 3px;
     max-width: 400px;
     aspect-ratio: 3 / 4;
-    border-radius: 16px;
+    border-radius: var(--radius-lg);
     overflow: hidden;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    box-shadow: var(--shadow-lg);
 }
 
 .journey-img {
@@ -223,13 +223,13 @@
    ============================================ */
 .about-motivation {
     padding: var(--spacing-lg) var(--spacing-sm);
-    background: linear-gradient(135deg, #f8fafc 0%, #eef2f7 100%);
+    background: var(--gradient-hero);
 }
 
 .motivation-text p {
     font-size: 1.0625rem;
     line-height: 1.9;
-    color: #4b5563;
+    color: var(--text-secondary);
     margin-bottom: var(--spacing-md);
 }
 
@@ -253,8 +253,8 @@
     height: auto;
     aspect-ratio: 3 / 4;
     object-fit: cover;
-    border-radius: 16px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
 }
 
 /* ============================================
@@ -275,7 +275,7 @@
 .about-approach-brief .approach-brief-content p {
     font-size: 1.0625rem;
     line-height: 1.8;
-    color: #4b5563;
+    color: var(--text-secondary);
     margin-bottom: var(--spacing-md);
 }
 
@@ -289,17 +289,17 @@
     background-color: var(--primary-color);
     color: white;
     text-decoration: none;
-    border-radius: 8px;
+    border-radius: var(--radius-sm);
     font-weight: 500;
     font-size: 1rem;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+    box-shadow: 0 4px 12px var(--primary-color-25);
 }
 
 .approach-link-btn:hover {
     background-color: var(--secondary-color);
     transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(37, 99, 235, 0.35);
+    box-shadow: 0 6px 16px var(--primary-color-35);
 }
 
 .approach-layout {
@@ -313,7 +313,7 @@
 .approach-text-content p {
     font-size: 1.0625rem;
     line-height: 1.8;
-    color: #4b5563;
+    color: var(--text-secondary);
     margin-bottom: var(--spacing-md);
 }
 
@@ -321,7 +321,7 @@
     margin-top: var(--spacing-lg);
     padding: var(--spacing-md);
     background: var(--section-bg);
-    border-radius: 12px;
+    border-radius: var(--radius-md);
 }
 
 .principles-title {
@@ -343,7 +343,7 @@
     position: relative;
     font-size: 1rem;
     line-height: 1.6;
-    color: #4b5563;
+    color: var(--text-secondary);
 }
 
 .principles-list li::before {
@@ -371,8 +371,8 @@
 .slider-container {
     position: relative;
     overflow: hidden;
-    border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
 }
 
 .slider-track {
@@ -406,7 +406,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    box-shadow: var(--shadow-sm);
     transition: all 0.3s ease;
     z-index: 10;
 }
@@ -414,7 +414,7 @@
 .slider-btn:hover {
     background: var(--primary-color);
     color: white;
-    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+    box-shadow: var(--shadow-md);
 }
 
 .slider-prev {
@@ -436,7 +436,7 @@
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background: #d1d5db;
+    background: var(--border-light);
     border: none;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -444,7 +444,7 @@
 }
 
 .slider-dot:hover {
-    background: #9ca3af;
+    background: var(--text-muted);
 }
 
 .slider-dot.active {
@@ -469,10 +469,10 @@
 }
 
 .education-block {
-    background: white;
+    background: var(--bg-color);
     padding: var(--spacing-md);
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
 }
 
 .education-subtitle {
@@ -496,7 +496,7 @@
     position: relative;
     font-size: 0.9375rem;
     line-height: 1.6;
-    color: #4b5563;
+    color: var(--text-secondary);
 }
 
 .education-list li::before {
@@ -535,17 +535,17 @@
     background-color: var(--primary-color);
     color: white;
     text-decoration: none;
-    border-radius: 8px;
+    border-radius: var(--radius-sm);
     font-weight: 500;
     font-size: 1rem;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+    box-shadow: 0 4px 12px var(--primary-color-25);
 }
 
 .education-link-btn:hover {
     background-color: var(--secondary-color);
     transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(37, 99, 235, 0.35);
+    box-shadow: 0 6px 16px var(--primary-color-35);
 }
 
 /* ============================================
@@ -593,7 +593,7 @@
 .cta-btn {
     display: inline-block;
     padding: 1rem 2rem;
-    border-radius: 8px;
+    border-radius: var(--radius-sm);
     font-weight: 600;
     font-size: 1rem;
     text-decoration: none;
@@ -601,14 +601,14 @@
 }
 
 .cta-btn-primary {
-    background: white;
+    background: var(--bg-color);
     color: var(--primary-color);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: var(--shadow-md);
 }
 
 .cta-btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--shadow-lg);
 }
 
 .cta-btn-secondary {
@@ -632,11 +632,11 @@
 }
 
 .badge-rating {
-    background: #fbbf24;
-    color: #1f2937;
+    background: var(--star-color);
+    color: var(--text-color);
     font-weight: 700;
     padding: 0.25rem 0.5rem;
-    border-radius: 4px;
+    border-radius: var(--radius-sm);
     font-size: 0.875rem;
 }
 
@@ -702,7 +702,7 @@
 
     .about-hero-image {
         max-width: 300px;
-        border-radius: 14px;
+        border-radius: var(--radius-md);
     }
 
     .specialization-cards {
@@ -751,7 +751,7 @@
 
     .about-hero-image {
         max-width: 260px;
-        border-radius: 12px;
+        border-radius: var(--radius-md);
     }
 
     .specialization-collage,
@@ -798,11 +798,11 @@
     color: var(--primary-color);
     text-decoration: none;
     padding: var(--spacing-sm) var(--spacing-md);
-    border-radius: 8px;
+    border-radius: var(--radius-sm);
     transition: all 0.3s ease;
 }
 
 .about-next .next-page-link:hover {
-    background-color: rgba(37, 99, 235, 0.1);
+    background-color: var(--primary-color-10);
     transform: translateX(4px);
 }

@@ -27,7 +27,7 @@
 
 .location-subtitle {
     font-size: 1rem;
-    color: #6b7280;
+    color: var(--text-muted);
     margin: 0;
 }
 
@@ -87,7 +87,7 @@
     top: 50%;
     height: calc(100% + var(--spacing-lg));
     width: 3px;
-    background: linear-gradient(to bottom, var(--primary-color), #10b981);
+    background: linear-gradient(to bottom, var(--primary-color), var(--success-color));
     border-radius: 2px;
 }
 
@@ -123,32 +123,32 @@
     font-size: 1.25rem;
     font-weight: 700;
     z-index: 1;
-    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+    box-shadow: 0 4px 12px var(--primary-color-30);
 }
 
 /* Last step - green */
 .step-item:last-child .step-number {
-    background: linear-gradient(135deg, #10b981, #059669);
-    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+    background: linear-gradient(135deg, var(--success-color), #059669);
+    box-shadow: var(--shadow-md);
 }
 
 /* Step Content Card */
 .step-content {
-    background: white;
-    border-radius: 12px;
+    background: var(--bg-color);
+    border-radius: var(--radius-md);
     overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    box-shadow: var(--shadow-sm);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .step-content:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    box-shadow: var(--shadow-lg);
 }
 
 /* Last step highlight */
 .step-item:last-child .step-content {
-    border: 2px solid #10b981;
+    border: 2px solid var(--success-color);
 }
 
 /* Step Image Container */
@@ -189,7 +189,7 @@
 
 .step-text p {
     font-size: 0.95rem;
-    color: #6b7280;
+    color: var(--text-muted);
     margin: 0;
     line-height: 1.6;
 }

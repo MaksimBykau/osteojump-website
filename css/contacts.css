@@ -1,46 +1,47 @@
 /* Contacts Page Styles */
 
-/* Hero Section */
+/* Hero Section - uses .page-hero from style.css, keep for specifics */
 .contacts-hero {
-    padding: 3rem 0 2rem;
+    padding: var(--spacing-lg) 0 var(--spacing-md);
     text-align: center;
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    background: var(--gradient-hero);
 }
 
 .contacts-title {
-    font-size: 2.5rem;
-    color: #2c3e50;
-    margin-bottom: 0.5rem;
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    color: var(--text-color);
+    margin-bottom: var(--spacing-xs);
+    font-weight: 700;
 }
 
 .contacts-subtitle {
     font-size: 1.1rem;
-    color: #6c757d;
+    color: var(--text-muted);
 }
 
 /* Main Content */
 .contacts-main {
-    padding: 2rem 0 3rem;
+    padding: var(--spacing-md) 0 var(--spacing-lg);
 }
 
 .contacts-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
+    gap: var(--spacing-md);
 }
 
 /* Contact Blocks */
 .contacts-block {
-    background: #fff;
-    border-radius: 12px;
+    background: var(--bg-color);
+    border-radius: var(--radius-md);
     padding: 1.5rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    box-shadow: var(--shadow-sm);
 }
 
 .contacts-block-title {
     font-size: 1.1rem;
-    color: #2c3e50;
-    margin-bottom: 1rem;
+    color: var(--text-color);
+    margin-bottom: var(--spacing-sm);
     font-weight: 600;
 }
 
@@ -55,9 +56,9 @@
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    padding: 0.5rem 0;
+    padding: var(--spacing-xs) 0;
     text-decoration: none;
-    color: #2c3e50;
+    color: var(--text-color);
     transition: color 0.2s ease;
 }
 
@@ -77,6 +78,7 @@
 .contact-item-icon img {
     width: 20px;
     height: 20px;
+    filter: var(--primary-color-filter);
 }
 
 .contact-item-text {
@@ -93,10 +95,10 @@
 /* Hint Text */
 .contacts-hint {
     font-size: 0.85rem;
-    color: #6c757d;
-    margin-top: 1rem;
+    color: var(--text-muted);
+    margin-top: var(--spacing-sm);
     padding-top: 0.75rem;
-    border-top: 1px solid #e9ecef;
+    border-top: 1px solid var(--border-color);
 }
 
 /* Map Link */
@@ -115,14 +117,14 @@
 
 /* CTA Section */
 .contacts-cta {
-    margin-top: 2.5rem;
+    margin-top: var(--spacing-lg);
     text-align: center;
 }
 
 /* Responsive */
 @media (max-width: 767px) {
     .contacts-hero {
-        padding: 2rem 0 1.5rem;
+        padding: var(--spacing-md) 0 var(--spacing-sm);
     }
 
     .contacts-title {
@@ -131,7 +133,7 @@
 
     .contacts-grid {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
+        gap: var(--spacing-sm);
     }
 
     .contacts-block {
@@ -139,7 +141,7 @@
     }
 
     .contacts-cta {
-        margin-top: 2rem;
+        margin-top: var(--spacing-md);
     }
 }
 

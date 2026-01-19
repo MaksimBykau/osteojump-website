@@ -6,7 +6,7 @@
 .faq-hero {
     padding: var(--spacing-lg) var(--spacing-sm);
     padding-top: calc(var(--spacing-lg) + 60px); /* Account for fixed header */
-    background: linear-gradient(135deg, #f8fafc 0%, #eef2f7 100%);
+    background: var(--gradient-hero);
     text-align: center;
 }
 
@@ -21,7 +21,7 @@
 .faq-hero-subtitle {
     font-size: clamp(1rem, 2.5vw, 1.25rem);
     font-weight: 400;
-    color: #4b5563;
+    color: var(--text-secondary);
     max-width: 600px;
     margin: 0 auto;
 }
@@ -43,15 +43,15 @@
 }
 
 .faq-item {
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    background: var(--bg-color);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
     overflow: hidden;
     transition: box-shadow 0.3s ease;
 }
 
 .faq-item:hover {
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow-md);
 }
 
 /* Question Button */
@@ -135,7 +135,7 @@
 .faq-answer p {
     font-size: 1rem;
     line-height: 1.8;
-    color: #4b5563;
+    color: var(--text-secondary);
     margin: 0;
 }
 

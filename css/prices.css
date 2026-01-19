@@ -6,7 +6,7 @@
 .prices-hero {
     padding: var(--spacing-lg) var(--spacing-sm);
     padding-top: calc(var(--spacing-lg) + 80px);
-    background: linear-gradient(135deg, #f8fafc 0%, #eef2f7 100%);
+    background: var(--gradient-hero);
     text-align: center;
 }
 
@@ -19,7 +19,7 @@
 
 .prices-hero-subtitle {
     font-size: clamp(1rem, 2.5vw, 1.25rem);
-    color: #6b7280;
+    color: var(--text-muted);
     max-width: 600px;
     margin: 0 auto;
 }
@@ -45,7 +45,7 @@
 .price-old {
     display: block;
     font-size: 0.9rem;
-    color: #9ca3af;
+    color: var(--border-light);
     text-decoration: line-through;
     margin-bottom: 0.25rem;
 }
@@ -59,7 +59,7 @@
 .price-savings {
     display: block;
     font-size: 0.85rem;
-    color: #10b981;
+    color: var(--success-color);
     font-weight: 600;
     margin-top: 0.25rem;
 }
@@ -83,10 +83,10 @@
    Service Card
    ============================================ */
 .service-card {
-    background: white;
-    border-radius: 16px;
+    background: var(--bg-color);
+    border-radius: var(--radius-lg);
     overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: var(--shadow-sm);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
@@ -94,7 +94,7 @@
 
 .service-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    box-shadow: var(--shadow-lg);
 }
 
 .service-card-image {
@@ -130,7 +130,7 @@
 .service-card-description {
     font-size: 0.95rem;
     line-height: 1.6;
-    color: #4b5563;
+    color: var(--text-secondary);
     margin-bottom: 1rem;
     flex-grow: 1;
 }
@@ -140,7 +140,7 @@
     align-items: center;
     gap: 0.5rem;
     font-size: 0.9rem;
-    color: #6b7280;
+    color: var(--text-muted);
     margin-bottom: 1rem;
 }
 
@@ -163,7 +163,7 @@
 
 .price-secondary {
     font-size: 0.875rem;
-    color: #9ca3af;
+    color: var(--border-light);
 }
 
 .service-card-btn {
@@ -172,7 +172,7 @@
     background-color: var(--primary-color);
     color: white;
     text-align: center;
-    border-radius: 8px;
+    border-radius: var(--radius-sm);
     font-weight: 600;
     font-size: 0.95rem;
     text-decoration: none;
@@ -195,7 +195,7 @@
 .section-subtitle {
     text-align: center;
     font-size: 1.1rem;
-    color: #6b7280;
+    color: var(--text-muted);
     margin-top: -1rem;
     margin-bottom: var(--spacing-md);
 }
@@ -207,10 +207,10 @@
 }
 
 .family-card {
-    background: white;
-    border-radius: 16px;
+    background: var(--bg-color);
+    border-radius: var(--radius-lg);
     padding: var(--spacing-md);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: var(--shadow-sm);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
@@ -219,7 +219,7 @@
 
 .family-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    box-shadow: var(--shadow-lg);
 }
 
 .family-card-icon {
@@ -237,14 +237,14 @@
 .family-card-description {
     font-size: 0.95rem;
     line-height: 1.6;
-    color: #4b5563;
+    color: var(--text-secondary);
     margin-bottom: 1rem;
     flex-grow: 1;
 }
 
 .family-card-meta {
     font-size: 0.9rem;
-    color: #6b7280;
+    color: var(--text-muted);
     margin-bottom: 1rem;
 }
 
@@ -262,7 +262,7 @@
     background-color: var(--primary-color);
     color: white;
     text-align: center;
-    border-radius: 8px;
+    border-radius: var(--radius-sm);
     font-weight: 600;
     font-size: 0.95rem;
     text-decoration: none;
@@ -286,12 +286,12 @@
     max-width: 800px;
     margin: var(--spacing-md) auto 0;
     background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
-    border-radius: 16px;
+    border-radius: var(--radius-lg);
     padding: var(--spacing-md);
     display: flex;
     align-items: center;
     gap: var(--spacing-md);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: var(--shadow-sm);
 }
 
 .consultation-icon {
@@ -313,13 +313,13 @@
 .consultation-description {
     font-size: 1rem;
     line-height: 1.6;
-    color: #4b5563;
+    color: var(--text-secondary);
     margin-bottom: 0.75rem;
 }
 
 .consultation-meta {
     font-size: 0.9rem;
-    color: #6b7280;
+    color: var(--text-muted);
     margin-bottom: 0.5rem;
 }
 
@@ -331,11 +331,11 @@
 
 .consultation-btn {
     display: inline-block;
-    padding: 1rem 2rem;
+    padding: var(--spacing-sm) var(--spacing-md);
     background-color: var(--primary-color);
     color: white;
     text-align: center;
-    border-radius: 8px;
+    border-radius: var(--radius-sm);
     font-weight: 600;
     font-size: 1rem;
     text-decoration: none;
@@ -353,7 +353,7 @@
    ============================================ */
 .prices-cta {
     padding: var(--spacing-lg) var(--spacing-sm);
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: var(--gradient-cta);
     text-align: center;
     color: white;
 }
@@ -382,8 +382,8 @@
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 1rem 2rem;
-    border-radius: 8px;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--radius-sm);
     font-weight: 600;
     font-size: 1rem;
     text-decoration: none;
@@ -426,7 +426,7 @@
 
 .prices-note p {
     font-size: 0.9rem;
-    color: #6b7280;
+    color: var(--text-muted);
     max-width: 600px;
     margin: 0 auto;
 }
