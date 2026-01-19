@@ -18,236 +18,105 @@
     color: #6c757d;
 }
 
-/* Notice Section */
-.contacts-notice {
-    padding: 1.5rem 0 0;
+/* Main Content */
+.contacts-main {
+    padding: 2rem 0 3rem;
 }
 
-.notice-card {
-    display: flex;
-    align-items: flex-start;
-    gap: 1rem;
-    background: linear-gradient(135deg, #fff8e1 0%, #fff3cd 100%);
-    border: 1px solid #ffc107;
-    border-radius: 12px;
-    padding: 1.25rem 1.5rem;
-}
-
-.notice-icon {
-    font-size: 1.5rem;
-    flex-shrink: 0;
-}
-
-.notice-content {
-    flex: 1;
-}
-
-.notice-text {
-    color: #856404;
-    font-weight: 500;
-    margin-bottom: 0.25rem;
-}
-
-.notice-subtext {
-    color: #856404;
-    font-size: 0.9rem;
-    opacity: 0.85;
-}
-
-/* Contact Methods Section */
-.contact-methods {
-    padding: 2rem 0;
-}
-
-.contact-methods .section-title {
-    margin-bottom: 1.5rem;
-}
-
-.contact-cards-grid {
+.contacts-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
+    gap: 2rem;
 }
 
-.contact-card {
-    background: #fff;
-    border-radius: 16px;
-    padding: 2rem;
-    text-align: center;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.contact-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-}
-
-.contact-icon {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.contact-icon-img {
-    width: 48px;
-    height: 48px;
-    object-fit: contain;
-}
-
-.contact-card-title {
-    font-size: 1.25rem;
-    color: #2c3e50;
-    margin-bottom: 1rem;
-}
-
-.contact-value {
-    display: block;
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #4a90a4;
-    text-decoration: none;
-    margin-bottom: 0.5rem;
-}
-
-.contact-value:hover {
-    color: #357a8a;
-}
-
-.phone-number {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    letter-spacing: 0.5px;
-}
-
-.email-address {
-    font-size: 1.1rem;
-    word-break: break-all;
-}
-
-.contact-btn {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: background-color 0.2s ease, transform 0.2s ease;
-}
-
-.whatsapp-btn {
-    background-color: #25D366;
-    color: white;
-}
-
-.whatsapp-btn:hover {
-    background-color: #20bd5a;
-    transform: scale(1.02);
-}
-
-.telegram-btn {
-    background-color: #0088cc;
-    color: white;
-}
-
-.telegram-btn:hover {
-    background-color: #0077b5;
-    transform: scale(1.02);
-}
-
-.contact-hint {
-    font-size: 0.875rem;
-    color: #6c757d;
-    margin-top: 0.75rem;
-}
-
-/* Social Media Section */
-.social-section {
-    padding: 2rem 0;
-    background: #f8f9fa;
-}
-
-.social-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1rem;
-    margin-top: 1.5rem;
-}
-
-.social-card {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+/* Contact Blocks */
+.contacts-block {
     background: #fff;
     border-radius: 12px;
-    padding: 1.25rem;
-    text-decoration: none;
+    padding: 1.5rem;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.social-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-}
-
-.social-icon {
-    width: 40px;
-    height: 40px;
-    object-fit: contain;
-    flex-shrink: 0;
-}
-
-.social-info {
-    flex: 1;
-    min-width: 0;
-}
-
-.social-name {
-    font-weight: 600;
+.contacts-block-title {
+    font-size: 1.1rem;
     color: #2c3e50;
-    display: block;
+    margin-bottom: 1rem;
+    font-weight: 600;
 }
 
-.social-handle {
-    font-size: 0.875rem;
-    color: #6c757d;
-    display: block;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+/* Contact List */
+.contacts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
 }
 
-.social-lang {
-    font-size: 1.25rem;
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem 0;
+    text-decoration: none;
+    color: #2c3e50;
+    transition: color 0.2s ease;
+}
+
+.contact-item:hover {
+    color: #4a90a4;
+}
+
+.contact-item-icon {
+    width: 24px;
+    height: 24px;
     flex-shrink: 0;
-}
-
-.social-icon-emoji {
-    font-size: 2rem;
-    width: 40px;
-    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.contact-item-icon img {
+    width: 20px;
+    height: 20px;
+}
+
+.contact-item-text {
+    flex: 1;
+    font-size: 0.95rem;
+    word-break: break-word;
+}
+
+.contact-item-flag {
+    font-size: 1rem;
     flex-shrink: 0;
+}
+
+/* Hint Text */
+.contacts-hint {
+    font-size: 0.85rem;
+    color: #6c757d;
+    margin-top: 1rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid #e9ecef;
+}
+
+/* Map Link */
+.contacts-map-link {
+    display: inline-block;
+    margin-top: 0.75rem;
+    font-size: 0.9rem;
+    color: #4a90a4;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contacts-map-link:hover {
+    text-decoration: underline;
 }
 
 /* CTA Section */
 .contacts-cta {
-    padding: 3rem 0;
+    margin-top: 2.5rem;
     text-align: center;
-}
-
-.cta-title {
-    font-size: 1.75rem;
-    color: #2c3e50;
-    margin-bottom: 0.5rem;
-}
-
-.cta-text {
-    color: #6c757d;
-    margin-bottom: 1.5rem;
 }
 
 .cta-btn {
@@ -267,55 +136,6 @@
     transform: scale(1.02);
 }
 
-/* Location Link Section */
-.location-link-section {
-    padding: 1.5rem 0 3rem;
-}
-
-.location-link-card {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    background: #fff;
-    border-radius: 12px;
-    padding: 1.25rem 1.5rem;
-    text-decoration: none;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-    border: 1px solid #e9ecef;
-    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-}
-
-.location-link-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-    border-color: #4a90a4;
-}
-
-.location-link-icon {
-    font-size: 1.5rem;
-}
-
-.location-link-text {
-    flex: 1;
-}
-
-.location-link-title {
-    display: block;
-    font-weight: 600;
-    color: #2c3e50;
-    margin-bottom: 0.25rem;
-}
-
-.location-link-address {
-    font-size: 0.875rem;
-    color: #6c757d;
-}
-
-.location-link-arrow {
-    font-size: 1.25rem;
-    color: #4a90a4;
-}
-
 /* Responsive */
 @media (max-width: 767px) {
     .contacts-hero {
@@ -326,40 +146,17 @@
         font-size: 2rem;
     }
 
-    .notice-card {
-        padding: 1rem;
-    }
-
-    .notice-text {
-        font-size: 0.95rem;
-    }
-
-    .contact-cards-grid {
+    .contacts-grid {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
 
-    .contact-card {
-        padding: 1.5rem;
-    }
-
-    .contact-value {
-        font-size: 1.25rem;
-    }
-
-    .email-address {
-        font-size: 0.95rem;
-    }
-
-    .social-cards {
-        grid-template-columns: 1fr;
+    .contacts-block {
+        padding: 1.25rem;
     }
 
     .contacts-cta {
-        padding: 2rem 0;
-    }
-
-    .cta-title {
-        font-size: 1.5rem;
+        margin-top: 2rem;
     }
 }
 
@@ -368,7 +165,7 @@
         font-size: 1.75rem;
     }
 
-    .contact-card {
-        padding: 1.25rem;
+    .contact-item-text {
+        font-size: 0.9rem;
     }
 }
