@@ -5,6 +5,7 @@
         "home": "Головна",
         "prices": "Ціни",
         "reviews": "Відгуки",
+        "contacts": "Контакти",
         "about": "Про мене",
         "appointment": "Як проходить прийом",
         "faq": "Питання",
@@ -379,7 +380,30 @@
         "q7_answer": "Записатися можна через Booksy, WhatsApp або зателефонувавши. Кнопка «Записатися» знаходиться внизу сторінки."
     },
     "footer": {
-        "text": "© 2024 OsteoJump. Всі права захищені."
+        "text": "© 2024 OsteoJump. Всі права захищені.",
+        "contacts_title": "Контакти",
+        "address": "Siłaczki 3/9, каб. 212, Варшава",
+        "social_title": "Соцмережі",
+        "nav_title": "Навігація"
+    },
+    "contacts_page": {
+        "title": "Контакти - OsteoJump",
+        "hero_title": "Контакти",
+        "hero_subtitle": "Зв'яжіться зі мною будь-яким зручним способом",
+        "notice_text": "З питань запису краще писати, а не дзвонити — або скористайтеся Booksy.",
+        "notice_active": "Найактивніше веду листування в Telegram та Instagram.",
+        "contact_title": "Зв'язатися зі мною",
+        "phone_title": "Телефон",
+        "phone_hint": "Для зв'язку",
+        "write_whatsapp": "Написати в WhatsApp",
+        "whatsapp_hint": "Швидка відповідь",
+        "write_telegram": "Написати в Telegram",
+        "telegram_hint": "Найшвидший спосіб зв'язку",
+        "social_title": "Соціальні мережі",
+        "cta_title": "Готові записатися?",
+        "cta_text": "Оберіть зручний час через Booksy",
+        "cta_book": "Записатися на Booksy",
+        "location_link": "Як дістатися"
     }
 }
 

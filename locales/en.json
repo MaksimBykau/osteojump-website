@@ -5,6 +5,7 @@
         "home": "Home",
         "prices": "Prices",
         "reviews": "Reviews",
+        "contacts": "Contacts",
         "about": "About Me",
         "appointment": "How a Session Works",
         "faq": "FAQ",
@@ -379,7 +380,30 @@
         "q7_answer": "You can book through Booksy, WhatsApp, or by calling. The 'Book Appointment' button is at the bottom of the page."
     },
     "footer": {
-        "text": "© 2024 OsteoJump. All rights reserved."
+        "text": "© 2024 OsteoJump. All rights reserved.",
+        "contacts_title": "Contacts",
+        "address": "Siłaczki 3/9, office 212, Warsaw",
+        "social_title": "Social Media",
+        "nav_title": "Navigation"
+    },
+    "contacts_page": {
+        "title": "Contacts - OsteoJump",
+        "hero_title": "Contacts",
+        "hero_subtitle": "Get in touch with me in any convenient way",
+        "notice_text": "For booking inquiries, please message me rather than call — or use Booksy.",
+        "notice_active": "I'm most active on Telegram and Instagram.",
+        "contact_title": "Get in Touch",
+        "phone_title": "Phone",
+        "phone_hint": "For contact",
+        "write_whatsapp": "Message on WhatsApp",
+        "whatsapp_hint": "Quick response",
+        "write_telegram": "Message on Telegram",
+        "telegram_hint": "Fastest way to reach me",
+        "social_title": "Social Media",
+        "cta_title": "Ready to Book?",
+        "cta_text": "Choose a convenient time through Booksy",
+        "cta_book": "Book on Booksy",
+        "location_link": "Get Directions"
     }
 }
 

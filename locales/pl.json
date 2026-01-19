@@ -5,6 +5,7 @@
         "home": "Strona główna",
         "prices": "Ceny",
         "reviews": "Opinie",
+        "contacts": "Kontakt",
         "about": "O mnie",
         "appointment": "Jak przebiega wizyta",
         "faq": "FAQ",
@@ -379,7 +380,30 @@
         "q7_answer": "Możesz umówić się przez Booksy, WhatsApp lub telefonicznie. Przycisk 'Umów wizytę' znajduje się na dole strony."
     },
     "footer": {
-        "text": "© 2024 OsteoJump. Wszelkie prawa zastrzeżone."
+        "text": "© 2024 OsteoJump. Wszelkie prawa zastrzeżone.",
+        "contacts_title": "Kontakt",
+        "address": "Siłaczki 3/9, gab. 212, Warszawa",
+        "social_title": "Media społecznościowe",
+        "nav_title": "Nawigacja"
+    },
+    "contacts_page": {
+        "title": "Kontakt - OsteoJump",
+        "hero_title": "Kontakt",
+        "hero_subtitle": "Skontaktuj się ze mną w dowolny wygodny sposób",
+        "notice_text": "W sprawie rezerwacji proszę pisać zamiast dzwonić — lub skorzystaj z Booksy.",
+        "notice_active": "Najaktywniej prowadzę korespondencję na Telegramie i Instagramie.",
+        "contact_title": "Skontaktuj się ze mną",
+        "phone_title": "Telefon",
+        "phone_hint": "Do kontaktu",
+        "write_whatsapp": "Napisz na WhatsApp",
+        "whatsapp_hint": "Szybka odpowiedź",
+        "write_telegram": "Napisz na Telegram",
+        "telegram_hint": "Najszybszy sposób kontaktu",
+        "social_title": "Media społecznościowe",
+        "cta_title": "Gotowy do rezerwacji?",
+        "cta_text": "Wybierz dogodny termin przez Booksy",
+        "cta_book": "Zarezerwuj na Booksy",
+        "location_link": "Jak dojechać"
     }
 }
 

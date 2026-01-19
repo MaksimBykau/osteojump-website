@@ -6,12 +6,12 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
-    <title data-i18n="location.title">Как добраться - OsteoJump</title>
+    <title data-i18n="contacts_page.title">Контакты - OsteoJump</title>
     <link rel="icon" type="image/png" href="/images/favicon.png">
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link rel="apple-touch-icon" href="/images/favicon.png">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/location.css">
+    <link rel="stylesheet" href="../css/contacts.css">
     <style>
         /* Hide content until translations are loaded */
         body:not(.i18n-ready) {
@@ -51,11 +51,11 @@
 
             // Title translations map for immediate setting
             const titleMap = {
-                'ru': { 'title': 'OsteoJump', 'location.title': 'Как добраться - OsteoJump' },
-                'en': { 'title': 'OsteoJump', 'location.title': 'How to Find Us - OsteoJump' },
-                'de': { 'title': 'OsteoJump', 'location.title': 'Anfahrt - OsteoJump' },
-                'pl': { 'title': 'OsteoJump', 'location.title': 'Jak dojechac - OsteoJump' },
-                'uk': { 'title': 'OsteoJump', 'location.title': 'Як дістатися - OsteoJump' }
+                'ru': { 'title': 'OsteoJump', 'contacts_page.title': 'Контакты - OsteoJump' },
+                'en': { 'title': 'OsteoJump', 'contacts_page.title': 'Contacts - OsteoJump' },
+                'de': { 'title': 'OsteoJump', 'contacts_page.title': 'Kontakt - OsteoJump' },
+                'pl': { 'title': 'OsteoJump', 'contacts_page.title': 'Kontakt - OsteoJump' },
+                'uk': { 'title': 'OsteoJump', 'contacts_page.title': 'Контакти - OsteoJump' }
             };
 
             // Set title immediately based on current page
@@ -119,190 +119,138 @@
     </header>
 
     <main class="main">
-        <!-- Intro Section -->
-        <section class="location-intro">
+        <!-- Hero Section -->
+        <section class="contacts-hero">
             <div class="container">
-                <a href="https://maps.app.goo.gl/nisp2LjM92sZRDYz9" target="_blank" rel="noopener noreferrer" class="location-address-link">
-                    <h1 class="location-address" data-i18n="location.address">Silaczki 3/9, kabinet 212</h1>
-                    <p class="location-subtitle" data-i18n="location.subtitle">02-495 Warszawa, Polska</p>
+                <h1 class="contacts-title" data-i18n="contacts_page.hero_title">Контакты</h1>
+                <p class="contacts-subtitle" data-i18n="contacts_page.hero_subtitle">Свяжитесь со мной любым удобным способом</p>
+            </div>
+        </section>
+
+        <!-- Important Notice -->
+        <section class="contacts-notice">
+            <div class="container">
+                <div class="notice-card">
+                    <div class="notice-icon">💡</div>
+                    <div class="notice-content">
+                        <p class="notice-text" data-i18n="contacts_page.notice_text">По вопросам записи лучше писать, а не звонить — или воспользуйтесь Booksy.</p>
+                        <p class="notice-subtext" data-i18n="contacts_page.notice_active">Активнее всего веду переписку в Telegram и Instagram.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Methods -->
+        <section class="contact-methods">
+            <div class="container">
+                <h2 class="section-title" data-i18n="contacts_page.contact_title">Связаться со мной</h2>
+                <div class="contact-cards-grid">
+                    <!-- Phone -->
+                    <div class="contact-card contact-phone-card">
+                        <div class="contact-icon">📞</div>
+                        <h3 class="contact-card-title" data-i18n="contacts_page.phone_title">Телефон</h3>
+                        <a href="tel:+48571397199" class="contact-value phone-number">+48 571 397 199</a>
+                        <p class="contact-hint" data-i18n="contacts_page.phone_hint">Для связи</p>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="contact-card contact-email-card">
+                        <div class="contact-icon">✉️</div>
+                        <h3 class="contact-card-title">Email</h3>
+                        <a href="mailto:hanna.bykava.osteopata@gmail.com" class="contact-value email-address">hanna.bykava.osteopata@gmail.com</a>
+                    </div>
+
+                    <!-- WhatsApp -->
+                    <div class="contact-card contact-whatsapp-card">
+                        <div class="contact-icon">
+                            <img src="/images/icons/whatsapp-icon.png" alt="WhatsApp" class="contact-icon-img">
+                        </div>
+                        <h3 class="contact-card-title">WhatsApp</h3>
+                        <a href="https://wa.me/375295021754" target="_blank" rel="noopener noreferrer" class="contact-btn whatsapp-btn" data-i18n="contacts_page.write_whatsapp">Написать в WhatsApp</a>
+                        <p class="contact-hint" data-i18n="contacts_page.whatsapp_hint">Быстрый ответ</p>
+                    </div>
+
+                    <!-- Telegram -->
+                    <div class="contact-card contact-telegram-card">
+                        <div class="contact-icon">
+                            <img src="/images/icons/telegram-icon.png" alt="Telegram" class="contact-icon-img">
+                        </div>
+                        <h3 class="contact-card-title">Telegram</h3>
+                        <a href="https://t.me/OsteopatBykava" target="_blank" rel="noopener noreferrer" class="contact-btn telegram-btn" data-i18n="contacts_page.write_telegram">Написать в Telegram</a>
+                        <p class="contact-hint" data-i18n="contacts_page.telegram_hint">Самый быстрый способ связи</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Media -->
+        <section class="social-section">
+            <div class="container">
+                <h2 class="section-title" data-i18n="contacts_page.social_title">Социальные сети</h2>
+                <div class="social-cards">
+                    <!-- Instagram Polish -->
+                    <a href="https://www.instagram.com/hannabykavaosteopata/" target="_blank" rel="noopener noreferrer" class="social-card instagram-card">
+                        <img src="/images/icons/instagram-icon.png" alt="Instagram" class="social-icon">
+                        <div class="social-info">
+                            <span class="social-name">Instagram</span>
+                            <span class="social-handle">@hannabykavaosteopata</span>
+                        </div>
+                        <span class="social-lang">🇵🇱</span>
+                    </a>
+                    <!-- Instagram Russian -->
+                    <a href="https://www.instagram.com/bykova_anna_osteopat/" target="_blank" rel="noopener noreferrer" class="social-card instagram-card">
+                        <img src="/images/icons/instagram-icon.png" alt="Instagram" class="social-icon">
+                        <div class="social-info">
+                            <span class="social-name">Instagram</span>
+                            <span class="social-handle">@bykova_anna_osteopat</span>
+                        </div>
+                        <span class="social-lang">🇷🇺</span>
+                    </a>
+                    <!-- Facebook Polish -->
+                    <a href="https://www.facebook.com/HannaBykavaOsteopata" target="_blank" rel="noopener noreferrer" class="social-card facebook-card">
+                        <img src="/images/icons/facebook-icon.png" alt="Facebook" class="social-icon">
+                        <div class="social-info">
+                            <span class="social-name">Facebook</span>
+                            <span class="social-handle">HannaBykavaOsteopata</span>
+                        </div>
+                        <span class="social-lang">🇵🇱</span>
+                    </a>
+                    <!-- YouTube Russian -->
+                    <a href="https://www.youtube.com/@Dr.Bykava" target="_blank" rel="noopener noreferrer" class="social-card youtube-card">
+                        <span class="social-icon-emoji">▶️</span>
+                        <div class="social-info">
+                            <span class="social-name">YouTube</span>
+                            <span class="social-handle">@Dr.Bykava</span>
+                        </div>
+                        <span class="social-lang">🇷🇺</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Book Appointment CTA -->
+        <section class="contacts-cta">
+            <div class="container">
+                <h2 class="cta-title" data-i18n="contacts_page.cta_title">Готовы записаться?</h2>
+                <p class="cta-text" data-i18n="contacts_page.cta_text">Выберите удобное время через Booksy</p>
+                <a href="https://cdl.booksy.com/hwJaWJhtmNb" target="_blank" rel="noopener noreferrer" class="cta-btn" data-i18n="contacts_page.cta_book">Записаться на Booksy</a>
+            </div>
+        </section>
+
+        <!-- Location Link -->
+        <section class="location-link-section">
+            <div class="container">
+                <a href="/location" class="location-link-card">
+                    <span class="location-link-icon">📍</span>
+                    <div class="location-link-text">
+                        <span class="location-link-title" data-i18n="contacts_page.location_link">Как добраться</span>
+                        <span class="location-link-address" data-i18n="location.address">Siłaczki 3/9, кабинет 212</span>
+                    </div>
+                    <span class="location-link-arrow">→</span>
                 </a>
             </div>
         </section>
-
-        <!-- Google Maps Section -->
-        <section class="map-section">
-            <div class="container">
-                <div class="map-wrapper">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2445.5625965969243!2d20.8756512126467!3d52.196822971861394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47193540aabbe591%3A0x180bf6eb6fa5bb9c!2sOsteoJump%20-%20Osteopata%20dla%20doros%C5%82ych%20i%20dzieci!5e0!3m2!1sru!2spl!4v1766688809445!5m2!1sru!2spl"
-                        width="100%"
-                        height="300"
-                        style="border:0;"
-                        allowfullscreen=""
-                        loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"
-                        class="map-iframe"
-                        title="OsteoJump location">
-                    </iframe>
-                    <div class="map-info">
-                        <a href="https://maps.app.goo.gl/nisp2LjM92sZRDYz9" target="_blank" rel="noopener noreferrer" class="map-link" data-i18n="map.open_link">Открыть в Google Maps</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Step-by-step Guide -->
-        <section class="steps-section">
-            <div class="container">
-                <h2 class="steps-title" data-i18n="location.steps_title">Пошаговая навигация</h2>
-
-                <div class="steps-timeline">
-                    <!-- Step 1 -->
-                    <div class="step-item">
-                        <div class="step-number">1</div>
-                        <div class="step-content">
-                            <div class="step-image-wrapper">
-                                <img
-                                    src="/images/location/thumbs/step1_thumb.jpg"
-                                    data-full="/images/location/step1.jpeg"
-                                    alt="Step 1"
-                                    class="step-image location-image"
-                                    loading="lazy">
-                            </div>
-                            <div class="step-text">
-                                <h3 data-i18n="location.step1_title">Найдите здание</h3>
-                                <p data-i18n="location.step1_desc">Красное здание с номером 39. У здания два входа — вам нужен левый</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Step 2 -->
-                    <div class="step-item">
-                        <div class="step-number">2</div>
-                        <div class="step-content">
-                            <div class="step-image-wrapper">
-                                <img
-                                    src="/images/location/thumbs/step2_thumb.jpg"
-                                    data-full="/images/location/step2.jpeg"
-                                    alt="Step 2"
-                                    class="step-image location-image"
-                                    loading="lazy">
-                            </div>
-                            <div class="step-text">
-                                <h3 data-i18n="location.step2_title">Войдите в здание</h3>
-                                <p data-i18n="location.step2_desc">Главный вход под деревянным козырьком, табличка «Silaczki 3/9»</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Step 3 -->
-                    <div class="step-item">
-                        <div class="step-number">3</div>
-                        <div class="step-content">
-                            <div class="step-image-wrapper">
-                                <img
-                                    src="/images/location/thumbs/step3_thumb.jpg"
-                                    data-full="/images/location/step3.jpg"
-                                    alt="Step 3"
-                                    class="step-image location-image"
-                                    loading="lazy">
-                            </div>
-                            <div class="step-text">
-                                <h3 data-i18n="location.step3_title">Пройдите к лифту</h3>
-                                <p data-i18n="location.step3_desc">Лифт находится напротив входа</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Step 4 -->
-                    <div class="step-item">
-                        <div class="step-number">4</div>
-                        <div class="step-content">
-                            <div class="step-image-wrapper">
-                                <img
-                                    src="/images/location/thumbs/step4_thumb.jpg"
-                                    data-full="/images/location/step4.jpg"
-                                    alt="Step 4"
-                                    class="step-image location-image"
-                                    loading="lazy">
-                            </div>
-                            <div class="step-text">
-                                <h3 data-i18n="location.step4_title">Нажмите 2 этаж</h3>
-                                <p data-i18n="location.step4_desc">В лифте нажмите кнопку «2»</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Step 5 -->
-                    <div class="step-item">
-                        <div class="step-number">5</div>
-                        <div class="step-content">
-                            <div class="step-image-wrapper">
-                                <img
-                                    src="/images/location/thumbs/step5_thumb.jpg"
-                                    data-full="/images/location/step5.jpg"
-                                    alt="Step 5"
-                                    class="step-image location-image"
-                                    loading="lazy">
-                            </div>
-                            <div class="step-text">
-                                <h3 data-i18n="location.step5_title">Выйдите и поверните налево</h3>
-                                <p data-i18n="location.step5_desc">На 2 этаже выйдите из лифта, через 2 метра поверните налево</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Step 6 -->
-                    <div class="step-item">
-                        <div class="step-number">6</div>
-                        <div class="step-content">
-                            <div class="step-image-wrapper">
-                                <img
-                                    src="/images/location/thumbs/step6_thumb.jpg"
-                                    data-full="/images/location/step6.jpg"
-                                    alt="Step 6"
-                                    class="step-image location-image"
-                                    loading="lazy">
-                            </div>
-                            <div class="step-text">
-                                <h3 data-i18n="location.step6_title">Идите по коридору</h3>
-                                <p data-i18n="location.step6_desc">Прямо по коридору, затем поверните налево</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Step 7 -->
-                    <div class="step-item">
-                        <div class="step-number">7</div>
-                        <div class="step-content">
-                            <div class="step-image-wrapper">
-                                <img
-                                    src="/images/location/thumbs/step7_thumb.jpg"
-                                    data-full="/images/location/step7.jpeg"
-                                    alt="Step 7"
-                                    class="step-image location-image"
-                                    loading="lazy">
-                            </div>
-                            <div class="step-text">
-                                <h3 data-i18n="location.step7_title">Кабинет 212</h3>
-                                <p data-i18n="location.step7_desc">Аккуратно постучите в дверь в назначенное время. Рядом есть стулья для ожидания</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
     </main>
-
-    <!-- Location Image Modal (reusing diploma-modal structure) -->
-    <div class="diploma-modal" id="locationModal">
-        <button class="modal-close" aria-label="Close">&times;</button>
-        <button class="modal-prev" aria-label="Previous">&#10094;</button>
-        <div class="modal-content">
-            <img src="" alt="Location step" id="locationModalImage">
-        </div>
-        <button class="modal-next" aria-label="Next">&#10095;</button>
-    </div>
 
     <footer class="footer">
         <div class="container">
