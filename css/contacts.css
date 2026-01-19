@@ -62,7 +62,7 @@
 }
 
 .contact-item:hover {
-    color: #4a90a4;
+    color: var(--primary-color);
 }
 
 .contact-item-icon {
@@ -104,7 +104,7 @@
     display: inline-block;
     margin-top: 0.75rem;
     font-size: 0.9rem;
-    color: #4a90a4;
+    color: var(--primary-color);
     text-decoration: none;
     font-weight: 500;
 }
@@ -117,23 +117,6 @@
 .contacts-cta {
     margin-top: 2.5rem;
     text-align: center;
-}
-
-.cta-btn {
-    display: inline-block;
-    padding: 1rem 2rem;
-    background: #4a90a4;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: 500;
-    font-size: 1.1rem;
-    transition: background-color 0.2s ease, transform 0.2s ease;
-}
-
-.cta-btn:hover {
-    background: #357a8a;
-    transform: scale(1.02);
 }
 
 /* Responsive */

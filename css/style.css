@@ -49,6 +49,34 @@ body {
     padding-right: var(--spacing-md);
 }
 
+/* Button Base */
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 1rem;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn--primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn--primary:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.02);
+}
+
+.btn--lg {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+}
+
 /* Header */
 .header {
     background-color: var(--bg-color);
