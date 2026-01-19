@@ -1184,6 +1184,10 @@ body {
     transform: translateY(0);
 }
 
+.action-book .action-icon-img {
+    filter: none;
+}
+
 /* Secondary buttons - Contacts and Directions */
 .action-contacts,
 .action-directions {
