@@ -513,15 +513,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (actionContacts) {
         actionContacts.addEventListener('click', () => {
-            const contactsSection = document.querySelector('.contacts-section');
-            if (contactsSection) {
-                const headerHeight = document.querySelector('.header')?.offsetHeight || 0;
-                const targetPosition = contactsSection.getBoundingClientRect().top + window.pageYOffset - headerHeight - 20;
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
-            }
+            window.location.href = '/contacts';
         });
     }
 

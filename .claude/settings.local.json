@@ -34,7 +34,26 @@
       "WebFetch(domain:github.com)",
       "Bash(npx -y @modelcontextprotocol/server-sequential-thinking --help)",
       "Bash(npm cache clean:*)",
-      "Bash(claude mcp list:*)"
+      "Bash(claude mcp list:*)",
+      "WebFetch(domain:booksy.com)",
+      "Bash(make server:*)",
+      "mcp__playwright__browser_click",
+      "mcp__playwright__browser_evaluate",
+      "WebFetch(domain:www.orlymedycyny.pl)",
+      "Bash(lsof:*)",
+      "mcp__playwright__browser_tabs",
+      "mcp__playwright__browser_press_key",
+      "mcp__chrome-devtools__list_pages",
+      "mcp__chrome-devtools__navigate_page",
+      "mcp__chrome-devtools__take_snapshot",
+      "mcp__chrome-devtools__click",
+      "mcp__chrome-devtools__list_console_messages",
+      "mcp__chrome-devtools__evaluate_script",
+      "mcp__chrome-devtools__take_screenshot",
+      "Bash(for file in /Users/maxbykov/Documents/projects/web/osteojump/locales/*.json)",
+      "Bash(do echo \"Checking $file...\")",
+      "Bash(python3:*)",
+      "WebFetch(domain:www.svgrepo.com)"
     ]
   }
 }
