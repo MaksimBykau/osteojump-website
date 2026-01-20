@@ -6,12 +6,14 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
-    <title data-i18n="faq.title">Вопросы - OsteoJump</title>
+    <meta name="description" content="Что такое остеопатия. Принципы работы остеопата, как проходит диагностика и лечение. OsteoJump - остеопат в Варшаве.">
+    <meta name="keywords" content="остеопатия, что такое остеопатия, принципы остеопатии, мануальная терапия, OsteoJump">
+    <title data-i18n="osteopathy_page.title">Что такое остеопатия - OsteoJump</title>
     <link rel="icon" type="image/png" href="/images/favicon.png">
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link rel="apple-touch-icon" href="/images/favicon.png">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/faq.css">
+    <link rel="stylesheet" href="../css/osteopathy.css">
     <style>
         /* Hide content until translations are loaded */
         body:not(.i18n-ready) {
@@ -36,7 +38,7 @@
             const supportedLangs = ['ru', 'en', 'de', 'pl', 'uk'];
             const savedLang = localStorage.getItem('language');
             let lang = 'en'; // default
-            
+
             if (savedLang && supportedLangs.includes(savedLang)) {
                 lang = savedLang;
             } else {
@@ -45,19 +47,19 @@
                     lang = browserLang;
                 }
             }
-            
+
             // Set lang attribute immediately
             document.documentElement.lang = lang;
-            
+
             // Title translations map for immediate setting
             const titleMap = {
-                'ru': { 'title': 'OsteoJump', 'prices.title': 'Цены - OsteoJump', 'reviews.title': 'Отзывы - OsteoJump', 'about_page.title': 'Обо мне - OsteoJump', 'faq.title': 'Вопросы - OsteoJump', 'education.title': 'Образование - OsteoJump', 'location.title': 'Как добраться - OsteoJump' },
-                'en': { 'title': 'OsteoJump', 'prices.title': 'Prices - OsteoJump', 'reviews.title': 'Reviews - OsteoJump', 'about_page.title': 'About Me - OsteoJump', 'faq.title': 'FAQ - OsteoJump', 'education.title': 'Education - OsteoJump', 'location.title': 'Directions - OsteoJump' },
-                'de': { 'title': 'OsteoJump', 'prices.title': 'Preise - OsteoJump', 'reviews.title': 'Bewertungen - OsteoJump', 'about_page.title': 'Über mich - OsteoJump', 'faq.title': 'FAQ - OsteoJump', 'education.title': 'Ausbildung - OsteoJump', 'location.title': 'Anfahrt - OsteoJump' },
-                'pl': { 'title': 'OsteoJump', 'prices.title': 'Ceny - OsteoJump', 'reviews.title': 'Opinie - OsteoJump', 'about_page.title': 'O mnie - OsteoJump', 'faq.title': 'FAQ - OsteoJump', 'education.title': 'Wykształcenie - OsteoJump', 'location.title': 'Jak dojechać - OsteoJump' },
-                'uk': { 'title': 'OsteoJump', 'prices.title': 'Ціни - OsteoJump', 'reviews.title': 'Відгуки - OsteoJump', 'about_page.title': 'Про мене - OsteoJump', 'faq.title': 'Питання - OsteoJump', 'education.title': 'Освіта - OsteoJump', 'location.title': 'Як дістатися - OsteoJump' }
+                'ru': { 'osteopathy_page.title': 'Что такое остеопатия - OsteoJump' },
+                'en': { 'osteopathy_page.title': 'What is Osteopathy - OsteoJump' },
+                'de': { 'osteopathy_page.title': 'Was ist Osteopathie - OsteoJump' },
+                'pl': { 'osteopathy_page.title': 'Czym jest osteopatia - OsteoJump' },
+                'uk': { 'osteopathy_page.title': 'Що таке остеопатія - OsteoJump' }
             };
-            
+
             // Set title immediately based on current page
             const titleElement = document.querySelector('title');
             if (titleElement) {
@@ -67,11 +69,10 @@
                     titleElement.textContent = translations[titleKey];
                 }
             }
-            
+
             // Preload translation file for faster loading (with versioning)
-            // Use timestamp to ensure fresh load even if HTML is cached
-            const translationsVersion = '5'; // Must match version in i18n.js
-            const timestamp = Date.now(); // Add timestamp to force refresh
+            const translationsVersion = '5';
+            const timestamp = Date.now();
             const link = document.createElement('link');
             link.rel = 'preload';
             link.as = 'fetch';
@@ -120,95 +121,97 @@
     </header>
 
     <main class="main">
-        <!-- Hero Section -->
-        <section class="faq-hero">
+        <!-- 1. HERO Section -->
+        <section class="osteopathy-hero">
             <div class="container">
-                <h1 class="faq-hero-title" data-i18n="faq.hero_title">Часто задаваемые вопросы</h1>
-                <p class="faq-hero-subtitle" data-i18n="faq.hero_subtitle">Ответы на популярные вопросы об остеопатии</p>
+                <h1 class="osteopathy-hero-title" data-i18n="osteopathy_page.hero_title">Что такое остеопатия</h1>
+                <p class="osteopathy-hero-subtitle" data-i18n="osteopathy_page.hero_subtitle">Естественный, мягкий метод лечения, который работает с причиной проблемы, а не с симптомами</p>
             </div>
         </section>
 
-        <!-- FAQ Section -->
-        <section class="faq-section">
+        <!-- 2. PRINCIPLES Section -->
+        <section class="osteopathy-principles">
             <div class="container">
-                <div class="faq-list">
-                    <!-- Question 1 - How does the session work -->
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false">
-                            <span data-i18n="faq.q1_title">Как проходит прием?</span>
-                            <span class="faq-icon"></span>
-                        </button>
-                        <div class="faq-answer">
-                            <p data-i18n="faq.q1_answer">Прием начинается с разговора и сбора анамнеза, затем — диагностика руками и мягкая остеопатическая работа. Сеанс длится 45-60 минут для взрослых и 30-45 минут для детей.</p>
-                            <a href="/appointment" class="faq-link" data-i18n="faq.q1_link">Подробнее о приеме</a>
+                <h2 class="section-title" data-i18n="osteopathy_page.principles_title">Принципы остеопатии</h2>
+                <div class="principles-grid">
+                    <div class="principle-card">
+                        <div class="principle-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                                <path d="M2 12h20"/>
+                            </svg>
                         </div>
+                        <h3 class="principle-title" data-i18n="osteopathy_page.principle1_title">Целостность</h3>
+                        <p class="principle-text" data-i18n="osteopathy_page.principle1_text">Тело — единая система, где всё взаимосвязано. Проблема в одном месте может проявляться болью в другом.</p>
                     </div>
-
-                    <!-- Question 2 - What is osteopathy -->
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false">
-                            <span data-i18n="faq.q2_title">Что такое остеопатия?</span>
-                            <span class="faq-icon"></span>
-                        </button>
-                        <div class="faq-answer">
-                            <p data-i18n="faq.q2_answer">Остеопатия — это метод ручной диагностики и лечения, основанный на понимании взаимосвязи всех структур организма. Остеопат работает с мышцами, фасциями, органами, костями черепа и позвоночника, помогая телу восстановить естественный баланс.</p>
-                            <a href="/osteopathy/" class="faq-link" data-i18n="faq.q2_link">Подробнее об остеопатии</a>
+                    <div class="principle-card">
+                        <div class="principle-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+                            </svg>
                         </div>
+                        <h3 class="principle-title" data-i18n="osteopathy_page.principle2_title">Самоисцеление</h3>
+                        <p class="principle-text" data-i18n="osteopathy_page.principle2_text">Организм способен восстанавливаться сам. Задача остеопата — убрать препятствия и помочь телу запустить этот процесс.</p>
                     </div>
-
-                    <!-- Question 3 - Is it painful -->
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false">
-                            <span data-i18n="faq.q3_title">Это больно?</span>
-                            <span class="faq-icon"></span>
-                        </button>
-                        <div class="faq-answer">
-                            <p data-i18n="faq.q3_answer">Нет, остеопатические техники мягкие и безболезненные. Работа ведется деликатно, с учетом реакции вашего тела. Техники подходят даже новорожденным и беременным.</p>
+                    <div class="principle-card">
+                        <div class="principle-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/>
+                                <path d="m9 12 2 2 4-4"/>
+                            </svg>
                         </div>
+                        <h3 class="principle-title" data-i18n="osteopathy_page.principle3_title">Структура = функция</h3>
+                        <p class="principle-text" data-i18n="osteopathy_page.principle3_text">Здоровая структура тела обеспечивает здоровую функцию. Нарушение подвижности ведёт к нарушению работы органов.</p>
                     </div>
-
-                    <!-- Question 4 - How many sessions needed -->
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false">
-                            <span data-i18n="faq.q4_title">Сколько сеансов нужно?</span>
-                            <span class="faq-icon"></span>
-                        </button>
-                        <div class="faq-answer">
-                            <p data-i18n="faq.q4_answer">Это зависит от вашей проблемы и состояния здоровья. Часто уже после первого сеанса чувствуется улучшение. Для устойчивого результата обычно рекомендуется 3-5 сеансов с интервалом 1-2 недели.</p>
+                    <div class="principle-card">
+                        <div class="principle-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="11" cy="11" r="8"/>
+                                <path d="m21 21-4.3-4.3"/>
+                                <path d="M11 8v6"/>
+                                <path d="M8 11h6"/>
+                            </svg>
                         </div>
+                        <h3 class="principle-title" data-i18n="osteopathy_page.principle4_title">Причина, не симптом</h3>
+                        <p class="principle-text" data-i18n="osteopathy_page.principle4_text">Остеопат ищет и устраняет первопричину проблемы, а не просто снимает боль. Это даёт долгосрочный результат.</p>
                     </div>
+                </div>
+            </div>
+        </section>
 
-                    <!-- Question 5 - What to wear -->
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false">
-                            <span data-i18n="faq.q5_title">Что надеть на прием?</span>
-                            <span class="faq-icon"></span>
-                        </button>
-                        <div class="faq-answer">
-                            <p data-i18n="faq.q5_answer">Удобную одежду, которая не сковывает движения. Подойдут хлопковая футболка и легкие брюки или леггинсы. Работа проводится в одежде, раздеваться не нужно.</p>
-                        </div>
+        <!-- 3. HOW IT WORKS Section -->
+        <section class="osteopathy-how-works">
+            <div class="container">
+                <h2 class="section-title" data-i18n="osteopathy_page.how_works_title">Как работает остеопат</h2>
+                <div class="how-works-steps">
+                    <div class="how-works-step">
+                        <div class="step-number">1</div>
+                        <h3 class="step-title" data-i18n="osteopathy_page.step1_title">Диагностика</h3>
+                        <p class="step-text" data-i18n="osteopathy_page.step1_text">Остеопат оценивает подвижность тканей, находит зоны напряжения и ограничения движения</p>
                     </div>
-
-                    <!-- Question 6 - Can children be treated -->
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false">
-                            <span data-i18n="faq.q6_title">Можно ли лечить детей?</span>
-                            <span class="faq-icon"></span>
-                        </button>
-                        <div class="faq-answer">
-                            <p data-i18n="faq.q6_answer">Да, остеопатия безопасна для детей любого возраста, включая новорожденных. Детские техники еще более мягкие и адаптированы под особенности растущего организма.</p>
-                        </div>
+                    <div class="how-works-step">
+                        <div class="step-number">2</div>
+                        <h3 class="step-title" data-i18n="osteopathy_page.step2_title">Поиск причины</h3>
+                        <p class="step-text" data-i18n="osteopathy_page.step2_text">Определяет первопричину дисфункции — часто она находится далеко от места боли</p>
                     </div>
+                    <div class="how-works-step">
+                        <div class="step-number">3</div>
+                        <h3 class="step-title" data-i18n="osteopathy_page.step3_title">Мягкая коррекция</h3>
+                        <p class="step-text" data-i18n="osteopathy_page.step3_text">Деликатными техниками восстанавливает подвижность и баланс в теле</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                    <!-- Question 7 - How to book -->
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false">
-                            <span data-i18n="faq.q7_title">Как записаться на прием?</span>
-                            <span class="faq-icon"></span>
-                        </button>
-                        <div class="faq-answer">
-                            <p data-i18n="faq.q7_answer">Записаться можно через Booksy, WhatsApp или позвонив по телефону. Кнопка «Записаться» находится внизу страницы.</p>
-                        </div>
+        <!-- 4. CTA Section -->
+        <section class="osteopathy-cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="cta-title" data-i18n="osteopathy_page.cta_title">Узнайте, как остеопатия может помочь вам</h2>
+                    <div class="cta-buttons">
+                        <a href="https://booksy.com/pl-pl/262212_osteojump_zdrowie_3_warszawa" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--lg" data-i18n="osteopathy_page.cta_book">Записаться на приём</a>
+                        <a href="https://wa.me/+48572404770" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--lg" data-i18n="osteopathy_page.cta_question">Задать вопрос</a>
                     </div>
                 </div>
             </div>
@@ -306,15 +309,5 @@
 
     <script src="../js/i18n.js"></script>
     <script src="../js/main.js"></script>
-    <script>
-        // FAQ Accordion functionality
-        document.querySelectorAll('.faq-question').forEach(button => {
-            button.addEventListener('click', () => {
-                const isExpanded = button.getAttribute('aria-expanded') === 'true';
-                button.setAttribute('aria-expanded', !isExpanded);
-            });
-        });
-    </script>
 </body>
 </html>
-

@@ -119,34 +119,121 @@
     </header>
 
     <main class="main">
-        <!-- Hero section with doctor photo -->
-        <section class="hero-doctor">
+        <!-- 1. HERO - "Знакомо?" -->
+        <section class="hero-landing">
             <div class="container">
-                <div class="doctor-intro">
-                    <div class="doctor-photo-wrapper">
-                        <img src="/images/hanna-photo.avif" alt="Bykava Hanna" class="doctor-photo" id="doctorPhoto" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'photo-placeholder\'>📷</div>';">
+                <div class="hero-landing-content">
+                    <div class="hero-photo-wrapper">
+                        <img src="/images/hanna-photo.avif" alt="Bykava Hanna" class="hero-photo" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'photo-placeholder\'>📷</div>';">
                     </div>
-                    <div class="doctor-info">
-                        <p class="doctor-text" data-i18n="doctor.intro">Я — Bykava Hanna, врач-остеопат в профессии с 2018 года. Верю в людей и делаю этот мир чуточку лучше каждый день.</p>
+                    <div class="hero-text-content">
+                        <h1 class="hero-headline" data-i18n="landing.hero.headline">Знакомо?</h1>
+                        <ul class="hero-problems">
+                            <li data-i18n="landing.hero.problem1">Постоянные головные боли, которые не снимают таблетки</li>
+                            <li data-i18n="landing.hero.problem2">Малыш плохо спит и часто плачет</li>
+                            <li data-i18n="landing.hero.problem3">Боль в спине после родов</li>
+                            <li data-i18n="landing.hero.problem4">Хроническая усталость без видимых причин</li>
+                        </ul>
+                        <p class="hero-solution" data-i18n="landing.hero.solution">Остеопатия находит и устраняет причину, а не маскирует симптомы</p>
+                        <a href="https://booksy.com/pl-pl/262212_osteojump_zdrowie_3_warszawa" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--lg hero-cta" data-i18n="landing.hero.cta">Записаться на консультацию</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Osteopathy section -->
-        <section class="osteopathy">
+        <!-- 2. ЧТО ТАКОЕ ОСТЕОПАТИЯ -->
+        <section class="what-is-section">
             <div class="container">
-                <h2 class="section-title" data-i18n="osteopathy.title">Остеопатия</h2>
-                <div class="osteopathy-content">
-                    <p class="osteopathy-text" data-i18n="osteopathy.text">Остеопатия — это целостный подход к здоровью, основанный на понимании взаимосвязи всех систем организма. Каждый человек уникален, и я подхожу к лечению индивидуально, учитывая особенности вашего тела и образа жизни.</p>
+                <h2 class="section-title" data-i18n="landing.what_is.title">Что такое остеопатия</h2>
+                <div class="what-is-content">
+                    <p data-i18n="landing.what_is.text1">Остеопатия — мягкий метод лечения руками, который работает с причиной боли, а не с симптомами.</p>
+                    <p data-i18n="landing.what_is.text2">Безопасно для детей с рождения и беременных.</p>
+                    <a href="/osteopathy/" class="what-is-link" data-i18n="landing.what_is.link">Узнать больше</a>
                 </div>
             </div>
         </section>
 
-        <!-- Reviews carousel -->
+        <!-- 3. ДЛЯ КОГО - 3 карточки -->
+        <section class="for-who-section">
+            <div class="container">
+                <h2 class="section-title" data-i18n="landing.for_who.title">Для кого</h2>
+                <div class="for-who-grid">
+                    <!-- Дети -->
+                    <div class="for-who-card">
+                        <div class="for-who-icon">👶</div>
+                        <h3 class="for-who-card-title" data-i18n="landing.for_who.children.title">Дети (0+)</h3>
+                        <ul class="for-who-list">
+                            <li data-i18n="landing.for_who.children.item1">Колики, срыгивания</li>
+                            <li data-i18n="landing.for_who.children.item2">Плохой сон, беспокойство</li>
+                            <li data-i18n="landing.for_who.children.item3">Кривошея, асимметрия</li>
+                            <li data-i18n="landing.for_who.children.item4">Задержки развития</li>
+                        </ul>
+                        <a href="/about#children" class="for-who-link" data-i18n="landing.for_who.more">Подробнее</a>
+                    </div>
+                    <!-- Беременные и мамы -->
+                    <div class="for-who-card">
+                        <div class="for-who-icon">🤰</div>
+                        <h3 class="for-who-card-title" data-i18n="landing.for_who.mothers.title">Беременные и мамы</h3>
+                        <ul class="for-who-list">
+                            <li data-i18n="landing.for_who.mothers.item1">Боли в спине и тазу</li>
+                            <li data-i18n="landing.for_who.mothers.item2">Подготовка к родам</li>
+                            <li data-i18n="landing.for_who.mothers.item3">Восстановление после родов</li>
+                            <li data-i18n="landing.for_who.mothers.item4">Диастаз, опущение органов</li>
+                        </ul>
+                        <a href="/about#mothers" class="for-who-link" data-i18n="landing.for_who.more">Подробнее</a>
+                    </div>
+                    <!-- Взрослые -->
+                    <div class="for-who-card">
+                        <div class="for-who-icon">🧘</div>
+                        <h3 class="for-who-card-title" data-i18n="landing.for_who.adults.title">Взрослые</h3>
+                        <ul class="for-who-list">
+                            <li data-i18n="landing.for_who.adults.item1">Мигрени, головные боли</li>
+                            <li data-i18n="landing.for_who.adults.item2">Боли в спине и шее</li>
+                            <li data-i18n="landing.for_who.adults.item3">Панические атаки</li>
+                            <li data-i18n="landing.for_who.adults.item4">Хроническая усталость</li>
+                        </ul>
+                        <a href="/about#adults" class="for-who-link" data-i18n="landing.for_who.more">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. ПОЧЕМУ ВЫБИРАЮТ МЕНЯ -->
+        <section class="why-me-section">
+            <div class="container">
+                <h2 class="section-title" data-i18n="landing.why_me.title">Почему выбирают меня</h2>
+                <div class="why-me-stats">
+                    <div class="why-me-stat">
+                        <span class="stat-number">7+</span>
+                        <span class="stat-label" data-i18n="landing.why_me.stat1">лет в медицине</span>
+                    </div>
+                    <div class="why-me-stat">
+                        <span class="stat-number">5.0 ⭐</span>
+                        <span class="stat-label" data-i18n="landing.why_me.stat2">рейтинг</span>
+                    </div>
+                    <div class="why-me-stat">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label" data-i18n="landing.why_me.stat3">отзывов</span>
+                    </div>
+                    <div class="why-me-stat">
+                        <span class="stat-number">🏆</span>
+                        <span class="stat-label" data-i18n="landing.why_me.stat4">Orły Medycyny 2025</span>
+                    </div>
+                </div>
+                <div class="why-me-approach">
+                    <p data-i18n="landing.why_me.approach">Мягкие техники без хруста и боли. Индивидуальный подход — работаю с причиной, а не симптомами.</p>
+                </div>
+                <div class="why-me-links">
+                    <a href="/education" class="btn btn--outline" data-i18n="landing.why_me.education_link">Моё образование</a>
+                    <a href="/reviews" class="btn btn--outline" data-i18n="landing.why_me.reviews_link">Все отзывы</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. ОТЗЫВЫ - карусель -->
         <section class="reviews-carousel-section">
             <div class="container">
-                <h2 class="section-title" data-i18n="reviews.title">Отзывы</h2>
+                <h2 class="section-title" data-i18n="reviews.hero_title">Отзывы</h2>
                 <div class="reviews-carousel" id="reviewsCarousel">
                     <div class="reviews-track" id="reviewsTrack">
                         <!-- Review 1 - Google -->
@@ -186,19 +273,59 @@
                     <button class="carousel-btn carousel-next" id="carouselNext" aria-label="Next review">›</button>
                     <div class="carousel-dots" id="carouselDots"></div>
                 </div>
-                <!-- More reviews buttons -->
-                <div class="reviews-more-section">
-                    <h3 class="reviews-more-title" data-i18n="reviews.more_title">Смотреть больше отзывов</h3>
-                    <div class="reviews-more-buttons">
-                        <a href="https://www.google.com/maps/place/OsteoJump+-+Osteopata+dla+doros%C5%82ych+i+dzieci/@52.196823,20.8756512,17z/data=!4m8!3m7!1s0x47193540aabbe591:0x180bf6eb6fa5bb9c!8m2!3d52.196823!4d20.8782315!9m1!1b1!16s%2Fg%2F11wj9j5508?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoKLDEwMDc5MjA2N0gBUAM%3D" target="_blank" rel="noopener noreferrer" class="review-more-btn" data-i18n="reviews.more_google">Отзывы на Google</a>
-                        <a href="https://www.instagram.com/stories/highlights/17858759255277554/" target="_blank" rel="noopener noreferrer" class="review-more-btn" data-i18n="reviews.more_instagram">Отзывы в Instagram</a>
-                        <a href="https://booksy.com/pl-pl/262212_osteojump_zdrowie_3_warszawa#reviews-section" target="_blank" rel="noopener noreferrer" class="review-more-btn" data-i18n="reviews.more_booksy">Отзывы на Booksy</a>
+                <div class="reviews-all-link">
+                    <a href="/reviews" class="btn btn--outline" data-i18n="landing.reviews.all_link">Смотреть все отзывы</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. КАК ПРОХОДИТ ПРИЁМ - 4 шага -->
+        <section class="how-it-works-section">
+            <div class="container">
+                <h2 class="section-title" data-i18n="landing.how_it_works.title">Как проходит приём</h2>
+                <div class="how-it-works-steps">
+                    <div class="how-step">
+                        <div class="how-step-number">1</div>
+                        <h3 class="how-step-title" data-i18n="landing.how_it_works.step1.title">Беседа</h3>
+                        <p class="how-step-desc" data-i18n="landing.how_it_works.step1.desc">Узнаю историю</p>
+                    </div>
+                    <div class="how-step">
+                        <div class="how-step-number">2</div>
+                        <h3 class="how-step-title" data-i18n="landing.how_it_works.step2.title">Диагностика</h3>
+                        <p class="how-step-desc" data-i18n="landing.how_it_works.step2.desc">Нахожу причину</p>
+                    </div>
+                    <div class="how-step">
+                        <div class="how-step-number">3</div>
+                        <h3 class="how-step-title" data-i18n="landing.how_it_works.step3.title">Работа с телом</h3>
+                        <p class="how-step-desc" data-i18n="landing.how_it_works.step3.desc">Мягкие техники</p>
+                    </div>
+                    <div class="how-step">
+                        <div class="how-step-number">4</div>
+                        <h3 class="how-step-title" data-i18n="landing.how_it_works.step4.title">Рекомендации</h3>
+                        <p class="how-step-desc" data-i18n="landing.how_it_works.step4.desc">Что делать дома</p>
+                    </div>
+                </div>
+                <div class="how-it-works-link">
+                    <a href="/appointment" class="btn btn--outline" data-i18n="landing.how_it_works.more_link">Подробнее о приёме</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. CTA - Призыв к действию -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="cta-title" data-i18n="landing.cta.title">Запишитесь на консультацию</h2>
+                    <p class="cta-subtitle" data-i18n="landing.cta.subtitle">Первый шаг к жизни без боли</p>
+                    <div class="cta-buttons">
+                        <a href="https://booksy.com/pl-pl/262212_osteojump_zdrowie_3_warszawa" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--lg" data-i18n="landing.cta.booksy">Записаться на Booksy</a>
+                        <a href="https://wa.me/+48572404770" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--lg" data-i18n="landing.cta.whatsapp">Написать в WhatsApp</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Google Maps -->
+        <!-- 8. КАРТА - Локация -->
         <section class="map-section">
             <div class="container">
                 <h2 class="section-title" data-i18n="map.title">Как нас найти</h2>

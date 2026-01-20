@@ -368,6 +368,7 @@
         "q1_link": "Learn more about sessions",
         "q2_title": "What is osteopathy?",
         "q2_answer": "Osteopathy is a method of manual diagnostics and treatment based on understanding the interconnections of all body structures. An osteopath works with muscles, fascia, organs, skull bones, and spine, helping the body restore its natural balance.",
+        "q2_link": "Learn more about osteopathy",
         "q3_title": "Is it painful?",
         "q3_answer": "No, osteopathic techniques are gentle and painless. Work is done delicately, taking into account your body's response. Techniques are suitable even for newborns and pregnant women.",
         "q4_title": "How many sessions are needed?",
@@ -378,6 +379,87 @@
         "q6_answer": "Yes, osteopathy is safe for children of any age, including newborns. Children's techniques are even gentler and adapted to the characteristics of a growing body.",
         "q7_title": "How do I book an appointment?",
         "q7_answer": "You can book through Booksy, WhatsApp, or by calling. The 'Book Appointment' button is at the bottom of the page."
+    },
+    "landing": {
+        "hero": {
+            "headline": "Does this sound familiar?",
+            "problem1": "Persistent headaches that pills don't help",
+            "problem2": "Baby sleeps poorly and cries often",
+            "problem3": "Back pain after childbirth",
+            "problem4": "Chronic fatigue with no apparent cause",
+            "solution": "Osteopathy finds and eliminates the cause, not just masks symptoms",
+            "cta": "Book a consultation"
+        },
+        "what_is": {
+            "title": "What is osteopathy",
+            "text1": "Osteopathy is a gentle hands-on treatment method that addresses the root cause of pain, not just symptoms.",
+            "text2": "Safe for children from birth and pregnant women.",
+            "link": "Learn more →"
+        },
+        "for_who": {
+            "title": "Who I help",
+            "more": "Learn more →",
+            "children": {
+                "title": "Children (0+)",
+                "item1": "Colic, reflux",
+                "item2": "Poor sleep, restlessness",
+                "item3": "Torticollis, asymmetry",
+                "item4": "Developmental delays"
+            },
+            "mothers": {
+                "title": "Pregnant women & mothers",
+                "item1": "Back and pelvic pain",
+                "item2": "Birth preparation",
+                "item3": "Postpartum recovery",
+                "item4": "Diastasis, organ prolapse"
+            },
+            "adults": {
+                "title": "Adults",
+                "item1": "Migraines, headaches",
+                "item2": "Back and neck pain",
+                "item3": "Panic attacks",
+                "item4": "Chronic fatigue"
+            }
+        },
+        "why_me": {
+            "title": "Why choose me",
+            "stat1": "years in medicine",
+            "stat2": "rating",
+            "stat3": "reviews",
+            "stat4": "Orły Medycyny 2025",
+            "approach": "Gentle techniques without cracking or pain. Individual approach — I work with the cause, not symptoms.",
+            "education_link": "My education →",
+            "reviews_link": "All reviews →"
+        },
+        "reviews": {
+            "all_link": "View all reviews →"
+        },
+        "how_it_works": {
+            "title": "How a session works",
+            "step1": {
+                "title": "Conversation",
+                "desc": "Learn your history"
+            },
+            "step2": {
+                "title": "Diagnostics",
+                "desc": "Find the cause"
+            },
+            "step3": {
+                "title": "Body work",
+                "desc": "Gentle techniques"
+            },
+            "step4": {
+                "title": "Recommendations",
+                "desc": "What to do at home"
+            },
+            "more_link": "More about sessions →"
+        },
+        "cta": {
+            "title": "Book a consultation",
+            "subtitle": "The first step to a life without pain",
+            "booksy": "Book on Booksy",
+            "whatsapp": "Message on WhatsApp"
+        }
     },
     "footer": {
         "text": "© 2024 OsteoJump. All rights reserved.",
@@ -404,6 +486,30 @@
         "cta_text": "Choose a convenient time through Booksy",
         "cta_book": "Book on Booksy",
         "location_link": "Get Directions"
+    },
+    "osteopathy_page": {
+        "title": "What is Osteopathy - OsteoJump",
+        "hero_title": "What is Osteopathy",
+        "hero_subtitle": "A natural, gentle treatment method that addresses the root cause of problems, not just symptoms",
+        "principles_title": "Principles of Osteopathy",
+        "principle1_title": "Wholeness",
+        "principle1_text": "The body is a unified system where everything is interconnected. A problem in one area can manifest as pain in another.",
+        "principle2_title": "Self-Healing",
+        "principle2_text": "The body is capable of healing itself. The osteopath's task is to remove obstacles and help the body initiate this process.",
+        "principle3_title": "Structure = Function",
+        "principle3_text": "A healthy body structure ensures healthy function. Restricted mobility leads to organ dysfunction.",
+        "principle4_title": "Cause, Not Symptom",
+        "principle4_text": "An osteopath finds and eliminates the root cause of the problem, not just relieves pain. This provides long-term results.",
+        "how_works_title": "How an Osteopath Works",
+        "step1_title": "Diagnosis",
+        "step1_text": "The osteopath assesses tissue mobility, finding areas of tension and movement restriction",
+        "step2_title": "Finding the Cause",
+        "step2_text": "Identifies the root cause of dysfunction — often located far from the site of pain",
+        "step3_title": "Gentle Correction",
+        "step3_text": "Using delicate techniques, restores mobility and balance in the body",
+        "cta_title": "Discover how osteopathy can help you",
+        "cta_book": "Book an Appointment",
+        "cta_question": "Ask a Question"
     }
 }
 

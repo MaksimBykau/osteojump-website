@@ -368,6 +368,7 @@
         "q1_link": "Dowiedz się więcej o wizytach",
         "q2_title": "Czym jest osteopatia?",
         "q2_answer": "Osteopatia to metoda ręcznej diagnostyki i leczenia oparta na rozumieniu wzajemnych powiązań wszystkich struktur organizmu. Osteopata pracuje z mięśniami, powięziami, organami, kośćmi czaszki i kręgosłupem, pomagając ciału przywrócić naturalną równowagę.",
+        "q2_link": "Dowiedz się więcej o osteopatii",
         "q3_title": "Czy to boli?",
         "q3_answer": "Nie, techniki osteopatyczne są delikatne i bezbolesne. Praca odbywa się subtelnie, z uwzględnieniem reakcji twojego ciała. Techniki są odpowiednie nawet dla noworodków i kobiet w ciąży.",
         "q4_title": "Ile sesji potrzeba?",
@@ -378,6 +379,87 @@
         "q6_answer": "Tak, osteopatia jest bezpieczna dla dzieci w każdym wieku, w tym noworodków. Techniki dziecięce są jeszcze delikatniejsze i dostosowane do specyfiki rozwijającego się organizmu.",
         "q7_title": "Jak umówić wizytę?",
         "q7_answer": "Możesz umówić się przez Booksy, WhatsApp lub telefonicznie. Przycisk 'Umów wizytę' znajduje się na dole strony."
+    },
+    "landing": {
+        "hero": {
+            "headline": "Brzmi znajomo?",
+            "problem1": "Uporczywe bóle głowy, których nie usuwają tabletki",
+            "problem2": "Maluch źle śpi i często płacze",
+            "problem3": "Ból pleców po porodzie",
+            "problem4": "Chroniczne zmęczenie bez widocznej przyczyny",
+            "solution": "Osteopatia znajduje i eliminuje przyczynę, a nie maskuje objawy",
+            "cta": "Umów konsultację"
+        },
+        "what_is": {
+            "title": "Czym jest osteopatia",
+            "text1": "Osteopatia to delikatna metoda leczenia dłońmi, która pracuje z przyczyną bólu, a nie z objawami.",
+            "text2": "Bezpieczna dla dzieci od urodzenia i kobiet w ciąży.",
+            "link": "Dowiedz się więcej →"
+        },
+        "for_who": {
+            "title": "Dla kogo",
+            "more": "Więcej →",
+            "children": {
+                "title": "Dzieci (0+)",
+                "item1": "Kolki, ulewania",
+                "item2": "Zły sen, niepokój",
+                "item3": "Kręcz szyi, asymetria",
+                "item4": "Opóźnienia rozwojowe"
+            },
+            "mothers": {
+                "title": "Kobiety w ciąży i mamy",
+                "item1": "Bóle pleców i miednicy",
+                "item2": "Przygotowanie do porodu",
+                "item3": "Regeneracja po porodzie",
+                "item4": "Rozejście mięśni, opadanie narządów"
+            },
+            "adults": {
+                "title": "Dorośli",
+                "item1": "Migreny, bóle głowy",
+                "item2": "Bóle pleców i szyi",
+                "item3": "Ataki paniki",
+                "item4": "Chroniczne zmęczenie"
+            }
+        },
+        "why_me": {
+            "title": "Dlaczego ja",
+            "stat1": "lat w medycynie",
+            "stat2": "ocena",
+            "stat3": "opinii",
+            "stat4": "Orły Medycyny 2025",
+            "approach": "Delikatne techniki bez trzasków i bólu. Indywidualne podejście — pracuję z przyczyną, nie z objawami.",
+            "education_link": "Moje wykształcenie →",
+            "reviews_link": "Wszystkie opinie →"
+        },
+        "reviews": {
+            "all_link": "Zobacz wszystkie opinie →"
+        },
+        "how_it_works": {
+            "title": "Jak przebiega wizyta",
+            "step1": {
+                "title": "Rozmowa",
+                "desc": "Poznaję historię"
+            },
+            "step2": {
+                "title": "Diagnostyka",
+                "desc": "Znajduję przyczynę"
+            },
+            "step3": {
+                "title": "Praca z ciałem",
+                "desc": "Delikatne techniki"
+            },
+            "step4": {
+                "title": "Zalecenia",
+                "desc": "Co robić w domu"
+            },
+            "more_link": "Więcej o wizytach →"
+        },
+        "cta": {
+            "title": "Umów konsultację",
+            "subtitle": "Pierwszy krok do życia bez bólu",
+            "booksy": "Zarezerwuj na Booksy",
+            "whatsapp": "Napisz na WhatsApp"
+        }
     },
     "footer": {
         "text": "© 2024 OsteoJump. Wszelkie prawa zastrzeżone.",
@@ -404,6 +486,30 @@
         "cta_text": "Wybierz dogodny termin przez Booksy",
         "cta_book": "Zarezerwuj na Booksy",
         "location_link": "Jak dojechać"
+    },
+    "osteopathy_page": {
+        "title": "Czym jest osteopatia - OsteoJump",
+        "hero_title": "Czym jest osteopatia",
+        "hero_subtitle": "Naturalna, delikatna metoda leczenia, która pracuje z przyczyną problemu, a nie z objawami",
+        "principles_title": "Zasady osteopatii",
+        "principle1_title": "Całościowość",
+        "principle1_text": "Ciało to jednolity system, gdzie wszystko jest ze sobą powiązane. Problem w jednym miejscu może objawiać się bólem w innym.",
+        "principle2_title": "Samoleczenie",
+        "principle2_text": "Organizm jest zdolny do samoleczenia. Zadaniem osteopaty jest usunięcie przeszkód i pomoc ciału w uruchomieniu tego procesu.",
+        "principle3_title": "Struktura = funkcja",
+        "principle3_text": "Zdrowa struktura ciała zapewnia zdrową funkcję. Ograniczona ruchomość prowadzi do dysfunkcji narządów.",
+        "principle4_title": "Przyczyna, nie objaw",
+        "principle4_text": "Osteopata znajduje i eliminuje pierwotną przyczynę problemu, a nie tylko łagodzi ból. To daje długoterminowe rezultaty.",
+        "how_works_title": "Jak pracuje osteopata",
+        "step1_title": "Diagnostyka",
+        "step1_text": "Osteopata ocenia ruchomość tkanek, znajduje strefy napięcia i ograniczenia ruchu",
+        "step2_title": "Szukanie przyczyny",
+        "step2_text": "Określa pierwotną przyczynę dysfunkcji — często znajduje się daleko od miejsca bólu",
+        "step3_title": "Delikatna korekta",
+        "step3_text": "Delikatnymi technikami przywraca ruchomość i równowagę w ciele",
+        "cta_title": "Dowiedz się, jak osteopatia może ci pomóc",
+        "cta_book": "Umów wizytę",
+        "cta_question": "Zadaj pytanie"
     }
 }
 

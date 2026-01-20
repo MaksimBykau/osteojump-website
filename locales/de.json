@@ -368,6 +368,7 @@
         "q1_link": "Mehr über Sitzungen erfahren",
         "q2_title": "Was ist Osteopathie?",
         "q2_answer": "Osteopathie ist eine Methode der manuellen Diagnostik und Behandlung, die auf dem Verständnis der Wechselbeziehungen aller Körperstrukturen basiert. Ein Osteopath arbeitet mit Muskeln, Faszien, Organen, Schädelknochen und Wirbelsäule und hilft dem Körper, sein natürliches Gleichgewicht wiederherzustellen.",
+        "q2_link": "Mehr über Osteopathie erfahren",
         "q3_title": "Ist es schmerzhaft?",
         "q3_answer": "Nein, osteopathische Techniken sind sanft und schmerzlos. Die Arbeit erfolgt behutsam unter Berücksichtigung der Reaktion Ihres Körpers. Die Techniken sind sogar für Neugeborene und Schwangere geeignet.",
         "q4_title": "Wie viele Sitzungen sind nötig?",
@@ -378,6 +379,87 @@
         "q6_answer": "Ja, Osteopathie ist für Kinder jeden Alters sicher, einschließlich Neugeborener. Kindertechniken sind noch sanfter und an die Besonderheiten des wachsenden Körpers angepasst.",
         "q7_title": "Wie buche ich einen Termin?",
         "q7_answer": "Sie können über Booksy, WhatsApp oder telefonisch buchen. Der Button 'Termin vereinbaren' befindet sich unten auf der Seite."
+    },
+    "landing": {
+        "hero": {
+            "headline": "Kommt Ihnen das bekannt vor?",
+            "problem1": "Anhaltende Kopfschmerzen, die Tabletten nicht lindern",
+            "problem2": "Baby schläft schlecht und weint oft",
+            "problem3": "Rückenschmerzen nach der Geburt",
+            "problem4": "Chronische Müdigkeit ohne erkennbare Ursache",
+            "solution": "Osteopathie findet und beseitigt die Ursache, anstatt Symptome zu überdecken",
+            "cta": "Beratung buchen"
+        },
+        "what_is": {
+            "title": "Was ist Osteopathie",
+            "text1": "Osteopathie ist eine sanfte manuelle Behandlungsmethode, die an der Ursache von Schmerzen arbeitet, nicht an den Symptomen.",
+            "text2": "Sicher für Kinder ab Geburt und Schwangere.",
+            "link": "Mehr erfahren →"
+        },
+        "for_who": {
+            "title": "Für wen",
+            "more": "Mehr erfahren →",
+            "children": {
+                "title": "Kinder (0+)",
+                "item1": "Koliken, Aufstoßen",
+                "item2": "Schlechter Schlaf, Unruhe",
+                "item3": "Schiefhals, Asymmetrie",
+                "item4": "Entwicklungsverzögerungen"
+            },
+            "mothers": {
+                "title": "Schwangere & Mütter",
+                "item1": "Rücken- und Beckenschmerzen",
+                "item2": "Geburtsvorbereitung",
+                "item3": "Erholung nach der Geburt",
+                "item4": "Rektusdiastase, Organvorfall"
+            },
+            "adults": {
+                "title": "Erwachsene",
+                "item1": "Migräne, Kopfschmerzen",
+                "item2": "Rücken- und Nackenschmerzen",
+                "item3": "Panikattacken",
+                "item4": "Chronische Müdigkeit"
+            }
+        },
+        "why_me": {
+            "title": "Warum ich",
+            "stat1": "Jahre in der Medizin",
+            "stat2": "Bewertung",
+            "stat3": "Bewertungen",
+            "stat4": "Orły Medycyny 2025",
+            "approach": "Sanfte Techniken ohne Knacken und Schmerzen. Individueller Ansatz — ich arbeite mit der Ursache, nicht mit Symptomen.",
+            "education_link": "Meine Ausbildung →",
+            "reviews_link": "Alle Bewertungen →"
+        },
+        "reviews": {
+            "all_link": "Alle Bewertungen ansehen →"
+        },
+        "how_it_works": {
+            "title": "Wie eine Sitzung abläuft",
+            "step1": {
+                "title": "Gespräch",
+                "desc": "Geschichte erfahren"
+            },
+            "step2": {
+                "title": "Diagnostik",
+                "desc": "Ursache finden"
+            },
+            "step3": {
+                "title": "Körperarbeit",
+                "desc": "Sanfte Techniken"
+            },
+            "step4": {
+                "title": "Empfehlungen",
+                "desc": "Was zu Hause zu tun ist"
+            },
+            "more_link": "Mehr über Sitzungen →"
+        },
+        "cta": {
+            "title": "Buchen Sie eine Beratung",
+            "subtitle": "Der erste Schritt zu einem Leben ohne Schmerzen",
+            "booksy": "Auf Booksy buchen",
+            "whatsapp": "Nachricht auf WhatsApp"
+        }
     },
     "footer": {
         "text": "© 2024 OsteoJump. Alle Rechte vorbehalten.",
@@ -404,6 +486,30 @@
         "cta_text": "Wählen Sie einen passenden Termin über Booksy",
         "cta_book": "Auf Booksy buchen",
         "location_link": "Wegbeschreibung"
+    },
+    "osteopathy_page": {
+        "title": "Was ist Osteopathie - OsteoJump",
+        "hero_title": "Was ist Osteopathie",
+        "hero_subtitle": "Eine natürliche, sanfte Behandlungsmethode, die die Ursache des Problems behandelt, nicht nur die Symptome",
+        "principles_title": "Prinzipien der Osteopathie",
+        "principle1_title": "Ganzheitlichkeit",
+        "principle1_text": "Der Körper ist ein einheitliches System, in dem alles miteinander verbunden ist. Ein Problem in einem Bereich kann sich als Schmerz in einem anderen manifestieren.",
+        "principle2_title": "Selbstheilung",
+        "principle2_text": "Der Körper ist in der Lage, sich selbst zu heilen. Die Aufgabe des Osteopathen ist es, Hindernisse zu beseitigen und dem Körper zu helfen, diesen Prozess in Gang zu setzen.",
+        "principle3_title": "Struktur = Funktion",
+        "principle3_text": "Eine gesunde Körperstruktur gewährleistet eine gesunde Funktion. Eingeschränkte Mobilität führt zu Organfunktionsstörungen.",
+        "principle4_title": "Ursache, nicht Symptom",
+        "principle4_text": "Ein Osteopath findet und beseitigt die Grundursache des Problems, anstatt nur Schmerzen zu lindern. Dies führt zu langfristigen Ergebnissen.",
+        "how_works_title": "Wie ein Osteopath arbeitet",
+        "step1_title": "Diagnostik",
+        "step1_text": "Der Osteopath beurteilt die Gewebemobilität und findet Bereiche mit Spannung und Bewegungseinschränkung",
+        "step2_title": "Ursachensuche",
+        "step2_text": "Identifiziert die Grundursache der Dysfunktion — oft weit vom Schmerzort entfernt",
+        "step3_title": "Sanfte Korrektur",
+        "step3_text": "Stellt mit sanften Techniken Mobilität und Gleichgewicht im Körper wieder her",
+        "cta_title": "Erfahren Sie, wie Osteopathie Ihnen helfen kann",
+        "cta_book": "Termin vereinbaren",
+        "cta_question": "Frage stellen"
     }
 }
 
