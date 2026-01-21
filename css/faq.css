@@ -139,18 +139,8 @@
     margin: 0;
 }
 
-.faq-link {
-    display: inline-block;
+.faq-answer .soft-link {
     margin-top: var(--spacing-sm);
-    color: var(--primary-color);
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.faq-link:hover {
-    color: var(--secondary-color);
-    text-decoration: underline;
 }
 
 /* ============================================

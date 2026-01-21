@@ -148,6 +148,25 @@ body {
     display: block;
 }
 
+/* Soft Link - unified style for navigation links */
+.soft-link {
+    display: inline-block;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: var(--spacing-sm) var(--spacing-md);
+    background-color: var(--primary-color-10);
+    border-radius: var(--radius-md);
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.soft-link:hover {
+    border-color: var(--primary-color);
+    transform: translateX(4px);
+}
+
 /* Card Base */
 .card {
     background: var(--bg-color);
@@ -1684,18 +1703,6 @@ body {
     margin: 0;
 }
 
-.map-link {
-    color: var(--primary-color);
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.map-link:hover {
-    color: var(--secondary-color);
-    text-decoration: underline;
-}
-
 .map-directions-btn {
     display: inline-flex;
     align-items: center;
@@ -2237,24 +2244,9 @@ body {
     left: 0;
 }
 
-.for-who-link {
-    display: inline-block;
-    color: var(--primary-color);
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 0.95rem;
-    text-align: center;
-    padding: var(--spacing-xs) var(--spacing-sm);
-    background-color: var(--primary-color-10);
-    border-radius: var(--radius-md);
-    border: 2px solid transparent;
-    transition: all 0.3s ease;
+/* For who card link - uses .soft-link base */
+.for-who-card .soft-link {
     margin-top: auto;
-}
-
-.for-who-link:hover {
-    border-color: var(--primary-color);
-    transform: translateX(4px);
 }
 
 @media (max-width: 767px) {
@@ -2604,6 +2596,7 @@ body {
 .hero-text-content {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     gap: var(--spacing-sm);
 }
 
@@ -2615,23 +2608,7 @@ body {
     font-weight: 500;
 }
 
-.hero-about-link {
-    display: inline-block;
-    color: var(--primary-color);
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 1.1rem;
-    padding: var(--spacing-sm) var(--spacing-md);
-    background-color: var(--primary-color-10);
-    border-radius: var(--radius-md);
-    border: 2px solid transparent;
-    transition: all 0.3s ease;
-}
-
-.hero-about-link:hover {
-    border-color: var(--primary-color);
-    transform: translateX(4px);
-}
+/* Hero about link - uses .soft-link base, no additional styles needed */
 
 @media (max-width: 767px) {
     .hero-landing {
@@ -2710,23 +2687,12 @@ body {
     margin: 0;
 }
 
-.reasons-link {
-    display: inline-block;
+/* Reasons section link centering */
+.reasons-section .soft-link {
+    display: block;
     text-align: center;
-    color: var(--primary-color);
-    text-decoration: none;
-    font-weight: 500;
-    padding: var(--spacing-sm) var(--spacing-md);
-    background-color: var(--primary-color-10);
-    border-radius: var(--radius-md);
-    border: 2px solid transparent;
-    transition: all 0.3s ease;
+    width: fit-content;
     margin: 0 auto;
-}
-
-.reasons-link:hover {
-    border-color: var(--primary-color);
-    transform: translateX(4px);
 }
 
 @media (max-width: 767px) {
@@ -2826,24 +2792,7 @@ body {
     text-align: center;
 }
 
-/* Unified section link style - soft button */
-.section-link {
-    display: inline-block;
-    color: var(--primary-color);
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 1.1rem;
-    padding: var(--spacing-sm) var(--spacing-md);
-    background-color: var(--primary-color-10);
-    border-radius: var(--radius-md);
-    border: 2px solid transparent;
-    transition: all 0.3s ease;
-}
-
-.section-link:hover {
-    border-color: var(--primary-color);
-    transform: translateX(4px);
-}
+/* Section link removed - using .soft-link instead */
 
 @media (max-width: 767px) {
     .stats-section {
@@ -3002,22 +2951,7 @@ body {
     margin: 0;
 }
 
-.booking-map-link {
-    display: inline-block;
-    color: var(--primary-color);
-    text-decoration: none;
-    font-weight: 500;
-    padding: var(--spacing-xs) var(--spacing-sm);
-    background-color: var(--primary-color-10);
-    border-radius: var(--radius-md);
-    border: 2px solid transparent;
-    transition: all 0.3s ease;
-}
-
-.booking-map-link:hover {
-    border-color: var(--primary-color);
-    transform: translateX(4px);
-}
+/* Booking map link removed - using .soft-link instead */
 
 .booking-price {
     display: flex;
@@ -3100,20 +3034,11 @@ body {
     align-items: center;
 }
 
+/* Consultation link - extends .soft-link with flex for price display */
 .consultation-link {
     display: inline-flex;
     align-items: baseline;
     gap: var(--spacing-xs);
-    text-decoration: none;
-    padding: var(--spacing-sm) var(--spacing-md);
-    background-color: var(--primary-color-10);
-    border-radius: var(--radius-md);
-    border: 2px solid transparent;
-    transition: all 0.3s ease;
-}
-
-.consultation-link:hover {
-    border-color: var(--primary-color);
 }
 
 .consultation-price {

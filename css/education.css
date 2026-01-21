@@ -264,22 +264,6 @@
     text-align: center;
 }
 
-.next-page-link {
-    display: inline-block;
-    font-size: 1.125rem;
-    font-weight: 500;
-    color: var(--primary-color);
-    text-decoration: none;
-    padding: var(--spacing-sm) var(--spacing-md);
-    border-radius: var(--radius-sm);
-    transition: all 0.3s ease;
-}
-
-.next-page-link:hover {
-    background-color: var(--primary-color-10);
-    transform: translateX(4px);
-}
-
 /* ============================================
    Responsive for Carousel and Hero
    ============================================ */
