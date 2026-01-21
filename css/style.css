@@ -2811,6 +2811,21 @@ body {
     text-align: center;
 }
 
+/* Unified section link style */
+.section-link {
+    display: inline-block;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.section-link:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
 @media (max-width: 767px) {
     .stats-section {
         padding: var(--spacing-md) var(--spacing-sm);
@@ -3061,10 +3076,20 @@ body {
     align-items: center;
 }
 
-.questions-consultation {
+.consultation-link {
     display: flex;
     align-items: baseline;
     gap: var(--spacing-xs);
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.consultation-link:hover {
+    opacity: 0.8;
+}
+
+.consultation-link:hover .consultation-price {
+    text-decoration: underline;
 }
 
 .consultation-price {

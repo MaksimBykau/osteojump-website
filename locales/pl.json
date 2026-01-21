@@ -420,7 +420,7 @@
             "reviews": "opinii",
             "patients": "pacjentów",
             "award": "Laureat Orły Medycyny 2025",
-            "reviews_btn": "Czytaj opinie"
+            "reviews_btn": "Czytaj opinie →"
         },
         "for_who": {
             "title": "Dla kogo",
@@ -481,13 +481,13 @@
         "booking": {
             "title": "Umów wizytę",
             "map_link": "Otwórz w Google Maps →",
-            "session": "za sesję",
+            "session": "za sesję (55 min)",
             "booksy": "Zarezerwuj na Booksy"
         },
         "questions": {
             "title": "Masz jeszcze pytania?",
             "text": "Nie wiesz, czego się spodziewać? Masz wiele pytań? Sprawdź FAQ lub umów się na konsultację.",
-            "faq_btn": "Częste pytania",
+            "faq_btn": "Częste pytania →",
             "consultation": "konsultacja (20 min)"
         }
     },

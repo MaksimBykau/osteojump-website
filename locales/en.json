@@ -420,7 +420,7 @@
             "reviews": "reviews",
             "patients": "patients",
             "award": "Orły Medycyny 2025 Laureate",
-            "reviews_btn": "Read reviews"
+            "reviews_btn": "Read reviews →"
         },
         "for_who": {
             "title": "Who I Help",
@@ -481,13 +481,13 @@
         "booking": {
             "title": "Book an Appointment",
             "map_link": "Open in Google Maps →",
-            "session": "per session",
+            "session": "per session (55 min)",
             "booksy": "Book on Booksy"
         },
         "questions": {
             "title": "Still have questions?",
             "text": "Don't know what to expect? Have many questions? Check out the FAQ or book a consultation.",
-            "faq_btn": "FAQ",
+            "faq_btn": "FAQ →",
             "consultation": "consultation (20 min)"
         }
     },

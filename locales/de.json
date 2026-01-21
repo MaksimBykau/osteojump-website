@@ -420,7 +420,7 @@
             "reviews": "Bewertungen",
             "patients": "Patienten",
             "award": "Orły Medycyny 2025 Preisträgerin",
-            "reviews_btn": "Bewertungen lesen"
+            "reviews_btn": "Bewertungen lesen →"
         },
         "for_who": {
             "title": "Für wen",
@@ -481,13 +481,13 @@
         "booking": {
             "title": "Termin buchen",
             "map_link": "In Google Maps öffnen →",
-            "session": "pro Sitzung",
+            "session": "pro Sitzung (55 Min)",
             "booksy": "Auf Booksy buchen"
         },
         "questions": {
             "title": "Noch Fragen?",
             "text": "Wissen Sie nicht, was Sie erwartet? Viele Fragen? Schauen Sie sich die Antworten auf häufige Fragen an oder buchen Sie eine Beratung.",
-            "faq_btn": "Häufige Fragen",
+            "faq_btn": "Häufige Fragen →",
             "consultation": "Beratung (20 Min)"
         }
     },
