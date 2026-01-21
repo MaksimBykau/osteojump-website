@@ -382,22 +382,48 @@
     },
     "landing": {
         "hero": {
-            "headline": "Does this sound familiar?",
-            "problem1": "Persistent headaches that pills don't help",
-            "problem2": "Baby sleeps poorly and cries often",
-            "problem3": "Back pain after childbirth",
-            "problem4": "Chronic fatigue with no apparent cause",
-            "solution": "Osteopathy finds and eliminates the cause, not just masks symptoms",
-            "cta": "Book a consultation"
+            "intro": "I am Hanna Bykava, an osteopath. I believe in people and make this world a little better every day.",
+            "about_link": "Learn more about me →"
         },
-        "what_is": {
-            "title": "What is osteopathy",
-            "text1": "Osteopathy is a gentle hands-on treatment method that addresses the root cause of pain, not just symptoms.",
-            "text2": "Safe for children from birth and pregnant women.",
-            "link": "Learn more →"
+        "reasons": {
+            "title": "Reasons to Try Osteopathy",
+            "r1": {
+                "title": "Gentle, safe techniques",
+                "text": "No cracking or sudden movements. Many clients fall asleep during sessions"
+            },
+            "r2": {
+                "title": "No alternatives",
+                "text": "Osteopathy works with the cause, not the symptoms. Neither massage nor chiropractic offers this"
+            },
+            "r3": {
+                "title": "Virtually no contraindications",
+                "text": "Suitable for newborns, pregnant women, and the elderly"
+            },
+            "r4": {
+                "title": "Holistic approach",
+                "text": "I view the body as one unified system. Neck pain can originate from the pelvis"
+            },
+            "r5": {
+                "title": "Helps when doctors can't",
+                "text": "Migraines, panic attacks, chronic fatigue — cases where no cause is found"
+            },
+            "r6": {
+                "title": "Fast results",
+                "text": "Many feel improvement after just the first session"
+            },
+            "link": "What is osteopathy →"
+        },
+        "stats": {
+            "medicine": "years in medicine",
+            "osteopathy": "years in osteopathy",
+            "rating": "rating",
+            "reviews": "reviews",
+            "patients": "patients",
+            "award": "Orły Medycyny 2025 Laureate",
+            "reviews_btn": "Read reviews"
         },
         "for_who": {
-            "title": "Who I help",
+            "title": "Who I Help",
             "more": "Learn more →",
             "children": {
                 "title": "Children (0+)",
@@ -422,43 +448,47 @@
             }
         },
         "why_me": {
-            "title": "Why choose me",
-            "stat1": "years in medicine",
-            "stat2": "rating",
-            "stat3": "reviews",
-            "stat4": "Orły Medycyny 2025",
-            "approach": "Gentle techniques without cracking or pain. Individual approach — I work with the cause, not symptoms.",
-            "education_link": "My education →",
-            "reviews_link": "All reviews →"
+            "title": "Why Choose Me",
+            "education": {
+                "title": "Education",
+                "text": "Medical university, specialization in osteopathy. Constantly improving my skills"
+            },
+            "experience": {
+                "title": "Experience",
+                "text": "15 years in medicine, 7 years in osteopathy. Over 1000 patients"
+            },
+            "results": {
+                "title": "Results",
+                "text": "5.0 rating and 150+ positive reviews. Orły Medycyny 2025 Laureate"
+            },
+            "approach": {
+                "title": "Individual approach",
+                "text": "No template protocols. I work with your body and its needs"
+            },
+            "reviews": {
+                "title": "Reviews",
+                "text": "Patients return and recommend me to friends and family"
+            },
+            "complex": {
+                "title": "Complex cases",
+                "text": "I take on unique cases where traditional medicine hasn't helped"
+            }
         },
-        "reviews": {
-            "all_link": "View all reviews →"
+        "motivation": {
+            "title": "Don't postpone taking care of your health",
+            "text": "Acute problem — 1-2 sessions. Chronic — months of work. The sooner you start, the faster the results."
         },
-        "how_it_works": {
-            "title": "How a session works",
-            "step1": {
-                "title": "Conversation",
-                "desc": "Learn your history"
-            },
-            "step2": {
-                "title": "Diagnostics",
-                "desc": "Find the cause"
-            },
-            "step3": {
-                "title": "Body work",
-                "desc": "Gentle techniques"
-            },
-            "step4": {
-                "title": "Recommendations",
-                "desc": "What to do at home"
-            },
-            "more_link": "More about sessions →"
+        "booking": {
+            "title": "Book an Appointment",
+            "map_link": "Open in Google Maps →",
+            "session": "per session",
+            "booksy": "Book on Booksy"
         },
-        "cta": {
-            "title": "Book a consultation",
-            "subtitle": "The first step to a life without pain",
-            "booksy": "Book on Booksy",
-            "whatsapp": "Message on WhatsApp"
+        "questions": {
+            "title": "Still have questions?",
+            "text": "Don't know what to expect? Have many questions? Check out the FAQ or book a consultation.",
+            "faq_btn": "FAQ",
+            "consultation": "consultation (20 min)"
         }
     },
     "footer": {

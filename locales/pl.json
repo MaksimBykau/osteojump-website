@@ -382,19 +382,45 @@
     },
     "landing": {
         "hero": {
-            "headline": "Brzmi znajomo?",
-            "problem1": "Uporczywe bóle głowy, których nie usuwają tabletki",
-            "problem2": "Maluch źle śpi i często płacze",
-            "problem3": "Ból pleców po porodzie",
-            "problem4": "Chroniczne zmęczenie bez widocznej przyczyny",
-            "solution": "Osteopatia znajduje i eliminuje przyczynę, a nie maskuje objawy",
-            "cta": "Umów konsultację"
+            "intro": "Jestem Hanna Bykava, osteopata. Wierzę w ludzi i każdego dnia czynię ten świat odrobinę lepszym.",
+            "about_link": "Więcej o mnie →"
         },
-        "what_is": {
-            "title": "Czym jest osteopatia",
-            "text1": "Osteopatia to delikatna metoda leczenia dłońmi, która pracuje z przyczyną bólu, a nie z objawami.",
-            "text2": "Bezpieczna dla dzieci od urodzenia i kobiet w ciąży.",
-            "link": "Dowiedz się więcej →"
+        "reasons": {
+            "title": "Powody, by spróbować osteopatii",
+            "r1": {
+                "title": "Delikatne, bezpieczne techniki",
+                "text": "Bez trzasków i gwałtownych ruchów. Wielu pacjentów zasypia podczas sesji"
+            },
+            "r2": {
+                "title": "Brak alternatywy",
+                "text": "Osteopatia pracuje z przyczyną, nie z objawami. Tego nie da ani masaż, ani terapia manualna"
+            },
+            "r3": {
+                "title": "Praktycznie brak przeciwwskazań",
+                "text": "Odpowiednia dla noworodków, kobiet w ciąży i osób starszych"
+            },
+            "r4": {
+                "title": "Holistyczne podejście",
+                "text": "Postrzegam ciało jako jeden system. Ból szyi może pochodzić od miednicy"
+            },
+            "r5": {
+                "title": "Pomaga, gdy lekarze są bezsilni",
+                "text": "Migreny, ataki paniki, chroniczne zmęczenie — tam, gdzie nie znajdują przyczyny"
+            },
+            "r6": {
+                "title": "Szybkie rezultaty",
+                "text": "Wielu pacjentów odczuwa poprawę już po pierwszej wizycie"
+            },
+            "link": "Czym jest osteopatia →"
+        },
+        "stats": {
+            "medicine": "lat w medycynie",
+            "osteopathy": "lat w osteopatii",
+            "rating": "ocena",
+            "reviews": "opinii",
+            "patients": "pacjentów",
+            "award": "Laureat Orły Medycyny 2025",
+            "reviews_btn": "Czytaj opinie"
         },
         "for_who": {
             "title": "Dla kogo",
@@ -422,43 +448,47 @@
             }
         },
         "why_me": {
-            "title": "Dlaczego ja",
-            "stat1": "lat w medycynie",
-            "stat2": "ocena",
-            "stat3": "opinii",
-            "stat4": "Orły Medycyny 2025",
-            "approach": "Delikatne techniki bez trzasków i bólu. Indywidualne podejście — pracuję z przyczyną, nie z objawami.",
-            "education_link": "Moje wykształcenie →",
-            "reviews_link": "Wszystkie opinie →"
+            "title": "Dlaczego właśnie do mnie",
+            "education": {
+                "title": "Wykształcenie",
+                "text": "Uniwersytet medyczny, specjalizacja w osteopatii. Stale podnoszę kwalifikacje"
+            },
+            "experience": {
+                "title": "Doświadczenie",
+                "text": "15 lat w medycynie, 7 lat w osteopatii. Ponad 1000 pacjentów"
+            },
+            "results": {
+                "title": "Rezultaty",
+                "text": "Ocena 5.0 i ponad 150 pozytywnych opinii. Laureat Orły Medycyny 2025"
+            },
+            "approach": {
+                "title": "Indywidualne podejście",
+                "text": "Żadnych szablonowych protokołów. Pracuję z twoim ciałem i jego potrzebami"
+            },
+            "reviews": {
+                "title": "Opinie",
+                "text": "Pacjenci wracają i polecają mnie przyjaciołom i rodzinie"
+            },
+            "complex": {
+                "title": "Trudne przypadki",
+                "text": "Podejmuję się unikalnych przypadków, gdzie tradycyjna medycyna nie pomogła"
+            }
         },
-        "reviews": {
-            "all_link": "Zobacz wszystkie opinie →"
+        "motivation": {
+            "title": "Nie odkładaj dbania o zdrowie",
+            "text": "Ostry problem — 1-2 sesje. Przewlekły — miesiące pracy. Im wcześniej zaczniesz, tym szybciej rezultaty."
         },
-        "how_it_works": {
-            "title": "Jak przebiega wizyta",
-            "step1": {
-                "title": "Rozmowa",
-                "desc": "Poznaję historię"
-            },
-            "step2": {
-                "title": "Diagnostyka",
-                "desc": "Znajduję przyczynę"
-            },
-            "step3": {
-                "title": "Praca z ciałem",
-                "desc": "Delikatne techniki"
-            },
-            "step4": {
-                "title": "Zalecenia",
-                "desc": "Co robić w domu"
-            },
-            "more_link": "Więcej o wizytach →"
+        "booking": {
+            "title": "Umów wizytę",
+            "map_link": "Otwórz w Google Maps →",
+            "session": "za sesję",
+            "booksy": "Zarezerwuj na Booksy"
         },
-        "cta": {
-            "title": "Umów konsultację",
-            "subtitle": "Pierwszy krok do życia bez bólu",
-            "booksy": "Zarezerwuj na Booksy",
-            "whatsapp": "Napisz na WhatsApp"
+        "questions": {
+            "title": "Masz jeszcze pytania?",
+            "text": "Nie wiesz, czego się spodziewać? Masz wiele pytań? Sprawdź FAQ lub umów się na konsultację.",
+            "faq_btn": "Częste pytania",
+            "consultation": "konsultacja (20 min)"
         }
     },
     "footer": {

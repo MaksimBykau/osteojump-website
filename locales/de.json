@@ -382,19 +382,45 @@
     },
     "landing": {
         "hero": {
-            "headline": "Kommt Ihnen das bekannt vor?",
-            "problem1": "Anhaltende Kopfschmerzen, die Tabletten nicht lindern",
-            "problem2": "Baby schläft schlecht und weint oft",
-            "problem3": "Rückenschmerzen nach der Geburt",
-            "problem4": "Chronische Müdigkeit ohne erkennbare Ursache",
-            "solution": "Osteopathie findet und beseitigt die Ursache, anstatt Symptome zu überdecken",
-            "cta": "Beratung buchen"
+            "intro": "Ich bin Hanna Bykava, Osteopathin. Ich glaube an die Menschen und mache diese Welt jeden Tag ein wenig besser.",
+            "about_link": "Über mich →"
         },
-        "what_is": {
-            "title": "Was ist Osteopathie",
-            "text1": "Osteopathie ist eine sanfte manuelle Behandlungsmethode, die an der Ursache von Schmerzen arbeitet, nicht an den Symptomen.",
-            "text2": "Sicher für Kinder ab Geburt und Schwangere.",
-            "link": "Mehr erfahren →"
+        "reasons": {
+            "title": "Gründe, Osteopathie auszuprobieren",
+            "r1": {
+                "title": "Sanfte, sichere Techniken",
+                "text": "Kein Knacken oder plötzliche Bewegungen. Viele schlafen während der Sitzung ein"
+            },
+            "r2": {
+                "title": "Keine Alternativen",
+                "text": "Osteopathie arbeitet mit der Ursache, nicht mit Symptomen. Das bietet weder Massage noch Chiropraktik"
+            },
+            "r3": {
+                "title": "Praktisch keine Kontraindikationen",
+                "text": "Geeignet für Neugeborene, Schwangere und ältere Menschen"
+            },
+            "r4": {
+                "title": "Ganzheitlicher Ansatz",
+                "text": "Ich betrachte den Körper als ein einheitliches System. Nackenschmerzen können vom Becken kommen"
+            },
+            "r5": {
+                "title": "Hilft, wenn Ärzte versagen",
+                "text": "Migräne, Panikattacken, chronische Müdigkeit — wo keine Ursache gefunden wird"
+            },
+            "r6": {
+                "title": "Schnelle Ergebnisse",
+                "text": "Viele spüren bereits nach der ersten Sitzung eine Verbesserung"
+            },
+            "link": "Was ist Osteopathie →"
+        },
+        "stats": {
+            "medicine": "Jahre in der Medizin",
+            "osteopathy": "Jahre in der Osteopathie",
+            "rating": "Bewertung",
+            "reviews": "Bewertungen",
+            "patients": "Patienten",
+            "award": "Orły Medycyny 2025 Preisträgerin",
+            "reviews_btn": "Bewertungen lesen"
         },
         "for_who": {
             "title": "Für wen",
@@ -422,43 +448,47 @@
             }
         },
         "why_me": {
-            "title": "Warum ich",
-            "stat1": "Jahre in der Medizin",
-            "stat2": "Bewertung",
-            "stat3": "Bewertungen",
-            "stat4": "Orły Medycyny 2025",
-            "approach": "Sanfte Techniken ohne Knacken und Schmerzen. Individueller Ansatz — ich arbeite mit der Ursache, nicht mit Symptomen.",
-            "education_link": "Meine Ausbildung →",
-            "reviews_link": "Alle Bewertungen →"
+            "title": "Warum gerade zu mir",
+            "education": {
+                "title": "Ausbildung",
+                "text": "Medizinische Hochschule, Medizinische Universität, Warschauer Akademie für Osteopathische Medizin"
+            },
+            "experience": {
+                "title": "Erfahrung",
+                "text": "15+ Jahre in der Medizin, 7+ Jahre Osteopathie-Praxis"
+            },
+            "results": {
+                "title": "Ergebnisse",
+                "text": "150+ Bewertungen, alle positiv. Orły Medycyny 2025 Preisträgerin"
+            },
+            "approach": {
+                "title": "Individueller Ansatz",
+                "text": "Keine Vorlagen — ich arbeite mit Ihrem Körper und seinen Bedürfnissen"
+            },
+            "reviews": {
+                "title": "Bewertungen",
+                "text": "5.0 auf Booksy, Google und Instagram — Patienten kommen wieder und empfehlen mich"
+            },
+            "complex": {
+                "title": "Komplexe Fälle",
+                "text": "Ich nehme an, was andere ablehnen: Migräne, Panikattacken, chronische Schmerzen"
+            }
         },
-        "reviews": {
-            "all_link": "Alle Bewertungen ansehen →"
+        "motivation": {
+            "title": "Verschieben Sie die Gesundheit nicht",
+            "text": "Akutes Problem — 1-2 Sitzungen. Vernachlässigt — Monate der Arbeit. Je früher Sie beginnen, desto schneller das Ergebnis."
         },
-        "how_it_works": {
-            "title": "Wie eine Sitzung abläuft",
-            "step1": {
-                "title": "Gespräch",
-                "desc": "Geschichte erfahren"
-            },
-            "step2": {
-                "title": "Diagnostik",
-                "desc": "Ursache finden"
-            },
-            "step3": {
-                "title": "Körperarbeit",
-                "desc": "Sanfte Techniken"
-            },
-            "step4": {
-                "title": "Empfehlungen",
-                "desc": "Was zu Hause zu tun ist"
-            },
-            "more_link": "Mehr über Sitzungen →"
+        "booking": {
+            "title": "Termin buchen",
+            "map_link": "In Google Maps öffnen →",
+            "session": "pro Sitzung",
+            "booksy": "Auf Booksy buchen"
         },
-        "cta": {
-            "title": "Buchen Sie eine Beratung",
-            "subtitle": "Der erste Schritt zu einem Leben ohne Schmerzen",
-            "booksy": "Auf Booksy buchen",
-            "whatsapp": "Nachricht auf WhatsApp"
+        "questions": {
+            "title": "Noch Fragen?",
+            "text": "Wissen Sie nicht, was Sie erwartet? Viele Fragen? Schauen Sie sich die Antworten auf häufige Fragen an oder buchen Sie eine Beratung.",
+            "faq_btn": "Häufige Fragen",
+            "consultation": "Beratung (20 Min)"
         }
     },
     "footer": {
