@@ -79,12 +79,13 @@
             "duration": "2 Std. 50 Min",
             "price_eur": "(~167 EUR)"
         },
-        "consultation_title": "Beratung",
+        "consultation_title": "Unsicher?",
         "consultation": {
-            "title": "Beratung & Diagnostik",
+            "title": "Beratung",
             "description": "Ruhiges, persönliches Gespräch mit dem Osteopathen zur Besprechung von Problemen und Diagnostik. Ideal, wenn Sie erfahren möchten, ob Osteopathie Ihnen helfen kann.",
             "duration": "20 Min",
-            "price_eur": "(~28 EUR)"
+            "price_eur": "(~28 EUR)",
+            "more_link": "Mehr erfahren →"
         },
         "cta_title": "Bereit zu buchen?",
         "cta_text": "Wählen Sie einen passenden Termin über Booksy oder kontaktieren Sie mich direkt",
@@ -378,7 +379,10 @@
         "q6_title": "Können Kinder behandelt werden?",
         "q6_answer": "Ja, Osteopathie ist für Kinder jeden Alters sicher, einschließlich Neugeborener. Kindertechniken sind noch sanfter und an die Besonderheiten des wachsenden Körpers angepasst.",
         "q7_title": "Wie buche ich einen Termin?",
-        "q7_answer": "Sie können über Booksy, WhatsApp oder telefonisch buchen. Der Button 'Termin vereinbaren' befindet sich unten auf der Seite."
+        "q7_answer": "Sie können über Booksy, WhatsApp oder telefonisch buchen. Der Button 'Termin vereinbaren' befindet sich unten auf der Seite.",
+        "q8_title": "Was ist der Unterschied zwischen einer Beratung und einer vollständigen Sitzung?",
+        "q8_answer": "Eine Beratung (20 Min.) ist ein Kennenlernen. Wir besprechen Ihre Beschwerden, ich führe eine erste Diagnose durch und erkläre, wie ich helfen kann. Ideal, wenn Sie unsicher sind oder verstehen möchten, ob Osteopathie für Sie geeignet ist. Eine vollständige Sitzung (55 Min.) ist eine komplette Körperarbeit: detaillierte Diagnostik und osteopathische Behandlung.",
+        "q8_link": "Beratung buchen →"
     },
     "landing": {
         "hero": {

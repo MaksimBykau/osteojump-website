@@ -79,12 +79,13 @@
             "duration": "2 h 50 min",
             "price_eur": "(~167 EUR)"
         },
-        "consultation_title": "Consultation",
+        "consultation_title": "Not sure?",
         "consultation": {
-            "title": "Consultation & Diagnostics",
+            "title": "Consultation",
             "description": "A calm, personal meeting with the osteopath to discuss your concerns and perform diagnostics. Ideal if you want to learn whether osteopathy can help you.",
             "duration": "20 min",
-            "price_eur": "(~28 EUR)"
+            "price_eur": "(~28 EUR)",
+            "more_link": "Learn more →"
         },
         "cta_title": "Ready to Book?",
         "cta_text": "Choose a convenient time through Booksy or contact me directly",
@@ -378,7 +379,10 @@
         "q6_title": "Can children be treated?",
         "q6_answer": "Yes, osteopathy is safe for children of any age, including newborns. Children's techniques are even gentler and adapted to the characteristics of a growing body.",
         "q7_title": "How do I book an appointment?",
-        "q7_answer": "You can book through Booksy, WhatsApp, or by calling. The 'Book Appointment' button is at the bottom of the page."
+        "q7_answer": "You can book through Booksy, WhatsApp, or by calling. The 'Book Appointment' button is at the bottom of the page.",
+        "q8_title": "What's the difference between a consultation and a full session?",
+        "q8_answer": "A consultation (20 min) is an introduction. We'll discuss your concerns, I'll do an initial assessment, and explain how I can help. It's perfect if you're unsure or want to understand if osteopathy is right for you. A full session (55 min) is complete bodywork: detailed diagnostics and osteopathic treatment.",
+        "q8_link": "Book a consultation →"
     },
     "landing": {
         "hero": {

@@ -293,8 +293,8 @@
         <!-- Consultation -->
         <section class="prices-consultation">
             <div class="container">
-                <h2 class="section-title" data-i18n="prices.consultation_title">Консультация</h2>
-                <div class="consultation-card">
+                <h2 class="section-title" data-i18n="prices.consultation_title">Сомневаетесь?</h2>
+                <div class="consultation-card consultation-card--clickable" id="consultation-card" data-href="/faq#consultation">
                     <div class="consultation-image">
                         <img src="/images/about/work1.jpg" alt="" loading="lazy">
                     </div>
@@ -311,26 +311,24 @@
                                 <span class="price-secondary" data-i18n="prices.consultation.price_eur">(~28 EUR)</span>
                             </div>
                         </div>
-                        <a href="https://booksy.com/pl-pl/262212_osteojump_zdrowie_3_warszawa" target="_blank" rel="noopener" class="consultation-btn" data-i18n="prices.book_btn">Записаться</a>
+                        <div class="consultation-links">
+                            <a href="/faq#consultation" class="soft-link" data-i18n="prices.consultation.more_link">Подробнее о консультации →</a>
+                            <a href="https://booksy.com/pl-pl/262212_osteojump_zdrowie_3_warszawa" target="_blank" rel="noopener" class="consultation-btn" data-i18n="prices.book_btn">Записаться</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- CTA Section -->
-        <section class="prices-cta">
+        <!-- Questions Section -->
+        <section class="questions-section">
             <div class="container">
-                <h2 class="prices-cta-title" data-i18n="prices.cta_title">Готовы записаться?</h2>
-                <p class="prices-cta-text" data-i18n="prices.cta_text">Выберите удобное время через Booksy или свяжитесь со мной напрямую</p>
-                <div class="cta-buttons">
-                    <a href="https://booksy.com/pl-pl/262212_osteojump_zdrowie_3_warszawa" target="_blank" rel="noopener" class="cta-btn cta-btn-primary">
-                        <span class="cta-icon">📅</span>
-                        <span data-i18n="prices.book_btn">Записаться на Booksy</span>
-                    </a>
-                    <a href="https://wa.me/48732008898" target="_blank" rel="noopener" class="cta-btn cta-btn-secondary">
-                        <span class="cta-icon">💬</span>
-                        <span data-i18n="prices.contact_btn">Написать в WhatsApp</span>
-                    </a>
+                <div class="questions-content">
+                    <h2 class="questions-title" data-i18n="landing.questions.title">Остались вопросы?</h2>
+                    <p class="questions-text" data-i18n="landing.questions.text">Не знаете чего ожидать? Много вопросов? Посмотрите ответы на частые вопросы или запишитесь на консультацию.</p>
+                    <div class="questions-links">
+                        <a href="/faq" class="soft-link" data-i18n="landing.questions.faq_btn">Частые вопросы →</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -434,5 +432,13 @@
 
     <script src="../js/i18n.js"></script>
     <script src="../js/main.js"></script>
+    <script>
+        // Clickable card - navigate on click, but not when clicking links inside
+        document.querySelector('.consultation-card--clickable')?.addEventListener('click', function(e) {
+            if (e.target.tagName !== 'A' && !e.target.closest('a')) {
+                window.location.href = this.dataset.href;
+            }
+        });
+    </script>
 </body>
 </html>

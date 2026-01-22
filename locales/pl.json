@@ -79,12 +79,13 @@
             "duration": "2 godz. 50 min",
             "price_eur": "(~167 EUR)"
         },
-        "consultation_title": "Konsultacja",
+        "consultation_title": "Nie jesteś pewien/pewna?",
         "consultation": {
-            "title": "Konsultacja i diagnostyka",
+            "title": "Konsultacja",
             "description": "Spokojna, indywidualna rozmowa z osteopatą w celu omówienia problemów i diagnostyki. Idealna, jeśli chcesz dowiedzieć się, czy osteopatia może ci pomóc.",
             "duration": "20 min",
-            "price_eur": "(~28 EUR)"
+            "price_eur": "(~28 EUR)",
+            "more_link": "Dowiedz się więcej →"
         },
         "cta_title": "Gotowy do rezerwacji?",
         "cta_text": "Wybierz dogodny termin przez Booksy lub skontaktuj się ze mną bezpośrednio",
@@ -378,7 +379,10 @@
         "q6_title": "Czy można leczyć dzieci?",
         "q6_answer": "Tak, osteopatia jest bezpieczna dla dzieci w każdym wieku, w tym noworodków. Techniki dziecięce są jeszcze delikatniejsze i dostosowane do specyfiki rozwijającego się organizmu.",
         "q7_title": "Jak umówić wizytę?",
-        "q7_answer": "Możesz umówić się przez Booksy, WhatsApp lub telefonicznie. Przycisk 'Umów wizytę' znajduje się na dole strony."
+        "q7_answer": "Możesz umówić się przez Booksy, WhatsApp lub telefonicznie. Przycisk 'Umów wizytę' znajduje się na dole strony.",
+        "q8_title": "Czym różni się konsultacja od pełnej wizyty?",
+        "q8_answer": "Konsultacja (20 min) to poznanie się. Omówimy Twoje dolegliwości, przeprowadzę wstępną diagnozę i wyjaśnię, jak mogę pomóc. Idealna, jeśli nie jesteś pewien/pewna lub chcesz zrozumieć, czy osteopatia jest dla Ciebie. Pełna wizyta (55 min) to kompletna praca z ciałem: szczegółowa diagnostyka i leczenie osteopatyczne.",
+        "q8_link": "Umów konsultację →"
     },
     "landing": {
         "hero": {
