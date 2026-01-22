@@ -46,7 +46,6 @@
     background: var(--bg-color);
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-sm);
-    overflow: hidden;
     transition: box-shadow 0.3s ease;
 }
 
@@ -56,7 +55,7 @@
 
 /* Question Button */
 .faq-question {
-    width: 100%;
+    flex: 1;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -76,9 +75,69 @@
     color: var(--primary-color);
 }
 
-.faq-question span:first-child {
+.faq-question > span:first-child {
     flex: 1;
     padding-right: var(--spacing-sm);
+}
+
+/* Header container (question button + copy link) */
+.faq-header {
+    display: flex;
+    align-items: center;
+}
+
+/* Copy Link Button */
+.faq-copy-link {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: var(--spacing-md);
+    padding-left: var(--spacing-sm);
+    line-height: 1;
+    position: relative;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.faq-copy-icon {
+    width: 20px;
+    height: 20px;
+    opacity: 0.4;
+    transition: opacity 0.2s ease;
+    /* Make it blue like the +/- icon */
+    filter: invert(37%) sepia(93%) saturate(1149%) hue-rotate(209deg) brightness(97%) contrast(93%);
+}
+
+.faq-copy-link:hover .faq-copy-icon,
+.faq-copy-link:focus .faq-copy-icon {
+    opacity: 1;
+}
+
+/* Tooltip for copy confirmation */
+.faq-copy-link::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--text-color);
+    color: var(--bg-color);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.faq-copy-link.show-tooltip::after {
+    opacity: 1;
+    visibility: visible;
 }
 
 /* Expand/Collapse Icon */
@@ -119,6 +178,11 @@
     transform: translateX(-50%) rotate(90deg);
 }
 
+/* Opened state shows minus (horizontal line only) */
+.faq-question[aria-expanded="true"] .faq-icon::before {
+    background-color: var(--primary-color);
+}
+
 /* Answer */
 .faq-answer {
     max-height: 0;
@@ -127,7 +191,7 @@
     padding: 0 var(--spacing-md);
 }
 
-.faq-question[aria-expanded="true"] + .faq-answer {
+.faq-header:has(.faq-question[aria-expanded="true"]) + .faq-answer {
     max-height: 500px;
     padding: 0 var(--spacing-md) var(--spacing-md);
 }
@@ -141,6 +205,11 @@
 
 .faq-answer .soft-link {
     margin-top: var(--spacing-sm);
+}
+
+/* Highlighted state for hash navigation */
+.faq-item.highlighted {
+    box-shadow: 0 0 0 2px var(--primary-color);
 }
 
 /* ============================================
@@ -160,9 +229,10 @@
         padding: 0 var(--spacing-sm);
     }
 
-    .faq-question[aria-expanded="true"] + .faq-answer {
+    .faq-header:has(.faq-question[aria-expanded="true"]) + .faq-answer {
         padding: 0 var(--spacing-sm) var(--spacing-sm);
     }
+
 }
 
 @media (max-width: 480px) {

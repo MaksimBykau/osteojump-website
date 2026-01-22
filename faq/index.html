@@ -133,11 +133,14 @@
             <div class="container">
                 <div class="faq-list">
                     <!-- Question 1 - How does the session work -->
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false">
-                            <span data-i18n="faq.q1_title">Как проходит прием?</span>
-                            <span class="faq-icon"></span>
-                        </button>
+                    <div class="faq-item" id="session">
+                        <div class="faq-header">
+                            <button class="faq-question" aria-expanded="false">
+                                <span data-i18n="faq.q1_title">Как проходит прием?</span>
+                                <span class="faq-icon"></span>
+                            </button>
+                            <button class="faq-copy-link" data-question="session" aria-label="Копировать ссылку"><img src="/images/icons/share.svg" alt="" class="faq-copy-icon"></button>
+                        </div>
                         <div class="faq-answer">
                             <p data-i18n="faq.q1_answer">Прием начинается с разговора и сбора анамнеза, затем — диагностика руками и мягкая остеопатическая работа. Сеанс длится 45-60 минут для взрослых и 30-45 минут для детей.</p>
                             <a href="/appointment" class="soft-link" data-i18n="faq.q1_link">Подробнее о приеме →</a>
@@ -146,22 +149,28 @@
 
                     <!-- Question 8 - Consultation vs full session -->
                     <div class="faq-item" id="consultation">
-                        <button class="faq-question" aria-expanded="false">
-                            <span data-i18n="faq.q8_title">Чем консультация отличается от полноценного приёма?</span>
-                            <span class="faq-icon"></span>
-                        </button>
+                        <div class="faq-header">
+                            <button class="faq-question" aria-expanded="false">
+                                <span data-i18n="faq.q8_title">Чем консультация отличается от полноценного приёма?</span>
+                                <span class="faq-icon"></span>
+                            </button>
+                            <button class="faq-copy-link" data-question="consultation" aria-label="Копировать ссылку"><img src="/images/icons/share.svg" alt="" class="faq-copy-icon"></button>
+                        </div>
                         <div class="faq-answer">
                             <p data-i18n="faq.q8_answer">Консультация (20 мин) — это знакомство. Мы обсудим ваши жалобы, я проведу первичную диагностику и расскажу, чем могу помочь. Подходит, если вы сомневаетесь или хотите понять, нужна ли вам остеопатия. Полноценный приём (55 мин) — это полная работа с телом: подробная диагностика и остеопатическое лечение.</p>
-                            <a href="/prices#consultation-card" class="soft-link" data-i18n="faq.q8_link">Записаться на консультацию →</a>
+                            <a href="/consultation" class="soft-link" data-i18n="faq.q8_link">Записаться на консультацию →</a>
                         </div>
                     </div>
 
                     <!-- Question 2 - What is osteopathy -->
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false">
-                            <span data-i18n="faq.q2_title">Что такое остеопатия?</span>
-                            <span class="faq-icon"></span>
-                        </button>
+                    <div class="faq-item" id="osteopathy">
+                        <div class="faq-header">
+                            <button class="faq-question" aria-expanded="false">
+                                <span data-i18n="faq.q2_title">Что такое остеопатия?</span>
+                                <span class="faq-icon"></span>
+                            </button>
+                            <button class="faq-copy-link" data-question="osteopathy" aria-label="Копировать ссылку"><img src="/images/icons/share.svg" alt="" class="faq-copy-icon"></button>
+                        </div>
                         <div class="faq-answer">
                             <p data-i18n="faq.q2_answer">Остеопатия — это метод ручной диагностики и лечения, основанный на понимании взаимосвязи всех структур организма. Остеопат работает с мышцами, фасциями, органами, костями черепа и позвоночника, помогая телу восстановить естественный баланс.</p>
                             <a href="/osteopathy/" class="soft-link" data-i18n="faq.q2_link">Подробнее об остеопатии →</a>
@@ -169,55 +178,70 @@
                     </div>
 
                     <!-- Question 3 - Is it painful -->
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false">
-                            <span data-i18n="faq.q3_title">Это больно?</span>
-                            <span class="faq-icon"></span>
-                        </button>
+                    <div class="faq-item" id="pain">
+                        <div class="faq-header">
+                            <button class="faq-question" aria-expanded="false">
+                                <span data-i18n="faq.q3_title">Это больно?</span>
+                                <span class="faq-icon"></span>
+                            </button>
+                            <button class="faq-copy-link" data-question="pain" aria-label="Копировать ссылку"><img src="/images/icons/share.svg" alt="" class="faq-copy-icon"></button>
+                        </div>
                         <div class="faq-answer">
                             <p data-i18n="faq.q3_answer">Нет, остеопатические техники мягкие и безболезненные. Работа ведется деликатно, с учетом реакции вашего тела. Техники подходят даже новорожденным и беременным.</p>
                         </div>
                     </div>
 
                     <!-- Question 4 - How many sessions needed -->
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false">
-                            <span data-i18n="faq.q4_title">Сколько сеансов нужно?</span>
-                            <span class="faq-icon"></span>
-                        </button>
+                    <div class="faq-item" id="sessions-count">
+                        <div class="faq-header">
+                            <button class="faq-question" aria-expanded="false">
+                                <span data-i18n="faq.q4_title">Сколько сеансов нужно?</span>
+                                <span class="faq-icon"></span>
+                            </button>
+                            <button class="faq-copy-link" data-question="sessions-count" aria-label="Копировать ссылку"><img src="/images/icons/share.svg" alt="" class="faq-copy-icon"></button>
+                        </div>
                         <div class="faq-answer">
                             <p data-i18n="faq.q4_answer">Это зависит от вашей проблемы и состояния здоровья. Часто уже после первого сеанса чувствуется улучшение. Для устойчивого результата обычно рекомендуется 3-5 сеансов с интервалом 1-2 недели.</p>
                         </div>
                     </div>
 
                     <!-- Question 5 - What to wear -->
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false">
-                            <span data-i18n="faq.q5_title">Что надеть на прием?</span>
-                            <span class="faq-icon"></span>
-                        </button>
+                    <div class="faq-item" id="dress-code">
+                        <div class="faq-header">
+                            <button class="faq-question" aria-expanded="false">
+                                <span data-i18n="faq.q5_title">Что надеть на прием?</span>
+                                <span class="faq-icon"></span>
+                            </button>
+                            <button class="faq-copy-link" data-question="dress-code" aria-label="Копировать ссылку"><img src="/images/icons/share.svg" alt="" class="faq-copy-icon"></button>
+                        </div>
                         <div class="faq-answer">
                             <p data-i18n="faq.q5_answer">Удобную одежду, которая не сковывает движения. Подойдут хлопковая футболка и легкие брюки или леггинсы. Работа проводится в одежде, раздеваться не нужно.</p>
                         </div>
                     </div>
 
                     <!-- Question 6 - Can children be treated -->
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false">
-                            <span data-i18n="faq.q6_title">Можно ли лечить детей?</span>
-                            <span class="faq-icon"></span>
-                        </button>
+                    <div class="faq-item" id="children">
+                        <div class="faq-header">
+                            <button class="faq-question" aria-expanded="false">
+                                <span data-i18n="faq.q6_title">Можно ли лечить детей?</span>
+                                <span class="faq-icon"></span>
+                            </button>
+                            <button class="faq-copy-link" data-question="children" aria-label="Копировать ссылку"><img src="/images/icons/share.svg" alt="" class="faq-copy-icon"></button>
+                        </div>
                         <div class="faq-answer">
                             <p data-i18n="faq.q6_answer">Да, остеопатия безопасна для детей любого возраста, включая новорожденных. Детские техники еще более мягкие и адаптированы под особенности растущего организма.</p>
                         </div>
                     </div>
 
                     <!-- Question 7 - How to book -->
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false">
-                            <span data-i18n="faq.q7_title">Как записаться на прием?</span>
-                            <span class="faq-icon"></span>
-                        </button>
+                    <div class="faq-item" id="booking">
+                        <div class="faq-header">
+                            <button class="faq-question" aria-expanded="false">
+                                <span data-i18n="faq.q7_title">Как записаться на прием?</span>
+                                <span class="faq-icon"></span>
+                            </button>
+                            <button class="faq-copy-link" data-question="booking" aria-label="Копировать ссылку"><img src="/images/icons/share.svg" alt="" class="faq-copy-icon"></button>
+                        </div>
                         <div class="faq-answer">
                             <p data-i18n="faq.q7_answer">Записаться можно через Booksy, WhatsApp или позвонив по телефону. Кнопка «Записаться» находится внизу страницы.</p>
                         </div>
@@ -324,8 +348,91 @@
             button.addEventListener('click', () => {
                 const isExpanded = button.getAttribute('aria-expanded') === 'true';
                 button.setAttribute('aria-expanded', !isExpanded);
+
+                // Update URL hash when opening/closing question
+                const faqItem = button.closest('.faq-item');
+                if (faqItem && faqItem.id) {
+                    if (!isExpanded) {
+                        // Opening question - update URL
+                        history.replaceState(null, '', `#${faqItem.id}`);
+                    } else {
+                        // Closing question - remove hash
+                        history.replaceState(null, '', window.location.pathname);
+                    }
+                }
             });
         });
+
+        // Handle hash on page load - open specific question
+        function handleHashOnLoad() {
+            const hash = window.location.hash.slice(1);
+            if (hash) {
+                const targetItem = document.getElementById(hash);
+                if (targetItem && targetItem.classList.contains('faq-item')) {
+                    // Close all questions
+                    document.querySelectorAll('.faq-question').forEach(btn => {
+                        btn.setAttribute('aria-expanded', 'false');
+                    });
+
+                    // Open the target question
+                    const button = targetItem.querySelector('.faq-question');
+                    if (button) {
+                        button.setAttribute('aria-expanded', 'true');
+                    }
+
+                    // Add highlight effect
+                    targetItem.classList.add('highlighted');
+
+                    // Scroll to the question with offset for header
+                    setTimeout(() => {
+                        const headerHeight = document.querySelector('.header')?.offsetHeight || 60;
+                        const targetPosition = targetItem.getBoundingClientRect().top + window.pageYOffset - headerHeight - 20;
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }, 100);
+
+                    // Remove highlight after animation
+                    setTimeout(() => {
+                        targetItem.classList.remove('highlighted');
+                    }, 2000);
+                }
+            }
+        }
+
+        // Copy question link to clipboard
+        function copyQuestionLink(questionId) {
+            const url = `${window.location.origin}/faq#${questionId}`;
+            navigator.clipboard.writeText(url).then(() => {
+                // Show tooltip
+                const button = document.querySelector(`.faq-copy-link[data-question="${questionId}"]`);
+                if (button) {
+                    button.setAttribute('data-tooltip', 'Скопировано!');
+                    button.classList.add('show-tooltip');
+
+                    setTimeout(() => {
+                        button.classList.remove('show-tooltip');
+                    }, 1500);
+                }
+            });
+        }
+
+        // Add click handlers for copy link buttons
+        document.querySelectorAll('.faq-copy-link').forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                const questionId = button.getAttribute('data-question');
+                copyQuestionLink(questionId);
+            });
+        });
+
+        // Handle hash navigation
+        handleHashOnLoad();
+
+        // Also handle hash change (e.g., clicking link from same page)
+        window.addEventListener('hashchange', handleHashOnLoad);
     </script>
 </body>
 </html>
