@@ -131,119 +131,552 @@
         <!-- FAQ Section -->
         <section class="faq-section">
             <div class="container">
-                <div class="faq-list">
-                    <!-- Question 1 - How does the session work -->
-                    <div class="faq-item" id="session">
-                        <div class="faq-header">
-                            <button class="faq-question" aria-expanded="false">
-                                <span data-i18n="faq.q1_title">Как проходит прием?</span>
-                                <span class="faq-icon"></span>
-                            </button>
-                            <button class="faq-copy-link" data-question="session" aria-label="Копировать ссылку"><img src="/images/icons/share.svg" alt="" class="faq-copy-icon"></button>
+                <!-- Section 1: General Questions -->
+                <div class="faq-category" id="general">
+                    <h2 class="faq-category-title" data-i18n="faq.section_general">Общие вопросы</h2>
+                    <div class="faq-list">
+                        <!-- What is osteopathy -->
+                        <div class="faq-item" id="osteopathy">
+                            <div class="faq-header">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span data-i18n="faq.q2_title">Что такое остеопатия?</span>
+                                    <span class="faq-icon"></span>
+                                </button>
+                                <button class="faq-copy-link" data-question="osteopathy" aria-label="Копировать ссылку"><img src="/images/icons/share.svg" alt="" class="faq-copy-icon"></button>
+                            </div>
+                            <div class="faq-answer">
+                                <p data-i18n="faq.q2_answer">Остеопатия — это метод ручной диагностики и лечения, основанный на понимании взаимосвязи всех структур организма. Остеопат работает с мышцами, фасциями, органами, костями черепа и позвоночника, помогая телу восстановить естественный баланс.</p>
+                                <a href="/osteopathy/" class="soft-link" data-i18n="faq.q2_link">Подробнее об остеопатии →</a>
+                            </div>
                         </div>
-                        <div class="faq-answer">
-                            <p data-i18n="faq.q1_answer">Прием начинается с разговора и сбора анамнеза, затем — диагностика руками и мягкая остеопатическая работа. Сеанс длится 45-60 минут для взрослых и 30-45 минут для детей.</p>
-                            <a href="/appointment" class="soft-link" data-i18n="faq.q1_link">Подробнее о приеме →</a>
+
+                        <!-- Is it painful -->
+                        <div class="faq-item" id="pain">
+                            <div class="faq-header">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span data-i18n="faq.q3_title">Это больно?</span>
+                                    <span class="faq-icon"></span>
+                                </button>
+                                <button class="faq-copy-link" data-question="pain" aria-label="Копировать ссылку"><img src="/images/icons/share.svg" alt="" class="faq-copy-icon"></button>
+                            </div>
+                            <div class="faq-answer">
+                                <p data-i18n="faq.q3_answer">Нет, остеопатические техники мягкие и безболезненные. Работа ведется деликатно, с учетом реакции вашего тела. Техники подходят даже новорожденным и беременным.</p>
+                            </div>
+                        </div>
+
+                        <!-- Contraindications -->
+                        <div class="faq-item" id="contraindications">
+                            <div class="faq-header">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span data-i18n="faq.contraindications_title">Есть ли противопоказания для остеопатии?</span>
+                                    <span class="faq-icon"></span>
+                                </button>
+                                <button class="faq-copy-link" data-question="contraindications" aria-label="Копировать ссылку"><img src="/images/icons/share.svg" alt="" class="faq-copy-icon"></button>
+                            </div>
+                            <div class="faq-answer">
+                                <p data-i18n="faq.contraindications_answer">Абсолютных противопоказаний мало: острые инфекции, онкология в активной фазе, тяжёлые психические расстройства, состояния, требующие экстренной помощи. В остальных случаях остеопатия безопасна — техники подбираются индивидуально.</p>
+                            </div>
+                        </div>
+
+                        <!-- Anxiety -->
+                        <div class="faq-item" id="anxiety">
+                            <div class="faq-header">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span data-i18n="faq.anxiety_title">Безопасны ли сеансы при тревожности и панических атаках?</span>
+                                    <span class="faq-icon"></span>
+                                </button>
+                                <button class="faq-copy-link" data-question="anxiety" aria-label="Копировать ссылку"><img src="/images/icons/share.svg" alt="" class="faq-copy-icon"></button>
+                            </div>
+                            <div class="faq-answer">
+                                <p data-i18n="faq.anxiety_answer">Да, более того — остеопатия часто помогает при тревожности. Мягкая работа с телом снимает напряжение, улучшает дыхание и помогает нервной системе «перезагрузиться». Многие отмечают улучшение уже после первого сеанса.</p>
+                            </div>
+                        </div>
+
+                        <!-- Elderly -->
+                        <div class="faq-item" id="elderly">
+                            <div class="faq-header">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span data-i18n="faq.elderly_title">Подходит ли остеопатия пожилым людям?</span>
+                                    <span class="faq-icon"></span>
+                                </button>
+                                <button class="faq-copy-link" data-question="elderly" aria-label="Копировать ссылку"><img src="/images/icons/share.svg" alt="" class="faq-copy-icon"></button>
+                            </div>
+                            <div class="faq-answer">
+                                <p data-i18n="faq.elderly_answer">Да, остеопатия подходит людям любого возраста. Для пожилых пациентов я использую особенно мягкие техники, учитывая особенности организма. Это помогает при хронических болях, скованности, проблемах с подвижностью.</p>
+                            </div>
+                        </div>
+
+                        <!-- Combine treatment -->
+                        <div class="faq-item" id="combine-treatment">
+                            <div class="faq-header">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span data-i18n="faq.combine_title">Можно ли совмещать остеопатию с другим лечением?</span>
+                                    <span class="faq-icon"></span>
+                                </button>
+                                <button class="faq-copy-link" data-question="combine-treatment" aria-label="Копировать ссылку"><img src="/images/icons/share.svg" alt="" class="faq-copy-icon"></button>
+                            </div>
+                            <div class="faq-answer">
+                                <p data-i18n="faq.combine_answer">Да, остеопатия хорошо дополняет другие методы: физиотерапию, массаж, ортодонтическое лечение, психотерапию. Важно рассказать мне обо всех процедурах, чтобы я могла координировать работу с телом.</p>
+                            </div>
+                        </div>
+
+                        <!-- Insurance -->
+                        <div class="faq-item" id="insurance">
+                            <div class="faq-header">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span data-i18n="faq.insurance_title">Покрывает ли страховка услуги остеопата?</span>
+                                    <span class="faq-icon"></span>
+                                </button>
+                                <button class="faq-copy-link" data-question="insurance" aria-label="Копировать ссылку"><img src="/images/icons/share.svg" alt="" class="faq-copy-icon"></button>
+                            </div>
+                            <div class="faq-answer">
+                                <p data-i18n="faq.insurance_answer">Это зависит от вашей страховой компании и полиса. Некоторые страховки в Польше покрывают визиты к остеопату. Я выдаю чек (faktura), который можно отправить в страховую для возмещения.</p>
+                            </div>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Question 8 - Consultation vs full session -->
-                    <div class="faq-item" id="consultation">
-                        <div class="faq-header">
-                            <button class="faq-question" aria-expanded="false">
-                                <span data-i18n="faq.q8_title">Чем консультация отличается от полноценного приёма?</span>
-                                <span class="faq-icon"></span>
-                            </button>
-                            <button class="faq-copy-link" data-question="consultation" aria-label="Копировать ссылку"><img src="/images/icons/share.svg" alt="" class="faq-copy-icon"></button>
+                <!-- Section 2: How Session Works -->
+                <div class="faq-category" id="session-process">
+                    <h2 class="faq-category-title" data-i18n="faq.section_session">Как проходит приём</h2>
+                    <div class="faq-list">
+                        <!-- How does the session work -->
+                        <div class="faq-item" id="session">
+                            <div class="faq-header">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span data-i18n="faq.q1_title">Как проходит прием?</span>
+                                    <span class="faq-icon"></span>
+                                </button>
+                                <button class="faq-copy-link" data-question="session" aria-label="Копировать ссылку"><img src="/images/icons/share.svg" alt="" class="faq-copy-icon"></button>
+                            </div>
+                            <div class="faq-answer">
+                                <p data-i18n="faq.q1_answer">Прием начинается с разговора и сбора анамнеза, затем — диагностика руками и мягкая остеопатическая работа. Сеанс длится 45-60 минут для взрослых и 30-45 минут для детей.</p>
+                                <a href="/appointment" class="soft-link" data-i18n="faq.q1_link">Подробнее о приеме →</a>
+                            </div>
                         </div>
-                        <div class="faq-answer">
-                            <p data-i18n="faq.q8_answer">Консультация (20 мин) — это знакомство. Мы обсудим ваши жалобы, я проведу первичную диагностику и расскажу, чем могу помочь. Подходит, если вы сомневаетесь или хотите понять, нужна ли вам остеопатия. Полноценный приём (55 мин) — это полная работа с телом: подробная диагностика и остеопатическое лечение.</p>
-                            <a href="/consultation" class="soft-link" data-i18n="faq.q8_link">Записаться на консультацию →</a>
+
+                        <!-- Consultation vs full session -->
+                        <div class="faq-item" id="consultation">
+                            <div class="faq-header">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span data-i18n="faq.q8_title">Чем консультация отличается от полноценного приёма?</span>
+                                    <span class="faq-icon"></span>
+                                </button>
+                                <button class="faq-copy-link" data-question="consultation" aria-label="Копировать ссылку"><img src="/images/icons/share.svg" alt="" class="faq-copy-icon"></button>
+                            </div>
+                            <div class="faq-answer">
+                                <p data-i18n="faq.q8_answer">Консультация (20 мин) — это знакомство. Мы обсудим ваши жалобы, я проведу первичную диагностику и расскажу, чем могу помочь. Подходит, если вы сомневаетесь или хотите понять, нужна ли вам остеопатия. Полноценный приём (55 мин) — это полная работа с телом: подробная диагностика и остеопатическое лечение.</p>
+                                <a href="/consultation" class="soft-link" data-i18n="faq.q8_link">Записаться на консультацию →</a>
+                            </div>
+                        </div>
+
+                        <!-- How many sessions needed -->
+                        <div class="faq-item" id="sessions-count">
+                            <div class="faq-header">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span data-i18n="faq.q4_title">Сколько сеансов нужно?</span>
+                                    <span class="faq-icon"></span>
+                                </button>
+                                <button class="faq-copy-link" data-question="sessions-count" aria-label="Копировать ссылку"><img src="/images/icons/share.svg" alt="" class="faq-copy-icon"></button>
+                            </div>
+                            <div class="faq-answer">
+                                <p data-i18n="faq.q4_answer">Это зависит от вашей проблемы и состояния здоровья. Часто уже после первого сеанса чувствуется улучшение. Для устойчивого результата обычно рекомендуется 3-5 сеансов с интервалом 1-2 недели.</p>
+                            </div>
+                        </div>
+
+                        <!-- What to wear -->
+                        <div class="faq-item" id="dress-code">
+                            <div class="faq-header">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span data-i18n="faq.q5_title">Что надеть на прием?</span>
+                                    <span class="faq-icon"></span>
+                                </button>
+                                <button class="faq-copy-link" data-question="dress-code" aria-label="Копировать ссылку"><img src="/images/icons/share.svg" alt="" class="faq-copy-icon"></button>
+                            </div>
+                            <div class="faq-answer">
+                                <p data-i18n="faq.q5_answer">Удобную одежду, которая не сковывает движения. Подойдут хлопковая футболка и легкие брюки или леггинсы. Работа проводится в одежде, раздеваться не нужно.</p>
+                            </div>
+                        </div>
+
+                        <!-- After session -->
+                        <div class="faq-item" id="after-session">
+                            <div class="faq-header">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span data-i18n="faq.after_session_title">Чего ожидать после приёма?</span>
+                                    <span class="faq-icon"></span>
+                                </button>
+                                <button class="faq-copy-link" data-question="after-session" aria-label="Копировать ссылку"><img src="/images/icons/share.svg" alt="" class="faq-copy-icon"></button>
+                            </div>
+                            <div class="faq-answer">
+                                <p data-i18n="faq.after_session_answer">В день сеанса рекомендую отдохнуть и пить больше воды. В первые 1-3 дня возможны лёгкая усталость или временное усиление симптомов — это нормальная реакция тела на изменения. Затем обычно наступает улучшение.</p>
+                            </div>
+                        </div>
+
+                        <!-- Worse after -->
+                        <div class="faq-item" id="worse-after">
+                            <div class="faq-header">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span data-i18n="faq.worse_after_title">Что делать, если после приёма стало хуже?</span>
+                                    <span class="faq-icon"></span>
+                                </button>
+                                <button class="faq-copy-link" data-question="worse-after" aria-label="Копировать ссылку"><img src="/images/icons/share.svg" alt="" class="faq-copy-icon"></button>
+                            </div>
+                            <div class="faq-answer">
+                                <p data-i18n="faq.worse_after_answer">Временное ухудшение в первые 1-3 дня — это нормальная реакция. Тело адаптируется к изменениям. Если симптомы сохраняются дольше или вызывают беспокойство — напишите мне, и мы разберёмся вместе.</p>
+                            </div>
+                        </div>
+
+                        <!-- How to book -->
+                        <div class="faq-item" id="booking">
+                            <div class="faq-header">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span data-i18n="faq.q7_title">Как записаться на прием?</span>
+                                    <span class="faq-icon"></span>
+                                </button>
+                                <button class="faq-copy-link" data-question="booking" aria-label="Копировать ссылку"><img src="/images/icons/share.svg" alt="" class="faq-copy-icon"></button>
+                            </div>
+                            <div class="faq-answer">
+                                <p data-i18n="faq.q7_answer">Записаться можно через Booksy, WhatsApp или позвонив по телефону. Кнопка «Записаться» находится внизу страницы.</p>
+                            </div>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Question 2 - What is osteopathy -->
-                    <div class="faq-item" id="osteopathy">
-                        <div class="faq-header">
-                            <button class="faq-question" aria-expanded="false">
-                                <span data-i18n="faq.q2_title">Что такое остеопатия?</span>
-                                <span class="faq-icon"></span>
-                            </button>
-                            <button class="faq-copy-link" data-question="osteopathy" aria-label="Копировать ссылку"><img src="/images/icons/share.svg" alt="" class="faq-copy-icon"></button>
+                <!-- Section 3: Adults -->
+                <div class="faq-category" id="adults">
+                    <h2 class="faq-category-title" data-i18n="faq.section_adults">Взрослые</h2>
+                    <div class="faq-list">
+                        <!-- Reasons -->
+                        <div class="faq-item" id="reasons">
+                            <div class="faq-header">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span data-i18n="faq.reasons_title">С какими проблемами обращаются к остеопату?</span>
+                                    <span class="faq-icon"></span>
+                                </button>
+                                <button class="faq-copy-link" data-question="reasons" aria-label="Копировать ссылку"><img src="/images/icons/share.svg" alt="" class="faq-copy-icon"></button>
+                            </div>
+                            <div class="faq-answer">
+                                <p data-i18n="faq.reasons_answer">Боли в спине, шее, головные боли, мигрени, последствия травм, хроническая усталость, проблемы с пищеварением, нарушения сна, тревожность. Также — подготовка к родам, восстановление после них, работа с детьми от рождения.</p>
+                            </div>
                         </div>
-                        <div class="faq-answer">
-                            <p data-i18n="faq.q2_answer">Остеопатия — это метод ручной диагностики и лечения, основанный на понимании взаимосвязи всех структур организма. Остеопат работает с мышцами, фасциями, органами, костями черепа и позвоночника, помогая телу восстановить естественный баланс.</p>
-                            <a href="/osteopathy/" class="soft-link" data-i18n="faq.q2_link">Подробнее об остеопатии →</a>
+
+                        <!-- Stress -->
+                        <div class="faq-item" id="stress">
+                            <div class="faq-header">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span data-i18n="faq.stress_title">Помогает ли остеопатия при стрессе и переутомлении?</span>
+                                    <span class="faq-icon"></span>
+                                </button>
+                                <button class="faq-copy-link" data-question="stress" aria-label="Копировать ссылку"><img src="/images/icons/share.svg" alt="" class="faq-copy-icon"></button>
+                            </div>
+                            <div class="faq-answer">
+                                <p data-i18n="faq.stress_answer">Да, хронический стресс «записывается» в теле: зажатые плечи, скованное дыхание, головные боли. Остеопатия помогает снять физическое напряжение, что улучшает общее самочувствие и качество сна.</p>
+                            </div>
+                        </div>
+
+                        <!-- After injury -->
+                        <div class="faq-item" id="after-injury">
+                            <div class="faq-header">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span data-i18n="faq.after_injury_title">Можно ли обращаться после травм и операций?</span>
+                                    <span class="faq-icon"></span>
+                                </button>
+                                <button class="faq-copy-link" data-question="after-injury" aria-label="Копировать ссылку"><img src="/images/icons/share.svg" alt="" class="faq-copy-icon"></button>
+                            </div>
+                            <div class="faq-answer">
+                                <p data-i18n="faq.after_injury_answer">Да, но после периода острого восстановления. Остеопатия помогает телу адаптироваться к изменениям, работает с рубцами и спайками, восстанавливает подвижность. Сроки зависят от типа травмы или операции — обсудим индивидуально.</p>
+                            </div>
+                        </div>
+
+                        <!-- Hernia -->
+                        <div class="faq-item" id="hernia">
+                            <div class="faq-header">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span data-i18n="faq.hernia_title">Работает ли остеопатия с грыжами и протрузиями?</span>
+                                    <span class="faq-icon"></span>
+                                </button>
+                                <button class="faq-copy-link" data-question="hernia" aria-label="Копировать ссылку"><img src="/images/icons/share.svg" alt="" class="faq-copy-icon"></button>
+                            </div>
+                            <div class="faq-answer">
+                                <p data-i18n="faq.hernia_answer">Да, при грыжах и протрузиях остеопатия помогает снять мышечное напряжение, улучшить кровоснабжение и уменьшить боль. Я работаю мягко, без резких манипуляций. Цель — создать условия для восстановления.</p>
+                            </div>
+                        </div>
+
+                        <!-- Orthodontics -->
+                        <div class="faq-item" id="orthodontics">
+                            <div class="faq-header">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span data-i18n="faq.orthodontics_title">Зачем остеопат при ортодонтическом лечении?</span>
+                                    <span class="faq-icon"></span>
+                                </button>
+                                <button class="faq-copy-link" data-question="orthodontics" aria-label="Копировать ссылку"><img src="/images/icons/share.svg" alt="" class="faq-copy-icon"></button>
+                            </div>
+                            <div class="faq-answer">
+                                <p data-i18n="faq.orthodontics_answer">Прикус связан с осанкой, положением черепа и шеи. Остеопат помогает телу адаптироваться к изменениям от брекетов или элайнеров, снимает напряжение в челюсти и улучшает результат ортодонтического лечения.</p>
+                            </div>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Question 3 - Is it painful -->
-                    <div class="faq-item" id="pain">
-                        <div class="faq-header">
-                            <button class="faq-question" aria-expanded="false">
-                                <span data-i18n="faq.q3_title">Это больно?</span>
-                                <span class="faq-icon"></span>
-                            </button>
-                            <button class="faq-copy-link" data-question="pain" aria-label="Копировать ссылку"><img src="/images/icons/share.svg" alt="" class="faq-copy-icon"></button>
+                <!-- Section 4: Pregnancy and Postpartum -->
+                <div class="faq-category" id="pregnancy">
+                    <h2 class="faq-category-title" data-i18n="faq.section_pregnancy">Беременность, роды и восстановление</h2>
+                    <div class="faq-list">
+                        <!-- Pregnancy planning -->
+                        <div class="faq-item" id="pregnancy-planning">
+                            <div class="faq-header">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span data-i18n="faq.pregnancy_planning_title">Нужен ли остеопат при планировании беременности?</span>
+                                    <span class="faq-icon"></span>
+                                </button>
+                                <button class="faq-copy-link" data-question="pregnancy-planning" aria-label="Копировать ссылку"><img src="/images/icons/share.svg" alt="" class="faq-copy-icon"></button>
+                            </div>
+                            <div class="faq-answer">
+                                <p data-i18n="faq.pregnancy_planning_answer">Это может быть полезно. Остеопат помогает подготовить тело к будущим изменениям: работает с тазом, крестцом, улучшает кровоснабжение органов малого таза. Особенно актуально при проблемах с зачатием.</p>
+                            </div>
                         </div>
-                        <div class="faq-answer">
-                            <p data-i18n="faq.q3_answer">Нет, остеопатические техники мягкие и безболезненные. Работа ведется деликатно, с учетом реакции вашего тела. Техники подходят даже новорожденным и беременным.</p>
+
+                        <!-- Pregnancy -->
+                        <div class="faq-item" id="pregnancy-issues">
+                            <div class="faq-header">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span data-i18n="faq.pregnancy_issues_title">С чем можно обратиться беременным?</span>
+                                    <span class="faq-icon"></span>
+                                </button>
+                                <button class="faq-copy-link" data-question="pregnancy-issues" aria-label="Копировать ссылку"><img src="/images/icons/share.svg" alt="" class="faq-copy-icon"></button>
+                            </div>
+                            <div class="faq-answer">
+                                <p data-i18n="faq.pregnancy_issues_answer">Боли в спине и тазу, изжога, отёки, головные боли, нарушения сна, тонус матки. Также помогаю малышу занять правильное положение перед родами. Работаю мягко и безопасно на любом сроке.</p>
+                            </div>
+                        </div>
+
+                        <!-- Postpartum when -->
+                        <div class="faq-item" id="postpartum-when">
+                            <div class="faq-header">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span data-i18n="faq.postpartum_when_title">Когда можно обратиться к остеопату после родов?</span>
+                                    <span class="faq-icon"></span>
+                                </button>
+                                <button class="faq-copy-link" data-question="postpartum-when" aria-label="Копировать ссылку"><img src="/images/icons/share.svg" alt="" class="faq-copy-icon"></button>
+                            </div>
+                            <div class="faq-answer">
+                                <p data-i18n="faq.postpartum_when_answer">Можно уже через 2-4 недели после естественных родов (после кесарева — через 6-8 недель). Раннее обращение помогает телу быстрее восстановиться и предотвратить формирование хронических проблем.</p>
+                            </div>
+                        </div>
+
+                        <!-- Postpartum reasons -->
+                        <div class="faq-item" id="postpartum-reasons">
+                            <div class="faq-header">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span data-i18n="faq.postpartum_reasons_title">С чем обращаются женщины после родов?</span>
+                                    <span class="faq-icon"></span>
+                                </button>
+                                <button class="faq-copy-link" data-question="postpartum-reasons" aria-label="Копировать ссылку"><img src="/images/icons/share.svg" alt="" class="faq-copy-icon"></button>
+                            </div>
+                            <div class="faq-answer">
+                                <p data-i18n="faq.postpartum_reasons_answer">Боли в спине и тазу, диастаз, опущение органов, проблемы с мочеиспусканием, боли при кормлении, головные боли, усталость. Остеопатия помогает телу вернуться в форму после беременности и родов.</p>
+                            </div>
+                        </div>
+
+                        <!-- Cesarean -->
+                        <div class="faq-item" id="cesarean">
+                            <div class="faq-header">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span data-i18n="faq.cesarean_title">Помогает ли остеопатия после кесарева сечения?</span>
+                                    <span class="faq-icon"></span>
+                                </button>
+                                <button class="faq-copy-link" data-question="cesarean" aria-label="Копировать ссылку"><img src="/images/icons/share.svg" alt="" class="faq-copy-icon"></button>
+                            </div>
+                            <div class="faq-answer">
+                                <p data-i18n="faq.cesarean_answer">Да, после заживления шва (обычно 6-8 недель). Остеопатия помогает работать с рубцом и спайками, восстанавливает подвижность тканей, снимает напряжение в области живота и таза.</p>
+                            </div>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Question 4 - How many sessions needed -->
-                    <div class="faq-item" id="sessions-count">
-                        <div class="faq-header">
-                            <button class="faq-question" aria-expanded="false">
-                                <span data-i18n="faq.q4_title">Сколько сеансов нужно?</span>
-                                <span class="faq-icon"></span>
-                            </button>
-                            <button class="faq-copy-link" data-question="sessions-count" aria-label="Копировать ссылку"><img src="/images/icons/share.svg" alt="" class="faq-copy-icon"></button>
+                <!-- Section 5: Infants -->
+                <div class="faq-category" id="infants-section">
+                    <h2 class="faq-category-title" data-i18n="faq.section_infants">Младенцы</h2>
+                    <div class="faq-list">
+                        <!-- Can children be treated -->
+                        <div class="faq-item" id="children">
+                            <div class="faq-header">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span data-i18n="faq.q6_title">Можно ли лечить детей?</span>
+                                    <span class="faq-icon"></span>
+                                </button>
+                                <button class="faq-copy-link" data-question="children" aria-label="Копировать ссылку"><img src="/images/icons/share.svg" alt="" class="faq-copy-icon"></button>
+                            </div>
+                            <div class="faq-answer">
+                                <p data-i18n="faq.q6_answer">Да, остеопатия безопасна для детей любого возраста, включая новорожденных. Детские техники еще более мягкие и адаптированы под особенности растущего организма.</p>
+                            </div>
                         </div>
-                        <div class="faq-answer">
-                            <p data-i18n="faq.q4_answer">Это зависит от вашей проблемы и состояния здоровья. Часто уже после первого сеанса чувствуется улучшение. Для устойчивого результата обычно рекомендуется 3-5 сеансов с интервалом 1-2 недели.</p>
+
+                        <!-- Infants reasons -->
+                        <div class="faq-item" id="infants-reasons">
+                            <div class="faq-header">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span data-i18n="faq.infants_reasons_title">С чем приводят младенцев к остеопату?</span>
+                                    <span class="faq-icon"></span>
+                                </button>
+                                <button class="faq-copy-link" data-question="infants-reasons" aria-label="Копировать ссылку"><img src="/images/icons/share.svg" alt="" class="faq-copy-icon"></button>
+                            </div>
+                            <div class="faq-answer">
+                                <p data-i18n="faq.infants_reasons_answer">Последствия сложных родов, кривошея, асимметрия головы, колики, частые срыгивания, нарушения сна, беспокойство, проблемы с захватом груди. Чем раньше обратиться, тем легче помочь малышу.</p>
+                            </div>
+                        </div>
+
+                        <!-- Colic and sleep -->
+                        <div class="faq-item" id="colic-sleep">
+                            <div class="faq-header">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span data-i18n="faq.colic_sleep_title">Помогает ли остеопатия при коликах и нарушениях сна?</span>
+                                    <span class="faq-icon"></span>
+                                </button>
+                                <button class="faq-copy-link" data-question="colic-sleep" aria-label="Копировать ссылку"><img src="/images/icons/share.svg" alt="" class="faq-copy-icon"></button>
+                            </div>
+                            <div class="faq-answer">
+                                <p data-i18n="faq.colic_sleep_answer">Да, часто колики связаны с напряжением в животике или нервной системе малыша. Мягкая остеопатическая работа помогает снять это напряжение. Родители обычно замечают улучшение сна и поведения уже после первых сеансов.</p>
+                            </div>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Question 5 - What to wear -->
-                    <div class="faq-item" id="dress-code">
-                        <div class="faq-header">
-                            <button class="faq-question" aria-expanded="false">
-                                <span data-i18n="faq.q5_title">Что надеть на прием?</span>
-                                <span class="faq-icon"></span>
-                            </button>
-                            <button class="faq-copy-link" data-question="dress-code" aria-label="Копировать ссылку"><img src="/images/icons/share.svg" alt="" class="faq-copy-icon"></button>
+                <!-- Section 6: Children -->
+                <div class="faq-category" id="children-section">
+                    <h2 class="faq-category-title" data-i18n="faq.section_children">Дети</h2>
+                    <div class="faq-list">
+                        <!-- Autism -->
+                        <div class="faq-item" id="autism">
+                            <div class="faq-header">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span data-i18n="faq.autism_title">Подходит ли остеопатия детям с аутизмом?</span>
+                                    <span class="faq-icon"></span>
+                                </button>
+                                <button class="faq-copy-link" data-question="autism" aria-label="Копировать ссылку"><img src="/images/icons/share.svg" alt="" class="faq-copy-icon"></button>
+                            </div>
+                            <div class="faq-answer">
+                                <p data-i18n="faq.autism_answer">Да, остеопатия может помочь детям с РАС. Мягкая работа с телом помогает снизить сенсорную перегрузку, улучшить сон и общее самочувствие. Я работаю в темпе ребёнка, учитывая его особенности.</p>
+                            </div>
                         </div>
-                        <div class="faq-answer">
-                            <p data-i18n="faq.q5_answer">Удобную одежду, которая не сковывает движения. Подойдут хлопковая футболка и легкие брюки или леггинсы. Работа проводится в одежде, раздеваться не нужно.</p>
+
+                        <!-- Children reasons -->
+                        <div class="faq-item" id="children-reasons">
+                            <div class="faq-header">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span data-i18n="faq.children_reasons_title">С чем обращаются с детьми постарше?</span>
+                                    <span class="faq-icon"></span>
+                                </button>
+                                <button class="faq-copy-link" data-question="children-reasons" aria-label="Копировать ссылку"><img src="/images/icons/share.svg" alt="" class="faq-copy-icon"></button>
+                            </div>
+                            <div class="faq-answer">
+                                <p data-i18n="faq.children_reasons_answer">Нарушения осанки, головные боли, проблемы с концентрацией, последствия травм, частые простуды, энурез, задержки развития. Остеопатия помогает ребёнку расти здоровым и гармонично развиваться.</p>
+                            </div>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Question 6 - Can children be treated -->
-                    <div class="faq-item" id="children">
-                        <div class="faq-header">
-                            <button class="faq-question" aria-expanded="false">
-                                <span data-i18n="faq.q6_title">Можно ли лечить детей?</span>
-                                <span class="faq-icon"></span>
-                            </button>
-                            <button class="faq-copy-link" data-question="children" aria-label="Копировать ссылку"><img src="/images/icons/share.svg" alt="" class="faq-copy-icon"></button>
+                <!-- Section 7: Payment and Organization -->
+                <div class="faq-category" id="payment">
+                    <h2 class="faq-category-title" data-i18n="faq.section_payment">Оплата и организация</h2>
+                    <div class="faq-list">
+                        <!-- Payment methods -->
+                        <div class="faq-item" id="payment-methods">
+                            <div class="faq-header">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span data-i18n="faq.payment_methods_title">Какие способы оплаты принимаются?</span>
+                                    <span class="faq-icon"></span>
+                                </button>
+                                <button class="faq-copy-link" data-question="payment-methods" aria-label="Копировать ссылку"><img src="/images/icons/share.svg" alt="" class="faq-copy-icon"></button>
+                            </div>
+                            <div class="faq-answer">
+                                <p data-i18n="faq.payment_methods_answer">Принимаю оплату картой, наличными, через BLIK и банковским переводом. Выберите удобный для вас способ.</p>
+                            </div>
                         </div>
-                        <div class="faq-answer">
-                            <p data-i18n="faq.q6_answer">Да, остеопатия безопасна для детей любого возраста, включая новорожденных. Детские техники еще более мягкие и адаптированы под особенности растущего организма.</p>
-                        </div>
-                    </div>
 
-                    <!-- Question 7 - How to book -->
-                    <div class="faq-item" id="booking">
-                        <div class="faq-header">
-                            <button class="faq-question" aria-expanded="false">
-                                <span data-i18n="faq.q7_title">Как записаться на прием?</span>
-                                <span class="faq-icon"></span>
-                            </button>
-                            <button class="faq-copy-link" data-question="booking" aria-label="Копировать ссылку"><img src="/images/icons/share.svg" alt="" class="faq-copy-icon"></button>
+                        <!-- BLIK -->
+                        <div class="faq-item" id="blik">
+                            <div class="faq-header">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span data-i18n="faq.blik_title">Можно ли оплатить через BLIK?</span>
+                                    <span class="faq-icon"></span>
+                                </button>
+                                <button class="faq-copy-link" data-question="blik" aria-label="Копировать ссылку"><img src="/images/icons/share.svg" alt="" class="faq-copy-icon"></button>
+                            </div>
+                            <div class="faq-answer">
+                                <p data-i18n="faq.blik_answer">Да, оплата через BLIK доступна. Это быстро и удобно — просто назовите код из приложения вашего банка.</p>
+                            </div>
                         </div>
-                        <div class="faq-answer">
-                            <p data-i18n="faq.q7_answer">Записаться можно через Booksy, WhatsApp или позвонив по телефону. Кнопка «Записаться» находится внизу страницы.</p>
+
+                        <!-- Discounts -->
+                        <div class="faq-item" id="discounts">
+                            <div class="faq-header">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span data-i18n="faq.discounts_title">Есть ли скидки?</span>
+                                    <span class="faq-icon"></span>
+                                </button>
+                                <button class="faq-copy-link" data-question="discounts" aria-label="Копировать ссылку"><img src="/images/icons/share.svg" alt="" class="faq-copy-icon"></button>
+                            </div>
+                            <div class="faq-answer">
+                                <p data-i18n="faq.discounts_answer">Да, есть семейные пакеты и скидки при покупке нескольких сеансов. Подробности смотрите на странице цен или спросите при записи.</p>
+                                <a href="/prices" class="soft-link" data-i18n="faq.discounts_link">Смотреть цены →</a>
+                            </div>
+                        </div>
+
+                        <!-- Gift certificate -->
+                        <div class="faq-item" id="gift-certificate">
+                            <div class="faq-header">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span data-i18n="faq.gift_certificate_title">Можно ли купить подарочный сертификат?</span>
+                                    <span class="faq-icon"></span>
+                                </button>
+                                <button class="faq-copy-link" data-question="gift-certificate" aria-label="Копировать ссылку"><img src="/images/icons/share.svg" alt="" class="faq-copy-icon"></button>
+                            </div>
+                            <div class="faq-answer">
+                                <p data-i18n="faq.gift_certificate_answer">Да, можно приобрести сертификат на любую сумму или конкретную услугу. Отличный подарок для близких — напишите мне, и я подготовлю сертификат.</p>
+                            </div>
+                        </div>
+
+                        <!-- Booking without Booksy -->
+                        <div class="faq-item" id="booking-without-booksy">
+                            <div class="faq-header">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span data-i18n="faq.booking_without_booksy_title">Можно ли записаться без Booksy?</span>
+                                    <span class="faq-icon"></span>
+                                </button>
+                                <button class="faq-copy-link" data-question="booking-without-booksy" aria-label="Копировать ссылку"><img src="/images/icons/share.svg" alt="" class="faq-copy-icon"></button>
+                            </div>
+                            <div class="faq-answer">
+                                <p data-i18n="faq.booking_without_booksy_answer">Да, можно записаться через WhatsApp, Telegram или по телефону. Booksy удобен для самостоятельного выбора времени, но если предпочитаете личный контакт — напишите или позвоните.</p>
+                            </div>
+                        </div>
+
+                        <!-- No convenient time -->
+                        <div class="faq-item" id="no-convenient-time">
+                            <div class="faq-header">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span data-i18n="faq.no_convenient_time_title">Не могу найти удобное время в расписании</span>
+                                    <span class="faq-icon"></span>
+                                </button>
+                                <button class="faq-copy-link" data-question="no-convenient-time" aria-label="Копировать ссылку"><img src="/images/icons/share.svg" alt="" class="faq-copy-icon"></button>
+                            </div>
+                            <div class="faq-answer">
+                                <p data-i18n="faq.no_convenient_time_answer">Напишите или позвоните мне — расскажите, какое время вам удобно. Помогу подобрать варианты, даже если в онлайн-расписании их пока нет.</p>
+                            </div>
+                        </div>
+
+                        <!-- Invoice -->
+                        <div class="faq-item" id="invoice">
+                            <div class="faq-header">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span data-i18n="faq.invoice_title">Можно ли получить чек или фактуру?</span>
+                                    <span class="faq-icon"></span>
+                                </button>
+                                <button class="faq-copy-link" data-question="invoice" aria-label="Копировать ссылку"><img src="/images/icons/share.svg" alt="" class="faq-copy-icon"></button>
+                            </div>
+                            <div class="faq-answer">
+                                <p data-i18n="faq.invoice_answer">Да, выдаю фактуру (faktura) по запросу. Её можно использовать для возмещения через страховую компанию или для налогового вычета.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
