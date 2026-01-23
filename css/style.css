@@ -665,6 +665,36 @@ body {
     }
 }
 
+/* Photo wrapper for section-layout */
+.photo-wrapper {
+    width: 450px;
+    flex-shrink: 0;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+}
+
+.photo-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+@media (max-width: 1024px) {
+    .photo-wrapper {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 767px) {
+    .photo-wrapper {
+        max-width: 100%;
+    }
+}
+
 .features-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));

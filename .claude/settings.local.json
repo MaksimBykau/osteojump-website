@@ -53,7 +53,9 @@
       "Bash(for file in /Users/maxbykov/Documents/projects/web/osteojump/locales/*.json)",
       "Bash(do echo \"Checking $file...\")",
       "Bash(python3:*)",
-      "WebFetch(domain:www.svgrepo.com)"
+      "WebFetch(domain:www.svgrepo.com)",
+      "mcp__chrome-devtools__resize_page",
+      "mcp__chrome-devtools__hover"
     ]
   }
 }
