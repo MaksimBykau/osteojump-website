@@ -525,21 +525,21 @@
                 "title": "Doświadczenie",
                 "text": "15 lat w medycynie, 7 lat w osteopatii. Ponad 1000 pacjentów"
             },
-            "results": {
-                "title": "Rezultaty",
-                "text": "Ocena 5.0 i ponad 150 pozytywnych opinii. Laureat Orły Medycyny 2025"
+            "complex": {
+                "title": "Trudne przypadki",
+                "text": "Podejmuję się unikalnych przypadków, gdzie tradycyjna medycyna nie pomogła"
             },
             "approach": {
                 "title": "Indywidualne podejście",
                 "text": "Żadnych szablonowych protokołów. Pracuję z twoim ciałem i jego potrzebami"
             },
-            "reviews": {
-                "title": "Opinie",
-                "text": "Pacjenci wracają i polecają mnie przyjaciołom i rodzinie"
+            "results": {
+                "title": "Rezultaty i opinie",
+                "text": "Ocena 5.0 na Booksy, 150+ opinii. Pacjenci wracają i polecają znajomym."
             },
-            "complex": {
-                "title": "Trudne przypadki",
-                "text": "Podejmuję się unikalnych przypadków, gdzie tradycyjna medycyna nie pomogła"
+            "honesty": {
+                "title": "Uczciwość i przejrzystość",
+                "text": "Szczerze mówię, jeśli osteopatia nie pomoże w twoim przypadku. Nie narzucam zbędnych wizyt."
             }
         },
         "motivation": {

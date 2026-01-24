@@ -525,21 +525,21 @@
                 "title": "Erfahrung",
                 "text": "15+ Jahre in der Medizin, 7+ Jahre Osteopathie-Praxis"
             },
-            "results": {
-                "title": "Ergebnisse",
-                "text": "150+ Bewertungen, alle positiv. Orły Medycyny 2025 Preisträgerin"
+            "complex": {
+                "title": "Komplexe Fälle",
+                "text": "Ich nehme an, was andere ablehnen: Migräne, Panikattacken, chronische Schmerzen"
             },
             "approach": {
                 "title": "Individueller Ansatz",
                 "text": "Keine Vorlagen — ich arbeite mit Ihrem Körper und seinen Bedürfnissen"
             },
-            "reviews": {
-                "title": "Bewertungen",
-                "text": "5.0 auf Booksy, Google und Instagram — Patienten kommen wieder und empfehlen mich"
+            "results": {
+                "title": "Ergebnisse und Bewertungen",
+                "text": "5.0 Bewertung auf Booksy, 150+ Bewertungen. Patienten kommen zurück und empfehlen Freunden."
             },
-            "complex": {
-                "title": "Komplexe Fälle",
-                "text": "Ich nehme an, was andere ablehnen: Migräne, Panikattacken, chronische Schmerzen"
+            "honesty": {
+                "title": "Ehrlichkeit und Transparenz",
+                "text": "Ich sage ehrlich, wenn Osteopathie in Ihrem Fall nicht hilft. Ich dränge keine unnötigen Sitzungen auf."
             }
         },
         "motivation": {

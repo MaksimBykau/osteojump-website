@@ -525,21 +525,21 @@
                 "title": "Experience",
                 "text": "15 years in medicine, 7 years in osteopathy. Over 1000 patients"
             },
-            "results": {
-                "title": "Results",
-                "text": "5.0 rating and 150+ positive reviews. Orły Medycyny 2025 Laureate"
+            "complex": {
+                "title": "Complex cases",
+                "text": "I take on unique cases where traditional medicine hasn't helped"
             },
             "approach": {
                 "title": "Individual approach",
                 "text": "No template protocols. I work with your body and its needs"
             },
-            "reviews": {
-                "title": "Reviews",
-                "text": "Patients return and recommend me to friends and family"
+            "results": {
+                "title": "Results and reviews",
+                "text": "5.0 rating on Booksy, 150+ reviews. Patients return and recommend to friends."
             },
-            "complex": {
-                "title": "Complex cases",
-                "text": "I take on unique cases where traditional medicine hasn't helped"
+            "honesty": {
+                "title": "Honesty and transparency",
+                "text": "I'm honest if osteopathy won't help in your case. I don't push unnecessary sessions."
             }
         },
         "motivation": {
