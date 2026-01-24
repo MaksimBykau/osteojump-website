@@ -552,9 +552,12 @@
             "session": "per session (55 min)",
             "booksy": "Book on Booksy"
         },
+        "doubts": {
+            "title": "Your doubts are completely normal",
+            "text": "If you have questions — ask them. I'll try to answer as honestly as possible. If I can help — great, if not, I'll tell you straight. I won't waste your time or push unnecessary sessions."
+        },
         "questions": {
-            "title": "Still have questions?",
-            "text": "Don't know what to expect? Have many questions? Check out the FAQ or book a consultation.",
+            "text": "You'll find lots of information about osteopathy and appointments on the FAQ page",
             "faq_btn": "FAQ →",
             "consultation": "consultation (20 min)"
         }

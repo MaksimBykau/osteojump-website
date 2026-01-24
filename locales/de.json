@@ -552,9 +552,12 @@
             "session": "pro Sitzung (55 Min)",
             "booksy": "Auf Booksy buchen"
         },
+        "doubts": {
+            "title": "Ihre Zweifel sind völlig normal",
+            "text": "Wenn Sie Fragen haben — stellen Sie sie. Ich werde versuchen, so ehrlich wie möglich zu antworten. Wenn ich helfen kann — großartig, wenn nicht, sage ich es Ihnen direkt. Ich werde Ihre Zeit nicht verschwenden und keine unnötigen Sitzungen aufdrängen."
+        },
         "questions": {
-            "title": "Noch Fragen?",
-            "text": "Wissen Sie nicht, was Sie erwartet? Viele Fragen? Schauen Sie sich die Antworten auf häufige Fragen an oder buchen Sie eine Beratung.",
+            "text": "Viele Informationen über Osteopathie und Termine finden Sie auf der FAQ-Seite",
             "faq_btn": "Häufige Fragen →",
             "consultation": "Beratung (20 Min)"
         }

@@ -552,9 +552,12 @@
             "session": "za sesję (55 min)",
             "booksy": "Zarezerwuj na Booksy"
         },
+        "doubts": {
+            "title": "Twoje wątpliwości są całkowicie normalne",
+            "text": "Jeśli masz pytania — zadaj je. Postaram się odpowiedzieć jak najuczciwiej. Jeśli mogę pomóc — świetnie, jeśli nie, też powiem wprost. Nie będę marnować twojego czasu ani narzucać niepotrzebnych wizyt."
+        },
         "questions": {
-            "title": "Masz jeszcze pytania?",
-            "text": "Nie wiesz, czego się spodziewać? Masz wiele pytań? Sprawdź FAQ lub umów się na konsultację.",
+            "text": "Wiele informacji o osteopatii i wizytach znajdziesz na stronie z pytaniami",
             "faq_btn": "Częste pytania →",
             "consultation": "konsultacja (20 min)"
         }
