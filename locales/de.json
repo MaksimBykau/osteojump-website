@@ -451,7 +451,7 @@
     "landing": {
         "hero": {
             "intro": "Ich bin Hanna Bykava, Osteopathin. Ich glaube an die Menschen und mache diese Welt jeden Tag ein wenig besser.",
-            "about_link": "Über mich →"
+            "utp": "Osteopathie für Schwangere, Kinder und Erwachsene"
         },
         "reasons": {
             "title": "Gründe, Osteopathie auszuprobieren",
@@ -544,7 +544,7 @@
         },
         "motivation": {
             "title": "Ehrlicher Ansatz",
-            "text": "Obwohl viele Kunden meine Osteopathie-Sitzungen loben und mich Freunden empfehlen, verstehe ich Ihre Situation noch nicht vollständig, daher kann ich Ihnen kein 100%iges Ergebnis garantieren."
+            "text": "Obwohl viele Kunden meine Osteopathie-Sitzungen loben und mich Freunden empfehlen, verstehe ich Ihre Situation noch nicht vollständig, daher kann ich keine Garantien geben."
         },
         "booking": {
             "title": "Termin buchen",
@@ -556,10 +556,16 @@
             "title": "Ihre Zweifel sind völlig normal",
             "text": "Wenn Sie Fragen haben — stellen Sie sie. Ich werde versuchen, so ehrlich wie möglich zu antworten. Wenn ich helfen kann — großartig, wenn nicht, sage ich es Ihnen direkt. Ich werde Ihre Zeit nicht verschwenden und keine unnötigen Sitzungen aufdrängen."
         },
-        "questions": {
-            "text": "Viele Informationen über Osteopathie und Termine finden Sie auf der FAQ-Seite",
-            "faq_btn": "Häufige Fragen →",
-            "consultation": "Beratung (20 Min)"
+        "prices": {
+            "session_label": "Sitzung (55 Min)",
+            "consultation_label": "Beratung (20 Min)",
+            "booksy_btn": "Auf Booksy buchen",
+            "alt_contact": "Wenn Sie Booksy nicht nutzen — schreiben Sie mir auf beliebige Weise, wir finden einen passenden Termin für Ihren Besuch.",
+            "contacts_btn": "Kontakt →"
+        },
+        "faq": {
+            "text": "Weitere Informationen über Osteopathie und Termine finden Sie auf der FAQ-Seite.",
+            "btn": "Häufige Fragen →"
         }
     },
     "footer": {

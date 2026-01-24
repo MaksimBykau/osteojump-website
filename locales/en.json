@@ -451,7 +451,7 @@
     "landing": {
         "hero": {
             "intro": "I am Hanna Bykava, an osteopath. I believe in people and make this world a little better every day.",
-            "about_link": "Learn more about me →"
+            "utp": "Osteopathy for pregnant women, children and adults"
         },
         "reasons": {
             "title": "Reasons to Try Osteopathy",
@@ -544,7 +544,7 @@
         },
         "motivation": {
             "title": "Honest approach",
-            "text": "Although many clients speak highly of my osteopathy sessions and recommend me to friends, I don't fully understand your situation yet, so I cannot guarantee you 100% results."
+            "text": "Although many clients speak highly of my osteopathy sessions and recommend me to friends, I don't fully understand your situation yet, so I cannot make guarantees."
         },
         "booking": {
             "title": "Book an Appointment",
@@ -556,10 +556,16 @@
             "title": "Your doubts are completely normal",
             "text": "If you have questions — ask them. I'll try to answer as honestly as possible. If I can help — great, if not, I'll tell you straight. I won't waste your time or push unnecessary sessions."
         },
-        "questions": {
-            "text": "You'll find lots of information about osteopathy and appointments on the FAQ page",
-            "faq_btn": "FAQ →",
-            "consultation": "consultation (20 min)"
+        "prices": {
+            "session_label": "Session (55 min)",
+            "consultation_label": "Consultation (20 min)",
+            "booksy_btn": "Book on Booksy",
+            "alt_contact": "If you don't use Booksy — contact me any way you prefer, we'll find a convenient time for your visit.",
+            "contacts_btn": "Contacts →"
+        },
+        "faq": {
+            "text": "You'll find more information about osteopathy and appointments on the FAQ page.",
+            "btn": "FAQ →"
         }
     },
     "footer": {

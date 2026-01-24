@@ -451,7 +451,7 @@
     "landing": {
         "hero": {
             "intro": "Jestem Hanna Bykava, osteopata. Wierzę w ludzi i każdego dnia czynię ten świat odrobinę lepszym.",
-            "about_link": "Więcej o mnie →"
+            "utp": "Osteopatia dla kobiet w ciąży, dzieci i dorosłych"
         },
         "reasons": {
             "title": "Powody, by spróbować osteopatii",
@@ -544,7 +544,7 @@
         },
         "motivation": {
             "title": "Uczciwe podejście",
-            "text": "Chociaż wielu klientów dobrze wypowiada się o moich sesjach osteopatii i poleca mnie znajomym, nie do końca rozumiem twoją sytuację, dlatego nie mogę zagwarantować ci 100% wyniku."
+            "text": "Chociaż wielu klientów dobrze wypowiada się o moich sesjach osteopatii i poleca mnie znajomym, nie do końca rozumiem twoją sytuację, dlatego nie mogę dawać gwarancji."
         },
         "booking": {
             "title": "Umów wizytę",
@@ -556,10 +556,16 @@
             "title": "Twoje wątpliwości są całkowicie normalne",
             "text": "Jeśli masz pytania — zadaj je. Postaram się odpowiedzieć jak najuczciwiej. Jeśli mogę pomóc — świetnie, jeśli nie, też powiem wprost. Nie będę marnować twojego czasu ani narzucać niepotrzebnych wizyt."
         },
-        "questions": {
-            "text": "Wiele informacji o osteopatii i wizytach znajdziesz na stronie z pytaniami",
-            "faq_btn": "Częste pytania →",
-            "consultation": "konsultacja (20 min)"
+        "prices": {
+            "session_label": "Wizyta (55 min)",
+            "consultation_label": "Konsultacja (20 min)",
+            "booksy_btn": "Zarezerwuj na Booksy",
+            "alt_contact": "Jeśli nie korzystasz z Booksy — napisz do mnie w dowolny sposób, dobierzemy dla ciebie dogodny termin wizyty.",
+            "contacts_btn": "Kontakt →"
+        },
+        "faq": {
+            "text": "Więcej informacji o osteopatii i wizytach znajdziesz na stronie z pytaniami.",
+            "btn": "Częste pytania →"
         }
     },
     "footer": {

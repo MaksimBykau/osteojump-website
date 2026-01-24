@@ -2638,7 +2638,28 @@ body {
     font-weight: 500;
 }
 
-/* Hero about link - uses .soft-link base, no additional styles needed */
+.hero-utp {
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    color: var(--primary-color);
+    font-weight: 600;
+    margin: 0;
+}
+
+.hero-cta {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-xs);
+}
+
+.hero-cta .price-list {
+    background: transparent;
+    padding: 0;
+}
+
+.hero-cta .btn--primary {
+    align-self: flex-start;
+}
 
 @media (max-width: 767px) {
     .hero-landing {
@@ -2663,6 +2684,10 @@ body {
 
     .hero-text-content {
         align-items: center;
+    }
+
+    .hero-cta .btn--primary {
+        align-self: center;
     }
 }
 
@@ -3040,6 +3065,7 @@ body {
     text-align: center;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: var(--spacing-md);
 }
 
@@ -3055,6 +3081,32 @@ body {
     color: var(--text-secondary);
     line-height: 1.6;
     margin: 0;
+}
+
+.price-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+    width: 100%;
+    max-width: 300px;
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: var(--spacing-md);
+}
+
+.price-row .price-label {
+    color: var(--text-secondary);
+    font-size: 1rem;
+}
+
+.price-row .price-value {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-color);
 }
 
 .questions-links {
