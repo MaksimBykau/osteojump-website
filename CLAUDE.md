@@ -5,6 +5,14 @@
 # Context7
 Always use Context7 MCP when I need library/API documentation, code generation, setup or configuration steps without me having to explicitly ask.
 
+# HugeIcons
+При поиске иконок для сайта используй MCP сервер `hugeicons`. Он предоставляет доступ к библиотеке HugeIcons с тысячами SVG иконок.
+
+**Когда использовать:**
+- Нужна новая иконка для UI
+- Замена существующей иконки на более подходящую
+- Поиск иконки по ключевому слову
+
 ## Структура проекта
 
 ```

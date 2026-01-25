@@ -450,8 +450,19 @@
     },
     "landing": {
         "hero": {
-            "intro": "Jestem Hanna Bykava, osteopata. Wierzę w ludzi i każdego dnia czynię ten świat odrobinę lepszym.",
-            "utp": "Osteopatia dla kobiet w ciąży, dzieci i dorosłych"
+            "name": "Hanna Bykava",
+            "role": "Osteopata",
+            "city": "Warszawa",
+            "distance": "500m od PKP",
+            "utp": "Pomagam, gdy inni lekarze nie mogli",
+            "reviews_count": "150+ opinii",
+            "award": "Laureat Orły Medycyny 2025",
+            "session": "Wizyta",
+            "session_duration": "55 minut",
+            "consultation": "Konsultacja",
+            "consultation_duration": "20 minut",
+            "book_btn": "Umów się",
+            "try_btn": "Spróbuj"
         },
         "reasons": {
             "title": "Powody, by spróbować osteopatii",
@@ -484,11 +495,12 @@
         "stats": {
             "medicine": "lat w medycynie",
             "osteopathy": "lat w osteopatii",
-            "rating": "ocena",
-            "reviews": "opinii",
             "patients": "pacjentów",
             "award": "Laureat Orły Medycyny 2025",
-            "reviews_btn": "Czytaj opinie →"
+            "reviews_btn": "Czytaj wszystkie opinie →",
+            "review1": "Anna to świetna specjalistka, prawdziwy profesjonalista i bardzo miła osoba.",
+            "review2": "Anna ma lekkie ręce!! Cała sesja to sama przyjemność!",
+            "review3": "Już po pierwszej sesji poczułam, jak zniknął stres i napięcie z ciała."
         },
         "for_who": {
             "title": "Dla kogo",

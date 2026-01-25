@@ -450,8 +450,19 @@
     },
     "landing": {
         "hero": {
-            "intro": "Ich bin Hanna Bykava, Osteopathin. Ich glaube an die Menschen und mache diese Welt jeden Tag ein wenig besser.",
-            "utp": "Osteopathie für Schwangere, Kinder und Erwachsene"
+            "name": "Hanna Bykava",
+            "role": "Osteopathin",
+            "city": "Warschau",
+            "distance": "500m vom PKP",
+            "utp": "Ich helfe, wenn andere Ärzte nicht konnten",
+            "reviews_count": "150+ Bewertungen",
+            "award": "Orły Medycyny 2025 Preisträger",
+            "session": "Sitzung",
+            "session_duration": "55 Minuten",
+            "consultation": "Beratung",
+            "consultation_duration": "20 Minuten",
+            "book_btn": "Termin buchen",
+            "try_btn": "Ausprobieren"
         },
         "reasons": {
             "title": "Gründe, Osteopathie auszuprobieren",
@@ -484,11 +495,12 @@
         "stats": {
             "medicine": "Jahre in der Medizin",
             "osteopathy": "Jahre in der Osteopathie",
-            "rating": "Bewertung",
-            "reviews": "Bewertungen",
             "patients": "Patienten",
             "award": "Orły Medycyny 2025 Preisträgerin",
-            "reviews_btn": "Bewertungen lesen →"
+            "reviews_btn": "Alle Bewertungen lesen →",
+            "review1": "Anna ist eine ausgezeichnete Spezialistin, eine echte Fachfrau und ein sehr angenehmer Mensch.",
+            "review2": "Anna hat leichte Hände!! Die ganze Sitzung war ein Vergnügen!",
+            "review3": "Schon nach der ersten Sitzung spürte ich, wie meine Angst und Körperspannung verschwanden."
         },
         "for_who": {
             "title": "Für wen",
