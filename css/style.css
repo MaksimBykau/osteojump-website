@@ -2899,7 +2899,8 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--spacing-md);
-    margin: var(--spacing-lg) 0;
+    margin: var(--spacing-lg) auto;
+    max-width: 1000px;
 }
 
 .stats-review-card {
@@ -3494,6 +3495,12 @@ body {
     background: var(--primary-color-05);
     border-left: 3px solid var(--primary-color);
     border-radius: var(--radius-sm);
+}
+
+.hero-g-audience {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin: 0;
 }
 
 .hero-g-badges {
