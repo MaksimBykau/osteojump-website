@@ -3492,8 +3492,8 @@ body {
     margin: 0;
     padding: var(--spacing-sm);
     background: var(--primary-color-05);
-    border-left: 4px solid var(--primary-color);
-    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    border-left: 3px solid var(--primary-color);
+    border-radius: var(--radius-sm);
 }
 
 .hero-g-badges {
