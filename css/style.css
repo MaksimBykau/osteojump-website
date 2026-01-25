@@ -2779,6 +2779,45 @@ body {
     margin-bottom: var(--spacing-md);
 }
 
+/* Stats row - horizontal layout with award */
+.stats-row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: var(--spacing-lg);
+    flex-wrap: wrap;
+    margin-bottom: var(--spacing-md);
+}
+
+/* Award as stat item */
+.stat-item--award {
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.stat-item--award:hover {
+    opacity: 0.8;
+}
+
+.stat-award-images {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    height: 85px;
+    margin-bottom: 0.6em;
+}
+
+.stat-award-images .stats-award-logo {
+    height: 80px;
+    width: auto;
+}
+
+.stat-award-images .stats-medal {
+    height: 50px;
+    width: auto;
+}
+
 .stat-item {
     display: flex;
     flex-direction: column;
@@ -2791,6 +2830,9 @@ body {
     font-size: clamp(1.75rem, 4vw, 2.5rem);
     font-weight: 700;
     color: var(--primary-color);
+    height: 85px;
+    display: flex;
+    align-items: flex-end;
 }
 
 .stat-item .stat-label {
@@ -2847,11 +2889,80 @@ body {
     text-align: center;
 }
 
+/* Stats grid compact - 3 items */
+.stats-grid--compact {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* Stats Reviews */
+.stats-reviews {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-md);
+    margin: var(--spacing-lg) 0;
+}
+
+.stats-review-card {
+    background: white;
+    border-radius: var(--radius-md);
+    padding: var(--spacing-md);
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.stats-review-stars {
+    color: var(--star-color);
+    font-size: 1rem;
+    letter-spacing: 2px;
+}
+
+.stats-review-text {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.stats-review-author {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-top: auto;
+}
+
 /* Section link removed - using .soft-link instead */
 
 @media (max-width: 767px) {
     .stats-section {
         padding: var(--spacing-md) var(--spacing-sm);
+    }
+
+    .stats-grid--compact {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--spacing-xs);
+    }
+
+    .stats-row {
+        gap: var(--spacing-sm);
+    }
+
+    .stats-row .stat-item {
+        min-width: 70px;
+    }
+
+    .stat-award-images .stats-award-logo {
+        height: 30px;
+    }
+
+    .stat-award-images .stats-medal {
+        height: 28px;
+    }
+
+    .stats-reviews {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-sm);
     }
 
     .stats-grid {
@@ -3289,6 +3400,229 @@ body {
 
     .why-me-accordion-content p {
         font-size: 0.875rem;
+    }
+}
+
+/* ===========================================
+   HERO G - New Landing Hero
+   =========================================== */
+.hero-g {
+    padding: var(--spacing-xl) var(--spacing-sm);
+    background: var(--gradient-hero);
+}
+
+.hero-g-content {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: var(--spacing-lg);
+    align-items: center;
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+.hero-g-photo-wrapper {
+    flex-shrink: 0;
+}
+
+.hero-g-photo {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--primary-color);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.hero-g-text {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.hero-g-name {
+    font-size: clamp(1.75rem, 4vw, 2.25rem);
+    color: var(--text-color);
+    font-weight: 700;
+    margin: 0;
+}
+
+.hero-g-location {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.hero-g-location i {
+    color: var(--text-muted);
+}
+
+.hero-g-utp {
+    font-size: clamp(1.125rem, 2.5vw, 1.375rem);
+    color: var(--text-color);
+    font-weight: 600;
+    margin: 0;
+    padding: var(--spacing-sm);
+    background: var(--primary-color-05);
+    border-left: 4px solid var(--primary-color);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+.hero-g-badges {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.hero-g-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+}
+
+.hero-g-badge i {
+    color: var(--primary-color);
+}
+
+.hero-g-badge .star-icon {
+    color: var(--star-color);
+}
+
+.hero-g-cta-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-xs);
+}
+
+.hero-g-card {
+    background: white;
+    border-radius: var(--radius-md);
+    padding: var(--spacing-md);
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.hero-g-card:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.hero-g-card--primary {
+    background: var(--primary-color);
+    color: white;
+}
+
+.hero-g-card--primary:hover {
+    background: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+.hero-g-card-title {
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin: 0;
+    opacity: 0.9;
+}
+
+.hero-g-card--primary .hero-g-card-title {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.hero-g-card-price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.hero-g-card--primary .hero-g-card-price {
+    color: white;
+}
+
+.hero-g-card-duration {
+    font-size: 0.875rem;
+    margin: 0;
+    opacity: 0.7;
+}
+
+.hero-g-card--primary .hero-g-card-duration {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.hero-g-card .btn {
+    margin-top: auto;
+}
+
+.hero-g-btn-primary {
+    background: white;
+    color: var(--primary-color);
+}
+
+.hero-g-btn-primary:hover {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.hero-g-card--secondary .btn {
+    background: var(--primary-color-10);
+    color: var(--primary-color);
+}
+
+.hero-g-card--secondary .btn:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+@media (max-width: 767px) {
+    .hero-g {
+        padding: var(--spacing-lg) var(--spacing-sm);
+    }
+
+    .hero-g-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-g-photo-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+
+    .hero-g-photo {
+        width: 180px;
+        height: 180px;
+    }
+
+    .hero-g-text {
+        align-items: center;
+    }
+
+    .hero-g-location {
+        justify-content: center;
+    }
+
+    .hero-g-utp {
+        text-align: left;
+    }
+
+    .hero-g-badges {
+        align-items: center;
+    }
+
+    .hero-g-cta-cards {
+        grid-template-columns: 1fr;
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
