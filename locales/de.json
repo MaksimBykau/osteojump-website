@@ -452,6 +452,7 @@
         "hero": {
             "name": "Hanna Bykava",
             "role": "Osteopathin",
+            "role_short": "Osteopathin",
             "city": "Warschau",
             "distance": "500m vom PKP",
             "utp": "Ich helfe, wenn andere Ärzte nicht konnten",

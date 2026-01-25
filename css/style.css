@@ -3439,11 +3439,36 @@ body {
     gap: var(--spacing-sm);
 }
 
+.hero-g-title-row {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
 .hero-g-name {
     font-size: clamp(1.75rem, 4vw, 2.25rem);
     color: var(--text-color);
     font-weight: 700;
     margin: 0;
+}
+
+.hero-g-rating {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    background: white;
+    padding: 0.35rem 0.65rem;
+    border-radius: 2rem;
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: var(--text-muted);
+    box-shadow: var(--shadow-sm);
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+.hero-g-rating .star-icon {
+    color: var(--star-color);
 }
 
 .hero-g-location {
@@ -3486,10 +3511,11 @@ body {
 }
 
 .hero-g-badge i {
-    color: var(--primary-color);
+    color: var(--star-color);
 }
 
-.hero-g-badge .star-icon {
+.hero-g-badge .star-icon,
+.hero-g-badge .award-icon {
     color: var(--star-color);
 }
 

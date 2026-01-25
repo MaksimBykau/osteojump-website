@@ -452,6 +452,7 @@
         "hero": {
             "name": "Hanna Bykava",
             "role": "Osteopata",
+            "role_short": "osteopata",
             "city": "Warszawa",
             "distance": "500m od PKP",
             "utp": "Pomagam, gdy inni lekarze nie mogli",
