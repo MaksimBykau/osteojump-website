@@ -3528,92 +3528,48 @@ body {
 
 .hero-g-cta-cards {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--spacing-md);
     margin-top: var(--spacing-xs);
 }
 
 .hero-g-card {
-    background: white;
+    background: var(--bg-color);
     border-radius: var(--radius-md);
     padding: var(--spacing-md);
     box-shadow: var(--shadow-sm);
+    text-align: center;
     display: flex;
     flex-direction: column;
     gap: var(--spacing-xs);
-    border: 2px solid transparent;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .hero-g-card:hover {
-    border-color: var(--primary-color);
     transform: translateY(-4px);
     box-shadow: var(--shadow-md);
 }
 
-.hero-g-card--primary {
-    background: var(--primary-color);
-    color: white;
-}
-
-.hero-g-card--primary:hover {
-    background: var(--secondary-color);
-    border-color: var(--secondary-color);
-}
-
 .hero-g-card-title {
-    font-size: 0.875rem;
-    font-weight: 500;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-color);
     margin: 0;
-    opacity: 0.9;
-}
-
-.hero-g-card--primary .hero-g-card-title {
-    color: rgba(255, 255, 255, 0.9);
 }
 
 .hero-g-card-price {
     font-size: 1.5rem;
     font-weight: 700;
+    color: var(--primary-color);
     margin: 0;
-}
-
-.hero-g-card--primary .hero-g-card-price {
-    color: white;
 }
 
 .hero-g-card-duration {
-    font-size: 0.875rem;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
     margin: 0;
-    opacity: 0.7;
 }
 
-.hero-g-card--primary .hero-g-card-duration {
-    color: rgba(255, 255, 255, 0.8);
-}
-
-.hero-g-card .btn {
-    margin-top: auto;
-}
-
-.hero-g-btn-primary {
-    background: white;
-    color: var(--primary-color);
-}
-
-.hero-g-btn-primary:hover {
-    background: rgba(255, 255, 255, 0.9);
-}
-
-.hero-g-card--secondary .btn {
-    background: var(--primary-color-10);
-    color: var(--primary-color);
-}
-
-.hero-g-card--secondary .btn:hover {
-    background: var(--primary-color);
-    color: white;
-}
 
 @media (max-width: 767px) {
     .hero-g {
@@ -3653,9 +3609,6 @@ body {
 
     .hero-g-cta-cards {
         grid-template-columns: 1fr;
-        max-width: 300px;
-        margin-left: auto;
-        margin-right: auto;
     }
 }
 
