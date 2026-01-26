@@ -3456,6 +3456,15 @@ body {
     margin: 0;
 }
 
+.hero-g-name a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.hero-g-name a:hover {
+    color: var(--primary-color);
+}
+
 .hero-g-rating {
     display: inline-flex;
     align-items: center;
@@ -3469,6 +3478,12 @@ body {
     box-shadow: var(--shadow-sm);
     flex-shrink: 0;
     white-space: nowrap;
+    text-decoration: none;
+    transition: box-shadow 0.2s ease;
+}
+
+.hero-g-rating:hover {
+    box-shadow: var(--shadow-md);
 }
 
 .hero-g-rating .star-icon {
@@ -3483,6 +3498,12 @@ body {
     align-items: center;
     gap: 0.5rem;
     flex-wrap: wrap;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.hero-g-location:hover {
+    color: var(--primary-color);
 }
 
 .hero-g-location i {
@@ -3495,6 +3516,13 @@ body {
     background: var(--primary-color-05);
     border-left: 3px solid var(--primary-color);
     border-radius: var(--radius-sm);
+    text-decoration: none;
+    display: block;
+    transition: background 0.2s ease;
+}
+
+.hero-g-utp:hover {
+    background: var(--primary-color-10);
 }
 
 .hero-g-utp p {
@@ -3553,6 +3581,8 @@ body {
     gap: var(--spacing-xs);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
+    text-decoration: none;
+    color: inherit;
 }
 
 .hero-g-card:hover {
