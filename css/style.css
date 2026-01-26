@@ -3487,9 +3487,6 @@ body {
 }
 
 .hero-g-utp {
-    font-size: clamp(1.125rem, 2.5vw, 1.375rem);
-    color: var(--text-color);
-    font-weight: 600;
     margin: 0;
     padding: var(--spacing-sm);
     background: var(--primary-color-05);
@@ -3497,10 +3494,20 @@ body {
     border-radius: var(--radius-sm);
 }
 
-.hero-g-audience {
+.hero-g-utp p {
+    margin: 0;
+}
+
+.hero-g-utp p:first-child {
+    font-size: clamp(1.125rem, 2.5vw, 1.375rem);
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.hero-g-utp-audience {
     font-size: 0.95rem;
     color: var(--text-muted);
-    margin: 0;
+    margin-top: var(--spacing-xs);
 }
 
 .hero-g-badges {
@@ -3538,11 +3545,11 @@ body {
     border-radius: var(--radius-md);
     padding: var(--spacing-md);
     box-shadow: var(--shadow-sm);
-    text-align: center;
     display: flex;
     flex-direction: column;
     gap: var(--spacing-xs);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
 }
 
 .hero-g-card:hover {
@@ -3588,24 +3595,6 @@ body {
     color: var(--text-muted);
 }
 
-.hero-g-card-pricing {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.25rem;
-}
-
-.hero-g-card-pricing .price-old {
-    font-size: 0.85rem;
-    color: var(--text-muted);
-    text-decoration: line-through;
-}
-
-.hero-g-card-pricing .price-savings {
-    font-size: 0.8rem;
-    color: var(--success-color);
-    font-weight: 600;
-}
 
 
 @media (max-width: 767px) {
