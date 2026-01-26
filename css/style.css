@@ -2195,7 +2195,7 @@ body {
 /* 4. SPECIALIZATIONS SECTION - 3 cards with collage */
 .specializations-section {
     padding: var(--spacing-xl) var(--spacing-sm);
-    background-color: var(--section-bg);
+    background-color: var(--bg-color);
 }
 
 .specialization-cards {
