@@ -68,51 +68,14 @@
 }
 
 /* ============================================
-   Specializations Section
+   Specializations Section (about page wrapper)
    ============================================ */
 .about-specializations {
     padding: var(--spacing-lg) var(--spacing-sm);
     background-color: var(--bg-color);
 }
 
-.specialization-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
-    gap: var(--spacing-lg);
-    margin-top: var(--spacing-lg);
-}
-
-.specialization-card {
-    background: var(--bg-color);
-    border-radius: var(--radius-lg);
-    overflow: hidden;
-    box-shadow: var(--shadow-md);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.specialization-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-lg);
-}
-
-/* Photo Collage */
-.specialization-collage {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 3px;
-    aspect-ratio: 16 / 10;
-    overflow: hidden;
-}
-
-.collage-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-/* Single Image (instead of collage) */
+/* Single Image (about page only) */
 .specialization-single-image {
     aspect-ratio: 16 / 10;
     overflow: hidden;
@@ -122,42 +85,6 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
-
-.specialization-card:hover .collage-img {
-    transform: scale(1.02);
-}
-
-.collage-img-1 { grid-area: 1 / 1 / 2 / 2; }
-.collage-img-2 { grid-area: 1 / 2 / 2 / 3; }
-.collage-img-3 { grid-area: 2 / 1 / 3 / 2; }
-.collage-img-4 { grid-area: 2 / 2 / 3 / 3; }
-
-.specialization-content {
-    padding: var(--spacing-md);
-}
-
-.specialization-title {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--text-color);
-    margin-bottom: var(--spacing-sm);
-}
-
-.specialization-text {
-    font-size: 1rem;
-    line-height: 1.7;
-    color: var(--text-secondary);
-    margin-bottom: var(--spacing-sm);
-}
-
-.specialization-text:last-child {
-    margin-bottom: 0;
-}
-
-.specialization-text-accent {
-    color: var(--primary-color);
-    font-style: italic;
 }
 
 /* ============================================
@@ -705,12 +632,6 @@
         border-radius: var(--radius-md);
     }
 
-    .specialization-cards {
-        grid-template-columns: 1fr;
-        gap: var(--spacing-md);
-    }
-
-    .specialization-collage,
     .specialization-single-image {
         aspect-ratio: 16 / 9;
     }
@@ -754,7 +675,6 @@
         border-radius: var(--radius-md);
     }
 
-    .specialization-collage,
     .specialization-single-image {
         aspect-ratio: 4 / 3;
     }
