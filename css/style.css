@@ -3692,14 +3692,19 @@ body {
     }
 
     .hero-g-utp {
-        text-align: left;
+        text-align: center;
         width: 100%;
+        border-left: none;
+        border-top: 3px solid var(--primary-color);
+        border-bottom: 3px solid var(--primary-color);
     }
 
     .hero-g-badges {
         align-items: center;
     }
+}
 
+@media (max-width: 575px) {
     .hero-g-cta-cards {
         grid-template-columns: 1fr;
     }
