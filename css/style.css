@@ -3577,6 +3577,10 @@ body {
     margin-top: var(--spacing-xs);
 }
 
+.hero-g-text > .btn {
+    margin-top: var(--spacing-sm);
+}
+
 .hero-g-card {
     background: var(--bg-color);
     border-radius: var(--radius-md);
