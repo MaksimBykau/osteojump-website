@@ -2211,12 +2211,14 @@ body {
     border-radius: var(--radius-md);
     overflow: hidden;
     box-shadow: var(--shadow-sm);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    border: 2px solid transparent;
 }
 
 .specialization-card:hover {
     transform: translateY(-4px);
     box-shadow: var(--shadow-md);
+    border-color: var(--primary-color);
 }
 
 /* Photo Collage */
@@ -2717,12 +2719,14 @@ body {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-xs);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    border: 2px solid transparent;
 }
 
 .reason-card:hover {
     transform: translateY(-4px);
     box-shadow: var(--shadow-md);
+    border-color: var(--primary-color);
 }
 
 .reason-icon {
@@ -3479,11 +3483,13 @@ body {
     flex-shrink: 0;
     white-space: nowrap;
     text-decoration: none;
-    transition: box-shadow 0.2s ease;
+    transition: all 0.2s ease;
 }
 
 .hero-g-rating:hover {
+    background: var(--primary-color-10);
     box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
 }
 
 .hero-g-rating .star-icon {
@@ -3579,15 +3585,17 @@ body {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-xs);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
     text-align: center;
     text-decoration: none;
     color: inherit;
+    border: 2px solid transparent;
 }
 
 .hero-g-card:hover {
     transform: translateY(-4px);
     box-shadow: var(--shadow-md);
+    border-color: var(--primary-color);
 }
 
 .hero-g-card-title {
