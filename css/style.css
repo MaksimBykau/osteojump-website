@@ -3590,6 +3590,8 @@ body {
     text-decoration: none;
     color: inherit;
     border: 2px solid transparent;
+    flex: 1;
+    min-width: 0;
 }
 
 .hero-g-card:hover {
@@ -3603,13 +3605,17 @@ body {
     font-weight: 600;
     color: var(--text-color);
     margin: 0;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    hyphens: auto;
 }
 
 .hero-g-card-meta {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem;
+    gap: 0.25rem;
     font-size: 0.9rem;
     color: var(--text-muted);
 }
@@ -3618,17 +3624,23 @@ body {
     font-size: 1rem;
 }
 
+.hero-g-card-meta .meta-time {
+    white-space: nowrap;
+}
+
 .hero-g-card-price {
     display: flex;
+    flex-wrap: wrap;
     align-items: baseline;
     justify-content: center;
-    gap: 0.5rem;
+    gap: 0.25rem 0.5rem;
 }
 
 .hero-g-card-price .price-main {
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--primary-color);
+    white-space: nowrap;
 }
 
 .hero-g-card-price .price-secondary {
@@ -3659,7 +3671,16 @@ body {
     }
 
     .hero-g-text {
-        align-items: center;
+        align-items: stretch;
+    }
+
+    .hero-g-title-row {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero-g-name {
+        text-align: center;
     }
 
     .hero-g-location {
@@ -3668,6 +3689,7 @@ body {
 
     .hero-g-utp {
         text-align: left;
+        width: 100%;
     }
 
     .hero-g-badges {

@@ -461,8 +461,10 @@
             "award": "лауреат Orły Medycyny 2025",
             "session": "Приём",
             "session_duration": "55 минут",
+            "session_unit": "минут",
             "consultation": "Консультация",
             "consultation_duration": "20 минут",
+            "consultation_unit": "минут",
             "book_btn": "Записаться",
             "try_btn": "Попробовать"
         },

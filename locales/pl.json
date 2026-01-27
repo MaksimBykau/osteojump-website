@@ -461,8 +461,10 @@
             "award": "Laureat Orły Medycyny 2025",
             "session": "Wizyta",
             "session_duration": "55 minut",
+            "session_unit": "minut",
             "consultation": "Konsultacja",
             "consultation_duration": "20 minut",
+            "consultation_unit": "minut",
             "book_btn": "Umów się",
             "try_btn": "Spróbuj"
         },

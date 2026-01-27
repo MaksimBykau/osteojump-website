@@ -461,8 +461,10 @@
             "award": "Orły Medycyny 2025 Preisträger",
             "session": "Sitzung",
             "session_duration": "55 Minuten",
+            "session_unit": "Minuten",
             "consultation": "Beratung",
             "consultation_duration": "20 Minuten",
+            "consultation_unit": "Minuten",
             "book_btn": "Termin buchen",
             "try_btn": "Ausprobieren"
         },
