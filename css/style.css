@@ -2786,24 +2786,48 @@ body {
     margin-bottom: var(--spacing-md);
 }
 
-/* Stats row - horizontal layout with award */
+/* Stats row wrapper */
+.stats-row-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+}
+
+/* Stats row - horizontal layout */
 .stats-row {
     display: flex;
     justify-content: center;
     align-items: flex-end;
     gap: var(--spacing-lg);
     flex-wrap: wrap;
-    margin-bottom: var(--spacing-md);
+    text-decoration: none;
+    color: inherit;
+    padding: var(--spacing-md);
+    border-radius: var(--radius-md);
+    border: 2px solid transparent;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.stats-row:hover {
+    border-color: var(--primary-color);
+    background-color: var(--primary-color-05);
 }
 
 /* Award as stat item */
 .stat-item--award {
     text-decoration: none;
-    transition: opacity 0.2s ease;
+    color: inherit;
+    padding: var(--spacing-md);
+    border-radius: var(--radius-md);
+    border: 2px solid transparent;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
 }
 
 .stat-item--award:hover {
-    opacity: 0.8;
+    border-color: var(--primary-color);
+    background-color: var(--primary-color-05);
 }
 
 .stat-award-images {
@@ -2918,6 +2942,15 @@ body {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-xs);
+    text-decoration: none;
+    color: inherit;
+    border: 2px solid transparent;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stats-review-card:hover {
+    border-color: var(--primary-color);
+    box-shadow: var(--shadow-md);
 }
 
 .stats-review-stars {
@@ -2961,11 +2994,11 @@ body {
     }
 
     .stat-award-images .stats-award-logo {
-        height: 30px;
+        height: 55px;
     }
 
     .stat-award-images .stats-medal {
-        height: 28px;
+        height: 40px;
     }
 
     .stats-reviews {
