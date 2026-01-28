@@ -585,6 +585,11 @@
         "faq": {
             "text": "Więcej informacji o osteopatii i wizytach znajdziesz na stronie z pytaniami.",
             "btn": "Częste pytania →"
+        },
+        "questions": {
+            "title": "Masz jeszcze pytania?",
+            "text": "Nie wiesz czego się spodziewać? Masz wiele pytań? Sprawdź odpowiedzi na częste pytania lub umów się na konsultację.",
+            "faq_btn": "Częste pytania →"
         }
     },
     "footer": {

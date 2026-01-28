@@ -585,6 +585,11 @@
         "faq": {
             "text": "You'll find more information about osteopathy and appointments on the FAQ page.",
             "btn": "FAQ →"
+        },
+        "questions": {
+            "title": "Still have questions?",
+            "text": "Not sure what to expect? Have many questions? Check out the FAQ or book a consultation.",
+            "faq_btn": "FAQ →"
         }
     },
     "footer": {

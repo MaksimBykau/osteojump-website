@@ -585,6 +585,11 @@
         "faq": {
             "text": "Weitere Informationen über Osteopathie und Termine finden Sie auf der FAQ-Seite.",
             "btn": "Häufige Fragen →"
+        },
+        "questions": {
+            "title": "Noch Fragen?",
+            "text": "Wissen Sie nicht, was Sie erwartet? Viele Fragen? Schauen Sie sich die häufig gestellten Fragen an oder buchen Sie eine Beratung.",
+            "faq_btn": "Häufige Fragen →"
         }
     },
     "footer": {
