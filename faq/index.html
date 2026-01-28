@@ -128,12 +128,28 @@
             </div>
         </section>
 
+        <!-- Table of Contents -->
+        <nav class="faq-toc">
+            <ul class="faq-toc-list">
+                <li class="faq-toc-item"><a href="#about-method" class="faq-toc-link" data-i18n="faq.section_about_method">О методе</a></li>
+                <li class="faq-toc-item"><a href="#safety" class="faq-toc-link" data-i18n="faq.section_safety">Безопасность</a></li>
+                <li class="faq-toc-item"><a href="#before-session" class="faq-toc-link" data-i18n="faq.section_before">До приёма</a></li>
+                <li class="faq-toc-item"><a href="#during-session" class="faq-toc-link" data-i18n="faq.section_during">Во время приёма</a></li>
+                <li class="faq-toc-item"><a href="#after-session-category" class="faq-toc-link" data-i18n="faq.section_after">После приёма</a></li>
+                <li class="faq-toc-item"><a href="#adults" class="faq-toc-link" data-i18n="faq.section_adults">Взрослые</a></li>
+                <li class="faq-toc-item"><a href="#pregnancy" class="faq-toc-link" data-i18n="faq.section_pregnancy">Беременность и роды</a></li>
+                <li class="faq-toc-item"><a href="#infants-section" class="faq-toc-link" data-i18n="faq.section_infants">Младенцы</a></li>
+                <li class="faq-toc-item"><a href="#children-section" class="faq-toc-link" data-i18n="faq.section_children">Дети</a></li>
+                <li class="faq-toc-item"><a href="#booking-payment" class="faq-toc-link" data-i18n="faq.section_booking_payment">Запись и оплата</a></li>
+            </ul>
+        </nav>
+
         <!-- FAQ Section -->
         <section class="faq-section">
             <div class="container">
-                <!-- Section 1: General Questions -->
-                <div class="faq-category" id="general">
-                    <h2 class="faq-category-title" data-i18n="faq.section_general">Общие вопросы</h2>
+                <!-- Section 1: About the Method -->
+                <div class="faq-category" id="about-method">
+                    <h2 class="faq-category-title" data-i18n="faq.section_about_method">О методе</h2>
                     <div class="faq-list">
                         <!-- What is osteopathy -->
                         <div class="faq-item" id="osteopathy">
@@ -164,6 +180,40 @@
                             </div>
                         </div>
 
+                        <!-- Combine treatment -->
+                        <div class="faq-item" id="combine-treatment">
+                            <div class="faq-header">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span data-i18n="faq.combine_title">Можно ли совмещать остеопатию с другим лечением?</span>
+                                    <span class="faq-icon"></span>
+                                </button>
+                                <button class="faq-copy-link" data-question="combine-treatment" aria-label="Копировать ссылку"><img src="/images/icons/share.svg" alt="" class="faq-copy-icon"></button>
+                            </div>
+                            <div class="faq-answer">
+                                <p data-i18n="faq.combine_answer">Да, остеопатия хорошо дополняет другие методы: физиотерапию, массаж, ортодонтическое лечение, психотерапию. Важно рассказать мне обо всех процедурах, чтобы я могла координировать работу с телом.</p>
+                            </div>
+                        </div>
+
+                        <!-- How many sessions needed -->
+                        <div class="faq-item" id="sessions-count">
+                            <div class="faq-header">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span data-i18n="faq.q4_title">Сколько сеансов нужно?</span>
+                                    <span class="faq-icon"></span>
+                                </button>
+                                <button class="faq-copy-link" data-question="sessions-count" aria-label="Копировать ссылку"><img src="/images/icons/share.svg" alt="" class="faq-copy-icon"></button>
+                            </div>
+                            <div class="faq-answer">
+                                <p data-i18n="faq.q4_answer">Это зависит от вашей проблемы и состояния здоровья. Часто уже после первого сеанса чувствуется улучшение. Для устойчивого результата обычно рекомендуется 3-5 сеансов с интервалом 1-2 недели.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 2: Safety -->
+                <div class="faq-category" id="safety">
+                    <h2 class="faq-category-title" data-i18n="faq.section_safety">Безопасность</h2>
+                    <div class="faq-list">
                         <!-- Anxiety -->
                         <div class="faq-item" id="anxiety">
                             <div class="faq-header">
@@ -191,40 +241,61 @@
                                 <p data-i18n="faq.elderly_answer">Да, остеопатия подходит людям любого возраста. Для пожилых пациентов я использую особенно мягкие техники, учитывая особенности организма. Это помогает при хронических болях, скованности, проблемах с подвижностью.</p>
                             </div>
                         </div>
+                    </div>
+                </div>
 
-                        <!-- Combine treatment -->
-                        <div class="faq-item" id="combine-treatment">
+                <!-- Section 3: Before Session -->
+                <div class="faq-category" id="before-session">
+                    <h2 class="faq-category-title" data-i18n="faq.section_before">До приёма</h2>
+                    <div class="faq-list">
+                        <!-- Consultation vs full session -->
+                        <div class="faq-item" id="consultation">
                             <div class="faq-header">
                                 <button class="faq-question" aria-expanded="false">
-                                    <span data-i18n="faq.combine_title">Можно ли совмещать остеопатию с другим лечением?</span>
+                                    <span data-i18n="faq.q8_title">Чем консультация отличается от полноценного приёма?</span>
                                     <span class="faq-icon"></span>
                                 </button>
-                                <button class="faq-copy-link" data-question="combine-treatment" aria-label="Копировать ссылку"><img src="/images/icons/share.svg" alt="" class="faq-copy-icon"></button>
+                                <button class="faq-copy-link" data-question="consultation" aria-label="Копировать ссылку"><img src="/images/icons/share.svg" alt="" class="faq-copy-icon"></button>
                             </div>
                             <div class="faq-answer">
-                                <p data-i18n="faq.combine_answer">Да, остеопатия хорошо дополняет другие методы: физиотерапию, массаж, ортодонтическое лечение, психотерапию. Важно рассказать мне обо всех процедурах, чтобы я могла координировать работу с телом.</p>
+                                <p data-i18n="faq.q8_answer">Консультация (20 мин) — это знакомство. Мы обсудим ваши жалобы, я проведу первичную диагностику и расскажу, чем могу помочь. Подходит, если вы сомневаетесь или хотите понять, нужна ли вам остеопатия. Полноценный приём (55 мин) — это полная работа с телом: подробная диагностика и остеопатическое лечение.</p>
+                                <a href="/consultation" class="soft-link" data-i18n="faq.q8_link">Записаться на консультацию →</a>
                             </div>
                         </div>
 
-                        <!-- Insurance -->
-                        <div class="faq-item" id="insurance">
+                        <!-- What to wear -->
+                        <div class="faq-item" id="dress-code">
                             <div class="faq-header">
                                 <button class="faq-question" aria-expanded="false">
-                                    <span data-i18n="faq.insurance_title">Покрывает ли страховка услуги остеопата?</span>
+                                    <span data-i18n="faq.q5_title">Что надеть на прием?</span>
                                     <span class="faq-icon"></span>
                                 </button>
-                                <button class="faq-copy-link" data-question="insurance" aria-label="Копировать ссылку"><img src="/images/icons/share.svg" alt="" class="faq-copy-icon"></button>
+                                <button class="faq-copy-link" data-question="dress-code" aria-label="Копировать ссылку"><img src="/images/icons/share.svg" alt="" class="faq-copy-icon"></button>
                             </div>
                             <div class="faq-answer">
-                                <p data-i18n="faq.insurance_answer">Это зависит от вашей страховой компании и полиса. Некоторые страховки в Польше покрывают визиты к остеопату. Я выдаю чек (faktura), который можно отправить в страховую для возмещения.</p>
+                                <p data-i18n="faq.q5_answer">Удобную одежду, которая не сковывает движения. Подойдут хлопковая футболка и легкие брюки или леггинсы. Работа проводится в одежде, раздеваться не нужно.</p>
+                            </div>
+                        </div>
+
+                        <!-- How to book -->
+                        <div class="faq-item" id="booking">
+                            <div class="faq-header">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span data-i18n="faq.q7_title">Как записаться на прием?</span>
+                                    <span class="faq-icon"></span>
+                                </button>
+                                <button class="faq-copy-link" data-question="booking" aria-label="Копировать ссылку"><img src="/images/icons/share.svg" alt="" class="faq-copy-icon"></button>
+                            </div>
+                            <div class="faq-answer">
+                                <p data-i18n="faq.q7_answer">Записаться можно через Booksy, WhatsApp или позвонив по телефону. Кнопка «Записаться» находится внизу страницы.</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Section 2: How Session Works -->
-                <div class="faq-category" id="session-process">
-                    <h2 class="faq-category-title" data-i18n="faq.section_session">Как проходит приём</h2>
+                <!-- Section 4: During Session -->
+                <div class="faq-category" id="during-session">
+                    <h2 class="faq-category-title" data-i18n="faq.section_during">Во время приёма</h2>
                     <div class="faq-list">
                         <!-- How does the session work -->
                         <div class="faq-item" id="session">
@@ -255,49 +326,26 @@
                             </div>
                         </div>
 
-                        <!-- Consultation vs full session -->
-                        <div class="faq-item" id="consultation">
+                        <!-- No convenient time -->
+                        <div class="faq-item" id="no-convenient-time">
                             <div class="faq-header">
                                 <button class="faq-question" aria-expanded="false">
-                                    <span data-i18n="faq.q8_title">Чем консультация отличается от полноценного приёма?</span>
+                                    <span data-i18n="faq.no_convenient_time_title">Не могу найти удобное время в расписании</span>
                                     <span class="faq-icon"></span>
                                 </button>
-                                <button class="faq-copy-link" data-question="consultation" aria-label="Копировать ссылку"><img src="/images/icons/share.svg" alt="" class="faq-copy-icon"></button>
+                                <button class="faq-copy-link" data-question="no-convenient-time" aria-label="Копировать ссылку"><img src="/images/icons/share.svg" alt="" class="faq-copy-icon"></button>
                             </div>
                             <div class="faq-answer">
-                                <p data-i18n="faq.q8_answer">Консультация (20 мин) — это знакомство. Мы обсудим ваши жалобы, я проведу первичную диагностику и расскажу, чем могу помочь. Подходит, если вы сомневаетесь или хотите понять, нужна ли вам остеопатия. Полноценный приём (55 мин) — это полная работа с телом: подробная диагностика и остеопатическое лечение.</p>
-                                <a href="/consultation" class="soft-link" data-i18n="faq.q8_link">Записаться на консультацию →</a>
+                                <p data-i18n="faq.no_convenient_time_answer">Напишите или позвоните мне — расскажите, какое время вам удобно. Помогу подобрать варианты, даже если в онлайн-расписании их пока нет.</p>
                             </div>
                         </div>
+                    </div>
+                </div>
 
-                        <!-- How many sessions needed -->
-                        <div class="faq-item" id="sessions-count">
-                            <div class="faq-header">
-                                <button class="faq-question" aria-expanded="false">
-                                    <span data-i18n="faq.q4_title">Сколько сеансов нужно?</span>
-                                    <span class="faq-icon"></span>
-                                </button>
-                                <button class="faq-copy-link" data-question="sessions-count" aria-label="Копировать ссылку"><img src="/images/icons/share.svg" alt="" class="faq-copy-icon"></button>
-                            </div>
-                            <div class="faq-answer">
-                                <p data-i18n="faq.q4_answer">Это зависит от вашей проблемы и состояния здоровья. Часто уже после первого сеанса чувствуется улучшение. Для устойчивого результата обычно рекомендуется 3-5 сеансов с интервалом 1-2 недели.</p>
-                            </div>
-                        </div>
-
-                        <!-- What to wear -->
-                        <div class="faq-item" id="dress-code">
-                            <div class="faq-header">
-                                <button class="faq-question" aria-expanded="false">
-                                    <span data-i18n="faq.q5_title">Что надеть на прием?</span>
-                                    <span class="faq-icon"></span>
-                                </button>
-                                <button class="faq-copy-link" data-question="dress-code" aria-label="Копировать ссылку"><img src="/images/icons/share.svg" alt="" class="faq-copy-icon"></button>
-                            </div>
-                            <div class="faq-answer">
-                                <p data-i18n="faq.q5_answer">Удобную одежду, которая не сковывает движения. Подойдут хлопковая футболка и легкие брюки или леггинсы. Работа проводится в одежде, раздеваться не нужно.</p>
-                            </div>
-                        </div>
-
+                <!-- Section 5: After Session -->
+                <div class="faq-category" id="after-session-category">
+                    <h2 class="faq-category-title" data-i18n="faq.section_after">После приёма</h2>
+                    <div class="faq-list">
                         <!-- After session -->
                         <div class="faq-item" id="after-session">
                             <div class="faq-header">
@@ -325,24 +373,10 @@
                                 <p data-i18n="faq.worse_after_answer">Временное ухудшение в первые 1-3 дня — это нормальная реакция. Тело адаптируется к изменениям. Если симптомы сохраняются дольше или вызывают беспокойство — напишите мне, и мы разберёмся вместе.</p>
                             </div>
                         </div>
-
-                        <!-- How to book -->
-                        <div class="faq-item" id="booking">
-                            <div class="faq-header">
-                                <button class="faq-question" aria-expanded="false">
-                                    <span data-i18n="faq.q7_title">Как записаться на прием?</span>
-                                    <span class="faq-icon"></span>
-                                </button>
-                                <button class="faq-copy-link" data-question="booking" aria-label="Копировать ссылку"><img src="/images/icons/share.svg" alt="" class="faq-copy-icon"></button>
-                            </div>
-                            <div class="faq-answer">
-                                <p data-i18n="faq.q7_answer">Записаться можно через Booksy, WhatsApp или позвонив по телефону. Кнопка «Записаться» находится внизу страницы.</p>
-                            </div>
-                        </div>
                     </div>
                 </div>
 
-                <!-- Section 3: Adults -->
+                <!-- Section 6: Adults -->
                 <div class="faq-category" id="adults">
                     <h2 class="faq-category-title" data-i18n="faq.section_adults">Взрослые</h2>
                     <div class="faq-list">
@@ -418,7 +452,7 @@
                     </div>
                 </div>
 
-                <!-- Section 4: Pregnancy and Postpartum -->
+                <!-- Section 7: Pregnancy and Postpartum -->
                 <div class="faq-category" id="pregnancy">
                     <h2 class="faq-category-title" data-i18n="faq.section_pregnancy">Беременность, роды и восстановление</h2>
                     <div class="faq-list">
@@ -494,7 +528,7 @@
                     </div>
                 </div>
 
-                <!-- Section 5: Infants -->
+                <!-- Section 8: Infants -->
                 <div class="faq-category" id="infants-section">
                     <h2 class="faq-category-title" data-i18n="faq.section_infants">Младенцы</h2>
                     <div class="faq-list">
@@ -542,7 +576,7 @@
                     </div>
                 </div>
 
-                <!-- Section 6: Children -->
+                <!-- Section 9: Children -->
                 <div class="faq-category" id="children-section">
                     <h2 class="faq-category-title" data-i18n="faq.section_children">Дети</h2>
                     <div class="faq-list">
@@ -576,9 +610,9 @@
                     </div>
                 </div>
 
-                <!-- Section 7: Payment and Organization -->
-                <div class="faq-category" id="payment">
-                    <h2 class="faq-category-title" data-i18n="faq.section_payment">Оплата и организация</h2>
+                <!-- Section 10: Booking and Payment -->
+                <div class="faq-category" id="booking-payment">
+                    <h2 class="faq-category-title" data-i18n="faq.section_booking_payment">Запись и оплата</h2>
                     <div class="faq-list">
                         <!-- Payment methods -->
                         <div class="faq-item" id="payment-methods">
@@ -605,6 +639,20 @@
                             </div>
                             <div class="faq-answer">
                                 <p data-i18n="faq.blik_answer">Да, оплата через BLIK доступна. Это быстро и удобно — просто назовите код из приложения вашего банка.</p>
+                            </div>
+                        </div>
+
+                        <!-- Insurance -->
+                        <div class="faq-item" id="insurance">
+                            <div class="faq-header">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span data-i18n="faq.insurance_title">Покрывает ли страховка услуги остеопата?</span>
+                                    <span class="faq-icon"></span>
+                                </button>
+                                <button class="faq-copy-link" data-question="insurance" aria-label="Копировать ссылку"><img src="/images/icons/share.svg" alt="" class="faq-copy-icon"></button>
+                            </div>
+                            <div class="faq-answer">
+                                <p data-i18n="faq.insurance_answer">Это зависит от вашей страховой компании и полиса. Некоторые страховки в Польше покрывают визиты к остеопату. Я выдаю чек (faktura), который можно отправить в страховую для возмещения.</p>
                             </div>
                         </div>
 
@@ -648,20 +696,6 @@
                             </div>
                             <div class="faq-answer">
                                 <p data-i18n="faq.booking_without_booksy_answer">Да, можно записаться через WhatsApp, Telegram или по телефону. Booksy удобен для самостоятельного выбора времени, но если предпочитаете личный контакт — напишите или позвоните.</p>
-                            </div>
-                        </div>
-
-                        <!-- No convenient time -->
-                        <div class="faq-item" id="no-convenient-time">
-                            <div class="faq-header">
-                                <button class="faq-question" aria-expanded="false">
-                                    <span data-i18n="faq.no_convenient_time_title">Не могу найти удобное время в расписании</span>
-                                    <span class="faq-icon"></span>
-                                </button>
-                                <button class="faq-copy-link" data-question="no-convenient-time" aria-label="Копировать ссылку"><img src="/images/icons/share.svg" alt="" class="faq-copy-icon"></button>
-                            </div>
-                            <div class="faq-answer">
-                                <p data-i18n="faq.no_convenient_time_answer">Напишите или позвоните мне — расскажите, какое время вам удобно. Помогу подобрать варианты, даже если в онлайн-расписании их пока нет.</p>
                             </div>
                         </div>
 
@@ -786,11 +820,16 @@
                 const faqItem = button.closest('.faq-item');
                 if (faqItem && faqItem.id) {
                     if (!isExpanded) {
-                        // Opening question - update URL
+                        // Opening question - update URL to question
                         history.replaceState(null, '', `#${faqItem.id}`);
                     } else {
-                        // Closing question - remove hash
-                        history.replaceState(null, '', window.location.pathname);
+                        // Closing question - update URL to parent section
+                        const parentSection = faqItem.closest('.faq-category');
+                        if (parentSection && parentSection.id) {
+                            history.replaceState(null, '', `#${parentSection.id}`);
+                        } else {
+                            history.replaceState(null, '', window.location.pathname);
+                        }
                     }
                 }
             });
@@ -866,6 +905,52 @@
 
         // Also handle hash change (e.g., clicking link from same page)
         window.addEventListener('hashchange', handleHashOnLoad);
+
+        // Track visible section and update URL hash on scroll
+        let isUserScrolling = true;
+        let scrollTimeout = null;
+
+        // Detect when user clicks TOC link (to pause hash updates briefly)
+        document.querySelectorAll('.faq-toc-link').forEach(link => {
+            link.addEventListener('click', () => {
+                isUserScrolling = false;
+                // Resume after scroll animation completes
+                setTimeout(() => { isUserScrolling = true; }, 1000);
+            });
+        });
+
+        // IntersectionObserver for sections
+        const sectionObserverOptions = {
+            root: null,
+            rootMargin: '-80px 0px -50% 0px', // Account for header, trigger when section enters top half
+            threshold: 0
+        };
+
+        const sectionObserver = new IntersectionObserver((entries) => {
+            if (!isUserScrolling) return;
+
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const sectionId = entry.target.id;
+                    const currentHash = window.location.hash.slice(1);
+
+                    // Only update if:
+                    // 1. Hash is empty, OR
+                    // 2. Current hash is a section ID (not a question ID)
+                    const allSectionIds = Array.from(document.querySelectorAll('.faq-category')).map(s => s.id);
+                    const isCurrentHashSection = allSectionIds.includes(currentHash) || !currentHash;
+
+                    if (isCurrentHashSection && sectionId !== currentHash) {
+                        history.replaceState(null, '', `#${sectionId}`);
+                    }
+                }
+            });
+        }, sectionObserverOptions);
+
+        // Observe all FAQ category sections
+        document.querySelectorAll('.faq-category').forEach(section => {
+            sectionObserver.observe(section);
+        });
     </script>
 </body>
 </html>
