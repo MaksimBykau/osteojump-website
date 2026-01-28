@@ -147,13 +147,6 @@
     text-decoration: underline;
 }
 
-.award-photo {
-    width: 100%;
-    max-width: 400px;
-    border-radius: var(--radius-md);
-    box-shadow: var(--shadow-md);
-}
-
 /* Thanks Section */
 .reviews-thanks {
     padding: var(--spacing-lg) var(--spacing-sm);
@@ -501,10 +494,6 @@
 
     .reviews-award {
         padding: var(--spacing-lg) var(--spacing-sm);
-    }
-
-    .award-photo {
-        max-width: 100%;
     }
 
     .featured-grid {
