@@ -3703,7 +3703,12 @@ body {
     color: var(--text-muted);
 }
 
-
+.hero-g-card-link {
+    font-size: 0.8rem;
+    color: var(--primary-color);
+    margin-top: auto;
+    padding-top: var(--spacing-xs);
+}
 
 @media (max-width: 795px) {
     .hero-g {
