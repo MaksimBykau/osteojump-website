@@ -66,6 +66,12 @@
 
     /* Layout */
     --max-width: 1200px;
+
+    /* Hero section spacing (vh-based) */
+    --hero-padding-top: 12vh;
+    --hero-padding-bottom: 6vh;
+    --hero-height: 75vh;
+    --hero-image-max-height: 57vh;
 }
 
 html {
@@ -630,6 +636,7 @@ body {
     display: grid;
     gap: var(--spacing-lg);
     align-items: center;
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -656,6 +663,7 @@ body {
     .section-layout--img-right {
         grid-template-columns: 1fr;
         gap: var(--spacing-md);
+        justify-items: center;
     }
 }
 
@@ -683,9 +691,9 @@ body {
 
 /* Portrait photo (3:4 aspect ratio) - reusable across pages */
 .photo-portrait {
-    width: 100%;
+    width: auto;
     max-width: 400px;
-    height: auto;
+    max-height: var(--hero-image-max-height);
     aspect-ratio: 3 / 4;
     object-fit: cover;
     object-position: center 20%;
@@ -702,6 +710,12 @@ body {
 
     .photo-portrait {
         max-width: 350px;
+    }
+}
+
+@media (max-width: 950px) {
+    .photo-portrait {
+        max-height: none;
     }
 }
 
@@ -3475,7 +3489,10 @@ body {
    HERO G - New Landing Hero
    =========================================== */
 .hero-g {
-    padding: var(--spacing-xl) var(--spacing-sm);
+    padding: var(--spacing-sm);
+    padding-top: var(--hero-padding-top);
+    padding-bottom: var(--hero-padding-bottom);
+    min-height: var(--hero-height);
     background: var(--gradient-hero);
 }
 
@@ -3483,7 +3500,7 @@ body {
     display: grid;
     grid-template-columns: auto 1fr;
     gap: var(--spacing-lg);
-    align-items: center;
+    align-items: start;
     max-width: var(--max-width);
     margin: 0 auto;
 }
@@ -3496,6 +3513,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-sm);
+    align-self: center;
 }
 
 .hero-g-title-row {
@@ -3710,9 +3728,11 @@ body {
     padding-top: var(--spacing-xs);
 }
 
-@media (max-width: 795px) {
+@media (max-width: 950px) {
     .hero-g {
-        padding: var(--spacing-lg) var(--spacing-sm);
+        min-height: auto;
+        padding-top: var(--spacing-lg);
+        padding-bottom: var(--spacing-md);
     }
 
     .hero-g-content {
