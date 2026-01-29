@@ -3705,7 +3705,7 @@ body {
 
 
 
-@media (max-width: 767px) {
+@media (max-width: 795px) {
     .hero-g {
         padding: var(--spacing-lg) var(--spacing-sm);
     }
@@ -3748,9 +3748,7 @@ body {
     .hero-g-badges {
         align-items: center;
     }
-}
 
-@media (max-width: 575px) {
     .hero-g-cta-cards {
         grid-template-columns: 1fr;
     }
