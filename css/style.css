@@ -27,6 +27,13 @@
     --success-color: #10b981;
     --star-color: #fbbf24;
 
+    /* Gold colors (for awards) */
+    --gold-color: #d4af37;
+    --gold-light: #f4d89f;
+    --gold-dark: #9d8b5e;
+    --gold-05: rgba(212, 175, 55, 0.05);
+    --gold-10: rgba(212, 175, 55, 0.1);
+
     /* Gradients */
     --gradient-hero: linear-gradient(135deg, #f8fafc 0%, #eef2f7 100%);
     --gradient-cta: linear-gradient(135deg, var(--primary-color-light), var(--secondary-color));
