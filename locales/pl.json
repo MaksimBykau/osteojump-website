@@ -109,8 +109,15 @@
         "hero_title": "Opinie",
         "hero_rating": "Wszystkie opinie na 5.0",
         "hero_platforms": "100+ na Instagram • 40+ na Booksy • 10+ na Google",
+        "platforms": {
+            "instagram": "100+ na Instagram",
+            "booksy": "40+ na Booksy",
+            "google": "10+ na Google"
+        },
         "award_title": "Orły Medycyny 2025",
         "award_subtitle": "Laureat konkursu Orły Medycyny 2025 w Warszawie",
+        "award_line1": "Laureat konkursu",
+        "award_line2": "w Warszawie",
         "award_description": "Ta nagroda jest przyznawana za wysokie oceny w dziedzinie medycyny. Dziękuję wszystkim klientom za zaufanie i opinie!",
         "award_link": "Zobacz na orlymedycyny.pl",
         "featured_title": "Szczegółowe opinie",

@@ -46,6 +46,35 @@
 .stats-card .stats-platforms {
     font-size: clamp(0.9rem, 2vw, 1.1rem);
     color: var(--text-muted);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.platform-separator {
+    color: var(--text-muted);
+}
+
+.platform-instagram {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 500;
+}
+
+.platform-booksy {
+    color: #3d8c8c;
+    font-weight: 500;
+}
+
+.platform-google {
+    background: linear-gradient(90deg, #4285F4, #34A853, #FBBC05, #EA4335);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 500;
 }
 
 /* Gap for award section content */
@@ -340,22 +369,22 @@
 }
 
 .platform-btn--booksy {
-    background-color: #6366f1;
+    background-color: #3d8c8c;
     color: white;
 }
 
 .platform-btn--booksy:hover {
-    background-color: #4f46e5;
+    background-color: #2d7a7a;
     transform: translateY(-2px);
 }
 
 .platform-btn--google {
-    background-color: #4285f4;
+    background: linear-gradient(90deg, #4285F4 0%, #34A853 33%, #FBBC05 66%, #EA4335 100%);
     color: white;
 }
 
 .platform-btn--google:hover {
-    background-color: #3367d6;
+    opacity: 0.9;
     transform: translateY(-2px);
 }
 

@@ -109,8 +109,15 @@
         "hero_title": "Bewertungen",
         "hero_rating": "Alle Bewertungen 5.0",
         "hero_platforms": "100+ auf Instagram • 40+ auf Booksy • 10+ auf Google",
+        "platforms": {
+            "instagram": "100+ auf Instagram",
+            "booksy": "40+ auf Booksy",
+            "google": "10+ auf Google"
+        },
         "award_title": "Orły Medycyny 2025",
         "award_subtitle": "Preisträgerin des Wettbewerbs Orły Medycyny 2025 in Warschau",
+        "award_line1": "Preisträgerin",
+        "award_line2": "in Warschau",
         "award_description": "Diese Auszeichnung wird für hohe Bewertungen im medizinischen Bereich verliehen. Vielen Dank an alle Kunden für Ihr Vertrauen und Ihre Bewertungen!",
         "award_link": "Auf orlymedycyny.pl ansehen",
         "featured_title": "Ausführliche Bewertungen",

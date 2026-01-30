@@ -109,8 +109,15 @@
         "hero_title": "Reviews",
         "hero_rating": "All reviews rated 5.0",
         "hero_platforms": "100+ on Instagram • 40+ on Booksy • 10+ on Google",
+        "platforms": {
+            "instagram": "100+ on Instagram",
+            "booksy": "40+ on Booksy",
+            "google": "10+ on Google"
+        },
         "award_title": "Orły Medycyny 2025",
         "award_subtitle": "Laureate of Orły Medycyny 2025 in Warsaw",
+        "award_line1": "Laureate of",
+        "award_line2": "in Warsaw",
         "award_description": "This award is given for high ratings in the medical field. Thank you to all clients for your trust and reviews!",
         "award_link": "View on orlymedycyny.pl",
         "featured_title": "Detailed Reviews",
