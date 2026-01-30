@@ -689,6 +689,12 @@ body {
     object-fit: cover;
 }
 
+/* Hero photo wrapper - unified across all hero sections */
+.hero-photo-wrapper {
+    position: relative;
+    flex-shrink: 0;
+}
+
 /* Portrait photo (3:4 aspect ratio) - reusable across pages */
 .photo-portrait {
     width: auto;
@@ -3505,9 +3511,8 @@ body {
     margin: 0 auto;
 }
 
-.hero-g-photo-wrapper {
-    flex-shrink: 0;
-}
+/* hero-photo-wrapper in hero-g context - no additional styles needed,
+   base styles from .hero-photo-wrapper are sufficient */
 
 .hero-g-text {
     display: flex;
@@ -3740,7 +3745,7 @@ body {
         text-align: center;
     }
 
-    .hero-g-photo-wrapper {
+    .hero-g .hero-photo-wrapper {
         display: flex;
         justify-content: center;
     }

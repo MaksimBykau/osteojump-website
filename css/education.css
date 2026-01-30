@@ -17,20 +17,6 @@
     grid-template-columns: auto 1fr;
 }
 
-.hero-top-image-wrapper {
-    position: relative;
-}
-
-.hero-top-image {
-    width: auto;
-    max-height: var(--hero-image-max-height);
-    aspect-ratio: 3 / 4;
-    object-fit: cover;
-    object-position: center 20%;
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-lg);
-}
-
 .hero-top-text {
     font-size: clamp(1rem, 2.5vw, 1.25rem);
     font-weight: 400;
@@ -303,15 +289,9 @@
         text-align: center;
     }
 
-    .hero-top-image-wrapper {
+    .education-hero-top .hero-photo-wrapper {
         display: flex;
         justify-content: center;
-    }
-
-    .hero-top-image {
-        max-height: none;
-        width: clamp(220px, 60vw, 350px);
-        height: auto;
     }
 
     .education-hero-top .section-content {
@@ -320,10 +300,6 @@
 }
 
 @media (max-width: 767px) {
-    .hero-top-image {
-        border-radius: var(--radius-md);
-    }
-
     .hero-top-text {
         font-size: 1rem;
     }
