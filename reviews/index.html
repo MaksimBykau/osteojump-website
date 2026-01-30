@@ -128,14 +128,18 @@
                         <img src="/images/reviews/feedback_photo.jpeg" alt="Orły Medycyny 2025" class="photo-portrait">
                     </div>
                     <div class="section-content award-content">
-                        <div class="award-badges">
-                            <img src="/images/reviews/orly-medycyny-logo.png" alt="Orły Medycyny" class="award-logo">
-                            <div class="award-medals">
+                        <a href="https://www.orlymedycyny.pl/profile-892351-osteojump" target="_blank" rel="noopener" class="award-link-block">
+                            <span class="award-images">
+                                <img src="/images/reviews/orly-medycyny-logo.png" alt="Orły Medycyny" class="award-logo">
                                 <img src="/images/reviews/gold-medal-2025.png" alt="Gold Medal 2025" class="award-medal">
                                 <img src="/images/reviews/laureate-medal-2025.png" alt="Laureate Medal 2025" class="award-medal">
-                            </div>
-                        </div>
-                        <a href="https://www.orlymedycyny.pl/profile-892351-osteojump" target="_blank" rel="noopener" class="award-title-link" data-i18n="reviews.award_subtitle">Лауреат конкурса Orły Medycyny 2025 в Варшаве</a>
+                            </span>
+                            <span class="award-title">
+                                <span data-i18n="reviews.award_line1">Лауреат конкурса</span><br>
+                                <span class="award-title-name">Orły Medycyny 2025</span><br>
+                                <span data-i18n="reviews.award_line2">в Варшаве</span>
+                            </span>
+                        </a>
                         <p class="award-description" data-i18n="reviews.award_description">Эта награда присуждается за высокие оценки в сфере медицины. Благодарю всех клиентов за доверие и отзывы!</p>
                     </div>
                 </div>
@@ -145,13 +149,11 @@
         <!-- Rating Stats Section -->
         <section class="reviews-stats">
             <div class="container">
-                <div class="stats-subtitle">
-                    <div class="stats-rating">
-                        <span class="rating-stars">★★★★★</span>
-                        <span data-i18n="reviews.hero_rating">Все отзывы на 5.0</span>
-                    </div>
-                    <div class="stats-platforms" data-i18n="reviews.hero_platforms">40+ на Booksy • 10+ на Google • 100+ в Instagram</div>
-                </div>
+                <a href="#reviews-cta" class="stats-card stats-row">
+                    <span class="rating-stars">★★★★★</span>
+                    <span class="stats-rating" data-i18n="reviews.hero_rating">Все отзывы на 5.0</span>
+                    <span class="stats-platforms" data-i18n="reviews.hero_platforms">40+ на Booksy • 10+ на Google • 100+ в Instagram</span>
+                </a>
             </div>
         </section>
 
@@ -273,7 +275,7 @@
         </section>
 
         <!-- Reviews CTA Section -->
-        <section class="reviews-cta">
+        <section class="reviews-cta" id="reviews-cta">
             <div class="container">
                 <h2 class="cta-title" data-i18n="reviews.cta_thanks_title">Спасибо вам за отзывы!</h2>
                 <p class="cta-text" data-i18n="reviews.cta_thanks_text">Ваши отзывы помогают другим людям и вдохновляют меня на развитие.</p>

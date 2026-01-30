@@ -26,34 +26,31 @@
     background: var(--bg-color);
 }
 
-.reviews-stats .stats-subtitle {
-    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
-    display: flex;
+/* Stats card - extends stats-row from style.css */
+.stats-card {
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
+    gap: 1rem;
+    max-width: 500px;
+    margin: 0 auto;
 }
 
-.reviews-stats .stats-rating {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
+
+.stats-card .rating-stars {
+    color: var(--star-color);
+    letter-spacing: 3px;
+    font-size: clamp(2rem, 5vw, 2.5rem);
+}
+
+.stats-card .stats-rating {
     font-size: clamp(1.5rem, 3vw, 2rem);
     font-weight: 600;
     color: var(--text-color);
 }
 
-.reviews-stats .stats-platforms {
+.stats-card .stats-platforms {
     font-size: clamp(0.9rem, 2vw, 1.1rem);
     color: var(--text-muted);
-}
-
-.rating-stars {
-    color: var(--star-color);
-    letter-spacing: 2px;
-    font-size: clamp(1.8rem, 4vw, 2.5rem);
 }
 
 .award-content {
