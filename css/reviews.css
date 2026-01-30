@@ -68,9 +68,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.25rem;
+    gap: 1.75rem;
     text-decoration: none;
-    padding: 1.5rem 2rem 1.75rem;
+    padding: 2.25rem 3rem 2.5rem;
     border-radius: var(--radius-md);
     background: var(--bg-color);
     border: 1px solid var(--border-color);
@@ -560,6 +560,6 @@
     }
 
     .award-link-block {
-        padding: 1.25rem 1.5rem 1.5rem;
+        padding: 1.75rem 2.25rem 2rem;
     }
 }
