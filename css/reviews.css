@@ -49,11 +49,21 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 0.25rem 0.5rem;
+}
+
+.platform-instagram,
+.platform-booksy {
+    display: flex;
+    align-items: center;
     gap: 0.5rem;
 }
 
-.platform-separator {
+.platform-instagram::after,
+.platform-booksy::after {
+    content: "•";
     color: var(--text-muted);
+    font-weight: 400;
 }
 
 .platform-instagram {
@@ -526,6 +536,22 @@
 }
 
 @media (max-width: 767px) {
+    .stats-card .stats-platforms {
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+
+    .platform-instagram,
+    .platform-booksy {
+        display: inline;
+        gap: 0;
+    }
+
+    .platform-instagram::after,
+    .platform-booksy::after {
+        display: none;
+    }
+
     .featured-grid {
         grid-template-columns: 1fr;
     }
