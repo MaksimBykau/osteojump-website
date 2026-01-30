@@ -1,20 +1,33 @@
 /* Reviews Page Styles */
 
-/* Hero Section */
-.reviews-hero {
-    padding: var(--spacing-xl) var(--spacing-sm);
+/* ============================================
+   Hero Section - Award (first section)
+   ============================================ */
+.reviews-award {
+    padding: var(--spacing-sm);
+    padding-top: var(--hero-padding-top);
+    padding-bottom: var(--hero-padding-bottom);
+    height: var(--hero-height);
+    overflow: hidden;
+    background: var(--gradient-hero);
+}
+
+/* Override section-layout for reviews hero - same as education */
+.reviews-award .section-layout--img-left {
+    grid-template-columns: auto 1fr;
+}
+
+/* ============================================
+   Rating Stats Section (blue block)
+   ============================================ */
+.reviews-stats {
+    padding: var(--spacing-lg) var(--spacing-sm);
     text-align: center;
     background: var(--gradient-cta);
     color: white;
 }
 
-.reviews-hero .hero-title {
-    font-size: clamp(2rem, 5vw, 3rem);
-    margin-bottom: var(--spacing-sm);
-    font-weight: 700;
-}
-
-.reviews-hero .hero-subtitle {
+.reviews-stats .stats-subtitle {
     font-size: clamp(1.1rem, 2.5vw, 1.5rem);
     opacity: 0.95;
     display: flex;
@@ -24,7 +37,7 @@
     gap: 0.5rem;
 }
 
-.reviews-hero .hero-rating {
+.reviews-stats .stats-rating {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -33,7 +46,7 @@
     font-weight: 600;
 }
 
-.reviews-hero .hero-platforms {
+.reviews-stats .stats-platforms {
     font-size: clamp(0.9rem, 2vw, 1.1rem);
     opacity: 0.9;
 }
@@ -42,12 +55,6 @@
     color: var(--star-color);
     letter-spacing: 2px;
     font-size: clamp(1.8rem, 4vw, 2.5rem);
-}
-
-/* Award Section */
-.reviews-award {
-    padding: var(--spacing-xl) var(--spacing-sm);
-    background-color: var(--section-bg);
 }
 
 .award-content {
@@ -487,15 +494,32 @@
 }
 
 /* Responsive */
-@media (max-width: 767px) {
-    .reviews-hero {
-        padding: var(--spacing-lg) var(--spacing-sm);
-    }
 
+/* Reviews award hero switches to single column at 850px - same as other pages */
+@media (max-width: 850px) {
     .reviews-award {
-        padding: var(--spacing-lg) var(--spacing-sm);
+        height: auto;
+        overflow: visible;
+        padding-top: var(--spacing-lg);
+        padding-bottom: var(--spacing-md);
     }
 
+    .reviews-award .section-layout--img-left {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .reviews-award .hero-photo-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+
+    .reviews-award .section-content {
+        align-items: center;
+    }
+}
+
+@media (max-width: 767px) {
     .featured-grid {
         grid-template-columns: 1fr;
     }
@@ -523,13 +547,13 @@
 }
 
 @media (max-width: 575px) {
-    .reviews-hero .hero-subtitle {
+    .reviews-stats .stats-subtitle {
         flex-direction: column;
         gap: 0.25rem;
     }
 
     /* Stars and rating text on separate lines */
-    .reviews-hero .hero-rating {
+    .reviews-stats .stats-rating {
         flex-direction: column;
         gap: 0.25rem;
     }
