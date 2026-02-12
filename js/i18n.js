@@ -1,7 +1,7 @@
 class I18n {
     constructor() {
-        this.supportedLangs = ['ru', 'en', 'de', 'pl', 'uk'];
-        this.defaultLang = 'en';
+        this.supportedLangs = ['pl', 'uk', 'en', 'de', 'ru'];
+        this.defaultLang = 'pl';
         this.currentLang = this.detectLanguage();
         this.translations = {};
         this.translationsVersion = '5'; // Increment this when translations are updated
