@@ -92,9 +92,16 @@
         "book_btn": "Zarezerwuj na Booksy",
         "contact_btn": "Napisz na WhatsApp",
         "note_text": "Ceny podane są w polskich złotych (PLN). Przelicznik na euro jest przybliżony.",
-        "promo_banner": "🎉 10% zniżki do końca stycznia!",
-        "price_was": "Było",
-        "price_savings": "Oszczędzasz"
+        "gift_certificate": {
+            "description": "Troska, którą można podarować",
+            "step1": "Wybierz pakiet",
+            "step2": "Wypełnij dane",
+            "step3": "Napisz ciepłe słowa",
+            "step4": "Zapłać i pobierz",
+            "price": "🎁 Bon na osteopatię od 350 PLN",
+            "buy_btn": "Dowiedz się więcej o bonach",
+            "note": "Zakup online w kilka minut"
+        }
     },
     "doctor": {
         "intro": "Jestem Bykava Hanna, osteopata od 2018 roku. Wierzę w ludzi i każdego dnia czynię ten świat odrobinę lepszym.",
@@ -447,10 +454,11 @@
         "blik_title": "Czy można zapłacić przez BLIK?",
         "blik_answer": "Tak, płatność BLIK jest dostępna. To szybkie i wygodne — wystarczy podać kod z aplikacji bankowej.",
         "discounts_title": "Czy są zniżki?",
-        "discounts_answer": "Tak, są pakiety rodzinne i zniżki przy zakupie kilku sesji. Szczegóły na stronie cennika lub zapytaj przy rezerwacji.",
+        "discounts_answer": "Tak! Jest kilka opcji: Pakiety rodzinne — zniżka przy rezerwacji kilku członków rodziny. Booksy — rezerwacja przez platformę Booksy, gdzie pojawiają się okazjonalne promocje. Warunki indywidualne — dla pacjentów wymagających regularnej długoterminowej terapii (np. dzieci z zaburzeniami ze spektrum autyzmu — minimum 2 razy w miesiącu, od 6 miesięcy), możemy omówić indywidualne warunki.",
         "discounts_link": "Zobacz cennik →",
         "gift_certificate_title": "Czy mogę kupić bon podarunkowy?",
-        "gift_certificate_answer": "Tak, można kupić bon na dowolną kwotę lub konkretną usługę. Świetny prezent dla bliskich — napisz do mnie, a przygotuję bon.",
+        "gift_certificate_answer": "Tak! Bon można kupić online w kilka minut. Wybierz pakiet (dla dorosłego, dziecka, kobiety w ciąży lub rodziny), wypełnij dane, zapłać bezpiecznie przez Stripe — i bon jest gotowy do pobrania. Ważny przez 3 miesiące.",
+        "gift_certificate_link": "Kup bon →",
         "booking_without_booksy_title": "Czy mogę umówić się bez Booksy?",
         "booking_without_booksy_answer": "Tak, można umówić się przez WhatsApp, Telegram lub telefonicznie. Booksy jest wygodny do samodzielnego wyboru terminu, ale jeśli wolisz kontakt osobisty — napisz lub zadzwoń.",
         "no_convenient_time_title": "Nie mogę znaleźć dogodnego terminu w grafiku",

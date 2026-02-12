@@ -24,30 +24,9 @@
     margin: 0 auto;
 }
 
-/* Promo Banner */
-.promo-banner {
-    display: inline-block;
-    margin-top: 1rem;
-    padding: 0.75rem 1.5rem;
-    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-    color: white;
-    font-weight: 600;
-    font-size: clamp(0.95rem, 2.5vw, 1.1rem);
-    border-radius: 50px;
-    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
-}
-
-/* Price with Discount */
+/* Price Block */
 .price-block {
     margin-bottom: 1rem;
-}
-
-.price-old {
-    display: block;
-    font-size: 0.9rem;
-    color: var(--border-light);
-    text-decoration: line-through;
-    margin-bottom: 0.25rem;
 }
 
 .price-current {
@@ -56,13 +35,61 @@
     gap: 0.5rem;
 }
 
-.price-savings {
-    display: block;
-    font-size: 0.85rem;
-    color: var(--success-color);
-    font-weight: 600;
-    margin-top: 0.25rem;
+/* ============================================
+   Gift Certificate Section
+   ============================================ */
+.gift-certificate-section {
+    padding: var(--spacing-lg) var(--spacing-sm);
+    background-color: var(--section-bg);
+    text-align: center;
 }
+
+.gift-certificate-heading {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: var(--spacing-sm);
+}
+
+.gift-certificate-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin: 0 auto var(--spacing-md);
+    width: fit-content;
+}
+
+.gift-step {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-align: left;
+}
+
+.gift-step i {
+    font-size: 1.25rem;
+    color: var(--primary-color);
+    width: 24px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.gift-step span {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+}
+
+.gift-certificate-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 2rem;
+    padding: 0.6rem 1.5rem;
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-bottom: var(--spacing-md);
+    box-shadow: var(--shadow-sm);
+}
+
 
 /* ============================================
    Services Section
@@ -355,6 +382,7 @@
         align-items: center;
         width: 100%;
     }
+
 }
 
 /* Mobile */
@@ -393,6 +421,7 @@
         width: 100%;
         text-align: center;
     }
+
 }
 
 /* Small Mobile */

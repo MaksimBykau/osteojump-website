@@ -13,6 +13,10 @@ Always use Context7 MCP when I need library/API documentation, code generation, 
 - Замена существующей иконки на более подходящую
 - Поиск иконки по ключевому слову
 
+## Общее правило
+
+**Всегда используй MCP серверы, агентов и скилы**, если они настроены в проекте. Не делай вручную то, что можно сделать через доступные инструменты (HugeIcons для иконок, Context7 для документации, `/screenshot` для скриншотов, `/translate` для переводов и т.д.).
+
 ## Структура проекта
 
 ```
@@ -36,6 +40,12 @@ Always use Context7 MCP when I need library/API documentation, code generation, 
 - `/faq` - Вопросы
 - `/education` - Образование
 - `/location` - Как добраться
+
+## Подарочные сертификаты
+
+- Платформа: https://cert.osteojump.pl/
+- Упоминается: секция на странице `/prices`, ответ в FAQ `/faq#gift-certificate`
+- Ключи переводов: `prices.gift_certificate.*`, `faq.gift_certificate_answer`, `faq.gift_certificate_link`
 
 ## Команды
 
@@ -99,6 +109,27 @@ make thumbnails    # Сгенерировать превью для диплом
 | `.section-content` | `.motivation-text p` (font-size) |
 | `.section-title` | `.journey-collage` (специфичный коллаж) |
 | Респонсив для layout | Респонсив для специфичных элементов |
+
+### Чередование фонов секций
+
+Секции на каждой странице **чередуют фон** для визуального ритма:
+
+- `var(--bg-color)` (#ffffff) — белый фон
+- `var(--section-bg)` (#f9fafb) — светло-серый фон
+
+**Правило:** каждая следующая секция использует противоположный фон. Hero-секция может использовать `var(--gradient-hero)`.
+
+**Примеры (главная, обо мне, отзывы):**
+```
+Hero        → var(--gradient-hero)
+Section 1   → var(--bg-color)
+Section 2   → var(--section-bg)
+Section 3   → var(--bg-color)
+Section 4   → var(--section-bg)
+...
+```
+
+**Не используй** яркие/насыщенные градиенты (типа `var(--gradient-cta)`) для фона целой секции — они слишком давящие.
 
 ### Отладка стилей
 

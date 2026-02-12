@@ -92,9 +92,16 @@
         "book_btn": "Auf Booksy buchen",
         "contact_btn": "Nachricht auf WhatsApp",
         "note_text": "Preise sind in Polnischen Złoty (PLN) angegeben. Die Euro-Umrechnung ist ungefähr.",
-        "promo_banner": "🎉 10% Rabatt bis Ende Januar!",
-        "price_was": "Vorher",
-        "price_savings": "Sie sparen"
+        "gift_certificate": {
+            "description": "Fürsorge, die man verschenken kann",
+            "step1": "Paket wählen",
+            "step2": "Daten ausfüllen",
+            "step3": "Warme Worte schreiben",
+            "step4": "Bezahlen und herunterladen",
+            "price": "🎁 Osteopathie-Gutschein ab 350 PLN",
+            "buy_btn": "Mehr über Gutscheine erfahren",
+            "note": "Online in wenigen Minuten"
+        }
     },
     "doctor": {
         "intro": "Ich bin Bykava Hanna, Osteopathin seit 2018. Ich glaube an die Menschen und mache diese Welt jeden Tag ein wenig besser.",
@@ -447,10 +454,11 @@
         "blik_title": "Kann ich mit BLIK bezahlen?",
         "blik_answer": "Ja, BLIK-Zahlung ist möglich. Es ist schnell und bequem — nennen Sie einfach den Code aus Ihrer Banking-App.",
         "discounts_title": "Gibt es Rabatte?",
-        "discounts_answer": "Ja, es gibt Familienpakete und Rabatte beim Kauf mehrerer Sitzungen. Details auf der Preisseite oder fragen Sie bei der Buchung.",
+        "discounts_answer": "Ja! Es gibt mehrere Möglichkeiten: Familienpakete — Rabatt bei Buchung mehrerer Familienmitglieder. Booksy — Buchung über die Booksy-Plattform, wo gelegentlich Aktionen verfügbar sind. Individuelle Konditionen — für Patienten, die eine regelmäßige Langzeitbehandlung benötigen (z.B. Kinder mit Autismus-Spektrum-Störungen — mindestens 2 mal pro Monat, ab 6 Monaten), können wir individuelle Konditionen besprechen.",
         "discounts_link": "Preise ansehen →",
         "gift_certificate_title": "Kann ich einen Geschenkgutschein kaufen?",
-        "gift_certificate_answer": "Ja, Sie können einen Gutschein für jeden Betrag oder eine bestimmte Leistung erwerben. Ein tolles Geschenk für Ihre Lieben — schreiben Sie mir, und ich bereite den Gutschein vor.",
+        "gift_certificate_answer": "Ja! Den Gutschein können Sie online in wenigen Minuten kaufen. Wählen Sie ein Paket (für Erwachsene, Kinder, Schwangere oder Familien), geben Sie die Daten ein, bezahlen Sie sicher über Stripe — und der Gutschein steht zum Download bereit. 3 Monate gültig.",
+        "gift_certificate_link": "Gutschein kaufen →",
         "booking_without_booksy_title": "Kann ich ohne Booksy buchen?",
         "booking_without_booksy_answer": "Ja, Sie können über WhatsApp, Telegram oder Telefon buchen. Booksy ist praktisch für die eigenständige Terminwahl, aber wenn Sie persönlichen Kontakt bevorzugen — schreiben oder rufen Sie an.",
         "no_convenient_time_title": "Ich finde keinen passenden Termin im Kalender",

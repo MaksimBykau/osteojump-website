@@ -92,9 +92,16 @@
         "book_btn": "Book on Booksy",
         "contact_btn": "Message on WhatsApp",
         "note_text": "Prices are in Polish zloty (PLN). Euro conversion is approximate.",
-        "promo_banner": "🎉 10% off until end of January!",
-        "price_was": "Was",
-        "price_savings": "You save"
+        "gift_certificate": {
+            "description": "Care you can give as a gift",
+            "step1": "Choose a package",
+            "step2": "Fill in the details",
+            "step3": "Write warm words",
+            "step4": "Pay and download",
+            "price": "🎁 Osteopathy certificate from 350 PLN",
+            "buy_btn": "Learn more about certificates",
+            "note": "Online in just a couple of minutes"
+        }
     },
     "doctor": {
         "intro": "I am Bykava Hanna, an osteopath since 2018. I believe in people and make this world a little better every day.",
@@ -447,10 +454,11 @@
         "blik_title": "Can I pay with BLIK?",
         "blik_answer": "Yes, BLIK payment is available. It's fast and convenient — just share the code from your banking app.",
         "discounts_title": "Are there any discounts?",
-        "discounts_answer": "Yes, there are family packages and discounts when purchasing multiple sessions. See the prices page for details or ask when booking.",
+        "discounts_answer": "Yes! There are several options: Family packages — discounts when booking multiple family members together. Booksy — book through the Booksy platform, where occasional promotions are available. Individual conditions — for patients requiring regular long-term treatment (e.g., children with autism spectrum disorders — at least 2 times a month, from 6 months), we can discuss individual terms.",
         "discounts_link": "View prices →",
         "gift_certificate_title": "Can I buy a gift certificate?",
-        "gift_certificate_answer": "Yes, you can purchase a certificate for any amount or specific service. A great gift for loved ones — write to me, and I'll prepare the certificate.",
+        "gift_certificate_answer": "Yes! You can purchase a certificate online in just a couple of minutes. Choose a package (for an adult, child, pregnant woman, or family), fill in the details, pay securely via Stripe — and the certificate is ready to download. Valid for 3 months.",
+        "gift_certificate_link": "Buy a certificate →",
         "booking_without_booksy_title": "Can I book without Booksy?",
         "booking_without_booksy_answer": "Yes, you can book via WhatsApp, Telegram, or phone. Booksy is convenient for choosing your own time, but if you prefer personal contact — just write or call.",
         "no_convenient_time_title": "I can't find a convenient time in the schedule",
