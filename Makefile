@@ -1,4 +1,4 @@
-.PHONY: help server server-simple stop restart install-deps thumbnails clean
+.PHONY: help server server-simple stop restart install-deps thumbnails clean css-vars locale-keys
 
 # Default target
 help:
@@ -9,6 +9,8 @@ help:
 	@echo "  make restart     - Stop and start the server"
 	@echo "  make thumbnails  - Generate thumbnails for diplomas"
 	@echo "  make clean       - Remove generated thumbnails"
+	@echo "  make css-vars    - List all CSS custom properties"
+	@echo "  make locale-keys - Show translation key structure"
 
 # Start server with clean URL support
 server:
@@ -46,6 +48,17 @@ thumbnails:
 		fi \
 	done
 	@echo "✅ Thumbnails generation complete!"
+
+# List all CSS custom properties with values
+css-vars:
+	@grep -h -E '^\s+\-\-[a-zA-Z-]+:' css/style.css | sed 's/^[[:space:]]*//' | sort -u
+
+# Show translation key structure (top-level keys with subkeys)
+locale-keys:
+	@python3 -c "\
+	import json; \
+	data = json.load(open('locales/en.json')); \
+	[print(f'{k}: {sorted(v.keys()) if isinstance(v, dict) else v}') for k, v in data.items()]"
 
 # Clean generated files
 clean:

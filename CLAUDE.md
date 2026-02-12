@@ -9,7 +9,7 @@
 **ОБЯЗАТЕЛЬНО прочитай нужные доки перед началом работы:**
 
 - Написание/редактирование текстов → прочитай `docs/strategist/writing-style.md` и `docs/strategist/doctor-profile.md`
-- Новая страница или секция → прочитай `docs/TECHNICAL.md`
+- Новая страница или секция → прочитай `docs/TECHNICAL.md` (включая Page Map)
 - Работа с переводами → прочитай `docs/TRANSLATE.md`
 - Работа со стилями/вёрсткой → CSS rules ниже в этом файле
 - Деплой → прочитай `docs/DEPLOYMENT.md`
@@ -27,7 +27,8 @@
 
 - Обсуждаем новую идею/задачу для сайта → **запиши в `TODO.md`** с датой `(YYYY-MM)`
 - Задача выполнена → **перенеси из `TODO.md` в `TODO-done.md`** с датой `(YYYY-MM-DD)`
-- Формат: `- [ ] Описание задачи (YYYY-MM)`, подробности — на следующей строке с отступом
+- Приняли важное решение (выбор подхода, отказ от варианта) → **допиши в `docs/DECISIONS.md`**
+- Формат TODO: `- [ ] Описание задачи (YYYY-MM)`, подробности — на следующей строке с отступом
 - Категории в TODO.md: `## Контент`, `## Дизайн`, `## Фичи`, `## Техническое`
 
 ## General Rules
@@ -36,6 +37,7 @@
 
 - **Context7** — Always use Context7 MCP when I need library/API documentation, code generation, setup or configuration steps without me having to explicitly ask.
 - **HugeIcons** — При поиске иконок используй MCP сервер `hugeicons` (поиск, замена, добавление иконок).
+- **Субагенты** — для `/translate check`, простого поиска и исследования кода используй `model: haiku` (дешевле в 10-15x).
 
 ---
 
@@ -68,6 +70,8 @@
 make server        # Запустить локальный сервер (порт 8000)
 make stop          # Остановить сервер
 make thumbnails    # Сгенерировать превью для дипломов
+make css-vars      # Список всех CSS переменных (вместо чтения style.css)
+make locale-keys   # Структура ключей переводов (вместо чтения JSON)
 ```
 
 ---
@@ -88,6 +92,7 @@ make thumbnails    # Сгенерировать превью для диплом
 | docs/ABOUT.md | Целевая аудитория |
 | TODO.md | Открытые задачи и идеи |
 | TODO-done.md | Архив выполненных задач |
+| docs/DECISIONS.md | Лог ключевых решений (append-only) |
 
 ---
 

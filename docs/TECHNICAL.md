@@ -76,6 +76,28 @@ make clean
 ```
 4. Добавьте код языка в массив `supportedLangs` в `js/i18n.js`
 
+## Page Map
+
+При создании/изменении страницы — **обнови эту таблицу**.
+
+| Страница | HTML | CSS | Ключи переводов |
+|----------|------|-----|-----------------|
+| `/` | `index.html` | `css/style.css` | `hero.*`, `features.*`, `landing.*`, `doctor.*` |
+| `/about` | `about/index.html` | `css/about.css` | `about_page.*` |
+| `/prices` | `prices/index.html` | `css/prices.css` | `prices.*` |
+| `/reviews` | `reviews/index.html` | `css/reviews.css` | `reviews.*` |
+| `/faq` | `faq/index.html` | `css/faq.css` | `faq.*` |
+| `/education` | `education/index.html` | `css/education.css` | `education.*` |
+| `/location` | `location/index.html` | `css/location.css` | `location.*` |
+| `/contacts` | `contacts/index.html` | `css/contacts.css` | `contacts_page.*` |
+| `/osteopathy` | `osteopathy/index.html` | `css/osteopathy.css` | `osteopathy_page.*` |
+| `/consultation` | `consultation/index.html` | `css/consultation.css` | `consultation_page.*` |
+| `/appointment` | `appointment/index.html` | `css/appointment.css` | `appointment_page.*` |
+
+Общие ключи (все страницы): `nav.*`, `footer.*`, `action_bar.*`, `contacts.*`, `map.*`
+
+Общие стили (все страницы): `css/style.css` (3793 строк) — layout, nav, footer, responsive
+
 ## Подарочные сертификаты
 
 - Платформа: https://cert.osteojump.pl/
