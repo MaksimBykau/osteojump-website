@@ -12,22 +12,19 @@
 
 ```
 osteojump/
-├── index.html          # Главная страница
+├── index.html              # Главная страница
+├── {page}/index.html       # Подстраницы (about, prices, faq, ...)
 ├── css/
-│   └── style.css      # Стили с адаптивной версткой
+│   ├── style.css           # Общие стили (layout, nav, footer, responsive)
+│   └── {page}.css          # Стили конкретной страницы
 ├── js/
-│   ├── i18n.js        # Логика переключения языков
-│   └── main.js        # Основная логика приложения
-├── locales/           # JSON файлы с переводами
-│   ├── ru.json
-│   ├── en.json
-│   ├── de.json
-│   ├── pl.json
-│   └── uk.json
-└── .github/
-    └── workflows/
-        └── deploy.yml # GitHub Actions workflow
+│   ├── i18n.js             # Логика переключения языков
+│   └── main.js             # Основная логика
+├── locales/                # Переводы (en, ru, pl, uk, de)
+└── .github/workflows/      # CI/CD
 ```
+
+Полный маппинг страниц на файлы — см. **Page Map** ниже.
 
 ## Локальная разработка
 
