@@ -125,12 +125,17 @@
         <section class="prices-hero">
             <div class="container">
                 <h1 class="prices-hero-title" data-i18n="prices.hero_title">Цены на услуги</h1>
-                <p class="prices-hero-subtitle" data-i18n="prices.hero_subtitle">Прозрачные цены, никаких скрытых платежей</p>
+                <div class="prices-hero-tags">
+                    <a href="#individual" class="prices-hero-tag"><i class="hgi-stroke hgi-user-02"></i> <span data-i18n="prices.hero_tag_individual">Индивидуальные</span></a>
+                    <a href="#family" class="prices-hero-tag"><i class="hgi-stroke hgi-user-group"></i> <span data-i18n="prices.hero_tag_family">Семейные</span></a>
+                    <a href="#consultation" class="prices-hero-tag"><i class="hgi-stroke hgi-bubble-chat"></i> <span data-i18n="prices.hero_tag_consultation">Консультации</span></a>
+                    <a href="#certificates" class="prices-hero-tag"><i class="hgi-stroke hgi-gift"></i> <span data-i18n="prices.hero_tag_certificates">Сертификаты</span></a>
+                </div>
             </div>
         </section>
 
         <!-- Individual Services -->
-        <section class="prices-services">
+        <section class="prices-services" id="individual">
             <div class="container">
                 <h2 class="section-title" data-i18n="prices.individual_title">Индивидуальные приёмы</h2>
                 <div class="services-grid">
@@ -204,7 +209,7 @@
         </section>
 
         <!-- Family Packages -->
-        <section class="prices-family">
+        <section class="prices-family" id="family">
             <div class="container">
                 <h2 class="section-title" data-i18n="prices.family_title">Семейные пакеты</h2>
                 <p class="section-subtitle" data-i18n="prices.family_subtitle">Выгодно при записи вместе</p>
@@ -279,7 +284,7 @@
         </section>
 
         <!-- Consultation -->
-        <section class="prices-consultation">
+        <section class="prices-consultation" id="consultation">
             <div class="container">
                 <h2 class="section-title" data-i18n="prices.consultation_title">Сомневаетесь?</h2>
                 <div class="consultation-card consultation-card--clickable" id="consultation-card" data-href="/consultation">
@@ -309,7 +314,7 @@
         </section>
 
         <!-- Gift Certificate -->
-        <section class="gift-certificate-section">
+        <section class="gift-certificate-section" id="certificates">
             <div class="container">
                 <h2 class="gift-certificate-heading" data-i18n="prices.gift_certificate.description">Забота, которую можно подарить</h2>
                 <p class="gift-certificate-badge" data-i18n="prices.gift_certificate.price">🎁 Сертификат на остеопатию от 350 PLN</p>

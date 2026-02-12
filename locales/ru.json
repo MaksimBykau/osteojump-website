@@ -39,7 +39,11 @@
     "prices": {
         "title": "Цены - OsteoJump",
         "hero_title": "Цены на услуги",
-        "hero_subtitle": "Прозрачные цены, никаких скрытых платежей",
+        "hero_subtitle": "Прозрачные цены, никаких скрытых платежей и лишних сеансов",
+        "hero_tag_individual": "Индивидуальные",
+        "hero_tag_family": "Семейные",
+        "hero_tag_consultation": "Консультации",
+        "hero_tag_certificates": "Сертификаты",
         "individual_title": "Индивидуальные приёмы",
         "adult": {
             "title": "Остеопатия для взрослых",

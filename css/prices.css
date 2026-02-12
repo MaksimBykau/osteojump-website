@@ -24,6 +24,37 @@
     margin: 0 auto;
 }
 
+.prices-hero-tags {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: var(--spacing-sm);
+}
+
+.prices-hero-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.5rem 1.1rem;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 2rem;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.prices-hero-tag:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.prices-hero-tag i {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+}
+
 /* Price Block */
 .price-block {
     margin-bottom: 1rem;

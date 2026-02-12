@@ -39,7 +39,11 @@
     "prices": {
         "title": "Prices - OsteoJump",
         "hero_title": "Service Prices",
-        "hero_subtitle": "Transparent pricing, no hidden fees",
+        "hero_subtitle": "Transparent pricing, no hidden fees or unnecessary sessions",
+        "hero_tag_individual": "Individual",
+        "hero_tag_family": "Family",
+        "hero_tag_consultation": "Consultations",
+        "hero_tag_certificates": "Certificates",
         "individual_title": "Individual Sessions",
         "adult": {
             "title": "Osteopathy for Adults",
