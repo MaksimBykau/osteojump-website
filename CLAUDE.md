@@ -4,49 +4,42 @@
 
 ---
 
-## Documentation Map
+## Before You Start
 
-### Start Here
+**ОБЯЗАТЕЛЬНО прочитай нужные доки перед началом работы:**
 
-| Документ | Назначение | Когда читать |
-|----------|-----------|-------------|
-| CLAUDE.md | Правила проекта, CSS, quick reference | **Всегда** (читается автоматически) |
-| docs/TECHNICAL.md | Техстек, структура файлов, dev setup | Перед первой задачей |
+- Написание/редактирование текстов → прочитай `docs/strategist/writing-style.md` и `docs/strategist/doctor-profile.md`
+- Новая страница или секция → прочитай `docs/TECHNICAL.md`
+- Работа с переводами → прочитай `docs/TRANSLATE.md`
+- Работа со стилями/вёрсткой → CSS rules ниже в этом файле
+- Деплой → прочитай `docs/DEPLOYMENT.md`
 
-### Разработка
+## Skills (slash commands)
 
-| Задача | Что читать |
-|--------|-----------|
-| Стили / CSS | CSS rules ниже в этом файле |
-| Добавление/изменение страниц | docs/TECHNICAL.md |
-| Переводы / `/translate` | docs/TRANSLATE.md |
-| Скриншоты / `/screenshot` | docs/SCREENSHOT.md |
-| Деплой | docs/DEPLOYMENT.md |
+При вызове skill'а — **СНАЧАЛА прочитай файл с инструкциями**, затем следуй им:
 
-### Контент и стратегия
+| Skill | Инструкции |
+|-------|-----------|
+| `/translate` | `docs/TRANSLATE.md` |
+| `/screenshot` | `docs/SCREENSHOT.md` |
 
-| Задача | Что читать |
-|--------|-----------|
-| Написание текстов | docs/strategist/writing-style.md |
-| Информация о враче | docs/strategist/doctor-profile.md |
-| Анализ страниц | docs/strategist/pages/ |
-| Целевая аудитория | docs/ABOUT.md |
-| Бэклог идей | TODO.md |
+## Task Tracking
 
----
+- Обсуждаем новую идею/задачу для сайта → **запиши в `TODO.md`** с датой `(YYYY-MM)`
+- Задача выполнена → **перенеси из `TODO.md` в `TODO-done.md`** с датой `(YYYY-MM-DD)`
+- Формат: `- [ ] Описание задачи (YYYY-MM)`, подробности — на следующей строке с отступом
+- Категории в TODO.md: `## Контент`, `## Дизайн`, `## Фичи`, `## Техническое`
 
 ## General Rules
 
-### MCP серверы
-
-**Всегда используй MCP серверы, агентов и скилы**, если они настроены в проекте. Не делай вручную то, что можно сделать через доступные инструменты (HugeIcons для иконок, Context7 для документации, `/screenshot` для скриншотов, `/translate` для переводов и т.д.).
+**Всегда используй MCP серверы, агентов и скилы**, если они настроены в проекте. Не делай вручную то, что можно сделать через доступные инструменты.
 
 - **Context7** — Always use Context7 MCP when I need library/API documentation, code generation, setup or configuration steps without me having to explicitly ask.
-- **HugeIcons** — При поиске иконок для сайта используй MCP сервер `hugeicons` (нужна новая иконка, замена существующей, поиск по ключевому слову).
+- **HugeIcons** — При поиске иконок используй MCP сервер `hugeicons` (поиск, замена, добавление иконок).
 
 ---
 
-## Project Quick Reference
+## Quick Reference
 
 ### Страницы
 
@@ -77,88 +70,55 @@ make stop          # Остановить сервер
 make thumbnails    # Сгенерировать превью для дипломов
 ```
 
-### Подарочные сертификаты
+---
 
-- Платформа: https://cert.osteojump.pl/
-- Упоминается: секция на странице `/prices`, ответ в FAQ `/faq#gift-certificate`
-- Ключи переводов: `prices.gift_certificate.*`, `faq.gift_certificate_answer`, `faq.gift_certificate_link`
+## Documentation Map
+
+Полный список документации проекта:
+
+| Документ | Назначение |
+|----------|-----------|
+| docs/TECHNICAL.md | Техстек, структура файлов, dev setup |
+| docs/TRANSLATE.md | Инструкции для `/translate` |
+| docs/SCREENSHOT.md | Инструкции для `/screenshot` |
+| docs/DEPLOYMENT.md | Деплой и CI/CD |
+| docs/strategist/writing-style.md | Тон, стиль, правила текстов |
+| docs/strategist/doctor-profile.md | Информация о враче |
+| docs/strategist/pages/ | Анализ отдельных страниц |
+| docs/ABOUT.md | Целевая аудитория |
+| TODO.md | Открытые задачи и идеи |
+| TODO-done.md | Архив выполненных задач |
 
 ---
 
 ## Правила работы со стилями CSS
 
-### Принцип DRY (Don't Repeat Yourself)
+### Принцип DRY
 
-**ВСЕГДА переиспользуй общие стили** вместо создания дублирующихся классов для разных страниц/секций.
+**ВСЕГДА переиспользуй общие стили.** НЕ создавай дублирующиеся классы типа `.page-name-layout`, `.page-name-content`.
 
 ### Общие классы в style.css
 
-Используй эти классы для секций с изображением + текстом:
-
 ```css
-/* Базовый layout */
 .section-layout                 /* grid контейнер */
 .section-layout--img-left       /* картинка слева, текст справа */
 .section-layout--img-right      /* текст слева, картинка справа */
 .section-content                /* текстовый блок (центрирован) */
 ```
 
-### Пример использования в HTML
+### Где хранить стили
 
-```html
-<section class="about-motivation">
-    <div class="container">
-        <h2 class="section-title">Заголовок</h2>
-        <div class="section-layout section-layout--img-left">
-            <div class="photo-wrapper">
-                <img src="..." class="photo-img">
-            </div>
-            <div class="section-content">
-                <p>Текст...</p>
-            </div>
-        </div>
-    </div>
-</section>
-```
+- **style.css** — layout (`.section-layout`, `.section-content`, `.section-title`), респонсив для layout
+- **page.css** — специфичные стили секции (padding, background, font-size), респонсив для специфичных элементов
 
-### Чек-лист при добавлении новых секций
+### Новая секция — чек-лист
 
-1. **Проверь** — есть ли уже похожий layout в style.css?
-2. **Используй** общие классы `.section-layout`, `.section-content`
-3. **Не создавай** новые классы типа `.page-name-layout`, `.page-name-content`
-4. **Специфичные стили** (цвета, отступы секции) — в файле страницы
-5. **Layout и выравнивание** — в style.css
-
-### Что хранить где
-
-| style.css (общее) | page.css (специфичное) |
-|-------------------|------------------------|
-| `.section-layout` | `.about-hero` (padding, background) |
-| `.section-content` | `.motivation-text p` (font-size) |
-| `.section-title` | `.journey-collage` (специфичный коллаж) |
-| Респонсив для layout | Респонсив для специфичных элементов |
+1. Проверь — есть ли уже похожий layout в style.css?
+2. Используй общие классы `.section-layout`, `.section-content`
+3. Специфичные стили (цвета, отступы) — в файле страницы
 
 ### Чередование фонов секций
 
-Секции на каждой странице **чередуют фон** для визуального ритма:
+Секции чередуют фон: `var(--bg-color)` (#fff) → `var(--section-bg)` (#f9fafb) → `var(--bg-color)` → ...
 
-- `var(--bg-color)` (#ffffff) — белый фон
-- `var(--section-bg)` (#f9fafb) — светло-серый фон
-
-**Правило:** каждая следующая секция использует противоположный фон. Hero-секция может использовать `var(--gradient-hero)`.
-
-**Примеры (главная, обо мне, отзывы):**
-```
-Hero        → var(--gradient-hero)
-Section 1   → var(--bg-color)
-Section 2   → var(--section-bg)
-Section 3   → var(--bg-color)
-Section 4   → var(--section-bg)
-...
-```
-
-**Не используй** яркие/насыщенные градиенты (типа `var(--gradient-cta)`) для фона целой секции — они слишком давящие.
-
-### Отладка стилей
-
-Для проверки применения стилей временно добавляй `background: red;` к общему классу в style.css — если стиль переиспользуется правильно, все элементы станут красными.
+Hero-секция может использовать `var(--gradient-hero)`. **НЕ используй** яркие градиенты (типа `var(--gradient-cta)`) для фона целой секции.

@@ -76,6 +76,12 @@ make clean
 ```
 4. Добавьте код языка в массив `supportedLangs` в `js/i18n.js`
 
+## Подарочные сертификаты
+
+- Платформа: https://cert.osteojump.pl/
+- Упоминается: секция на странице `/prices`, ответ в FAQ `/faq#gift-certificate`
+- Ключи переводов: `prices.gift_certificate.*`, `faq.gift_certificate_answer`, `faq.gift_certificate_link`
+
 ## Деплой
 
 Подробные инструкции по настройке деплоя и подключению кастомного домена см. в [DEPLOYMENT.md](DEPLOYMENT.md).
