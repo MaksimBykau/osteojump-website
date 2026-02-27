@@ -20,6 +20,14 @@ document.addEventListener('DOMContentLoaded', () => {
             const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
             menuToggle.setAttribute('aria-expanded', !isExpanded);
             overflowSidebar.classList.toggle('active');
+
+            // Close language dropdown when opening hamburger menu
+            if (!isExpanded) {
+                const langDropdown = document.getElementById('langSelectDropdown');
+                const langBtn = document.getElementById('langSelectBtn');
+                if (langDropdown) langDropdown.classList.remove('active');
+                if (langBtn) langBtn.setAttribute('aria-expanded', 'false');
+            }
         });
 
         // Close menu when clicking on a link

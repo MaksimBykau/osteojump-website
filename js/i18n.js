@@ -194,6 +194,12 @@ class I18n {
                 } else {
                     dropdown.classList.add('active');
                     langBtn.setAttribute('aria-expanded', 'true');
+
+                    // Close hamburger menu when opening language dropdown
+                    const sidebar = document.querySelector('.nav-overflow-sidebar');
+                    const menuToggle = document.querySelector('.menu-toggle');
+                    if (sidebar) sidebar.classList.remove('active');
+                    if (menuToggle) menuToggle.setAttribute('aria-expanded', 'false');
                 }
             });
         }
