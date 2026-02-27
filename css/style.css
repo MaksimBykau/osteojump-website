@@ -98,10 +98,6 @@ body {
     min-height: 100dvh; /* Dynamic viewport height for mobile browsers */
 }
 
-body.menu-open {
-    overflow: hidden;
-}
-
 .main {
     flex: 1;
 }
@@ -1197,6 +1193,21 @@ body.menu-open {
 .nav-overflow-sidebar.active {
     display: flex;
     transform: translateX(0);
+}
+
+.nav-menu-backdrop {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--bg-color);
+    z-index: 999;
+}
+
+.nav-menu-backdrop.active {
+    display: block;
 }
 
 .nav-overflow-sidebar li {

@@ -15,15 +15,28 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.appendChild(overflowSidebar);
     }
 
+    // Create backdrop for menu
+    const menuBackdrop = document.createElement('div');
+    menuBackdrop.className = 'nav-menu-backdrop';
+    document.body.appendChild(menuBackdrop);
+
+    function closeMenu() {
+        menuToggle.setAttribute('aria-expanded', 'false');
+        overflowSidebar.classList.remove('active');
+        menuBackdrop.classList.remove('active');
+    }
+
     if (menuToggle && overflowSidebar) {
         menuToggle.addEventListener('click', () => {
             const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
-            menuToggle.setAttribute('aria-expanded', !isExpanded);
-            overflowSidebar.classList.toggle('active');
-            document.body.classList.toggle('menu-open', !isExpanded);
+            if (isExpanded) {
+                closeMenu();
+            } else {
+                menuToggle.setAttribute('aria-expanded', 'true');
+                overflowSidebar.classList.add('active');
+                menuBackdrop.classList.add('active');
 
-            // Close language dropdown when opening hamburger menu
-            if (!isExpanded) {
+                // Close language dropdown when opening hamburger menu
                 const langDropdown = document.getElementById('langSelectDropdown');
                 const langBtn = document.getElementById('langSelectBtn');
                 if (langDropdown) langDropdown.classList.remove('active');
@@ -34,18 +47,15 @@ document.addEventListener('DOMContentLoaded', () => {
         // Close menu when clicking on a link
         overflowSidebar.addEventListener('click', (e) => {
             if (e.target.tagName === 'A') {
-                menuToggle.setAttribute('aria-expanded', 'false');
-                overflowSidebar.classList.remove('active');
-                document.body.classList.remove('menu-open');
+                closeMenu();
             }
         });
 
-        // Close menu when clicking outside
+        // Close menu when clicking backdrop or outside
+        menuBackdrop.addEventListener('click', closeMenu);
         document.addEventListener('click', (e) => {
-            if (!overflowSidebar.contains(e.target) && !menuToggle.contains(e.target)) {
-                menuToggle.setAttribute('aria-expanded', 'false');
-                overflowSidebar.classList.remove('active');
-                document.body.classList.remove('menu-open');
+            if (!overflowSidebar.contains(e.target) && !menuToggle.contains(e.target) && !menuBackdrop.contains(e.target)) {
+                closeMenu();
             }
         });
     }
