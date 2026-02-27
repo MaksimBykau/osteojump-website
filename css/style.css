@@ -1182,8 +1182,9 @@ body {
     transform: translateX(-100%);
     transition: transform 0.3s ease;
     z-index: 1000;
-    max-height: calc(100vh - 70px);
+    max-height: calc(100vh - 70px - 80px);
     overflow-y: auto;
+    overscroll-behavior: contain;
     display: none;
     flex-direction: column;
     padding: var(--spacing-md);
