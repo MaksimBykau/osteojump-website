@@ -1,16 +1,14 @@
-# Session: 2025-02-12
+# Session: 2026-02-27
 
 ## Последний коммит
-`fbcf506` — Add session handoff: SESSION.md + SESSION-log.md archive
+`e8d1e17` — Fix WhatsApp number and contacts page "Подробнее" link
 
 ## Что сделали за сессию
-- Полная реструктуризация документации проекта (6 коммитов)
-- CLAUDE.md: 491 → 92 строки с workflow triggers
-- Новые файлы: SCREENSHOT.md, TRANSLATE.md, DECISIONS.md, TODO-done.md, SESSION.md
+- Исправлен номер WhatsApp на всех 11 страницах: +48572404770 → +48571397199
+- Кнопка "Подробнее" на странице контактов теперь ведёт на /location вместо Google Maps
 
 ## Открытые задачи
 - См. `TODO.md`
 
 ## Следующие шаги
-- Проверить триггеры на практике (задача по тексту → прочитает ли writing-style.md?)
-- Проверить /translate и /screenshot с вынесенными инструкциями
+- Нет незавершённых задач
