@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
             menuToggle.setAttribute('aria-expanded', !isExpanded);
             overflowSidebar.classList.toggle('active');
+            document.body.classList.toggle('menu-open', !isExpanded);
 
             // Close language dropdown when opening hamburger menu
             if (!isExpanded) {
@@ -35,6 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (e.target.tagName === 'A') {
                 menuToggle.setAttribute('aria-expanded', 'false');
                 overflowSidebar.classList.remove('active');
+                document.body.classList.remove('menu-open');
             }
         });
 
@@ -43,6 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!overflowSidebar.contains(e.target) && !menuToggle.contains(e.target)) {
                 menuToggle.setAttribute('aria-expanded', 'false');
                 overflowSidebar.classList.remove('active');
+                document.body.classList.remove('menu-open');
             }
         });
     }
