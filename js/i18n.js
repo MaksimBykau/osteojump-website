@@ -198,8 +198,10 @@ class I18n {
                     // Close hamburger menu when opening language dropdown
                     const sidebar = document.querySelector('.nav-overflow-sidebar');
                     const menuToggle = document.querySelector('.menu-toggle');
+                    const menuBackdrop = document.querySelector('.nav-menu-backdrop');
                     if (sidebar) sidebar.classList.remove('active');
                     if (menuToggle) menuToggle.setAttribute('aria-expanded', 'false');
+                    if (menuBackdrop) menuBackdrop.classList.remove('active');
                 }
             });
         }
