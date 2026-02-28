@@ -39,12 +39,15 @@
 - [x] Кастомная 404.html с навигацией
 - [x] Исправлено дублирование H1 (логотип h1 → span на всех страницах)
 
+### 2026-02-28: Alt-теги и width/height картинок
+- [x] Описательные alt-теги на всех контентных картинках (PL язык для SEO)
+- [x] width/height атрибуты на всех контентных картинках (предотвращает CLS)
+- [x] Страницы: index, about, prices, reviews, education, location, appointment, consultation
+- [x] Декоративные иконки (footer, action bar) оставлены с alt="" (корректно по a11y)
+
 ## TODO
 
 ### Высокий приоритет
-
-- [ ] **Alt-теги картинок** — 84 картинки, многие с `alt=""`. Добавить описательные alt на всех страницах
-- [ ] **width/height картинок** — предотвращает CLS (Cumulative Layout Shift)
 - [ ] **Google Business Profile** — убедиться что ссылка на сайт osteojump.pl, категория "Osteopata"
 
 ### Средний приоритет
