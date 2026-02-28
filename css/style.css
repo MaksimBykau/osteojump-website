@@ -279,7 +279,8 @@ body {
     color: inherit;
 }
 
-.logo h1 {
+.logo h1,
+.logo .logo-text {
     font-size: 1.5rem;
     color: var(--primary-color);
     font-weight: 700;

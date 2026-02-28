@@ -129,21 +129,46 @@
             "url": "https://osteojump.pl/about"
         },
         "medicalSpecialty": "Osteopathic",
+        "areaServed": {
+            "@type": "City",
+            "name": "Warszawa"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5.0",
+            "reviewCount": "150",
+            "bestRating": "5"
+        },
         "availableService": [
             {
                 "@type": "MedicalTherapy",
                 "name": "Osteopatia dla dorosłych",
-                "description": "Sesja osteopatyczna z użyciem łagodnych technik manualnych"
+                "description": "Sesja osteopatyczna z użyciem łagodnych technik manualnych",
+                "offers": {
+                    "@type": "Offer",
+                    "price": "290",
+                    "priceCurrency": "PLN"
+                }
             },
             {
                 "@type": "MedicalTherapy",
                 "name": "Osteopatia dziecięca",
-                "description": "Osteopatia dla niemowląt i dzieci — delikatne techniki kraniosakralne"
+                "description": "Osteopatia dla niemowląt i dzieci — delikatne techniki kraniosakralne",
+                "offers": {
+                    "@type": "Offer",
+                    "price": "290",
+                    "priceCurrency": "PLN"
+                }
             },
             {
                 "@type": "MedicalTherapy",
                 "name": "Osteopatia dla kobiet w ciąży",
-                "description": "Bezpieczna osteopatia w ciąży i po porodzie"
+                "description": "Bezpieczna osteopatia w ciąży i po porodzie",
+                "offers": {
+                    "@type": "Offer",
+                    "price": "290",
+                    "priceCurrency": "PLN"
+                }
             }
         ]
     }
@@ -153,7 +178,7 @@
     <header class="header">
         <nav class="nav container">
             <div class="logo">
-                <a href="/"><h1 data-i18n="logo">OsteoJump</h1></a>
+                <a href="/"><span data-i18n="logo" class="logo-text">OsteoJump</span></a>
             </div>
             <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
                 <span></span>

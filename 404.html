@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="robots" content="noindex">
+    <title>404 — OsteoJump</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="icon" type="image/png" href="/images/icon.png">
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        .error-page {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 60vh;
+            text-align: center;
+            padding: 2rem;
+        }
+        .error-code {
+            font-size: 6rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+        .error-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-color);
+        }
+        .error-text {
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            max-width: 400px;
+        }
+        .error-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            justify-content: center;
+        }
+        .error-nav a {
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            background: var(--section-bg);
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+        .error-nav a:hover {
+            background: var(--primary-color);
+            color: #fff;
+        }
+    </style>
+</head>
+<body class="i18n-ready">
+    <header class="header">
+        <nav class="nav container">
+            <div class="logo">
+                <a href="/"><span>OsteoJump</span></a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <div class="error-page">
+            <div class="error-code">404</div>
+            <h1 class="error-title">Strona nie została znaleziona</h1>
+            <p class="error-text">Strona, której szukasz, nie istnieje lub została przeniesiona.</p>
+            <nav class="error-nav">
+                <a href="/">Strona główna</a>
+                <a href="/about">O mnie</a>
+                <a href="/prices">Cennik</a>
+                <a href="/contacts">Kontakt</a>
+                <a href="/faq">FAQ</a>
+            </nav>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>© 2024 OsteoJump</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

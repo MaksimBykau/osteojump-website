@@ -43,7 +43,7 @@ const PAGES = {
 // Static asset directories to copy
 const ASSET_DIRS = ['css', 'js', 'images', 'locales'];
 // Individual files to copy
-const ASSET_FILES = ['CNAME', 'robots.txt'];
+const ASSET_FILES = ['CNAME', 'robots.txt', '404.html'];
 
 // Internal page slugs (for link rewriting — don't rewrite links to these as assets)
 const PAGE_SLUGS = new Set(Object.keys(PAGES).filter(s => s !== ''));
@@ -318,6 +318,38 @@ function processPage(slug, lang, translations) {
     // that i18n-static.js or main.js can use
     $('[id="actionContacts"]').attr('data-static-href', `/${lang}/contacts`);
     $('[id="actionDirections"]').attr('data-static-href', `/${lang}/location`);
+  }
+
+  // 17. Generate FAQPage schema for FAQ page
+  if (slug === 'faq') {
+    const faqItems = [];
+    $('.faq-item').each(function () {
+      const questionEl = $(this).find('.faq-question span[data-i18n]').first();
+      const answerEl = $(this).find('.faq-answer p[data-i18n]').first();
+      if (questionEl.length && answerEl.length) {
+        const q = questionEl.text().trim();
+        const a = answerEl.text().trim();
+        if (q && a) {
+          faqItems.push({ q, a });
+        }
+      }
+    });
+
+    if (faqItems.length > 0) {
+      const faqSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'mainEntity': faqItems.map(item => ({
+          '@type': 'Question',
+          'name': item.q,
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': item.a,
+          },
+        })),
+      };
+      $('head').append(`\n    <script type="application/ld+json">\n    ${JSON.stringify(faqSchema, null, 4)}\n    </script>`);
+    }
   }
 
   return $.html();
