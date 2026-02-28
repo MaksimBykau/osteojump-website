@@ -42,6 +42,9 @@ pids
 # Build output
 dist/
 
+# Generated WebP images
+images/**/*.webp
+
 # Build script dependencies
 scripts/node_modules/
 

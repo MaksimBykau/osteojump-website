@@ -32,6 +32,12 @@ jobs:
       - name: Install build dependencies
         run: cd scripts && npm ci
 
+      - name: Install WebP tools
+        run: sudo apt-get install -y webp
+
+      - name: Convert images to WebP
+        run: node scripts/convert-webp.js
+
       - name: Build static site
         run: node scripts/build.js
 

@@ -320,7 +320,22 @@ function processPage(slug, lang, translations) {
     $('[id="actionDirections"]').attr('data-static-href', `/${lang}/location`);
   }
 
-  // 17. Generate FAQPage schema for FAQ page
+  // 17. Rewrite img src to .webp (JPG/JPEG/PNG → WebP)
+  $('img[src]').each(function () {
+    const src = $(this).attr('src');
+    if (src && /\.(jpg|jpeg|png)$/i.test(src)) {
+      $(this).attr('src', src.replace(/\.(jpg|jpeg|png)$/i, '.webp'));
+    }
+  });
+  // Also rewrite data-full (modal images)
+  $('[data-full]').each(function () {
+    const full = $(this).attr('data-full');
+    if (full && /\.(jpg|jpeg|png)$/i.test(full)) {
+      $(this).attr('data-full', full.replace(/\.(jpg|jpeg|png)$/i, '.webp'));
+    }
+  });
+
+  // 18. Generate FAQPage schema for FAQ page
   if (slug === 'faq') {
     const faqItems = [];
     $('.faq-item').each(function () {

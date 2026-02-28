@@ -1,4 +1,4 @@
-.PHONY: help server server-simple stop restart install-deps thumbnails clean css-vars locale-keys build serve-dist stop-dist
+.PHONY: help server server-simple stop restart install-deps thumbnails clean css-vars locale-keys build serve-dist stop-dist optimize-images webp
 
 # Default target
 help:
@@ -12,6 +12,8 @@ help:
 	@echo "  make stop-dist   - Stop dist server on port 8001"
 	@echo "  make thumbnails  - Generate thumbnails for diplomas"
 	@echo "  make clean       - Remove generated thumbnails and dist/"
+	@echo "  make optimize-images - Resize oversized images to max 1600px"
+	@echo "  make webp        - Convert images to WebP format"
 	@echo "  make css-vars    - List all CSS custom properties"
 	@echo "  make locale-keys - Show translation key structure"
 
@@ -77,6 +79,22 @@ serve-dist:
 stop-dist:
 	@echo "Stopping server on port 8001..."
 	@-lsof -ti:8001 | xargs kill -9 2>/dev/null || echo "No server running on port 8001"
+
+# Resize oversized images to max 1600px
+optimize-images:
+	@echo "Resizing oversized images to max 1600px..."
+	@sips -Z 1600 images/about/hero.jpg 2>/dev/null && echo "  Resized: hero.jpg" || true
+	@sips -Z 1600 images/about/work1.jpg images/about/work2.jpg images/about/work3.jpg images/about/work4.jpg 2>/dev/null && echo "  Resized: work1-4.jpg" || true
+	@sips -Z 1600 images/about/mother2.jpg 2>/dev/null && echo "  Resized: mother2.jpg" || true
+	@sips -Z 1600 images/about/mother5.jpg 2>/dev/null && echo "  Resized: mother5.jpg" || true
+	@for img in images/location/step*.jp*; do \
+		sips -Z 1600 "$$img" 2>/dev/null && echo "  Resized: $$(basename $$img)" || true; \
+	done
+	@echo "Done! Run 'make webp' to regenerate WebP files."
+
+# Convert images to WebP format
+webp:
+	@node scripts/convert-webp.js
 
 # Clean generated files
 clean:
