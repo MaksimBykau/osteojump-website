@@ -1,0 +1,8 @@
+{
+  "name": "osteojump-build",
+  "private": true,
+  "description": "Build scripts for OsteoJump static site generation",
+  "dependencies": {
+    "cheerio": "^1.0.0"
+  }
+}

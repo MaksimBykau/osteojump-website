@@ -61,16 +61,23 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     // Mark active menu item based on current page
+    // Supports language-prefixed paths like /en/about, /ru/prices
     const pathname = window.location.pathname.replace(/\/$/, ''); // Remove trailing slash
-    const currentPageClean = pathname.split('/').filter(Boolean).pop() || ''; // Get last non-empty segment
+    const segments = pathname.split('/').filter(Boolean);
+    const supportedLangPrefixes = ['en', 'ru', 'uk', 'de'];
+    // Strip language prefix if present to get the page slug
+    const hasLangPrefix = segments.length > 0 && supportedLangPrefixes.includes(segments[0]);
+    const currentPageClean = hasLangPrefix ? (segments[1] || '') : (segments[segments.length - 1] || '');
     navMenu?.querySelectorAll('a').forEach(link => {
-        const linkPage = link.getAttribute('href');
-        const linkPageClean = linkPage.replace(/^\//, '').replace(/\/$/, ''); // Remove leading and trailing /
+        const linkHref = link.getAttribute('href');
+        // Extract slug from the link href (strip any language prefix)
+        const linkSegments = linkHref.replace(/^\//, '').replace(/\/$/, '').split('/').filter(Boolean);
+        const linkHasPrefix = linkSegments.length > 0 && supportedLangPrefixes.includes(linkSegments[0]);
+        const linkPageClean = linkHasPrefix ? (linkSegments[1] || '') : (linkSegments[linkSegments.length - 1] || '');
 
-        // Check if it's the home page
-        if (currentPageClean === '' && (linkPage === '/' || linkPageClean === '')) {
+        if (currentPageClean === '' && linkPageClean === '') {
             link.classList.add('active');
-        } else if (linkPageClean === currentPageClean) {
+        } else if (linkPageClean !== '' && linkPageClean === currentPageClean) {
             link.classList.add('active');
         }
     });
@@ -534,13 +541,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (actionContacts) {
         actionContacts.addEventListener('click', () => {
-            window.location.href = '/contacts';
+            window.location.href = actionContacts.getAttribute('data-static-href') || '/contacts';
         });
     }
 
     if (actionDirections) {
         actionDirections.addEventListener('click', () => {
-            window.location.href = '/location';
+            window.location.href = actionDirections.getAttribute('data-static-href') || '/location';
         });
     }
 

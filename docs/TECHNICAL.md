@@ -12,19 +12,52 @@
 
 ```
 osteojump/
-├── index.html              # Главная страница
+├── index.html              # Главная страница (источник для SSG)
 ├── {page}/index.html       # Подстраницы (about, prices, faq, ...)
 ├── css/
 │   ├── style.css           # Общие стили (layout, nav, footer, responsive)
 │   └── {page}.css          # Стили конкретной страницы
 ├── js/
-│   ├── i18n.js             # Логика переключения языков
+│   ├── i18n.js             # Логика переключения языков (локальная разработка)
+│   ├── i18n-static.js      # Облегчённый i18n для SSG-страниц
 │   └── main.js             # Основная логика
 ├── locales/                # Переводы (en, ru, pl, uk, de)
-└── .github/workflows/      # CI/CD
+├── scripts/
+│   ├── build.js            # SSG build-скрипт (Node.js + cheerio)
+│   ├── meta.js             # Мета-описания для всех страниц × языков
+│   └── package.json        # Зависимости (cheerio)
+├── dist/                   # Сгенерированный сайт (gitignored)
+└── .github/workflows/      # CI/CD (билд + деплой из dist/)
 ```
 
 Полный маппинг страниц на файлы — см. **Page Map** ниже.
+
+## Static Site Generation (SSG)
+
+Build-скрипт генерирует 55 статических HTML (11 страниц × 5 языков):
+
+```
+/                    → Польский (дефолт, без префикса)
+/about, /prices...   → Польский
+/en/                 → English
+/en/about, /en/prices...
+/ru/, /uk/, /de/     → Аналогично
+```
+
+```bash
+make build           # Генерирует dist/ (55 HTML + ассеты + sitemap)
+make serve-dist      # Тестовый сервер на порту 8001
+```
+
+Что делает build.js для каждой страницы × языка:
+- Заполняет `[data-i18n]` / `[data-i18n-html]` текстом из JSON
+- Устанавливает `<html lang>`, `<title>`, meta description, og:tags
+- Генерирует hreflang и canonical теги
+- Перезаписывает внутренние ссылки (`/about` → `/en/about`)
+- Нормализует относительные пути (`../css/` → `/css/`)
+- Заменяет `i18n.js` → `i18n-static.js`
+- Удаляет inline "Quick language detection" скрипт
+- Добавляет `data-static-href` для навигации переключателя языков
 
 ## Локальная разработка
 

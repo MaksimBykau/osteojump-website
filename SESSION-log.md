@@ -4,6 +4,13 @@
 
 ---
 
+## Session: 2026-02-27 (early)
+**Коммит:** `e8d1e17` — Fix WhatsApp number and contacts page "Подробнее" link
+- Исправлен номер WhatsApp на всех 11 страницах: +48572404770 → +48571397199
+- Кнопка "Подробнее" на странице контактов теперь ведёт на /location вместо Google Maps
+
+---
+
 ## Session: 2025-02-12
 **Коммит:** `fbcf506` — Add session handoff: SESSION.md + SESSION-log.md archive
 - Полная реструктуризация документации проекта (6 коммитов)

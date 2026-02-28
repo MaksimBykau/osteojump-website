@@ -1,4 +1,4 @@
-.PHONY: help server server-simple stop restart install-deps thumbnails clean css-vars locale-keys
+.PHONY: help server server-simple stop restart install-deps thumbnails clean css-vars locale-keys build serve-dist stop-dist
 
 # Default target
 help:
@@ -7,8 +7,11 @@ help:
 	@echo "  make server-simple - Start simple Python HTTP server"
 	@echo "  make stop        - Stop the server running on port 8000"
 	@echo "  make restart     - Stop and start the server"
+	@echo "  make build       - Build static site into dist/"
+	@echo "  make serve-dist  - Serve dist/ on port 8001"
+	@echo "  make stop-dist   - Stop dist server on port 8001"
 	@echo "  make thumbnails  - Generate thumbnails for diplomas"
-	@echo "  make clean       - Remove generated thumbnails"
+	@echo "  make clean       - Remove generated thumbnails and dist/"
 	@echo "  make css-vars    - List all CSS custom properties"
 	@echo "  make locale-keys - Show translation key structure"
 
@@ -60,9 +63,25 @@ locale-keys:
 	data = json.load(open('locales/en.json')); \
 	[print(f'{k}: {sorted(v.keys()) if isinstance(v, dict) else v}') for k, v in data.items()]"
 
+# Build static site (SSG)
+build:
+	@cd scripts && npm install --silent
+	@node scripts/build.js
+
+# Serve dist/ for testing (port 8001)
+serve-dist:
+	@echo "Serving dist/ on http://localhost:8001"
+	@cd dist && python3 -m http.server 8001
+
+# Stop dist server on port 8001
+stop-dist:
+	@echo "Stopping server on port 8001..."
+	@-lsof -ti:8001 | xargs kill -9 2>/dev/null || echo "No server running on port 8001"
+
 # Clean generated files
 clean:
-	@echo "Removing thumbnails..."
+	@echo "Removing thumbnails and dist/..."
 	@rm -rf images/diplomas/thumbs
+	@rm -rf dist
 	@echo "✅ Clean complete!"
 
