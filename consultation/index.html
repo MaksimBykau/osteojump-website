@@ -1,12 +1,23 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
-    <title data-i18n="consultation_page.title">Консультация - OsteoJump</title>
+    <meta name="description" content="Konsultacja online z osteopatą. Omówienie problemu, zalecenia i plan leczenia. Wygodna forma kontaktu z OsteoJump.">
+    <meta property="og:title" content="Konsultacja online — OsteoJump">
+    <meta property="og:description" content="Konsultacja online z osteopatą. Omówienie problemu, zalecenia i plan leczenia.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://osteojump.pl/consultation">
+    <meta property="og:image" content="https://osteojump.pl/images/icon.png">
+    <meta property="og:locale" content="pl_PL">
+    <link rel="canonical" href="https://osteojump.pl/consultation">
+    <link rel="alternate" hreflang="x-default" href="https://osteojump.pl/consultation">
+    <link rel="alternate" hreflang="pl" href="https://osteojump.pl/consultation">
+    <link rel="alternate" hreflang="en" href="https://osteojump.pl/consultation">
+    <link rel="alternate" hreflang="ru" href="https://osteojump.pl/consultation">
+    <link rel="alternate" hreflang="uk" href="https://osteojump.pl/consultation">
+    <link rel="alternate" hreflang="de" href="https://osteojump.pl/consultation">
+    <title data-i18n="consultation_page.title">Konsultacja online — OsteoJump</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link rel="icon" type="image/png" href="/images/icon.png">
     <link rel="apple-touch-icon" href="/images/apple-icon.png">
@@ -35,7 +46,7 @@
         (function() {
             const supportedLangs = ['ru', 'en', 'de', 'pl', 'uk'];
             const savedLang = localStorage.getItem('language');
-            let lang = 'en'; // default
+            let lang = 'pl'; // default
 
             if (savedLang && supportedLangs.includes(savedLang)) {
                 lang = savedLang;

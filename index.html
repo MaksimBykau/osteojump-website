@@ -1,12 +1,27 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
-    <title data-i18n="title">OsteoJump</title>
+    <meta name="description" content="Osteopata Hanna Bykava w Warszawie. Łagodne techniki osteopatyczne dla dzieci, dorosłych i kobiet w ciąży. Umów wizytę online.">
+    <meta property="og:title" content="OsteoJump — Osteopata w Warszawie">
+    <meta property="og:description" content="Osteopata Hanna Bykava. Łagodne techniki dla dzieci, dorosłych i kobiet w ciąży. Umów wizytę online.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://osteojump.pl/">
+    <meta property="og:image" content="https://osteojump.pl/images/icon.png">
+    <meta property="og:locale" content="pl_PL">
+    <meta property="og:locale:alternate" content="en_GB">
+    <meta property="og:locale:alternate" content="ru_RU">
+    <meta property="og:locale:alternate" content="uk_UA">
+    <meta property="og:locale:alternate" content="de_DE">
+    <link rel="canonical" href="https://osteojump.pl/">
+    <link rel="alternate" hreflang="x-default" href="https://osteojump.pl/">
+    <link rel="alternate" hreflang="pl" href="https://osteojump.pl/">
+    <link rel="alternate" hreflang="en" href="https://osteojump.pl/">
+    <link rel="alternate" hreflang="ru" href="https://osteojump.pl/">
+    <link rel="alternate" hreflang="uk" href="https://osteojump.pl/">
+    <link rel="alternate" hreflang="de" href="https://osteojump.pl/">
+    <title data-i18n="title">OsteoJump — Osteopata w Warszawie</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link rel="icon" type="image/png" href="/images/icon.png">
     <link rel="apple-touch-icon" href="/images/apple-icon.png">
@@ -35,7 +50,7 @@
         (function() {
             const supportedLangs = ['ru', 'en', 'de', 'pl', 'uk'];
             const savedLang = localStorage.getItem('language');
-            let lang = 'en'; // default
+            let lang = 'pl'; // default
             
             if (savedLang && supportedLangs.includes(savedLang)) {
                 lang = savedLang;
@@ -79,6 +94,59 @@
             link.href = `/locales/${lang}.json?v=${translationsVersion}&t=${timestamp}`;
             document.head.appendChild(link);
         })();
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MedicalBusiness",
+        "name": "OsteoJump",
+        "description": "Gabinet osteopatyczny w Warszawie. Osteopata Hanna Bykava — łagodne techniki dla dzieci, dorosłych i kobiet w ciąży.",
+        "url": "https://osteojump.pl",
+        "telephone": "+48571397199",
+        "email": "hanna.bykava.osteopata@gmail.com",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Siłaczki 3/9, lokal 212",
+            "addressLocality": "Warszawa",
+            "postalCode": "02-495",
+            "addressCountry": "PL"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 52.1897,
+            "longitude": 20.8994
+        },
+        "priceRange": "$$",
+        "image": "https://osteojump.pl/images/icon.png",
+        "sameAs": [
+            "https://www.instagram.com/osteojump",
+            "https://booksy.com/pl-pl/262212_osteojump_zdrowie_3_warszawa"
+        ],
+        "founder": {
+            "@type": "Person",
+            "name": "Hanna Bykava",
+            "jobTitle": "Osteopata",
+            "url": "https://osteojump.pl/about"
+        },
+        "medicalSpecialty": "Osteopathic",
+        "availableService": [
+            {
+                "@type": "MedicalTherapy",
+                "name": "Osteopatia dla dorosłych",
+                "description": "Sesja osteopatyczna z użyciem łagodnych technik manualnych"
+            },
+            {
+                "@type": "MedicalTherapy",
+                "name": "Osteopatia dziecięca",
+                "description": "Osteopatia dla niemowląt i dzieci — delikatne techniki kraniosakralne"
+            },
+            {
+                "@type": "MedicalTherapy",
+                "name": "Osteopatia dla kobiet w ciąży",
+                "description": "Bezpieczna osteopatia w ciąży i po porodzie"
+            }
+        ]
+    }
     </script>
 </head>
 <body>
