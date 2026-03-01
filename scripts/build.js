@@ -345,7 +345,19 @@ function processPage(slug, lang, translations) {
     }
   });
 
-  // 18. Generate FAQPage schema for FAQ page
+  // 18. Inject PostHog analytics (cookieless, GDPR-compliant)
+  $('head').append(`
+    <script>
+      !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossorigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys getNextSurveyStep onSessionId".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+      posthog.init('phc_sfoiwVUmFb6egjr1Q8BqyIGbcvS6PCaSUWNV6aKE6gX',{
+        api_host:'https://eu.i.posthog.com',
+        person_profiles:'identified_only',
+        cookieless_mode:'always',
+        capture_scrolldepth:true
+      })
+    </script>`);
+
+  // 19. Generate FAQPage schema for FAQ page
   if (slug === 'faq') {
     const faqItems = [];
     $('.faq-item').each(function () {

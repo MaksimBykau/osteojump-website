@@ -52,11 +52,17 @@
 - [x] HugeIcons CSS async: preload/onload на index и prices
 - [x] CI/CD: webp tools + convert step в deploy.yml
 
+### 2026-03-01: Аналитика — PostHog
+- [x] PostHog подключён через build.js (шаг 18, инжекция в `<head>` всех страниц)
+- [x] EU Cloud (данные в Европе), cookieless_mode: 'always' (без cookie-баннера, GDPR-compliant)
+- [x] person_profiles: 'identified_only' (не создаём профили для анонимов)
+- [x] Только в продакшене (dist/) — исходные HTML не затронуты
+
 ## TODO
 
 ### Высокий приоритет
 - [x] **Google Business Profile** — настроен: Osteopath (primary) + Child health care centre, Women's health clinic, Alternative medicine practitioner, Massage therapist. Описание оптимизировано под локальные запросы и специализации
-- [ ] **Аналитика** — подключить (для отслеживания трафика из поиска)
+- [x] **Аналитика** — PostHog (EU Cloud, cookieless_mode: 'always', без cookie-баннера). Инжектится через build.js (шаг 18) на все 80 страниц
 
 ### Средний приоритет (контент)
 
