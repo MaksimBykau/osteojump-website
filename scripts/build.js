@@ -39,6 +39,7 @@ const PAGES = {
   'consultation':'consultation/index.html',
   'appointment': 'appointment/index.html',
   'osteopatia-terapia-manualna': 'osteopatia-terapia-manualna/index.html',
+  'osteopatia-masaz-leczniczy': 'osteopatia-masaz-leczniczy/index.html',
 };
 
 // Static asset directories to copy
@@ -63,6 +64,7 @@ const SITEMAP_PRIORITY = {
   'location': '0.6',
   'contacts': '0.6',
   'osteopatia-terapia-manualna': '0.5',
+  'osteopatia-masaz-leczniczy': '0.5',
 };
 
 // ---------------------------------------------------------------------------

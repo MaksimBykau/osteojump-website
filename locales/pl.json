@@ -391,6 +391,9 @@
         "osteo_vs_manual_title": "Czym osteopatia różni się od terapii manualnej?",
         "osteo_vs_manual_answer": "Terapia manualna koncentruje się na konkretnym obszarze bólu, np. stawach czy kręgosłupie. Osteopatia szuka pierwotnej przyczyny i pracuje całościowo — z powięziami, narządami wewnętrznymi i systemem kraniosakralnym. Obie metody dobrze się uzupełniają.",
         "osteo_vs_manual_link": "Czytaj porównanie osteopatii i terapii manualnej →",
+        "osteo_vs_massage_title": "Czym osteopatia różni się od masażu leczniczego?",
+        "osteo_vs_massage_answer": "Masaż leczniczy pracuje z mięśniami — rozluźnia napięcie i poprawia krążenie. Osteopatia szuka przyczyny napięcia i pracuje całościowo — z powięziami, narządami wewnętrznymi i systemem kraniosakralnym. Metody dobrze się uzupełniają.",
+        "osteo_vs_massage_link": "Czytaj porównanie osteopatii i masażu leczniczego →",
         "q3_title": "Jakie są odczucia podczas sesji?",
         "q3_answer": "Odczucia są delikatne i przyjemne — lekki nacisk, relaksacja, czasem ciepło. Praca odbywa się subtelnie, z uwzględnieniem reakcji twojego ciała. Techniki są tak delikatne, że odpowiednie nawet dla noworodków i kobiet w ciąży.",
         "q4_title": "Ile sesji potrzeba?",
@@ -694,6 +697,17 @@
         "cta_title": "Szukasz terapii manualnej lub osteopatycznej w Warszawie?",
         "cta_text": "Zapraszam na konsultację — ocenię, jak mogę pomóc i wspólnie ustalimy plan dalszego postępowania.",
         "cta_author": "Hanna Bykava — osteopata, 15 lat doświadczenia medycznego. Gabinet OsteoJump, Warszawa (Ursus).",
+        "cta_book": "Umów wizytę",
+        "cta_question": "Zadaj pytanie"
+    },
+    "article_osteo_massage": {
+        "title": "Osteopatia a masaż leczniczy — porównanie | OsteoJump",
+        "hero_title": "Czym osteopatia różni się od masażu leczniczego?",
+        "hero_subtitle": "Porównanie metod, różnice w podejściu i kiedy wybrać odpowiedniego specjalistę",
+        "content": "<h2>Czym jest masaż leczniczy?</h2><p>Masaż leczniczy to praca z mięśniami i tkankami miękkimi. Masażysta rozgrzewa, rozluźnia i ugniata mięśnie, aby zdjąć napięcie, poprawić krążenie i pomóc się zrelaksować. Masaż klasyczny pleców, masaż kręgosłupa, masaż szyjno-barkowy — to odmiany masażu skierowane na konkretny obszar ciała.</p><p>Masaż dobrze radzi sobie ze skutkami — napięciem mięśni, skurczami, zmęczeniem. Ale nie zawsze sięga do przyczyny, przez którą te mięśnie napinają się raz za razem.</p><h2>Jak pracuje osteopata?</h2><p>Osteopata również pracuje rękami, ale jego zadanie jest inne — znaleźć, dlaczego powstało napięcie, a nie tylko je usunąć. Na przykład:</p><ul><li>Napięcie mięśni pleców może wynikać z problemów w <strong>powięziach</strong> (fasciach) — tkance łącznej, która łączy całe ciało w jeden system</li><li>Ból w dolnej części pleców może być związany z napięciem <strong>narządów wewnętrznych</strong> — na przykład jelit lub nerek</li><li>Napięciowe bóle głowy mogą pochodzić z zaburzeń w <strong>systemie kraniosakralnym</strong> — czaszce i kości krzyżowej</li></ul><p>Osteopata ocenia ciało jako całość i pracuje z przyczyną, a nie tylko z objawem.</p><h2>Znam oba podejścia od podszewki</h2><p>Posiadam certyfikaty masażu klasycznego i leczniczego — ukończyłam to szkolenie jeszcze przed rozpoczęciem nauki osteopatii. Dlatego dobrze rozumiem, jak działa masaż i gdzie kończą się jego możliwości. Podczas konsultacji mogę ocenić, co będzie dla Ciebie bardziej odpowiednie.</p><h2>Kiedy wybrać masaż?</h2><p>Masaż sprawdza się dobrze, gdy:</p><ul><li>Chcesz <strong>się zrelaksować i zdjąć napięcie</strong> po wysiłku fizycznym lub stresującym okresie</li><li>Przeszkadza Ci <strong>miejscowa sztywność</strong> — na przykład zesztywniała szyja po pracy przy komputerze</li><li>Chcesz <strong>poprawić krążenie</strong> i ogólne samopoczucie</li><li>Szukasz <strong>regularnego wsparcia</strong> — masaż raz na 2-4 tygodnie pomaga utrzymać kondycję</li></ul><h2>Kiedy wybrać osteopatę?</h2><p>Osteopatia może pomóc, gdy:</p><ul><li><strong>Masaż pomaga, ale na krótko</strong> — napięcie pleców ustępuje na kilka dni po sesji, a potem wraca. To sygnał, że przyczyna leży głębiej niż w mięśniach</li><li><strong>Ból pleców nie ustępuje</strong> mimo serii masaży — być może źródło nie tkwi w mięśniach, lecz w powięziach, narządach wewnętrznych lub miednicy</li><li>Masz <strong>kilka dolegliwości jednocześnie</strong> — ból pleców, bóle głowy i problemy trawienne mogą mieć wspólną przyczynę</li><li>Dolegliwości mają <strong>charakter funkcjonalny</strong> — kolki u niemowlęcia, zaburzenia snu, problemy z koncentracją u dziecka</li><li>Szukasz pomocy <strong>w ciąży, po porodzie lub dla dziecka</strong> — osteopatia oferuje delikatne, bezpieczne techniki</li></ul><h2>Metody, które się uzupełniają</h2><p>Masaż i osteopatia nie konkurują ze sobą — dobrze ze sobą współpracują. Osteopatia może znaleźć i usunąć przyczynę problemu, a masaż — podtrzymywać efekt między sesjami. Wielu moich pacjentów łączy oba podejścia.</p>",
+        "cta_title": "Szukasz masażu leczniczego lub osteopatii w Warszawie?",
+        "cta_text": "Zapraszam na konsultację — ocenię Twoją sytuację i podpowiem, co będzie skuteczniejsze.",
+        "cta_author": "Hanna Bykava — osteopata, certyfikowana masażystka, 15 lat doświadczenia medycznego. Gabinet OsteoJump, Warszawa (Ursus).",
         "cta_book": "Umów wizytę",
         "cta_question": "Zadaj pytanie"
     }

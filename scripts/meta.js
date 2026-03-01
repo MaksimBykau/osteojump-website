@@ -319,6 +319,34 @@ const pageMeta = {
     },
   },
 
+  'osteopatia-masaz-leczniczy': {
+    pl: {
+      description: 'Czym osteopatia różni się od masażu leczniczego? Porównanie metod, kiedy wybrać masaż, a kiedy osteopatę. Osteopata i masażystka w Warszawie — OsteoJump.',
+      ogTitle: 'Osteopatia a masaż leczniczy — porównanie | OsteoJump',
+      ogDescription: 'Różnice między osteopatią a masażem leczniczym. Kiedy wybrać osteopatę, a kiedy masażystę.',
+    },
+    en: {
+      description: 'How does osteopathy differ from therapeutic massage? Comparison of methods, when to choose massage and when to choose an osteopath. Osteopath in Warsaw — OsteoJump.',
+      ogTitle: 'Osteopathy vs Therapeutic Massage — Comparison | OsteoJump',
+      ogDescription: 'Differences between osteopathy and therapeutic massage. When to choose an osteopath.',
+    },
+    ru: {
+      description: 'Чем остеопатия отличается от лечебного массажа? Сравнение методов, когда выбрать массаж, а когда остеопата. Остеопат и массажист в Варшаве — OsteoJump.',
+      ogTitle: 'Остеопатия и лечебный массаж — сравнение | OsteoJump',
+      ogDescription: 'Различия между остеопатией и лечебным массажем. Когда выбрать остеопата.',
+    },
+    uk: {
+      description: 'Чим остеопатія відрізняється від лікувального масажу? Порівняння методів, коли обрати масаж, а коли остеопата. Остеопат у Варшаві — OsteoJump.',
+      ogTitle: 'Остеопатія та лікувальний масаж — порівняння | OsteoJump',
+      ogDescription: 'Відмінності між остеопатією та лікувальним масажем. Коли обрати остеопата.',
+    },
+    de: {
+      description: 'Wie unterscheidet sich Osteopathie von Heilmassage? Methodenvergleich, wann Massage und wann Osteopathie wählen. Osteopathin in Warschau — OsteoJump.',
+      ogTitle: 'Osteopathie und Heilmassage — Vergleich | OsteoJump',
+      ogDescription: 'Unterschiede zwischen Osteopathie und Heilmassage. Wann einen Osteopathen wählen.',
+    },
+  },
+
   appointment: {
     pl: {
       description: 'Jak przebiega wizyta u osteopaty — rozmowa, diagnostyka, praca z ciałem. 55 minut, łagodne techniki. Osteopata Warszawa, OsteoJump.',

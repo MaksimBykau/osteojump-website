@@ -24,7 +24,7 @@
 ## Сделано
 
 ### 2026-02-28: SSG + мультиязычность
-- [x] 55 статических HTML (11 страниц × 5 языков)
+- [x] 65 статических HTML (13 страниц × 5 языков)
 - [x] Каждый язык имеет свой URL: `/` (PL), `/en/`, `/ru/`, `/uk/`, `/de/`
 - [x] hreflang теги для всех языковых версий + x-default
 - [x] canonical теги
@@ -68,9 +68,9 @@
   - Запрос: `terapia manualna warszawa` (500/мес), `rehabilitacja manualna`, `terapia osteopatyczna`
   - Отдельная страница-статья с полным SEO: title, meta, hreflang, 5 языков. Короткий FAQ entry с ссылкой на статью.
 
-- [ ] **Q2: Osteopatia vs masaż leczniczy**
+- [x] **Q2: Osteopatia vs masaż leczniczy** — `/osteopatia-masaz-leczniczy` + FAQ entry (2026-03-01)
   - Запрос: `masaż leczniczy warszawa` (500/мес), `masaż kręgosłupa warszawa`, `masaż klasyczny warszawa`
-  - Суть: массаж — мышцы (расслабление, кровообращение), остеопатия — причина напряжения (фасции, органы, краниосакральная система). Hanna имеет сертификаты массажа.
+  - Отдельная страница-статья: массаж — мышцы, остеопатия — причина напряжения. USP: Hanna — сертифицированная массажистка, знает оба метода.
 
 - [ ] **Q3: Osteopatia vs fizjoterapia**
   - Запрос: `fizjoterapia` (500/мес), `rehabilitacja manualna`, `kinezyterapia`
