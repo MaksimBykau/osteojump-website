@@ -38,6 +38,7 @@ const PAGES = {
   'osteopathy':  'osteopathy/index.html',
   'consultation':'consultation/index.html',
   'appointment': 'appointment/index.html',
+  'osteopatia-terapia-manualna': 'osteopatia-terapia-manualna/index.html',
 };
 
 // Static asset directories to copy
@@ -61,6 +62,7 @@ const SITEMAP_PRIORITY = {
   'education': '0.5',
   'location': '0.6',
   'contacts': '0.6',
+  'osteopatia-terapia-manualna': '0.5',
 };
 
 // ---------------------------------------------------------------------------

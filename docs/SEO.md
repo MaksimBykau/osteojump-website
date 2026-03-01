@@ -45,23 +45,52 @@
 - [x] Страницы: index, about, prices, reviews, education, location, appointment, consultation
 - [x] Декоративные иконки (footer, action bar) оставлены с alt="" (корректно по a11y)
 
+### 2026-02-28: Оптимизация скорости загрузки
+- [x] Ресайз крупных картинок до max 1600px (hero, work1-4, mother2/5, location steps)
+- [x] WebP конвертация: 82 файла, 36MB → 11MB (прямая замена src, не `<picture>`)
+- [x] Lazy loading: about (5), education (8), appointment (7) — картинки ниже fold
+- [x] HugeIcons CSS async: preload/onload на index и prices
+- [x] CI/CD: webp tools + convert step в deploy.yml
+
 ## TODO
 
 ### Высокий приоритет
-- [ ] **Google Business Profile** — убедиться что ссылка на сайт osteojump.pl, категория "Osteopata"
-
-### Средний приоритет
-
-- [ ] **WebP конвертация** — 84 JPG/PNG (36MB). Конвертировать в WebP с `<picture>` fallback
-- [ ] **HugeIcons CSS async** — грузится render-blocking, перевести на async загрузку
-- [ ] **Lazy loading** — расширить `loading="lazy"` на все картинки ниже fold
+- [x] **Google Business Profile** — настроен: Osteopath (primary) + Child health care centre, Women's health clinic, Alternative medicine practitioner, Massage therapist. Описание оптимизировано под локальные запросы и специализации
 - [ ] **Аналитика** — подключить (для отслеживания трафика из поиска)
 
-### Низкий приоритет (контент)
+### Средний приоритет (контент)
 
-- [ ] **Контент под смежные запросы** (Категория B) — секции на странице /osteopathy или отдельные страницы
-- [ ] **Responsive images** — srcset для разных размеров экранов
+#### FAQ: Остеопатия и другие методы (секция #2 на /faq)
+
+Стратегия: перехватить трафик по смежным запросам — люди ищут массаж/мануалку/физио → попадают на FAQ → узнают про остеопатию. Каждый вопрос — отдельная статья-сравнение.
+
+- [x] **Q1: Osteopatia vs terapia manualna** — `/osteopatia-terapia-manualna` + FAQ entry (2026-03-01)
+  - Запрос: `terapia manualna warszawa` (500/мес), `rehabilitacja manualna`, `terapia osteopatyczna`
+  - Отдельная страница-статья с полным SEO: title, meta, hreflang, 5 языков. Короткий FAQ entry с ссылкой на статью.
+
+- [ ] **Q2: Osteopatia vs masaż leczniczy**
+  - Запрос: `masaż leczniczy warszawa` (500/мес), `masaż kręgosłupa warszawa`, `masaż klasyczny warszawa`
+  - Суть: массаж — мышцы (расслабление, кровообращение), остеопатия — причина напряжения (фасции, органы, краниосакральная система). Hanna имеет сертификаты массажа.
+
+- [ ] **Q3: Osteopatia vs fizjoterapia**
+  - Запрос: `fizjoterapia` (500/мес), `rehabilitacja manualna`, `kinezyterapia`
+  - Суть: физиотерапия — широкая дисциплина (упражнения, электротерапия). Остеопатия — только руками, целостный подход. Хорошо дополняют друг друга.
+
+- [ ] **Q4: Osteopata vs chiropraktyk (kręgarz)**
+  - Запрос: `chiropraktyk warszawa`, `kręgarz warszawa`
+  - Суть: хиропрактика — быстрые манипуляции ("хруст"). Остеопатия — мягкие техники без резких движений. Безопасно для детей и беременных.
+
+- [ ] **Q5: Osteopatia a ból szczęki (TMJ)**
+  - Запрос: `fizjoterapia szczękowa` (500/мес), `staw skroniowo-żuchwowy`, `ból szczęki`
+  - Суть: TMJ связан с черепом, шейным отделом и краниосакральной системой. Hanna имеет краниосакральное обучение.
+
+#### Другое
+
 - [ ] **Обратные ссылки** — каталоги (ZnanyLekarz, Google Maps, Booksy)
+
+### Низкий приоритет
+
+- [ ] **Responsive images** — srcset для разных размеров экранов
 
 ## Инструменты проверки
 

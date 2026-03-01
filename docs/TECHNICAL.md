@@ -34,7 +34,7 @@ osteojump/
 
 ## Static Site Generation (SSG)
 
-Build-скрипт генерирует 55 статических HTML (11 страниц × 5 языков):
+Build-скрипт генерирует 60 статических HTML (12 страниц × 5 языков):
 
 ```
 /                    → Польский (дефолт, без префикса)
@@ -123,6 +123,7 @@ make clean
 | `/osteopathy` | `osteopathy/index.html` | `css/osteopathy.css` | `osteopathy_page.*` |
 | `/consultation` | `consultation/index.html` | `css/consultation.css` | `consultation_page.*` |
 | `/appointment` | `appointment/index.html` | `css/appointment.css` | `appointment_page.*` |
+| `/osteopatia-terapia-manualna` | `osteopatia-terapia-manualna/index.html` | `css/article.css` | `article_osteo_manual.*` |
 
 Общие ключи (все страницы): `nav.*`, `footer.*`, `action_bar.*`, `contacts.*`, `map.*`
 

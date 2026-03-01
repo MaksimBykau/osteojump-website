@@ -291,6 +291,34 @@ const pageMeta = {
     },
   },
 
+  'osteopatia-terapia-manualna': {
+    pl: {
+      description: 'Czym osteopatia różni się od terapii manualnej? Porównanie metod, różnice w podejściu diagnostycznym i zakresie pracy z ciałem. Osteopata Warszawa — OsteoJump.',
+      ogTitle: 'Osteopatia a terapia manualna — porównanie | OsteoJump',
+      ogDescription: 'Różnice między osteopatią a terapią manualną. Kiedy wybrać osteopatę, a kiedy terapeutę manualnego.',
+    },
+    en: {
+      description: 'How does osteopathy differ from manual therapy? Comparison of methods, diagnostic approaches and scope of bodywork. Osteopath in Warsaw — OsteoJump.',
+      ogTitle: 'Osteopathy vs Manual Therapy — Comparison | OsteoJump',
+      ogDescription: 'Differences between osteopathy and manual therapy. When to choose an osteopath.',
+    },
+    ru: {
+      description: 'Чем остеопатия отличается от мануальной терапии? Сравнение методов, различия в диагностике и подходе к лечению. Остеопат в Варшаве — OsteoJump.',
+      ogTitle: 'Остеопатия и мануальная терапия — сравнение | OsteoJump',
+      ogDescription: 'Различия между остеопатией и мануальной терапией. Когда выбрать остеопата.',
+    },
+    uk: {
+      description: 'Чим остеопатія відрізняється від мануальної терапії? Порівняння методів, відмінності в діагностиці та підході до лікування. Остеопат у Варшаві — OsteoJump.',
+      ogTitle: 'Остеопатія та мануальна терапія — порівняння | OsteoJump',
+      ogDescription: 'Відмінності між остеопатією та мануальною терапією. Коли обрати остеопата.',
+    },
+    de: {
+      description: 'Wie unterscheidet sich Osteopathie von manueller Therapie? Methodenvergleich, Unterschiede in Diagnostik und Behandlung. Osteopathin in Warschau — OsteoJump.',
+      ogTitle: 'Osteopathie und manuelle Therapie — Vergleich | OsteoJump',
+      ogDescription: 'Unterschiede zwischen Osteopathie und manueller Therapie. Wann einen Osteopathen wählen.',
+    },
+  },
+
   appointment: {
     pl: {
       description: 'Jak przebiega wizyta u osteopaty — rozmowa, diagnostyka, praca z ciałem. 55 minut, łagodne techniki. Osteopata Warszawa, OsteoJump.',
