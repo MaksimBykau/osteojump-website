@@ -394,6 +394,9 @@
         "osteo_vs_massage_title": "Czym osteopatia różni się od masażu leczniczego?",
         "osteo_vs_massage_answer": "Masaż leczniczy pracuje z mięśniami — rozluźnia napięcie i poprawia krążenie. Osteopatia szuka przyczyny napięcia i pracuje całościowo — z powięziami, narządami wewnętrznymi i systemem kraniosakralnym. Metody dobrze się uzupełniają.",
         "osteo_vs_massage_link": "Czytaj porównanie osteopatii i masażu leczniczego →",
+        "osteo_vs_physio_title": "Czym osteopatia różni się od fizjoterapii?",
+        "osteo_vs_physio_answer": "Fizjoterapia to szeroka dziedzina — ćwiczenia, elektroterapia, ultradźwięki, techniki manualne. Osteopatia to zawsze praca wyłącznie rękami i zawsze podejście całościowe — szukamy przyczyny, a nie tylko leczymy objaw. Metody dobrze się uzupełniają.",
+        "osteo_vs_physio_link": "Czytaj porównanie osteopatii i fizjoterapii →",
         "q3_title": "Jakie są odczucia podczas sesji?",
         "q3_answer": "Odczucia są delikatne i przyjemne — lekki nacisk, relaksacja, czasem ciepło. Praca odbywa się subtelnie, z uwzględnieniem reakcji twojego ciała. Techniki są tak delikatne, że odpowiednie nawet dla noworodków i kobiet w ciąży.",
         "q4_title": "Ile sesji potrzeba?",
@@ -708,6 +711,17 @@
         "cta_title": "Szukasz masażu leczniczego lub osteopatii w Warszawie?",
         "cta_text": "Zapraszam na konsultację — ocenię Twoją sytuację i podpowiem, co będzie skuteczniejsze.",
         "cta_author": "Hanna Bykava — osteopata, certyfikowana masażystka, 15 lat doświadczenia medycznego. Gabinet OsteoJump, Warszawa (Ursus).",
+        "cta_book": "Umów wizytę",
+        "cta_question": "Zadaj pytanie"
+    },
+    "article_osteo_physio": {
+        "title": "Osteopatia a fizjoterapia — porównanie | OsteoJump",
+        "hero_title": "Czym osteopatia różni się od fizjoterapii?",
+        "hero_subtitle": "Dwa podejścia do zdrowia — czym się różnią i kiedy się uzupełniają",
+        "content": "<h2>Czym jest fizjoterapia?</h2><p>Fizjoterapia to szeroka dziedzina medyczna, której celem jest przywrócenie sprawności ruchowej i funkcji ciała. Fizjoterapeuta korzysta z różnorodnych narzędzi: ćwiczeń leczniczych, elektroterapii, ultradźwięków, lasera, technik manualnych, kinesiotapingu.</p><p>Zazwyczaj fizjoterapeuta pracuje z konkretną diagnozą i zaleceniami od lekarza. Kurs leczenia może obejmować kilka metod i trwać tygodnie lub miesiące.</p><h2>Jak pracuje osteopata?</h2><p>Osteopata pracuje wyłącznie rękami — bez aparatów, ćwiczeń i dodatkowych narzędzi. Jego zadanie to znaleźć, gdzie w ciele zaburzona jest ruchomość tkanek, i przywrócić ją za pomocą delikatnych technik.</p><p>Główna różnica tkwi w podejściu diagnostycznym. Osteopata nie koncentruje się wyłącznie na miejscu bólu. Jeśli boli Cię dolna część pleców, przyczyna może tkwić w ograniczonej ruchomości narządów wewnętrznych, napięciu przepony lub nawet w obrębie miednicy. Osteopata szuka pierwotnej przyczyny, oceniając ciało jako całość.</p><h2>Na czym polega kluczowa różnica?</h2><p>Fizjoterapia stosuje wiele metod i często koncentruje się na konkretnej strefie — na przykład wzmacnia mięśnie wokół uszkodzonego stawu lub łagodzi stan zapalny ultradźwiękami. Jest to szczególnie skuteczne po operacjach, złamaniach i podczas rehabilitacji.</p><p>Osteopatia to zawsze praca rękami i zawsze podejście całościowe. Osteopata nie leczy pojedynczego stawu ani mięśnia — przywraca równowagę całego ciała, aby organizm mógł sam poradzić sobie z problemem.</p><h2>Kiedy lepiej wybrać fizjoterapeutę?</h2><ul><li>Po operacji lub złamaniu — gdy potrzebny jest <strong>kurs rehabilitacji z ćwiczeniami</strong></li><li>Gdy trzeba <strong>wzmocnić konkretne mięśnie</strong> (na przykład po urazie kolana)</li><li>Gdy zalecona jest <strong>terapia aparaturowa</strong> (elektrostymulacja, ultradźwięki, laser)</li><li>Przy długotrwałej rehabilitacji wymagającej <strong>regularnych treningów</strong></li></ul><h2>Kiedy lepiej wybrać osteopatę?</h2><ul><li><strong>Ból powraca pomimo ćwiczeń i zabiegów</strong> — być może nie została usunięta pierwotna przyczyna</li><li><strong>Przewlekłe bóle pleców, szyi, bóle głowy</strong> — gdy standardowe leczenie nie daje trwałych efektów</li><li>Problemy <strong>dotyczące kilku stref ciała jednocześnie</strong></li><li>Dolegliwości związane z <strong>ciążą, porodem, regeneracją poporodową</strong></li><li><strong>Zaburzenia funkcjonalne u dzieci</strong> — napięcie mięśniowe, kolki, kręcz szyi, problemy ze snem</li></ul><h2>Metody, które się uzupełniają</h2><p>Fizjoterapia i osteopatia to nie konkurenci. Fizjoterapeuta może wzmocnić mięśnie i przywrócić funkcję stawu. Osteopata może usunąć głębokie ograniczenie, które przeszkadza ciału w pełnym powrocie do zdrowia.</p><p>Wielu pacjentów łączy oba podejścia: osteopata pracuje z przyczyną — fizjoterapeuta pomaga utrwalić efekt za pomocą ćwiczeń.</p>",
+        "cta_title": "Nie wiesz, która metoda jest dla Ciebie?",
+        "cta_text": "Umów się na wizytę — ocenię Twoją sytuację i podpowiem, jakie podejście będzie najskuteczniejsze.",
+        "cta_author": "Hanna Bykava — osteopata, 15 lat doświadczenia medycznego. Gabinet OsteoJump, Warszawa (Ursus).",
         "cta_book": "Umów wizytę",
         "cta_question": "Zadaj pytanie"
     }

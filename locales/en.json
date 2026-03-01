@@ -394,6 +394,9 @@
         "osteo_vs_massage_title": "How does osteopathy differ from therapeutic massage?",
         "osteo_vs_massage_answer": "Therapeutic massage works with muscles — relieving tension and improving circulation. Osteopathy looks for the cause of tension and works holistically — with fascia, internal organs and the craniosacral system. The methods complement each other well.",
         "osteo_vs_massage_link": "Read the comparison of osteopathy and therapeutic massage →",
+        "osteo_vs_physio_title": "How does osteopathy differ from physiotherapy?",
+        "osteo_vs_physio_answer": "Physiotherapy is a broad field — exercise therapy, electrotherapy, ultrasound, manual techniques. Osteopathy always works exclusively with the hands and always takes a holistic approach — we look for the cause, not just treat the symptom. The methods complement each other well.",
+        "osteo_vs_physio_link": "Read the comparison of osteopathy and physiotherapy →",
         "q3_title": "What does it feel like during a session?",
         "q3_answer": "The sensations are gentle and pleasant — light pressure, relaxation, sometimes warmth. Work is done delicately, responding to your body. The techniques are so gentle they're suitable even for newborns and pregnant women.",
         "q4_title": "How many sessions are needed?",
@@ -710,6 +713,16 @@
         "cta_author": "Hanna Bykava — osteopath, certified massage therapist, 15 years of medical experience. OsteoJump practice, Warsaw (Ursus).",
         "cta_book": "Book an appointment",
         "cta_question": "Ask a question"
+    },
+    "article_osteo_physio": {
+        "title": "Osteopathy vs Physiotherapy — Comparison | OsteoJump",
+        "hero_title": "How does osteopathy differ from physiotherapy?",
+        "hero_subtitle": "Two approaches to health — what sets them apart and when they complement each other",
+        "content": "<h2>What is physiotherapy?</h2><p>Physiotherapy is a broad medical field aimed at restoring mobility and bodily function. A physiotherapist draws on a wide range of tools: therapeutic exercises, electrotherapy, ultrasound, laser therapy, manual techniques, and kinesiotaping.</p><p>Typically, a physiotherapist works with a specific diagnosis and a referral from a doctor. A course of treatment may combine several methods and last weeks or months.</p><h2>How does an osteopath work?</h2><p>An osteopath works exclusively with the hands — no equipment, exercises, or additional tools. The task is to find where the mobility of tissues is restricted in the body, and restore it through gentle techniques.</p><p>The key difference lies in the diagnostic approach. An osteopath does not focus solely on the site of pain. If you have lower back pain, the cause may lie in restricted mobility of the internal organs, tension in the diaphragm, or even in the pelvic area. The osteopath looks for the root cause by assessing the body as a whole.</p><h2>What is the essential difference?</h2><p>Physiotherapy uses many methods and often focuses on a specific area — for example, strengthening the muscles around a damaged joint or reducing inflammation with ultrasound. This is particularly effective after surgery, fractures, and during rehabilitation.</p><p>Osteopathy always involves hands-on work and always takes a holistic approach. The osteopath does not treat a single joint or muscle — the aim is to restore balance throughout the entire body so that it can resolve the problem on its own.</p><h2>When is it better to choose a physiotherapist?</h2><ul><li>After surgery or a fracture — when a <strong>rehabilitation programme with exercises</strong> is needed</li><li>When specific muscles need to be <strong>strengthened</strong> (for example, after a knee injury)</li><li>When <strong>equipment-based therapy</strong> has been prescribed (electrostimulation, ultrasound, laser)</li><li>During long-term rehabilitation that requires <strong>regular training</strong></li></ul><h2>When is it better to choose an osteopath?</h2><ul><li><strong>Pain keeps returning despite exercises and treatments</strong> — the root cause may not have been addressed</li><li><strong>Chronic back pain, neck pain, headaches</strong> — when standard treatment does not produce lasting results</li><li>Problems <strong>affecting several areas of the body at the same time</strong></li><li>Complaints related to <strong>pregnancy, childbirth, and postpartum recovery</strong></li><li><strong>Functional disorders in children</strong> — muscle tension, colic, torticollis, sleep difficulties</li></ul><h2>Methods that complement each other</h2><p>Physiotherapy and osteopathy are not competitors. A physiotherapist can strengthen muscles and restore joint function. An osteopath can release the deep restriction that prevents the body from fully recovering.</p><p>Many patients combine both approaches: the osteopath works on the cause — the physiotherapist helps consolidate the result through exercise.</p>",
+        "cta_title": "Not sure which method is right for you?",
+        "cta_text": "Book an appointment — I will assess your situation and advise on the approach that will be most effective.",
+        "cta_author": "Hanna Bykava — osteopath, 15 years of medical experience. OsteoJump practice, Warsaw (Ursus).",
+        "cta_book": "Book an appointment",
+        "cta_question": "Ask a question"
     }
 }
-

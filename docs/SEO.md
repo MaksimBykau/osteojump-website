@@ -24,7 +24,7 @@
 ## Сделано
 
 ### 2026-02-28: SSG + мультиязычность
-- [x] 65 статических HTML (13 страниц × 5 языков)
+- [x] 70 статических HTML (14 страниц × 5 языков)
 - [x] Каждый язык имеет свой URL: `/` (PL), `/en/`, `/ru/`, `/uk/`, `/de/`
 - [x] hreflang теги для всех языковых версий + x-default
 - [x] canonical теги
@@ -72,9 +72,9 @@
   - Запрос: `masaż leczniczy warszawa` (500/мес), `masaż kręgosłupa warszawa`, `masaż klasyczny warszawa`
   - Отдельная страница-статья: массаж — мышцы, остеопатия — причина напряжения. USP: Hanna — сертифицированная массажистка, знает оба метода.
 
-- [ ] **Q3: Osteopatia vs fizjoterapia**
+- [x] **Q3: Osteopatia vs fizjoterapia** — `/osteopatia-fizjoterapia` + FAQ entry (2026-03-01)
   - Запрос: `fizjoterapia` (500/мес), `rehabilitacja manualna`, `kinezyterapia`
-  - Суть: физиотерапия — широкая дисциплина (упражнения, электротерапия). Остеопатия — только руками, целостный подход. Хорошо дополняют друг друга.
+  - Отдельная страница-статья: физиотерапия — широкая дисциплина, остеопатия — только руками, целостный подход. Акцент на взаимодополняемости методов.
 
 - [ ] **Q4: Osteopata vs chiropraktyk (kręgarz)**
   - Запрос: `chiropraktyk warszawa`, `kręgarz warszawa`

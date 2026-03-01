@@ -347,6 +347,34 @@ const pageMeta = {
     },
   },
 
+  'osteopatia-fizjoterapia': {
+    pl: {
+      description: 'Czym osteopatia różni się od fizjoterapii? Porównanie metod, różnice w podejściu i kiedy się uzupełniają. Osteopata Warszawa — OsteoJump.',
+      ogTitle: 'Osteopatia a fizjoterapia — porównanie | OsteoJump',
+      ogDescription: 'Różnice między osteopatią a fizjoterapią. Kiedy wybrać osteopatę, a kiedy fizjoterapeutę.',
+    },
+    en: {
+      description: 'How does osteopathy differ from physiotherapy? Comparison of methods, differences in approach and when they complement each other. Osteopath in Warsaw — OsteoJump.',
+      ogTitle: 'Osteopathy vs Physiotherapy — Comparison | OsteoJump',
+      ogDescription: 'Differences between osteopathy and physiotherapy. When to choose an osteopath.',
+    },
+    ru: {
+      description: 'Чем остеопатия отличается от физиотерапии? Сравнение методов, различия в подходе и когда они дополняют друг друга. Остеопат в Варшаве — OsteoJump.',
+      ogTitle: 'Остеопатия и физиотерапия — сравнение | OsteoJump',
+      ogDescription: 'Различия между остеопатией и физиотерапией. Когда выбрать остеопата.',
+    },
+    uk: {
+      description: 'Чим остеопатія відрізняється від фізіотерапії? Порівняння методів, відмінності у підході та коли вони доповнюють одне одного. Остеопат у Варшаві — OsteoJump.',
+      ogTitle: 'Остеопатія та фізіотерапія — порівняння | OsteoJump',
+      ogDescription: 'Відмінності між остеопатією та фізіотерапією. Коли обрати остеопата.',
+    },
+    de: {
+      description: 'Wie unterscheidet sich Osteopathie von Physiotherapie? Methodenvergleich, Unterschiede im Ansatz und wann sie sich ergänzen. Osteopathin in Warschau — OsteoJump.',
+      ogTitle: 'Osteopathie und Physiotherapie — Vergleich | OsteoJump',
+      ogDescription: 'Unterschiede zwischen Osteopathie und Physiotherapie. Wann einen Osteopathen wählen.',
+    },
+  },
+
   appointment: {
     pl: {
       description: 'Jak przebiega wizyta u osteopaty — rozmowa, diagnostyka, praca z ciałem. 55 minut, łagodne techniki. Osteopata Warszawa, OsteoJump.',
