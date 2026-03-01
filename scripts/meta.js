@@ -403,6 +403,34 @@ const pageMeta = {
     },
   },
 
+  'osteopatia-bol-szczeki-stawu-skroniowo-zuchwowego': {
+    pl: {
+      description: 'Czy osteopatia pomaga przy bólu szczęki i problemach ze stawem skroniowo-żuchwowym? Podejście kraniosakralne, leczenie ZCSS. Osteopata Warszawa — OsteoJump.',
+      ogTitle: 'Osteopatia a ból szczęki (ZCSS) | OsteoJump',
+      ogDescription: 'Jak osteopatia i terapia kraniosakralna pomagają przy problemach ze stawem skroniowo-żuchwowym.',
+    },
+    en: {
+      description: 'Can osteopathy help with jaw pain and TMJ problems? Craniosacral approach to TMJ treatment. Osteopath in Warsaw — OsteoJump.',
+      ogTitle: 'Osteopathy for Jaw Pain and TMJ | OsteoJump',
+      ogDescription: 'How osteopathy and craniosacral therapy help with temporomandibular joint problems.',
+    },
+    ru: {
+      description: 'Помогает ли остеопатия при боли в челюсти и проблемах с ВНЧС? Краниосакральный подход к лечению ВНЧС. Остеопат в Варшаве — OsteoJump.',
+      ogTitle: 'Остеопатия при боли в челюсти и ВНЧС | OsteoJump',
+      ogDescription: 'Как остеопатия и краниосакральная терапия помогают при проблемах с височно-нижнечелюстным суставом.',
+    },
+    uk: {
+      description: 'Чи допомагає остеопатія при болю в щелепі та проблемах зі СНЩС? Краніосакральний підхід до лікування СНЩС. Остеопат у Варшаві — OsteoJump.',
+      ogTitle: 'Остеопатія при болю в щелепі та СНЩС | OsteoJump',
+      ogDescription: 'Як остеопатія та краніосакральна терапія допомагають при проблемах зі скронево-нижньощелепним суглобом.',
+    },
+    de: {
+      description: 'Hilft Osteopathie bei Kieferschmerzen und Kiefergelenkproblemen (TMJ)? Kraniosakraler Ansatz zur Behandlung. Osteopathin in Warschau — OsteoJump.',
+      ogTitle: 'Osteopathie bei Kieferschmerzen und TMJ | OsteoJump',
+      ogDescription: 'Wie Osteopathie und Kraniosakraltherapie bei Kiefergelenkproblemen helfen.',
+    },
+  },
+
   appointment: {
     pl: {
       description: 'Jak przebiega wizyta u osteopaty — rozmowa, diagnostyka, praca z ciałem. 55 minut, łagodne techniki. Osteopata Warszawa, OsteoJump.',

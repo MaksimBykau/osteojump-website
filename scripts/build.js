@@ -42,6 +42,7 @@ const PAGES = {
   'osteopatia-masaz-leczniczy': 'osteopatia-masaz-leczniczy/index.html',
   'osteopatia-fizjoterapia': 'osteopatia-fizjoterapia/index.html',
   'osteopatia-chiropraktyka': 'osteopatia-chiropraktyka/index.html',
+  'osteopatia-bol-szczeki-stawu-skroniowo-zuchwowego': 'osteopatia-bol-szczeki-stawu-skroniowo-zuchwowego/index.html',
 };
 
 // Static asset directories to copy
@@ -69,6 +70,7 @@ const SITEMAP_PRIORITY = {
   'osteopatia-masaz-leczniczy': '0.5',
   'osteopatia-fizjoterapia': '0.5',
   'osteopatia-chiropraktyka': '0.5',
+  'osteopatia-bol-szczeki-stawu-skroniowo-zuchwowego': '0.5',
 };
 
 // ---------------------------------------------------------------------------
