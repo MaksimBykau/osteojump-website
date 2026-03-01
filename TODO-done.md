@@ -1,5 +1,12 @@
 # Выполненные задачи
 
+## 2026-03
+
+- [x] SEO-статьи Q1-Q5: 5 страниц-сравнений для перехвата смежного трафика (2026-03-01)
+  - Q1: vs terapia manualna, Q2: vs masaż leczniczy, Q3: vs fizjoterapia, Q4: vs chiropraktyk, Q5: TMJ/ból szczęki
+  - Каждая: отдельная страница + FAQ entry + 5 языков. Сайт: 11→16 страниц, 55→80 HTML
+- [x] PostHog аналитика: EU Cloud, cookieless, GDPR-compliant, scroll depth (2026-03-01)
+
 ## 2026-02
 
 - [x] Оптимизация скорости: ресайз картинок, WebP, lazy loading, async CSS (2026-02-28)

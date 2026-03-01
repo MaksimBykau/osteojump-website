@@ -4,6 +4,28 @@
 
 ---
 
+## Session: 2026-03-01
+**Коммиты:**
+- `312f4ac` — Add article: Osteopatia vs masaż leczniczy (SEO Q2)
+- `248b90b` — Add article: Osteopatia vs fizjoterapia (SEO Q3)
+- `2ad3ccc` — Add article: Osteopata vs chiropraktyk (SEO Q4)
+- `ba022b0` — Add article: Osteopatia a ból szczęki / TMJ (SEO Q5)
+- `3708d0a` — Add PostHog analytics (cookieless, GDPR-compliant)
+
+**SEO-статьи (Q2-Q5):**
+- 4 статьи-сравнения для перехвата смежного трафика
+- Каждая: отдельная страница + FAQ entry со ссылкой
+- URL: `/osteopatia-{topic}`, i18n ключи: `article_osteo_{name}.*`
+- Переводы: 4 параллельных sonnet-агента (EN/RU/UK/DE)
+- Сайт вырос: 11 → 16 страниц, 55 → 80 HTML (16×5 языков)
+
+**PostHog аналитика:**
+- EU Cloud, cookieless_mode: 'always' (без cookie-баннера)
+- Инжекция через build.js (шаг 18) — только в продакшене
+- Autocapture (клики, формы), pageview/pageleave, scroll depth
+
+---
+
 ## Session: 2026-02-28
 **Коммит:** `87393c5` — Optimize page speed: resize images, WebP, lazy loading, async CSS
 - Ресайз крупных картинок до max 1600px (hero, work1-4, mother2/5, location steps)

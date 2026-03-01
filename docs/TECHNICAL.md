@@ -7,6 +7,7 @@
 - Vanilla JavaScript
 - GitHub Pages для хостинга
 - GitHub Actions для CI/CD
+- PostHog аналитика (EU Cloud, cookieless)
 
 ## Структура проекта
 
@@ -58,6 +59,7 @@ make serve-dist      # Тестовый сервер на порту 8001
 - Заменяет `i18n.js` → `i18n-static.js`
 - Удаляет inline "Quick language detection" скрипт
 - Добавляет `data-static-href` для навигации переключателя языков
+- Инжектит PostHog аналитику (cookieless, GDPR-compliant)
 
 ## Локальная разработка
 
