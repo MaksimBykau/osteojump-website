@@ -375,6 +375,34 @@ const pageMeta = {
     },
   },
 
+  'osteopatia-chiropraktyka': {
+    pl: {
+      description: 'Czym osteopata różni się od chiropraktyka (kręgarza)? Porównanie technik, podejścia i bezpieczeństwa. Delikatne techniki osteopatyczne — OsteoJump Warszawa.',
+      ogTitle: 'Osteopata a chiropraktyk — porównanie | OsteoJump',
+      ogDescription: 'Różnice między osteopatą a chiropraktykiem. Techniki, podejście, bezpieczeństwo.',
+    },
+    en: {
+      description: 'How does an osteopath differ from a chiropractor? Comparison of techniques, approaches and safety. Gentle osteopathic techniques — OsteoJump Warsaw.',
+      ogTitle: 'Osteopath vs Chiropractor — Comparison | OsteoJump',
+      ogDescription: 'Differences between an osteopath and a chiropractor. Techniques, approach, safety.',
+    },
+    ru: {
+      description: 'Чем остеопат отличается от хиропрактика (костоправа)? Сравнение техник, подхода и безопасности. Мягкие остеопатические техники — OsteoJump Варшава.',
+      ogTitle: 'Остеопат и хиропрактик — сравнение | OsteoJump',
+      ogDescription: 'Различия между остеопатом и хиропрактиком. Техники, подход, безопасность.',
+    },
+    uk: {
+      description: 'Чим остеопат відрізняється від хіропрактика? Порівняння технік, підходу та безпеки. М\'які остеопатичні техніки — OsteoJump Варшава.',
+      ogTitle: 'Остеопат та хіропрактик — порівняння | OsteoJump',
+      ogDescription: 'Відмінності між остеопатом та хіропрактиком. Техніки, підхід, безпека.',
+    },
+    de: {
+      description: 'Wie unterscheidet sich ein Osteopath vom Chiropraktiker? Vergleich der Techniken, Ansätze und Sicherheit. Sanfte osteopathische Techniken — OsteoJump Warschau.',
+      ogTitle: 'Osteopath und Chiropraktiker — Vergleich | OsteoJump',
+      ogDescription: 'Unterschiede zwischen Osteopath und Chiropraktiker. Techniken, Ansatz, Sicherheit.',
+    },
+  },
+
   appointment: {
     pl: {
       description: 'Jak przebiega wizyta u osteopaty — rozmowa, diagnostyka, praca z ciałem. 55 minut, łagodne techniki. Osteopata Warszawa, OsteoJump.',

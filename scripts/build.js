@@ -41,6 +41,7 @@ const PAGES = {
   'osteopatia-terapia-manualna': 'osteopatia-terapia-manualna/index.html',
   'osteopatia-masaz-leczniczy': 'osteopatia-masaz-leczniczy/index.html',
   'osteopatia-fizjoterapia': 'osteopatia-fizjoterapia/index.html',
+  'osteopatia-chiropraktyka': 'osteopatia-chiropraktyka/index.html',
 };
 
 // Static asset directories to copy
@@ -67,6 +68,7 @@ const SITEMAP_PRIORITY = {
   'osteopatia-terapia-manualna': '0.5',
   'osteopatia-masaz-leczniczy': '0.5',
   'osteopatia-fizjoterapia': '0.5',
+  'osteopatia-chiropraktyka': '0.5',
 };
 
 // ---------------------------------------------------------------------------
