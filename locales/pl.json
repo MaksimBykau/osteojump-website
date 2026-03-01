@@ -1,5 +1,5 @@
 {
-    "title": "OsteoJump",
+    "title": "Osteopata Warszawa — OsteoJump",
     "logo": "OsteoJump",
     "nav": {
         "home": "Strona główna",
@@ -37,7 +37,7 @@
         "text": "Specjalizujemy się w świadczeniu wysokiej jakości usług w dziedzinie osteopatii i rehabilitacji. Nasz zespół profesjonalistów jest gotowy pomóc Ci osiągnąć optymalne zdrowie."
     },
     "prices": {
-        "title": "Ceny - OsteoJump",
+        "title": "Cennik osteopaty Warszawa — OsteoJump",
         "hero_title": "Cennik usług",
         "hero_subtitle": "Przejrzyste ceny, bez ukrytych opłat i zbędnych wizyt",
         "hero_tag_individual": "Indywidualne",
@@ -116,7 +116,7 @@
         "text": "Osteopatia to holistyczne podejście do zdrowia, oparte na zrozumieniu wzajemnych powiązań wszystkich układów organizmu. Każdy człowiek jest wyjątkowy, dlatego podchodzę do leczenia indywidualnie, uwzględniając cechy Twojego ciała i stylu życia."
     },
     "reviews": {
-        "title": "Opinie - OsteoJump",
+        "title": "Opinie o osteopacie Warszawa — OsteoJump",
         "hero_title": "Opinie",
         "hero_rating": "Wszystkie opinie na 5.0",
         "hero_platforms": "100+ na Instagram • 40+ na Booksy • 10+ na Google",
@@ -227,7 +227,7 @@
     },
     "about_page": {
         "title": "O mnie",
-        "meta_title": "Anna Bykova — Osteopata w Warszawie | OsteoJump",
+        "meta_title": "Hanna Bykava — osteopata Warszawa | OsteoJump",
         "subtitle": "Informacje o mnie wkrótce",
         "content": "Ta strona jest w trakcie opracowywania. Wkrótce zostaną tutaj zamieszczone informacje o mnie i moim doświadczeniu zawodowym.",
         "intro": "Osteopatia jest w moim sercu, w moich dłoniach i w moim myśleniu.",
@@ -294,7 +294,7 @@
         "approach_more_link": "Dowiedz się więcej o wizytach"
     },
     "appointment_page": {
-        "title": "Jak przebiega wizyta - OsteoJump",
+        "title": "Wizyta u osteopaty — jak przebiega | OsteoJump",
         "hero_title": "Jak przebiega wizyta",
         "hero_subtitle": "Czego oczekiwać podczas sesji osteopatii",
         "step1_title": "Rozmowa",
@@ -324,7 +324,7 @@
         "cta_whatsapp": "Napisz na WhatsApp"
     },
     "education": {
-        "title": "Wykształcenie - OsteoJump",
+        "title": "Wykształcenie osteopaty — OsteoJump",
         "page_title": "Wykształcenie i certyfikaty",
         "hero_text": "Uczyłam się w <a href=\"https://www.upledger.com/\" target=\"_blank\" rel=\"noopener\">Upledger Institute</a>, <a href=\"https://www.barralinstitute.com/\" target=\"_blank\" rel=\"noopener\">Barral Institute</a>, kończę <a href=\"https://woma.edu.pl/\" target=\"_blank\" rel=\"noopener\">Warsaw Osteopathic Medicine Academy</a>.",
         "next_link": "Jak przebiega wizyta →",
@@ -357,7 +357,7 @@
         "course8_title": "TCK dla ciąży i porodu"
     },
     "location": {
-        "title": "Jak dojechać - OsteoJump",
+        "title": "Gabinet osteopatii Warszawa Ursus — OsteoJump",
         "address": "Siłaczki 3/9, gabinet 212",
         "subtitle": "02-495 Warszawa, Polska",
         "steps_title": "Nawigacja krok po kroku",
@@ -377,7 +377,7 @@
         "step7_desc": "Delikatnie zapukaj do drzwi o umówionej godzinie. Obok są krzesła do oczekiwania"
     },
     "faq": {
-        "title": "FAQ",
+        "title": "Osteopatia — pytania i odpowiedzi | OsteoJump",
         "subtitle": "Często zadawane pytania wkrótce",
         "content": "Ta strona jest w trakcie opracowywania. Wkrótce zostaną tutaj zamieszczone odpowiedzi na często zadawane pytania.",
         "hero_title": "Często zadawane pytania",
@@ -620,7 +620,7 @@
         "nav_title": "Nawigacja"
     },
     "contacts_page": {
-        "title": "Kontakt - OsteoJump",
+        "title": "Kontakt — osteopata Warszawa | OsteoJump",
         "hero_title": "Kontakt",
         "hero_subtitle": "Skontaktuj się ze mną w dowolny wygodny sposób",
         "notice_text": "W sprawie rezerwacji proszę pisać zamiast dzwonić — lub skorzystaj z Booksy.",
@@ -639,7 +639,7 @@
         "location_link": "Jak dojechać"
     },
     "osteopathy_page": {
-        "title": "Czym jest osteopatia - OsteoJump",
+        "title": "Osteopatia Warszawa — czym jest | OsteoJump",
         "hero_title": "Czym jest osteopatia",
         "hero_subtitle": "Naturalna, delikatna metoda leczenia, która pracuje z przyczyną problemu, a nie z objawami",
         "principles_title": "Zasady osteopatii",
@@ -663,7 +663,7 @@
         "cta_question": "Zadaj pytanie"
     },
     "consultation_page": {
-        "title": "Konsultacja - OsteoJump",
+        "title": "Konsultacja osteopatyczna Warszawa — OsteoJump",
         "hero_title": "Konsultacja i wstępna diagnostyka",
         "hero_subtitle": "Pierwszy krok do zrozumienia Twojej sytuacji",
         "intro": "Jeśli od dawna szukasz rozwiązania swojego problemu, ale nie znalazłeś jeszcze odpowiedzi, konsultacja może być dobrym pierwszym krokiem.",

@@ -187,7 +187,7 @@ function processPage(slug, lang, translations) {
       $(this).attr('placeholder', value);
     } else if (tag === 'TITLE') {
       let titleText = value;
-      if (!titleText.includes(' - OsteoJump') && !titleText.includes(' — OsteoJump') && titleText !== 'OsteoJump') {
+      if (!titleText.includes(' - OsteoJump') && !titleText.includes(' — OsteoJump') && !titleText.includes(' | OsteoJump') && titleText !== 'OsteoJump') {
         titleText = value + ' — OsteoJump';
       }
       $(this).text(titleText);

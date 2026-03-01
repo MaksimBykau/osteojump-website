@@ -1,5 +1,5 @@
 {
-    "title": "OsteoJump",
+    "title": "Osteopath Warsaw — OsteoJump",
     "logo": "OsteoJump",
     "nav": {
         "home": "Home",
@@ -37,7 +37,7 @@
         "text": "We specialize in providing quality services in the field of osteopathy and rehabilitation. Our team of professionals is ready to help you achieve optimal health."
     },
     "prices": {
-        "title": "Prices - OsteoJump",
+        "title": "Osteopath Prices Warsaw — OsteoJump",
         "hero_title": "Service Prices",
         "hero_subtitle": "Transparent pricing, no hidden fees or unnecessary sessions",
         "hero_tag_individual": "Individual",
@@ -116,7 +116,7 @@
         "text": "Osteopathy is a holistic approach to health based on understanding the interconnections of all body systems. Every person is unique, and I approach treatment individually, taking into account the characteristics of your body and lifestyle."
     },
     "reviews": {
-        "title": "Reviews - OsteoJump",
+        "title": "Osteopath Warsaw — patient reviews | OsteoJump",
         "hero_title": "Reviews",
         "hero_rating": "All reviews rated 5.0",
         "hero_platforms": "100+ on Instagram • 40+ on Booksy • 10+ on Google",
@@ -227,7 +227,7 @@
     },
     "about_page": {
         "title": "About Me",
-        "meta_title": "Anna Bykova — Osteopath in Warsaw | OsteoJump",
+        "meta_title": "Hanna Bykava — osteopath Warsaw | OsteoJump",
         "subtitle": "Information about me coming soon",
         "content": "This page is under development. Soon information about me and my work experience will be posted here.",
         "intro": "Osteopathy is in my heart, in my hands, and in my thinking.",
@@ -294,7 +294,7 @@
         "approach_more_link": "Learn more about sessions"
     },
     "appointment_page": {
-        "title": "How a Session Works - OsteoJump",
+        "title": "Osteopath session — how it works | OsteoJump",
         "hero_title": "How a Session Works",
         "hero_subtitle": "What to expect from an osteopathy session",
         "step1_title": "Conversation",
@@ -324,7 +324,7 @@
         "cta_whatsapp": "Message on WhatsApp"
     },
     "education": {
-        "title": "Education - OsteoJump",
+        "title": "Osteopath education — OsteoJump",
         "page_title": "Education & Certificates",
         "hero_text": "Trained at <a href=\"https://www.upledger.com/\" target=\"_blank\" rel=\"noopener\">Upledger Institute</a>, <a href=\"https://www.barralinstitute.com/\" target=\"_blank\" rel=\"noopener\">Barral Institute</a>, finishing <a href=\"https://woma.edu.pl/\" target=\"_blank\" rel=\"noopener\">Warsaw Osteopathic Medicine Academy</a>.",
         "next_link": "How an appointment works →",
@@ -357,7 +357,7 @@
         "course8_title": "CST for Pregnancy and Childbirth"
     },
     "location": {
-        "title": "How to Find Us - OsteoJump",
+        "title": "Osteopath office Warsaw Ursus — OsteoJump",
         "address": "Siłaczki 3/9, office 212",
         "subtitle": "02-495 Warsaw, Poland",
         "steps_title": "Step-by-step navigation",
@@ -377,7 +377,7 @@
         "step7_desc": "Gently knock on the door at your appointment time. There are chairs nearby for waiting"
     },
     "faq": {
-        "title": "FAQ",
+        "title": "Osteopathy — questions and answers | OsteoJump",
         "subtitle": "Frequently asked questions coming soon",
         "content": "This page is under development. Soon answers to frequently asked questions will be posted here.",
         "hero_title": "Frequently Asked Questions",
@@ -620,7 +620,7 @@
         "nav_title": "Navigation"
     },
     "contacts_page": {
-        "title": "Contacts - OsteoJump",
+        "title": "Contact — osteopath Warsaw | OsteoJump",
         "hero_title": "Contacts",
         "hero_subtitle": "Get in touch with me in any convenient way",
         "notice_text": "For booking inquiries, please message me rather than call — or use Booksy.",
@@ -639,7 +639,7 @@
         "location_link": "Get Directions"
     },
     "osteopathy_page": {
-        "title": "What is Osteopathy - OsteoJump",
+        "title": "Osteopathy Warsaw — what it is | OsteoJump",
         "hero_title": "What is Osteopathy",
         "hero_subtitle": "A natural, gentle treatment method that addresses the root cause of problems, not just symptoms",
         "principles_title": "Principles of Osteopathy",
@@ -663,7 +663,7 @@
         "cta_question": "Ask a Question"
     },
     "consultation_page": {
-        "title": "Consultation - OsteoJump",
+        "title": "Osteopathic consultation Warsaw — OsteoJump",
         "hero_title": "Consultation and Initial Diagnostics",
         "hero_subtitle": "The first step to understanding your situation",
         "intro": "If you've been searching for a solution to your problem but haven't found an answer yet, a consultation can be a good first step.",
