@@ -352,7 +352,7 @@ function processPage(slug, lang, translations) {
       posthog.init('phc_sfoiwVUmFb6egjr1Q8BqyIGbcvS6PCaSUWNV6aKE6gX',{
         api_host:'https://eu.i.posthog.com',
         person_profiles:'identified_only',
-        cookieless_mode:'always',
+        persistence:'memory',
         capture_scrolldepth:true
       })
     </script>`);
