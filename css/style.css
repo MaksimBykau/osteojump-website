@@ -73,12 +73,15 @@
 
     /* Layout */
     --max-width: 1200px;
+    --header-height: 80px;
 
     /* Hero section spacing (vh-based) */
     --hero-padding-top: 12vh;
     --hero-padding-bottom: 6vh;
     --hero-height: 75vh;
-    --hero-image-max-height: 57vh;
+    /* 75% of available viewport after header */
+    --hero-image-max-height: calc((100vh - var(--header-height)) * 0.75);
+    --hero-image-max-height: calc((100dvh - var(--header-height)) * 0.75);
 }
 
 html {
@@ -706,6 +709,7 @@ body {
 /* Portrait photo (3:4 aspect ratio) - reusable across pages */
 .photo-portrait {
     width: auto;
+    height: auto; /* override HTML height attribute presentational hint */
     max-width: 400px;
     max-height: var(--hero-image-max-height);
     aspect-ratio: 3 / 4;
@@ -727,26 +731,14 @@ body {
     }
 }
 
-@media (max-width: 950px) {
-    .photo-portrait {
-        max-height: none;
-    }
-}
-
 @media (max-width: 767px) {
     .photo-wrapper {
         max-width: 100%;
     }
 
     .photo-portrait {
-        max-width: 300px;
+        max-width: min(350px, 100%);
         border-radius: var(--radius-md);
-    }
-}
-
-@media (max-width: 575px) {
-    .photo-portrait {
-        max-width: 260px;
     }
 }
 
