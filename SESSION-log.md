@@ -4,6 +4,25 @@
 
 ---
 
+## Session: 2026-03-02
+**Коммиты:**
+- `e779215` — Fix mobile hero photo: programmatic sizing and centering
+
+**Мобильное фото:**
+- Баг: после добавления width/height атрибутов (CLS) фото на мобильном было 2415px высотой
+- Корень: HTML `height="533"` переопределял CSS `aspect-ratio: 3/4` как presentational hint
+- Формула: `calc((100dvh - var(--header-height)) * 0.75)` — 75% viewport минус header
+- `height: auto` — переопределяет HTML hint, aspect-ratio работает корректно
+- `max-width: min(350px, 100%)` — фото не выходит за контейнер, симметричные отступы
+- HTML width/height изменены на 400×533 (3:4) вместо реальных размеров файлов
+
+**Backlinks:**
+- Booksy: обновлено описание с SEO-ключевыми словами
+- ZnanyLekarz: запланирован на июнь 2026 (после диплома WOMA)
+- Документация обновлена: SEO.md, DECISIONS.md, TODO.md
+
+---
+
 ## Session: 2026-03-01
 **Коммиты:**
 - `312f4ac` — Add article: Osteopatia vs masaż leczniczy (SEO Q2)
@@ -11,6 +30,8 @@
 - `2ad3ccc` — Add article: Osteopata vs chiropraktyk (SEO Q4)
 - `ba022b0` — Add article: Osteopatia a ból szczęki / TMJ (SEO Q5)
 - `3708d0a` — Add PostHog analytics (cookieless, GDPR-compliant)
+- `901a885` — Update docs: session log, TODO, decisions, technical
+- `c533999` — Update TODO and SEO docs: Booksy done, ZnanyLekarz planned for June
 
 **SEO-статьи (Q2-Q5):**
 - 4 статьи-сравнения для перехвата смежного трафика

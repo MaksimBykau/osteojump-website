@@ -1,28 +1,25 @@
-# Session: 2026-03-01
+# Session: 2026-03-02
 
 ## Последний коммит
-`3708d0a` — Add PostHog analytics (cookieless, GDPR-compliant)
+`e779215` — Fix mobile hero photo: programmatic sizing and centering
 
 ## Что сделали за сессию
 
-### SEO-статьи Q2-Q5
-- 4 статьи-сравнения для перехвата смежного трафика (Q1 был сделан ранее)
-- Q2: Osteopatia vs masaż leczniczy (`312f4ac`)
-- Q3: Osteopatia vs fizjoterapia (`248b90b`)
-- Q4: Osteopata vs chiropraktyk (`2ad3ccc`) — добавлена осторожная критика хиропрактики
-- Q5: Osteopatia a ból szczęki / TMJ (`ba022b0`) — добавлена асимметрия лица
-- Каждая: отдельная страница + FAQ entry + 5 языков
-- Сайт: 11 → 16 страниц, 55 → 80 HTML
+### Фикс мобильного фото
+- Баг: после добавления width/height (CLS) фото растягивалось на весь экран
+- Формула: `calc((100dvh - var(--header-height)) * 0.75)` вместо хардкода
+- `height: auto` — фикс для HTML presentational hint vs CSS aspect-ratio
+- `max-width: min(350px, 100%)` — симметричные отступы на узких экранах
+- Проверено: iPhone SE (375px), 600px, desktop (1440px)
 
-### PostHog аналитика
-- EU Cloud, cookieless_mode: 'always' (без cookie-баннера)
-- Инжекция через build.js (шаг 18) — только в продакшене
-- Autocapture (клики, формы), pageview/pageleave, scroll depth
+### Backlinks
+- Booksy: описание обновлено с SEO-ключевыми словами
+- ZnanyLekarz: запланирован на июнь 2026 (после диплома WOMA)
 
 ## Открытые задачи
 - См. `TODO.md`
 
 ## Следующие шаги
-- Проверить PostHog dashboard после деплоя (приходят ли данные)
-- Обратные ссылки — регистрация на ZnanyLekarz, Booksy (после аналитики)
+- FAQ секция "Osteopatia a inne metody" (план готов: gentle-dreaming-pie.md)
 - Контент главной: объединить "5 причин" + "Почему ко мне", добавить цитаты отзывов
+- Проверить PostHog dashboard (приходят ли данные после деплоя)
