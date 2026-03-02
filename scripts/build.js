@@ -48,7 +48,7 @@ const PAGES = {
 // Static asset directories to copy
 const ASSET_DIRS = ['css', 'js', 'images', 'locales'];
 // Individual files to copy
-const ASSET_FILES = ['CNAME', 'robots.txt', '404.html'];
+const ASSET_FILES = ['CNAME', 'robots.txt', '404.html', 'site.webmanifest'];
 
 // Internal page slugs (for link rewriting — don't rewrite links to these as assets)
 const PAGE_SLUGS = new Set(Object.keys(PAGES).filter(s => s !== ''));
