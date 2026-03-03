@@ -430,6 +430,12 @@ function copyAssets() {
     }
   }
 
+  // Copy favicon.ico to root for Google Search and legacy crawlers
+  const faviconSrc = path.join(ROOT, 'images', 'favicon.ico');
+  if (fs.existsSync(faviconSrc)) {
+    fs.copyFileSync(faviconSrc, path.join(DIST, 'favicon.ico'));
+  }
+
   // Copy HugeIcons CSS link is external, no need to copy
 }
 
