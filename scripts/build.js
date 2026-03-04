@@ -44,6 +44,9 @@ const PAGES = {
   'osteopatia-chiropraktyka': 'osteopatia-chiropraktyka/index.html',
   'osteopatia-bol-szczeki-stawu-skroniowo-zuchwowego': 'osteopatia-bol-szczeki-stawu-skroniowo-zuchwowego/index.html',
   'osteopatia-dla-noworodkow-i-niemowlat': 'osteopatia-dla-noworodkow-i-niemowlat/index.html',
+  'osteopatia-w-ciazy': 'osteopatia-w-ciazy/index.html',
+  'osteopatia-po-porodzie': 'osteopatia-po-porodzie/index.html',
+  'osteopatia-przed-ciaza': 'osteopatia-przed-ciaza/index.html',
 };
 
 // Static asset directories to copy
@@ -73,6 +76,9 @@ const SITEMAP_PRIORITY = {
   'osteopatia-chiropraktyka': '0.5',
   'osteopatia-bol-szczeki-stawu-skroniowo-zuchwowego': '0.5',
   'osteopatia-dla-noworodkow-i-niemowlat': '0.6',
+  'osteopatia-w-ciazy': '0.7',
+  'osteopatia-po-porodzie': '0.6',
+  'osteopatia-przed-ciaza': '0.5',
 };
 
 // ---------------------------------------------------------------------------

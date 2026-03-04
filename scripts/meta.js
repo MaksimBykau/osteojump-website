@@ -459,6 +459,90 @@ const pageMeta = {
     },
   },
 
+  'osteopatia-w-ciazy': {
+    pl: {
+      description: 'Osteopatia w ciąży — czy jest bezpieczna? Pomoc przy bólach pleców, obrzękach, przygotowanie do porodu. Delikatne techniki kraniosakralne dla ciężarnych. Osteopata Warszawa — OsteoJump.',
+      ogTitle: 'Osteopatia w ciąży — co warto wiedzieć | OsteoJump',
+      ogDescription: 'Bezpieczeństwo, pomoc przy bólach i przygotowanie do porodu — delikatne techniki kraniosakralne dla ciężarnych.',
+    },
+    en: {
+      description: 'Osteopathy during pregnancy — is it safe? Help with back pain, swelling, birth preparation. Gentle craniosacral techniques for pregnant women. Osteopath in Warsaw — OsteoJump.',
+      ogTitle: 'Osteopathy During Pregnancy: What You Need to Know | OsteoJump',
+      ogDescription: 'Safety, pain relief and birth preparation — gentle craniosacral techniques for pregnant women.',
+    },
+    ru: {
+      description: 'Остеопатия при беременности — безопасно ли? Помощь при болях в спине, отёках, подготовка к родам. Мягкие краниосакральные техники. Остеопат в Варшаве — OsteoJump.',
+      ogTitle: 'Остеопатия при беременности: что нужно знать | OsteoJump',
+      ogDescription: 'Безопасность, помощь при болях и подготовка к родам — мягкие краниосакральные техники для беременных.',
+    },
+    uk: {
+      description: 'Остеопатія під час вагітності — чи безпечно? Допомога при болях у спині, набряках, підготовка до пологів. М\'які краніосакральні техніки. Остеопат у Варшаві — OsteoJump.',
+      ogTitle: 'Остеопатія під час вагітності: що потрібно знати | OsteoJump',
+      ogDescription: 'Безпека, допомога при болях та підготовка до пологів — м\'які краніосакральні техніки для вагітних.',
+    },
+    de: {
+      description: 'Osteopathie in der Schwangerschaft — ist es sicher? Hilfe bei Rückenschmerzen, Schwellungen, Geburtsvorbereitung. Sanfte kraniosakrale Techniken. Osteopathin in Warschau — OsteoJump.',
+      ogTitle: 'Osteopathie in der Schwangerschaft: Was Sie wissen sollten | OsteoJump',
+      ogDescription: 'Sicherheit, Schmerzlinderung und Geburtsvorbereitung — sanfte kraniosakrale Techniken für Schwangere.',
+    },
+  },
+
+  'osteopatia-po-porodzie': {
+    pl: {
+      description: 'Osteopatia po porodzie — rozstęp mięśni brzucha, blizna po cesarskim cięciu, dno miednicy, bóle pleców. Delikatne techniki osteopatyczne. Osteopata Warszawa — OsteoJump.',
+      ogTitle: 'Osteopatia po porodzie — odbudowa ciała | OsteoJump',
+      ogDescription: 'Rozstęp mięśni, blizna po cesarskim, dno miednicy — delikatna pomoc dla ciała po porodzie.',
+    },
+    en: {
+      description: 'Osteopathy after childbirth — diastasis recti, C-section scar, pelvic floor, back pain. Gentle osteopathic techniques for postpartum recovery. Osteopath in Warsaw — OsteoJump.',
+      ogTitle: 'Osteopathy After Childbirth: Body Recovery | OsteoJump',
+      ogDescription: 'Diastasis, C-section scar, pelvic floor — gentle help for postpartum body recovery.',
+    },
+    ru: {
+      description: 'Остеопатия после родов — диастаз, рубец после кесарева, тазовое дно, боли в спине. Мягкие остеопатические техники для восстановления. Остеопат в Варшаве — OsteoJump.',
+      ogTitle: 'Остеопатия после родов: восстановление тела | OsteoJump',
+      ogDescription: 'Диастаз, рубец после кесарева, тазовое дно — мягкая помощь телу в восстановлении после родов.',
+    },
+    uk: {
+      description: 'Остеопатія після пологів — діастаз, рубець після кесаревого, тазове дно, болі в спині. М\'які остеопатичні техніки для відновлення. Остеопат у Варшаві — OsteoJump.',
+      ogTitle: 'Остеопатія після пологів: відновлення тіла | OsteoJump',
+      ogDescription: 'Діастаз, рубець після кесаревого, тазове дно — м\'яка допомога тілу у відновленні після пологів.',
+    },
+    de: {
+      description: 'Osteopathie nach der Geburt — Rektusdiastase, Kaiserschnittnarbe, Beckenboden, Rückenschmerzen. Sanfte osteopathische Techniken. Osteopathin in Warschau — OsteoJump.',
+      ogTitle: 'Osteopathie nach der Geburt: Körperliche Erholung | OsteoJump',
+      ogDescription: 'Rektusdiastase, Kaiserschnittnarbe, Beckenboden — sanfte Hilfe für die Erholung nach der Geburt.',
+    },
+  },
+
+  'osteopatia-przed-ciaza': {
+    pl: {
+      description: 'Osteopatia przy planowaniu ciąży — przygotowanie miednicy, kręgosłupa i ciała do zajścia w ciążę. Delikatne techniki osteopatyczne. Osteopata Warszawa — OsteoJump.',
+      ogTitle: 'Osteopatia przy planowaniu ciąży | OsteoJump',
+      ogDescription: 'Przygotowanie ciała do ciąży — miednica, kręgosłup, narządy miednicy mniejszej. Delikatne techniki osteopatyczne.',
+    },
+    en: {
+      description: 'Osteopathy for pregnancy planning — preparing the pelvis, spine and body for conception. Gentle osteopathic techniques. Osteopath in Warsaw — OsteoJump.',
+      ogTitle: 'Osteopathy for Pregnancy Planning | OsteoJump',
+      ogDescription: 'Preparing the body for pregnancy — pelvis, spine, pelvic organs. Gentle osteopathic techniques.',
+    },
+    ru: {
+      description: 'Остеопатия при планировании беременности — подготовка таза, позвоночника и тела к зачатию. Мягкие остеопатические техники. Остеопат в Варшаве — OsteoJump.',
+      ogTitle: 'Остеопатия при планировании беременности | OsteoJump',
+      ogDescription: 'Подготовка тела к беременности — таз, позвоночник, органы малого таза. Мягкие остеопатические техники.',
+    },
+    uk: {
+      description: 'Остеопатія при плануванні вагітності — підготовка тазу, хребта і тіла до зачаття. М\'які остеопатичні техніки. Остеопат у Варшаві — OsteoJump.',
+      ogTitle: 'Остеопатія при плануванні вагітності | OsteoJump',
+      ogDescription: 'Підготовка тіла до вагітності — таз, хребет, органи малого тазу. М\'які остеопатичні техніки.',
+    },
+    de: {
+      description: 'Osteopathie bei Kinderwunsch — Vorbereitung von Becken, Wirbelsäule und Körper auf die Empfängnis. Sanfte osteopathische Techniken. Osteopathin in Warschau — OsteoJump.',
+      ogTitle: 'Osteopathie bei Kinderwunsch | OsteoJump',
+      ogDescription: 'Körper auf Schwangerschaft vorbereiten — Becken, Wirbelsäule, Beckenorgane. Sanfte osteopathische Techniken.',
+    },
+  },
+
   appointment: {
     pl: {
       description: 'Jak przebiega wizyta u osteopaty — rozmowa, diagnostyka, praca z ciałem. 55 minut, łagodne techniki. Osteopata Warszawa, OsteoJump.',

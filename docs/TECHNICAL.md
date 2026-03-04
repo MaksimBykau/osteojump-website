@@ -35,7 +35,7 @@ osteojump/
 
 ## Static Site Generation (SSG)
 
-Build-скрипт генерирует 80 статических HTML (16 страниц × 5 языков):
+Build-скрипт генерирует 100 статических HTML (20 страниц × 5 языков):
 
 ```
 /                    → Польский (дефолт, без префикса)
@@ -131,6 +131,9 @@ make clean
 | `/osteopatia-chiropraktyka` | `osteopatia-chiropraktyka/index.html` | `css/article.css` | `article_osteo_chiro.*` |
 | `/osteopatia-bol-szczeki-stawu-skroniowo-zuchwowego` | `osteopatia-bol-szczeki-stawu-skroniowo-zuchwowego/index.html` | `css/article.css` | `article_osteo_tmj.*` |
 | `/osteopatia-dla-noworodkow-i-niemowlat` | `osteopatia-dla-noworodkow-i-niemowlat/index.html` | `css/article.css` | `article_osteo_newborn.*` |
+| `/osteopatia-w-ciazy` | `osteopatia-w-ciazy/index.html` | `css/article.css` | `article_osteo_pregnancy.*` |
+| `/osteopatia-po-porodzie` | `osteopatia-po-porodzie/index.html` | `css/article.css` | `article_osteo_postpartum.*` |
+| `/osteopatia-przed-ciaza` | `osteopatia-przed-ciaza/index.html` | `css/article.css` | `article_osteo_preconception.*` |
 
 Общие ключи (все страницы): `nav.*`, `footer.*`, `action_bar.*`, `contacts.*`, `map.*`
 
