@@ -70,23 +70,23 @@
 
 Стратегия: перехватить трафик по смежным запросам — люди ищут массаж/мануалку/физио → попадают на FAQ → узнают про остеопатию. Каждый вопрос — отдельная статья-сравнение.
 
-- [x] **Q1: Osteopatia vs terapia manualna** — `/osteopatia-terapia-manualna` + FAQ entry (2026-03-01)
+- [x] **Q1: Osteopatia vs terapia manualna** — `/osteopathy-vs-manual-therapy` + FAQ entry (2026-03-01)
   - Запрос: `terapia manualna warszawa` (500/мес), `rehabilitacja manualna`, `terapia osteopatyczna`
   - Отдельная страница-статья с полным SEO: title, meta, hreflang, 5 языков. Короткий FAQ entry с ссылкой на статью.
 
-- [x] **Q2: Osteopatia vs masaż leczniczy** — `/osteopatia-masaz-leczniczy` + FAQ entry (2026-03-01)
+- [x] **Q2: Osteopatia vs masaż leczniczy** — `/osteopathy-vs-massage` + FAQ entry (2026-03-01)
   - Запрос: `masaż leczniczy warszawa` (500/мес), `masaż kręgosłupa warszawa`, `masaż klasyczny warszawa`
   - Отдельная страница-статья: массаж — мышцы, остеопатия — причина напряжения. USP: Hanna — сертифицированная массажистка, знает оба метода.
 
-- [x] **Q3: Osteopatia vs fizjoterapia** — `/osteopatia-fizjoterapia` + FAQ entry (2026-03-01)
+- [x] **Q3: Osteopatia vs fizjoterapia** — `/osteopathy-vs-physiotherapy` + FAQ entry (2026-03-01)
   - Запрос: `fizjoterapia` (500/мес), `rehabilitacja manualna`, `kinezyterapia`
   - Отдельная страница-статья: физиотерапия — широкая дисциплина, остеопатия — только руками, целостный подход. Акцент на взаимодополняемости методов.
 
-- [x] **Q4: Osteopata vs chiropraktyk (kręgarz)** — `/osteopatia-chiropraktyka` + FAQ entry (2026-03-01)
+- [x] **Q4: Osteopata vs chiropraktyk (kręgarz)** — `/osteopathy-vs-chiropractors` + FAQ entry (2026-03-01)
   - Запрос: `chiropraktyk warszawa`, `kręgarz warszawa`
   - Отдельная страница-статья: хиропрактика — быстрые манипуляции, остеопатия — мягкие техники. Акцент на безопасности для детей, беременных, пожилых.
 
-- [x] **Q5: Osteopatia a ból szczęki (TMJ)** — `/osteopatia-bol-szczeki-stawu-skroniowo-zuchwowego` + FAQ entry (2026-03-01)
+- [x] **Q5: Osteopatia a ból szczęki (TMJ)** — `/osteopathy-jaw-pain-tmj` + FAQ entry (2026-03-01)
   - Запрос: `fizjoterapia szczękowa` (500/мес), `staw skroniowo-żuchwowy`, `ból szczęki`
   - Отдельная страница-статья: TMJ связан с краниосакральной системой. USP: Hanna — сертифицированный краниосакральный терапевт (КСТ 1 и 2).
 

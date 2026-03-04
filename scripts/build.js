@@ -38,15 +38,15 @@ const PAGES = {
   'osteopathy':  'osteopathy/index.html',
   'consultation':'consultation/index.html',
   'appointment': 'appointment/index.html',
-  'osteopatia-terapia-manualna': 'osteopatia-terapia-manualna/index.html',
-  'osteopatia-masaz-leczniczy': 'osteopatia-masaz-leczniczy/index.html',
-  'osteopatia-fizjoterapia': 'osteopatia-fizjoterapia/index.html',
-  'osteopatia-chiropraktyka': 'osteopatia-chiropraktyka/index.html',
-  'osteopatia-bol-szczeki-stawu-skroniowo-zuchwowego': 'osteopatia-bol-szczeki-stawu-skroniowo-zuchwowego/index.html',
-  'osteopatia-dla-noworodkow-i-niemowlat': 'osteopatia-dla-noworodkow-i-niemowlat/index.html',
-  'osteopatia-w-ciazy': 'osteopatia-w-ciazy/index.html',
-  'osteopatia-po-porodzie': 'osteopatia-po-porodzie/index.html',
-  'osteopatia-przed-ciaza': 'osteopatia-przed-ciaza/index.html',
+  'osteopathy-vs-manual-therapy': 'osteopathy-vs-manual-therapy/index.html',
+  'osteopathy-vs-massage': 'osteopathy-vs-massage/index.html',
+  'osteopathy-vs-physiotherapy': 'osteopathy-vs-physiotherapy/index.html',
+  'osteopathy-vs-chiropractors': 'osteopathy-vs-chiropractors/index.html',
+  'osteopathy-jaw-pain-tmj': 'osteopathy-jaw-pain-tmj/index.html',
+  'osteopathy-for-newborns': 'osteopathy-for-newborns/index.html',
+  'osteopathy-pregnancy': 'osteopathy-pregnancy/index.html',
+  'osteopathy-postpartum': 'osteopathy-postpartum/index.html',
+  'osteopathy-preconception': 'osteopathy-preconception/index.html',
 };
 
 // Static asset directories to copy
@@ -70,15 +70,28 @@ const SITEMAP_PRIORITY = {
   'education': '0.5',
   'location': '0.6',
   'contacts': '0.6',
-  'osteopatia-terapia-manualna': '0.5',
-  'osteopatia-masaz-leczniczy': '0.5',
-  'osteopatia-fizjoterapia': '0.5',
-  'osteopatia-chiropraktyka': '0.5',
-  'osteopatia-bol-szczeki-stawu-skroniowo-zuchwowego': '0.5',
-  'osteopatia-dla-noworodkow-i-niemowlat': '0.6',
-  'osteopatia-w-ciazy': '0.7',
-  'osteopatia-po-porodzie': '0.6',
-  'osteopatia-przed-ciaza': '0.5',
+  'osteopathy-vs-manual-therapy': '0.5',
+  'osteopathy-vs-massage': '0.5',
+  'osteopathy-vs-physiotherapy': '0.5',
+  'osteopathy-vs-chiropractors': '0.5',
+  'osteopathy-jaw-pain-tmj': '0.5',
+  'osteopathy-for-newborns': '0.6',
+  'osteopathy-pregnancy': '0.7',
+  'osteopathy-postpartum': '0.6',
+  'osteopathy-preconception': '0.5',
+};
+
+// 301-style redirects: old slug → new slug (meta refresh for GitHub Pages)
+const REDIRECTS = {
+  'osteopatia-terapia-manualna': 'osteopathy-vs-manual-therapy',
+  'osteopatia-masaz-leczniczy': 'osteopathy-vs-massage',
+  'osteopatia-fizjoterapia': 'osteopathy-vs-physiotherapy',
+  'osteopatia-chiropraktyka': 'osteopathy-vs-chiropractors',
+  'osteopatia-bol-szczeki-stawu-skroniowo-zuchwowego': 'osteopathy-jaw-pain-tmj',
+  'osteopatia-dla-noworodkow-i-niemowlat': 'osteopathy-for-newborns',
+  'osteopatia-w-ciazy': 'osteopathy-pregnancy',
+  'osteopatia-po-porodzie': 'osteopathy-postpartum',
+  'osteopatia-przed-ciaza': 'osteopathy-preconception',
 };
 
 // ---------------------------------------------------------------------------
@@ -520,6 +533,23 @@ function build() {
       console.log(`  Generated: ${urlPath.padEnd(20)} → ${path.relative(DIST, distPath)}`);
     }
   }
+
+  // Generate redirect pages for old slugs
+  let redirectCount = 0;
+  for (const [oldSlug, newSlug] of Object.entries(REDIRECTS)) {
+    for (const lang of LANGUAGES) {
+      const prefix = lang === DEFAULT_LANG ? '' : lang;
+      const oldPath = path.join(DIST, prefix, oldSlug, 'index.html');
+      const newUrl = lang === DEFAULT_LANG ? `/${newSlug}` : `/${lang}/${newSlug}`;
+      const canonicalUrl = `${SITE_URL}${newUrl}`;
+
+      fs.mkdirSync(path.dirname(oldPath), { recursive: true });
+      const redirectHtml = `<!DOCTYPE html><html><head>\n<meta charset="utf-8">\n<meta http-equiv="refresh" content="0; url=${newUrl}">\n<link rel="canonical" href="${canonicalUrl}">\n<title>Redirecting...</title>\n</head><body><a href="${newUrl}">Redirecting...</a></body></html>`;
+      fs.writeFileSync(oldPath, redirectHtml, 'utf-8');
+      redirectCount++;
+    }
+  }
+  console.log(`  ${redirectCount} redirect pages generated.`);
 
   // Copy assets
   console.log('\nCopying assets...');

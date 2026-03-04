@@ -291,7 +291,7 @@ const pageMeta = {
     },
   },
 
-  'osteopatia-terapia-manualna': {
+  'osteopathy-vs-manual-therapy': {
     pl: {
       description: 'Czym osteopatia różni się od terapii manualnej? Porównanie metod, różnice w podejściu diagnostycznym i zakresie pracy z ciałem. Osteopata Warszawa — OsteoJump.',
       ogTitle: 'Osteopatia a terapia manualna — porównanie | OsteoJump',
@@ -319,7 +319,7 @@ const pageMeta = {
     },
   },
 
-  'osteopatia-masaz-leczniczy': {
+  'osteopathy-vs-massage': {
     pl: {
       description: 'Czym osteopatia różni się od masażu leczniczego? Porównanie metod, kiedy wybrać masaż, a kiedy osteopatę. Osteopata i masażystka w Warszawie — OsteoJump.',
       ogTitle: 'Osteopatia a masaż leczniczy — porównanie | OsteoJump',
@@ -347,7 +347,7 @@ const pageMeta = {
     },
   },
 
-  'osteopatia-fizjoterapia': {
+  'osteopathy-vs-physiotherapy': {
     pl: {
       description: 'Czym osteopatia różni się od fizjoterapii? Porównanie metod, różnice w podejściu i kiedy się uzupełniają. Osteopata Warszawa — OsteoJump.',
       ogTitle: 'Osteopatia a fizjoterapia — porównanie | OsteoJump',
@@ -375,7 +375,7 @@ const pageMeta = {
     },
   },
 
-  'osteopatia-chiropraktyka': {
+  'osteopathy-vs-chiropractors': {
     pl: {
       description: 'Czym osteopata różni się od chiropraktyka (kręgarza)? Porównanie technik, podejścia i bezpieczeństwa. Delikatne techniki osteopatyczne — OsteoJump Warszawa.',
       ogTitle: 'Osteopata a chiropraktyk — porównanie | OsteoJump',
@@ -403,7 +403,7 @@ const pageMeta = {
     },
   },
 
-  'osteopatia-bol-szczeki-stawu-skroniowo-zuchwowego': {
+  'osteopathy-jaw-pain-tmj': {
     pl: {
       description: 'Czy osteopatia pomaga przy bólu szczęki i problemach ze stawem skroniowo-żuchwowym? Podejście kraniosakralne, leczenie ZCSS. Osteopata Warszawa — OsteoJump.',
       ogTitle: 'Osteopatia a ból szczęki (ZCSS) | OsteoJump',
@@ -431,7 +431,7 @@ const pageMeta = {
     },
   },
 
-  'osteopatia-dla-noworodkow-i-niemowlat': {
+  'osteopathy-for-newborns': {
     pl: {
       description: 'Kiedy noworodek potrzebuje osteopaty? Kręcz szyi, napięcie mięśniowe, asymetria główki, kolki. Delikatne techniki kraniosakralne dla niemowląt. Osteopata Warszawa — OsteoJump.',
       ogTitle: 'Osteopatia dla noworodków i niemowląt | OsteoJump',
@@ -459,7 +459,7 @@ const pageMeta = {
     },
   },
 
-  'osteopatia-w-ciazy': {
+  'osteopathy-pregnancy': {
     pl: {
       description: 'Osteopatia w ciąży — czy jest bezpieczna? Pomoc przy bólach pleców, obrzękach, przygotowanie do porodu. Delikatne techniki kraniosakralne dla ciężarnych. Osteopata Warszawa — OsteoJump.',
       ogTitle: 'Osteopatia w ciąży — co warto wiedzieć | OsteoJump',
@@ -487,7 +487,7 @@ const pageMeta = {
     },
   },
 
-  'osteopatia-po-porodzie': {
+  'osteopathy-postpartum': {
     pl: {
       description: 'Osteopatia po porodzie — rozstęp mięśni brzucha, blizna po cesarskim cięciu, dno miednicy, bóle pleców. Delikatne techniki osteopatyczne. Osteopata Warszawa — OsteoJump.',
       ogTitle: 'Osteopatia po porodzie — odbudowa ciała | OsteoJump',
@@ -515,7 +515,7 @@ const pageMeta = {
     },
   },
 
-  'osteopatia-przed-ciaza': {
+  'osteopathy-preconception': {
     pl: {
       description: 'Osteopatia przy planowaniu ciąży — przygotowanie miednicy, kręgosłupa i ciała do zajścia w ciążę. Delikatne techniki osteopatyczne. Osteopata Warszawa — OsteoJump.',
       ogTitle: 'Osteopatia przy planowaniu ciąży | OsteoJump',

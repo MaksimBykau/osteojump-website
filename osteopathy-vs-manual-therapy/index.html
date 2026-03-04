@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta name="description" content="Czy osteopatia pomaga przy bólu szczęki i problemach ze stawem skroniowo-żuchwowym (ZCSS)? Podejście kraniosakralne do leczenia ZCSS. OsteoJump — osteopata Warszawa.">
-    <meta name="keywords" content="fizjoterapia szczękowa, staw skroniowo-żuchwowy, ból szczęki, bruksizm, osteopatia, osteopata warszawa, terapia kraniosakralna">
-    <meta property="og:title" content="Osteopatia a ból szczęki (ZCSS) | OsteoJump">
-    <meta property="og:description" content="Jak osteopatia i terapia kraniosakralna pomagają przy problemach ze stawem skroniowo-żuchwowym.">
+    <meta name="description" content="Czym osteopatia różni się od terapii manualnej? Porównanie metod, różnice w podejściu, kiedy wybrać osteopatę. OsteoJump — osteopata Warszawa.">
+    <meta name="keywords" content="terapia manualna, terapia manualna warszawa, osteopatia, rehabilitacja manualna, terapia osteopatyczna, osteopata warszawa">
+    <meta property="og:title" content="Osteopatia a terapia manualna — porównanie | OsteoJump">
+    <meta property="og:description" content="Różnice między osteopatią a terapią manualną. Kiedy wybrać osteopatę, a kiedy terapeutę manualnego.">
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://osteojump.pl/osteopatia-bol-szczeki-stawu-skroniowo-zuchwowego">
+    <meta property="og:url" content="https://osteojump.pl/osteopathy-vs-manual-therapy">
     <meta property="og:image" content="https://osteojump.pl/images/icon.png">
     <meta property="og:locale" content="pl_PL">
-    <link rel="canonical" href="https://osteojump.pl/osteopatia-bol-szczeki-stawu-skroniowo-zuchwowego">
-    <link rel="alternate" hreflang="x-default" href="https://osteojump.pl/osteopatia-bol-szczeki-stawu-skroniowo-zuchwowego">
-    <link rel="alternate" hreflang="pl" href="https://osteojump.pl/osteopatia-bol-szczeki-stawu-skroniowo-zuchwowego">
-    <link rel="alternate" hreflang="en" href="https://osteojump.pl/osteopatia-bol-szczeki-stawu-skroniowo-zuchwowego">
-    <link rel="alternate" hreflang="ru" href="https://osteojump.pl/osteopatia-bol-szczeki-stawu-skroniowo-zuchwowego">
-    <link rel="alternate" hreflang="uk" href="https://osteojump.pl/osteopatia-bol-szczeki-stawu-skroniowo-zuchwowego">
-    <link rel="alternate" hreflang="de" href="https://osteojump.pl/osteopatia-bol-szczeki-stawu-skroniowo-zuchwowego">
-    <title data-i18n="article_osteo_tmj.title">Osteopatia a ból szczęki i staw skroniowo-żuchwowy | OsteoJump</title>
+    <link rel="canonical" href="https://osteojump.pl/osteopathy-vs-manual-therapy">
+    <link rel="alternate" hreflang="x-default" href="https://osteojump.pl/osteopathy-vs-manual-therapy">
+    <link rel="alternate" hreflang="pl" href="https://osteojump.pl/osteopathy-vs-manual-therapy">
+    <link rel="alternate" hreflang="en" href="https://osteojump.pl/osteopathy-vs-manual-therapy">
+    <link rel="alternate" hreflang="ru" href="https://osteojump.pl/osteopathy-vs-manual-therapy">
+    <link rel="alternate" hreflang="uk" href="https://osteojump.pl/osteopathy-vs-manual-therapy">
+    <link rel="alternate" hreflang="de" href="https://osteojump.pl/osteopathy-vs-manual-therapy">
+    <title data-i18n="article_osteo_manual.title">Osteopatia a terapia manualna — porównanie | OsteoJump</title>
     <link rel="icon" href="/images/favicon.ico" sizes="48x48">
     <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/images/apple-icon.png">
@@ -26,10 +26,21 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/article.css">
     <style>
-        body:not(.i18n-ready) { visibility: hidden; }
-        body.i18n-ready { visibility: visible; }
-        @keyframes showContent { from { visibility: hidden; } to { visibility: visible; } }
-        body { animation: showContent 0s 1s forwards; }
+        /* Hide content until translations are loaded */
+        body:not(.i18n-ready) {
+            visibility: hidden;
+        }
+        body.i18n-ready {
+            visibility: visible;
+        }
+        /* Fallback: show content after 1 second even if translations didn't load */
+        @keyframes showContent {
+            from { visibility: hidden; }
+            to { visibility: visible; }
+        }
+        body {
+            animation: showContent 0s 1s forwards;
+        }
     </style>
     <script src="../js/clean-url.js"></script>
     <script>
@@ -37,31 +48,46 @@
         (function() {
             const supportedLangs = ['ru', 'en', 'de', 'pl', 'uk'];
             const savedLang = localStorage.getItem('language');
-            let lang = 'pl';
+            let lang = 'pl'; // default
+
             if (savedLang && supportedLangs.includes(savedLang)) {
                 lang = savedLang;
             } else {
                 const browserLang = (navigator.language || navigator.userLanguage).split('-')[0].toLowerCase();
-                if (supportedLangs.includes(browserLang)) lang = browserLang;
+                if (supportedLangs.includes(browserLang)) {
+                    lang = browserLang;
+                }
             }
+
+            // Set lang attribute immediately
             document.documentElement.lang = lang;
+
+            // Title translations map for immediate setting
             const titleMap = {
-                'pl': { 'article_osteo_tmj.title': 'Osteopatia a ból szczęki i staw skroniowo-żuchwowy | OsteoJump' },
-                'en': { 'article_osteo_tmj.title': 'Osteopathy for Jaw Pain and TMJ Problems | OsteoJump' },
-                'ru': { 'article_osteo_tmj.title': 'Остеопатия при боли в челюсти и проблемах с ВНЧС | OsteoJump' },
-                'uk': { 'article_osteo_tmj.title': 'Остеопатія при болю в щелепі та проблемах зі СНЩС | OsteoJump' },
-                'de': { 'article_osteo_tmj.title': 'Osteopathie bei Kieferschmerzen und Kiefergelenkproblemen | OsteoJump' }
+                'pl': { 'article_osteo_manual.title': 'Osteopatia a terapia manualna — porównanie | OsteoJump' },
+                'en': { 'article_osteo_manual.title': 'Osteopathy vs Manual Therapy — Comparison | OsteoJump' },
+                'ru': { 'article_osteo_manual.title': 'Остеопатия и мануальная терапия — сравнение | OsteoJump' },
+                'uk': { 'article_osteo_manual.title': 'Остеопатія та мануальна терапія — порівняння | OsteoJump' },
+                'de': { 'article_osteo_manual.title': 'Osteopathie und manuelle Therapie — Vergleich | OsteoJump' }
             };
+
+            // Set title immediately based on current page
             const titleElement = document.querySelector('title');
             if (titleElement) {
                 const titleKey = titleElement.getAttribute('data-i18n') || 'title';
                 const translations = titleMap[lang] || titleMap['pl'];
-                if (translations[titleKey]) titleElement.textContent = translations[titleKey];
+                if (translations[titleKey]) {
+                    titleElement.textContent = translations[titleKey];
+                }
             }
+
+            // Preload translation file for faster loading (with versioning)
             const translationsVersion = '5';
             const timestamp = Date.now();
             const link = document.createElement('link');
-            link.rel = 'preload'; link.as = 'fetch'; link.crossOrigin = 'anonymous';
+            link.rel = 'preload';
+            link.as = 'fetch';
+            link.crossOrigin = 'anonymous';
             link.href = `/locales/${lang}.json?v=${translationsVersion}&t=${timestamp}`;
             document.head.appendChild(link);
         })();
@@ -74,7 +100,9 @@
                 <a href="/"><span data-i18n="logo" class="logo-text">OsteoJump</span></a>
             </div>
             <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
-                <span></span><span></span><span></span>
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
             <ul class="nav-menu" id="navMenu">
                 <li><a href="/" data-i18n="nav.home">Strona główna</a></li>
@@ -107,61 +135,61 @@
         <!-- Hero Section -->
         <section class="article-hero">
             <div class="container">
-                <h1 class="article-hero-title" data-i18n="article_osteo_tmj.hero_title">Czy osteopatia pomaga przy bólu szczęki i problemach ze stawem skroniowo-żuchwowym?</h1>
-                <p class="article-hero-subtitle" data-i18n="article_osteo_tmj.hero_subtitle">Staw skroniowo-żuchwowy, system kraniosakralny i podejście całościowe</p>
+                <h1 class="article-hero-title" data-i18n="article_osteo_manual.hero_title">Czym osteopatia różni się od terapii manualnej?</h1>
+                <p class="article-hero-subtitle" data-i18n="article_osteo_manual.hero_subtitle">Porównanie metod, różnice w podejściu i kiedy wybrać odpowiedniego specjalistę</p>
             </div>
         </section>
 
         <!-- Article Content -->
         <section class="article-body">
             <div class="container">
-                <div class="article-content" data-i18n-html="article_osteo_tmj.content">
-                    <h2>Czym jest ZCSS i dlaczego boli?</h2>
-                    <p>Staw skroniowo-żuchwowy (ZCSS) to staw łączący żuchwę z czaszką. Używasz go za każdym razem, gdy mówisz, żujesz lub ziewasz. Gdy ten staw nie funkcjonuje prawidłowo, mogą pojawić się:</p>
+                <div class="article-content" data-i18n-html="article_osteo_manual.content">
+                    <h2>Czym jest terapia manualna?</h2>
+                    <p>Terapia manualna to szerokie pojęcie obejmujące różne techniki leczenia rękoma — mobilizacje stawów, manipulacje kręgosłupa, techniki tkanek miękkich. Z zewnątrz wizyta u terapeuty manualnego i osteopaty może wyglądać podobnie: obaj pracują rękami, poszukując źródła bólu i ograniczeń ruchomości.</p>
+                    <p>Jednak między tymi metodami istnieją istotne różnice — zarówno w podejściu diagnostycznym, jak i w zakresie pracy z ciałem.</p>
+
+                    <h2>Jak pracuje terapeuta manualny?</h2>
+                    <p>Terapia manualna koncentruje się najczęściej na konkretnym obszarze problemu — na przykład na odcinku szyjnym kręgosłupa czy bolesnym stawie. Terapeuta stosuje mobilizacje, manipulacje i techniki rozluźniania mięśni, aby przywrócić ruchomość i zmniejszyć ból w danym miejscu.</p>
+
+                    <h2>Jak pracuje osteopata?</h2>
+                    <p>Osteopatia wychodzi daleko poza pracę z układem mięśniowo-szkieletowym. Osteopata:</p>
                     <ul>
-                        <li>Ból szczęki, szczególnie przy żuciu lub otwieraniu ust</li>
-                        <li>Trzaskanie lub chrzęszczenie w stawie</li>
-                        <li>Ograniczenie ruchomości — usta nie otwierają się w pełni</li>
-                        <li>Bóle głowy, ból ucha lub szyi</li>
-                        <li>Bruksizm — mimowolne zaciskanie lub zgrzytanie zębami</li>
-                        <li>Widoczne zmiany w konturach twarzy — asymetria, skrzywienie żuchwy</li>
+                        <li>Szuka <strong>pierwotnej przyczyny</strong> problemu, która często znajduje się daleko od miejsca bólu</li>
+                        <li>Pracuje z <strong>powięziami</strong> (fasciami) — tkanką łączną, która otacza i łączy wszystkie struktury ciała</li>
+                        <li>Stosuje <strong>techniki wisceralne</strong> — delikatną pracę z narządami wewnętrznymi, które mogą wpływać na postawę i ruchomość</li>
+                        <li>Wykorzystuje <strong>terapię kraniosakralną</strong> — subtelną pracę z czaszką i kręgosłupem krzyżowym, regulującą napięcie w całym ciele</li>
                     </ul>
-                    <p>Problemy z ZCSS często związane są nie tylko z samym stawem, ale z napięciem otaczających struktur — mięśni, powięzi, odcinka szyjnego kręgosłupa, a nawet czaszki.</p>
+                    <p>Podejście osteopatyczne jest zawsze <strong>całościowe</strong>: zamiast leczyć poszczególne objawy, osteopata ocenia ciało jako zintegrowany system i szuka wzorców, które prowadzą do dolegliwości.</p>
 
-                    <h2>Jak działa fizjoterapia szczękowa?</h2>
-                    <p>Fizjoterapia ZCSS (fizjoterapia szczękowa) koncentruje się bezpośrednio na okolicy stawu. Fizjoterapeuta pracuje z mięśniami żucia, wykonuje mobilizację stawu, zleca ćwiczenia dla szczęki i może stosować metody aparaturowe — ultradźwięki, elektrostymulację.</p>
-                    <p>To skuteczne podejście, szczególnie w stanach ostrych i po urazach szczęki.</p>
-
-                    <h2>Co może osteopata przy problemach z ZCSS?</h2>
-                    <p>Osteopata rozpatruje ZCSS nie w izolacji, lecz jako część jednego systemu. Staw skroniowo-żuchwowy jest bezpośrednio związany z kośćmi czaszki, odcinkiem szyjnym kręgosłupa i systemem kraniosakralnym — systemem łączącym czaszkę z kością krzyżową przez błony i płyn mózgowo-rdzeniowy.</p>
-                    <p>Dlatego osteopata pracując z żuchwą może odkryć:</p>
+                    <h2>Delikatne techniki — bezpieczeństwo dla każdego</h2>
+                    <p>Osteopatia nie stosuje gwałtownych ruchów ani «trzaskania» w stawach. Techniki są łagodne i delikatne, dlatego nadają się dla:</p>
                     <ul>
-                        <li>Napięcie w kościach skroniowych lub kościach twarzy, wpływające na pozycję stawu</li>
-                        <li>Ograniczenie ruchomości odcinka szyjnego, które tworzy napięcie kompensacyjne w szczęce</li>
-                        <li>Zaburzenie rytmu kraniosakralnego, związane z ogólnym napięciem w ciele</li>
-                        <li>Problemy z postawą, które zmieniają pozycję głowy i obciążają ZCSS</li>
-                    </ul>
-
-                    <h2>Kiedy do fizjoterapeuty?</h2>
-                    <ul>
-                        <li>Ostry ból lub zablokowanie szczęki po urazie</li>
-                        <li>Potrzebujesz <strong>konkretnych ćwiczeń dla mięśni żucia</strong></li>
-                        <li>Zalecona została <strong>terapia aparaturowa</strong> okolicy ZCSS</li>
-                        <li>Przechodzisz leczenie ortodontyczne i zalecono Ci <strong>fizjoterapię szczękową</strong></li>
+                        <li><strong>Niemowląt</strong> i małych dzieci</li>
+                        <li><strong>Kobiet w ciąży</strong> — na każdym etapie</li>
+                        <li><strong>Osób starszych</strong> z wrażliwymi tkankami</li>
+                        <li><strong>Pacjentów po urazach</strong> wymagających ostrożnego podejścia</li>
                     </ul>
 
-                    <h2>Kiedy do osteopaty?</h2>
+                    <h2>Kiedy wybrać terapię manualną?</h2>
+                    <p>Terapia manualna sprawdza się dobrze, gdy:</p>
                     <ul>
-                        <li><strong>Fizjoterapia szczękowa pomaga, ale problem wraca</strong> — być może przyczyna nie tkwi w samym stawie, lecz w napięciu czaszki, szyi lub całego ciała</li>
-                        <li><strong>Ból szczęki łączy się z bólami głowy, szyi lub pleców</strong> — osteopata szuka wspólnej przyczyny</li>
-                        <li><strong>Bruksizm i zaciskanie zębów</strong> związane z ogólnym napięciem w ciele</li>
-                        <li><strong>Problemy z ZCSS po leczeniu ortodontycznym</strong> — zmiana zgryzu może wpłynąć na równowagę całej czaszki</li>
-                        <li><strong>Widoczna asymetria twarzy lub skrzywienie żuchwy</strong> — osteopata może pracować z kośćmi czaszki i mięśniami wpływającymi na pozycję szczęki i symetrię twarzy</li>
-                        <li>Szukasz <strong>delikatnego podejścia bez bolesnych manipulacji</strong> wewnątrz ust</li>
+                        <li>Masz <strong>jasną diagnozę</strong> — np. blokada w odcinku szyjnym czy ograniczenie ruchomości po urazie</li>
+                        <li>Problem jest <strong>miejscowy</strong> — dotyczy konkretnego stawu lub grupy mięśni</li>
+                        <li>Potrzebujesz <strong>rehabilitacji pooperacyjnej</strong> — np. po artroskopii kolana</li>
                     </ul>
 
-                    <h2>Terapia kraniosakralna a ZCSS</h2>
-                    <p>Ukończyłam specjalistyczne szkolenie z terapii kraniosakralnej (KST 1 i 2), która jest szczególnie skuteczna w pracy z ZCSS. Techniki kraniosakralne delikatnie oddziałują na kości czaszki, błony i rytm płynu mózgowo-rdzeniowego — pozwala to zdjąć głębokie napięcie, które często leży u podstaw problemów ze szczęką.</p>
+                    <h2>Kiedy wybrać osteopatę?</h2>
+                    <p>Osteopatia może pomóc szczególnie, gdy:</p>
+                    <ul>
+                        <li><strong>Przyczyna bólu nie jest jasna</strong> — badania nie wykazują problemów, ale dolegliwości nie ustępują</li>
+                        <li><strong>Leczenie miejscowe nie daje trwałego efektu</strong> — np. ból kolana wraca mimo terapii samego stawu, bo problem leży w biodrze lub miednicy; napięcie karku ustępuje po mobilizacji, ale wraca za kilka dni, bo źródło tkwi w napięciu przepony</li>
+                        <li><strong>Masz kilka dolegliwości jednocześnie</strong> — ból głowy, napięcie karku i problemy trawienne mogą mieć wspólną przyczynę</li>
+                        <li>Dolegliwości mają charakter <strong>funkcjonalny</strong> — np. kolki u niemowlęcia, zaburzenia snu, problemy z koncentracją</li>
+                        <li>Szukasz opieki <strong>w ciąży, po porodzie lub dla dziecka</strong> — osteopatia oferuje bezpieczne, delikatne techniki dostosowane do wrażliwych pacjentów</li>
+                    </ul>
+
+                    <h2>Metody, które się uzupełniają</h2>
+                    <p>Terapia manualna i osteopatia nie wykluczają się wzajemnie — wiele osób łączy oba podejścia w zależności od potrzeb. Zarówno rehabilitacja manualna, jak i terapia osteopatyczna pomagają w odzyskaniu zdrowia i dobrego samopoczucia. Ważne, by trafić do specjalisty, który dokładnie zdiagnozuje przyczynę problemu i dobierze odpowiednie leczenie.</p>
                 </div>
             </div>
         </section>
@@ -170,12 +198,12 @@
         <section class="article-cta">
             <div class="container">
                 <div class="cta-content">
-                    <h2 class="cta-title" data-i18n="article_osteo_tmj.cta_title">Przeszkadza Ci ból szczęki lub trzaskanie w stawie?</h2>
-                    <p class="cta-text" data-i18n="article_osteo_tmj.cta_text">Umów się na wizytę — ocenię stan ZCSS w kontekście całego ciała. Pracuję łagodnymi technikami kraniosakralnymi.</p>
-                    <p class="cta-author" data-i18n="article_osteo_tmj.cta_author">Hanna Bykava — osteopata, certyfikowana terapeutka kraniosakralna (KST 1 i 2). Gabinet OsteoJump, Warszawa (Ursus).</p>
+                    <h2 class="cta-title" data-i18n="article_osteo_manual.cta_title">Szukasz terapii manualnej lub osteopatycznej w Warszawie?</h2>
+                    <p class="cta-text" data-i18n="article_osteo_manual.cta_text">Zapraszam na konsultację — ocenię, jak mogę pomóc i wspólnie ustalimy plan dalszego postępowania.</p>
+                    <p class="cta-author" data-i18n="article_osteo_manual.cta_author">Hanna Bykava — osteopata, 15 lat doświadczenia medycznego. Gabinet OsteoJump, Warszawa (Ursus).</p>
                     <div class="cta-buttons">
-                        <a href="https://booksy.com/pl-pl/262212_osteojump_zdrowie_3_warszawa" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--lg" data-i18n="article_osteo_tmj.cta_book">Umów wizytę</a>
-                        <a href="https://wa.me/+48571397199" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--lg" data-i18n="article_osteo_tmj.cta_question">Zadaj pytanie</a>
+                        <a href="https://booksy.com/pl-pl/262212_osteojump_zdrowie_3_warszawa" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--lg" data-i18n="article_osteo_manual.cta_book">Umów wizytę</a>
+                        <a href="https://wa.me/+48571397199" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--lg" data-i18n="article_osteo_manual.cta_question">Zadaj pytanie</a>
                     </div>
                 </div>
             </div>
@@ -185,6 +213,7 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
+                <!-- Contacts Column -->
                 <div class="footer-column">
                     <h4 class="footer-title" data-i18n="footer.contacts_title">Kontakt</h4>
                     <div class="footer-contacts">
@@ -210,23 +239,31 @@
                         </a>
                     </div>
                 </div>
+
+                <!-- Social Column -->
                 <div class="footer-column">
                     <h4 class="footer-title" data-i18n="footer.social_title">Social media</h4>
                     <div class="footer-social">
                         <a href="https://www.instagram.com/hannabykavaosteopata/" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Instagram PL">
-                            <img src="/images/icons/instagram.svg" alt="Instagram"><span class="footer-social-flag">🇵🇱</span>
+                            <img src="/images/icons/instagram.svg" alt="Instagram">
+                            <span class="footer-social-flag">🇵🇱</span>
                         </a>
                         <a href="https://www.instagram.com/bykova_anna_osteopat/" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Instagram RU">
-                            <img src="/images/icons/instagram.svg" alt="Instagram"><span class="footer-social-flag">🇷🇺</span>
+                            <img src="/images/icons/instagram.svg" alt="Instagram">
+                            <span class="footer-social-flag">🇷🇺</span>
                         </a>
                         <a href="https://www.facebook.com/HannaBykavaOsteopata" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Facebook">
-                            <img src="/images/icons/facebook.svg" alt="Facebook"><span class="footer-social-flag">🇵🇱</span>
+                            <img src="/images/icons/facebook.svg" alt="Facebook">
+                            <span class="footer-social-flag">🇵🇱</span>
                         </a>
                         <a href="https://www.youtube.com/@Dr.Bykava" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="YouTube">
-                            <img src="/images/icons/youtube.svg" alt="YouTube"><span class="footer-social-flag">🇷🇺</span>
+                            <img src="/images/icons/youtube.svg" alt="YouTube">
+                            <span class="footer-social-flag">🇷🇺</span>
                         </a>
                     </div>
                 </div>
+
+                <!-- Navigation Column -->
                 <div class="footer-column">
                     <h4 class="footer-title" data-i18n="footer.nav_title">Nawigacja</h4>
                     <nav class="footer-nav">
@@ -241,12 +278,14 @@
                     </nav>
                 </div>
             </div>
+
             <div class="footer-bottom">
                 <p data-i18n="footer.text">&copy; 2024 OsteoJump. Wszelkie prawa zastrzeżone.</p>
             </div>
         </div>
     </footer>
 
+    <!-- Fixed Action Bar -->
     <div class="fixed-action-bar" id="fixedActionBar">
         <button class="action-btn action-book" id="actionBook" aria-label="Book appointment">
             <span class="action-icon"><img src="/images/icons/calendar.svg" alt="" class="action-icon-img"></span>

@@ -3,7 +3,7 @@
 ## 2026-03
 
 - [x] Контент-план "Беременность, роды, дети": 4 статьи + 3 FAQ-вопроса (2026-03-05)
-  - Статьи: osteopatia-w-ciazy, osteopatia-po-porodzie, osteopatia-dla-noworodkow-i-niemowlat, osteopatia-przed-ciaza
+  - Статьи: osteopathy-pregnancy, osteopathy-postpartum, osteopathy-for-newborns, osteopathy-preconception
   - FAQ: pregnancy_frequency, pregnancy_safety, birth_types. Все 5 языков.
 - [x] SEO-статьи Q1-Q5: 5 страниц-сравнений для перехвата смежного трафика (2026-03-01)
   - Q1: vs terapia manualna, Q2: vs masaż leczniczy, Q3: vs fizjoterapia, Q4: vs chiropraktyk, Q5: TMJ/ból szczęki

@@ -125,15 +125,15 @@ make clean
 | `/osteopathy` | `osteopathy/index.html` | `css/osteopathy.css` | `osteopathy_page.*` |
 | `/consultation` | `consultation/index.html` | `css/consultation.css` | `consultation_page.*` |
 | `/appointment` | `appointment/index.html` | `css/appointment.css` | `appointment_page.*` |
-| `/osteopatia-terapia-manualna` | `osteopatia-terapia-manualna/index.html` | `css/article.css` | `article_osteo_manual.*` |
-| `/osteopatia-masaz-leczniczy` | `osteopatia-masaz-leczniczy/index.html` | `css/article.css` | `article_osteo_massage.*` |
-| `/osteopatia-fizjoterapia` | `osteopatia-fizjoterapia/index.html` | `css/article.css` | `article_osteo_physio.*` |
-| `/osteopatia-chiropraktyka` | `osteopatia-chiropraktyka/index.html` | `css/article.css` | `article_osteo_chiro.*` |
-| `/osteopatia-bol-szczeki-stawu-skroniowo-zuchwowego` | `osteopatia-bol-szczeki-stawu-skroniowo-zuchwowego/index.html` | `css/article.css` | `article_osteo_tmj.*` |
-| `/osteopatia-dla-noworodkow-i-niemowlat` | `osteopatia-dla-noworodkow-i-niemowlat/index.html` | `css/article.css` | `article_osteo_newborn.*` |
-| `/osteopatia-w-ciazy` | `osteopatia-w-ciazy/index.html` | `css/article.css` | `article_osteo_pregnancy.*` |
-| `/osteopatia-po-porodzie` | `osteopatia-po-porodzie/index.html` | `css/article.css` | `article_osteo_postpartum.*` |
-| `/osteopatia-przed-ciaza` | `osteopatia-przed-ciaza/index.html` | `css/article.css` | `article_osteo_preconception.*` |
+| `/osteopathy-vs-manual-therapy` | `osteopathy-vs-manual-therapy/index.html` | `css/article.css` | `article_osteo_manual.*` |
+| `/osteopathy-vs-massage` | `osteopathy-vs-massage/index.html` | `css/article.css` | `article_osteo_massage.*` |
+| `/osteopathy-vs-physiotherapy` | `osteopathy-vs-physiotherapy/index.html` | `css/article.css` | `article_osteo_physio.*` |
+| `/osteopathy-vs-chiropractors` | `osteopathy-vs-chiropractors/index.html` | `css/article.css` | `article_osteo_chiro.*` |
+| `/osteopathy-jaw-pain-tmj` | `osteopathy-jaw-pain-tmj/index.html` | `css/article.css` | `article_osteo_tmj.*` |
+| `/osteopathy-for-newborns` | `osteopathy-for-newborns/index.html` | `css/article.css` | `article_osteo_newborn.*` |
+| `/osteopathy-pregnancy` | `osteopathy-pregnancy/index.html` | `css/article.css` | `article_osteo_pregnancy.*` |
+| `/osteopathy-postpartum` | `osteopathy-postpartum/index.html` | `css/article.css` | `article_osteo_postpartum.*` |
+| `/osteopathy-preconception` | `osteopathy-preconception/index.html` | `css/article.css` | `article_osteo_preconception.*` |
 
 Общие ключи (все страницы): `nav.*`, `footer.*`, `action_bar.*`, `contacts.*`, `map.*`
 
