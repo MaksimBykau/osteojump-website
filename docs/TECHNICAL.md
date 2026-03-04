@@ -141,6 +141,70 @@ make clean
 - Упоминается: секция на странице `/prices`, ответ в FAQ `/faq#gift-certificate`
 - Ключи переводов: `prices.gift_certificate.*`, `faq.gift_certificate_answer`, `faq.gift_certificate_link`
 
+## Работа с изображениями
+
+### Форматы и структура
+
+- Для каждого JPEG/JPG хранится WebP-версия (рядом, то же имя)
+- Дипломы: `images/diplomas/` + `images/diplomas/thumbs/` (превью 300px)
+- Location: `images/location/` + `images/location/thumbs/` (превью)
+- HTML использует `<picture>` с WebP + JPEG fallback
+
+### EXIF-ориентация (ВАЖНО!)
+
+Фото с телефона часто содержат EXIF orientation tag (не 1). Браузеры учитывают EXIF, но при обработке (thumbnail, WebP-конвертация) ориентация может теряться → фото отображается повёрнутым.
+
+**Правило:** при добавлении нового фото — всегда вбивать EXIF-ориентацию в пиксели.
+
+#### Что использовать
+
+```bash
+# Python Pillow — ImageOps.exif_transpose (РЕКОМЕНДУЕМЫЙ способ)
+python3 -c "
+from PIL import Image, ImageOps
+img = Image.open('photo.jpg')
+img = ImageOps.exif_transpose(img)
+img.save('photo.jpg', format='JPEG', quality=95)
+"
+
+# Генерация WebP после auto-orient:
+cwebp -q 80 photo.jpg -o photo.webp
+
+# Генерация thumbnail:
+sips -Z 300 photo.jpg --out thumbs/photo_thumb.jpg
+cwebp -q 80 thumbs/photo_thumb.jpg -o thumbs/photo_thumb.webp
+```
+
+#### Что НЕ использовать
+
+- **`jpegtran -rotate`** — ручной поворот, не учитывает реальный EXIF. Легко повернуть не в ту сторону.
+- **`sips -r`** — поворачивает пиксели, но НЕ сбрасывает EXIF orientation tag → двойной поворот в браузере.
+- **`sips -s format webp`** — при конвертации может неправильно обрабатывать EXIF. Использовать `cwebp` вместо.
+
+#### Проверка EXIF-ориентации
+
+```bash
+# Проверить все JPEG на проблемные EXIF-теги:
+python3 -c "
+from PIL import Image
+import glob
+for f in glob.glob('images/**/*.jp*g', recursive=True):
+    img = Image.open(f)
+    orient = img.getexif().get(0x0112, 1)
+    if orient != 1:
+        print(f'PROBLEM: {f} orientation={orient}')
+"
+```
+
+### Чеклист добавления нового фото
+
+1. Поместить файл в нужную папку `images/{section}/`
+2. Вбить EXIF-ориентацию: `ImageOps.exif_transpose()` (см. выше)
+3. Создать WebP: `cwebp -q 80 photo.jpg -o photo.webp`
+4. Если нужен thumbnail: `sips -Z 300` + `cwebp`
+5. Добавить `<picture>` в HTML с правильными `width`/`height` (из реальных пикселей после auto-orient)
+6. `node scripts/build.js` для пересборки
+
 ## Деплой
 
 Подробные инструкции по настройке деплоя и подключению кастомного домена см. в [DEPLOYMENT.md](DEPLOYMENT.md).
