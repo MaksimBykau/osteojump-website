@@ -4,6 +4,18 @@
 
 ---
 
+## Session: 2026-03-05
+**Коммит:** `555791d` — Add 3 FAQ questions: pregnancy frequency, safety, birth types
+
+**FAQ — беременность и роды (3 новых вопроса):**
+- `pregnancy_frequency` — частота сеансов по триместрам, индивидуальный подход
+- `pregnancy_safety` — безопасность для малыша, мягкие техники, противопоказания
+- `birth_types` — остеопатия и выбор типа родов, от первого лица (опыт акушерки)
+- Все 5 языков (ru, pl, en, uk, de), soft-links → `/osteopatia-w-ciazy`
+- Контент-план "Беременность, роды, дети" — все 5 пунктов ГОТОВО
+
+---
+
 ## Session: 2026-03-02
 **Коммиты:**
 - `e779215` — Fix mobile hero photo: programmatic sizing and centering
