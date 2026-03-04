@@ -431,6 +431,34 @@ const pageMeta = {
     },
   },
 
+  'osteopatia-dla-noworodkow-i-niemowlat': {
+    pl: {
+      description: 'Kiedy noworodek potrzebuje osteopaty? Kręcz szyi, napięcie mięśniowe, asymetria główki, kolki. Delikatne techniki kraniosakralne dla niemowląt. Osteopata Warszawa — OsteoJump.',
+      ogTitle: 'Osteopatia dla noworodków i niemowląt | OsteoJump',
+      ogDescription: 'Kręcz szyi, napięcie, asymetria główki — delikatne techniki kraniosakralne dla niemowląt od pierwszych dni życia.',
+    },
+    en: {
+      description: 'When does a newborn need an osteopath? Torticollis, muscle tone issues, skull asymmetry, colic. Gentle craniosacral techniques for infants. Osteopath in Warsaw — OsteoJump.',
+      ogTitle: 'Osteopathy for Newborns and Infants | OsteoJump',
+      ogDescription: 'Torticollis, muscle tone, skull asymmetry — gentle craniosacral techniques for babies from the first days of life.',
+    },
+    ru: {
+      description: 'Когда новорождённому нужен остеопат? Кривошея, тонус, асимметрия черепа, колики. Мягкие краниосакральные техники для малышей. Остеопат в Варшаве — OsteoJump.',
+      ogTitle: 'Остеопатия для новорождённых и малышей | OsteoJump',
+      ogDescription: 'Кривошея, тонус, форма головы — мягкие краниосакральные техники для малышей с первых дней жизни.',
+    },
+    uk: {
+      description: 'Коли новонародженому потрібен остеопат? Кривошия, тонус, асиметрія черепа, коліки. М\'які краніосакральні техніки для малюків. Остеопат у Варшаві — OsteoJump.',
+      ogTitle: 'Остеопатія для новонароджених та малюків | OsteoJump',
+      ogDescription: 'Кривошия, тонус, форма голови — м\'які краніосакральні техніки для малюків з перших днів життя.',
+    },
+    de: {
+      description: 'Wann braucht ein Neugeborenes einen Osteopathen? Schiefhals, Muskeltonus, Schädelasymmetrie, Koliken. Sanfte kraniosakrale Techniken für Säuglinge. Osteopathin in Warschau — OsteoJump.',
+      ogTitle: 'Osteopathie für Neugeborene und Säuglinge | OsteoJump',
+      ogDescription: 'Schiefhals, Tonus, Kopfform — sanfte kraniosakrale Techniken für Babys ab den ersten Lebenstagen.',
+    },
+  },
+
   appointment: {
     pl: {
       description: 'Jak przebiega wizyta u osteopaty — rozmowa, diagnostyka, praca z ciałem. 55 minut, łagodne techniki. Osteopata Warszawa, OsteoJump.',

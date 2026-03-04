@@ -43,6 +43,7 @@ const PAGES = {
   'osteopatia-fizjoterapia': 'osteopatia-fizjoterapia/index.html',
   'osteopatia-chiropraktyka': 'osteopatia-chiropraktyka/index.html',
   'osteopatia-bol-szczeki-stawu-skroniowo-zuchwowego': 'osteopatia-bol-szczeki-stawu-skroniowo-zuchwowego/index.html',
+  'osteopatia-dla-noworodkow-i-niemowlat': 'osteopatia-dla-noworodkow-i-niemowlat/index.html',
 };
 
 // Static asset directories to copy
@@ -71,6 +72,7 @@ const SITEMAP_PRIORITY = {
   'osteopatia-fizjoterapia': '0.5',
   'osteopatia-chiropraktyka': '0.5',
   'osteopatia-bol-szczeki-stawu-skroniowo-zuchwowego': '0.5',
+  'osteopatia-dla-noworodkow-i-niemowlat': '0.6',
 };
 
 // ---------------------------------------------------------------------------

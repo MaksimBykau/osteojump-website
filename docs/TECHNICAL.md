@@ -130,6 +130,7 @@ make clean
 | `/osteopatia-fizjoterapia` | `osteopatia-fizjoterapia/index.html` | `css/article.css` | `article_osteo_physio.*` |
 | `/osteopatia-chiropraktyka` | `osteopatia-chiropraktyka/index.html` | `css/article.css` | `article_osteo_chiro.*` |
 | `/osteopatia-bol-szczeki-stawu-skroniowo-zuchwowego` | `osteopatia-bol-szczeki-stawu-skroniowo-zuchwowego/index.html` | `css/article.css` | `article_osteo_tmj.*` |
+| `/osteopatia-dla-noworodkow-i-niemowlat` | `osteopatia-dla-noworodkow-i-niemowlat/index.html` | `css/article.css` | `article_osteo_newborn.*` |
 
 Общие ключи (все страницы): `nav.*`, `footer.*`, `action_bar.*`, `contacts.*`, `map.*`
 
