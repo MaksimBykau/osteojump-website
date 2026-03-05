@@ -7,8 +7,7 @@
     padding: var(--spacing-lg) var(--spacing-sm);
     padding-top: var(--hero-padding-top);
     padding-bottom: var(--hero-padding-bottom);
-    height: var(--hero-height);
-    overflow: hidden;
+    min-height: var(--hero-height);
     background-color: var(--bg-color);
 }
 
