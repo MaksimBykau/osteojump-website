@@ -124,7 +124,7 @@ function getTranslation(translations, key) {
 function getPagePath(slug, lang) {
   const prefix = lang === DEFAULT_LANG ? '' : `/${lang}`;
   if (slug === '') return `${prefix}/`;
-  return `${prefix}/${slug}`;
+  return `${prefix}/${slug}/`;
 }
 
 /** Get the full URL for a page in a given language */
