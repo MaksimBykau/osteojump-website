@@ -390,28 +390,13 @@
 
     .consultation-card {
         flex-direction: column;
+        max-width: 480px;
     }
 
     .consultation-image {
         width: 100%;
-        height: 200px;
-    }
-
-    .consultation-content {
-        text-align: center;
-    }
-
-    .consultation-meta {
-        justify-content: center;
-    }
-
-    .consultation-btn {
-        align-self: center;
-    }
-
-    .consultation-links {
-        align-items: center;
-        width: 100%;
+        aspect-ratio: 3 / 2;
+        height: auto;
     }
 
 }
@@ -431,10 +416,6 @@
         padding: var(--spacing-sm);
     }
 
-    .consultation-image {
-        height: 180px;
-    }
-
     .consultation-content {
         padding: var(--spacing-sm);
     }
@@ -446,11 +427,6 @@
 
     .consultation-links {
         width: 100%;
-    }
-
-    .consultation-links .soft-link {
-        width: 100%;
-        text-align: center;
     }
 
 }
