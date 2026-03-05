@@ -3,28 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta name="description" content="Czym osteopatia różni się od terapii manualnej? Porównanie metod, różnice w podejściu, kiedy wybrać osteopatę. OsteoJump — osteopata Warszawa.">
-    <meta name="keywords" content="terapia manualna, terapia manualna warszawa, osteopatia, rehabilitacja manualna, terapia osteopatyczna, osteopata warszawa">
-    <meta property="og:title" content="Osteopatia a terapia manualna — porównanie | OsteoJump">
-    <meta property="og:description" content="Różnice między osteopatią a terapią manualną. Kiedy wybrać osteopatę, a kiedy terapeutę manualnego.">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://osteojump.pl/osteopathy-vs-manual-therapy">
+    <meta name="description" content="Artykuły o osteopatii — porównanie metod, ciąża, macierzyństwo i zdrowie. Blog osteopaty Hanny Bykavej, OsteoJump Warszawa.">
+    <meta property="og:title" content="Blog — OsteoJump">
+    <meta property="og:description" content="Artykuły o osteopatii — porównanie metod, ciąża, macierzyństwo i zdrowie.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://osteojump.pl/blog">
     <meta property="og:image" content="https://osteojump.pl/images/icon.png">
     <meta property="og:locale" content="pl_PL">
-    <link rel="canonical" href="https://osteojump.pl/osteopathy-vs-manual-therapy">
-    <link rel="alternate" hreflang="x-default" href="https://osteojump.pl/osteopathy-vs-manual-therapy">
-    <link rel="alternate" hreflang="pl" href="https://osteojump.pl/osteopathy-vs-manual-therapy">
-    <link rel="alternate" hreflang="en" href="https://osteojump.pl/osteopathy-vs-manual-therapy">
-    <link rel="alternate" hreflang="ru" href="https://osteojump.pl/osteopathy-vs-manual-therapy">
-    <link rel="alternate" hreflang="uk" href="https://osteojump.pl/osteopathy-vs-manual-therapy">
-    <link rel="alternate" hreflang="de" href="https://osteojump.pl/osteopathy-vs-manual-therapy">
-    <title data-i18n="article_osteo_manual.title">Osteopatia a terapia manualna — porównanie | OsteoJump</title>
+    <link rel="canonical" href="https://osteojump.pl/blog">
+    <link rel="alternate" hreflang="x-default" href="https://osteojump.pl/blog">
+    <link rel="alternate" hreflang="pl" href="https://osteojump.pl/blog">
+    <link rel="alternate" hreflang="en" href="https://osteojump.pl/blog">
+    <link rel="alternate" hreflang="ru" href="https://osteojump.pl/blog">
+    <link rel="alternate" hreflang="uk" href="https://osteojump.pl/blog">
+    <link rel="alternate" hreflang="de" href="https://osteojump.pl/blog">
+    <title data-i18n="blog.title">Blog — OsteoJump</title>
     <link rel="icon" href="/images/favicon.ico" sizes="48x48">
     <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/images/apple-icon.png">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/article.css">
+    <link rel="stylesheet" href="../css/blog.css">
     <style>
         /* Hide content until translations are loaded */
         body:not(.i18n-ready) {
@@ -64,18 +63,18 @@
 
             // Title translations map for immediate setting
             const titleMap = {
-                'pl': { 'article_osteo_manual.title': 'Osteopatia a terapia manualna — porównanie | OsteoJump' },
-                'en': { 'article_osteo_manual.title': 'Osteopathy vs Manual Therapy — Comparison | OsteoJump' },
-                'ru': { 'article_osteo_manual.title': 'Остеопатия и мануальная терапия — сравнение | OsteoJump' },
-                'uk': { 'article_osteo_manual.title': 'Остеопатія та мануальна терапія — порівняння | OsteoJump' },
-                'de': { 'article_osteo_manual.title': 'Osteopathie und manuelle Therapie — Vergleich | OsteoJump' }
+                'ru': { 'title': 'OsteoJump', 'blog.title': 'Блог — OsteoJump' },
+                'en': { 'title': 'OsteoJump', 'blog.title': 'Blog — OsteoJump' },
+                'de': { 'title': 'OsteoJump', 'blog.title': 'Blog — OsteoJump' },
+                'pl': { 'title': 'OsteoJump', 'blog.title': 'Blog — OsteoJump' },
+                'uk': { 'title': 'OsteoJump', 'blog.title': 'Блог — OsteoJump' }
             };
 
             // Set title immediately based on current page
             const titleElement = document.querySelector('title');
             if (titleElement) {
                 const titleKey = titleElement.getAttribute('data-i18n') || 'title';
-                const translations = titleMap[lang] || titleMap['pl'];
+                const translations = titleMap[lang] || titleMap['en'];
                 if (translations[titleKey]) {
                     titleElement.textContent = translations[titleKey];
                 }
@@ -119,7 +118,7 @@
             <div class="lang-select-wrapper">
                 <button class="lang-select-btn" id="langSelectBtn" aria-label="Select language" aria-expanded="false">
                     <span class="lang-select-text" id="langSelectText"><span class="flag-emoji">🇵🇱</span> PL</span>
-                    <span class="lang-select-arrow">&#9660;</span>
+                    <span class="lang-select-arrow">▼</span>
                 </button>
                 <div class="lang-select-dropdown" id="langSelectDropdown">
                     <button class="lang-select-option" data-lang="pl"><span class="flag-emoji">🇵🇱</span> PL</button>
@@ -134,78 +133,90 @@
 
     <main class="main">
         <!-- Hero Section -->
-        <section class="article-hero">
+        <section class="page-hero">
             <div class="container">
-                <h1 class="article-hero-title" data-i18n="article_osteo_manual.hero_title">Czym osteopatia różni się od terapii manualnej?</h1>
-                <p class="article-hero-subtitle" data-i18n="article_osteo_manual.hero_subtitle">Porównanie metod, różnice w podejściu i kiedy wybrać odpowiedniego specjalistę</p>
+                <h1 class="page-hero-title" data-i18n="blog.hero_title">Artykuły o osteopatii</h1>
+                <p class="page-hero-subtitle" data-i18n="blog.hero_subtitle">Porównanie metod, macierzyństwo i zdrowie — przydatne materiały od osteopaty</p>
             </div>
         </section>
 
-        <!-- Article Content -->
-        <section class="article-body">
+        <!-- Section: Comparison -->
+        <section class="blog-section">
             <div class="container">
-                <div class="article-content" data-i18n-html="article_osteo_manual.content">
-                    <h2>Czym jest terapia manualna?</h2>
-                    <p>Terapia manualna to szerokie pojęcie obejmujące różne techniki leczenia rękoma — mobilizacje stawów, manipulacje kręgosłupa, techniki tkanek miękkich. Z zewnątrz wizyta u terapeuty manualnego i osteopaty może wyglądać podobnie: obaj pracują rękami, poszukując źródła bólu i ograniczeń ruchomości.</p>
-                    <p>Jednak między tymi metodami istnieją istotne różnice — zarówno w podejściu diagnostycznym, jak i w zakresie pracy z ciałem.</p>
-
-                    <h2>Jak pracuje terapeuta manualny?</h2>
-                    <p>Terapia manualna koncentruje się najczęściej na konkretnym obszarze problemu — na przykład na odcinku szyjnym kręgosłupa czy bolesnym stawie. Terapeuta stosuje mobilizacje, manipulacje i techniki rozluźniania mięśni, aby przywrócić ruchomość i zmniejszyć ból w danym miejscu.</p>
-
-                    <h2>Jak pracuje osteopata?</h2>
-                    <p>Osteopatia wychodzi daleko poza pracę z układem mięśniowo-szkieletowym. Osteopata:</p>
-                    <ul>
-                        <li>Szuka <strong>pierwotnej przyczyny</strong> problemu, która często znajduje się daleko od miejsca bólu</li>
-                        <li>Pracuje z <strong>powięziami</strong> (fasciami) — tkanką łączną, która otacza i łączy wszystkie struktury ciała</li>
-                        <li>Stosuje <strong>techniki wisceralne</strong> — delikatną pracę z narządami wewnętrznymi, które mogą wpływać na postawę i ruchomość</li>
-                        <li>Wykorzystuje <strong>terapię kraniosakralną</strong> — subtelną pracę z czaszką i kręgosłupem krzyżowym, regulującą napięcie w całym ciele</li>
-                    </ul>
-                    <p>Podejście osteopatyczne jest zawsze <strong>całościowe</strong>: zamiast leczyć poszczególne objawy, osteopata ocenia ciało jako zintegrowany system i szuka wzorców, które prowadzą do dolegliwości.</p>
-
-                    <h2>Delikatne techniki — bezpieczeństwo dla każdego</h2>
-                    <p>Osteopatia nie stosuje gwałtownych ruchów ani «trzaskania» w stawach. Techniki są łagodne i delikatne, dlatego nadają się dla:</p>
-                    <ul>
-                        <li><strong>Niemowląt</strong> i małych dzieci</li>
-                        <li><strong>Kobiet w ciąży</strong> — na każdym etapie</li>
-                        <li><strong>Osób starszych</strong> z wrażliwymi tkankami</li>
-                        <li><strong>Pacjentów po urazach</strong> wymagających ostrożnego podejścia</li>
-                    </ul>
-
-                    <h2>Kiedy wybrać terapię manualną?</h2>
-                    <p>Terapia manualna sprawdza się dobrze, gdy:</p>
-                    <ul>
-                        <li>Masz <strong>jasną diagnozę</strong> — np. blokada w odcinku szyjnym czy ograniczenie ruchomości po urazie</li>
-                        <li>Problem jest <strong>miejscowy</strong> — dotyczy konkretnego stawu lub grupy mięśni</li>
-                        <li>Potrzebujesz <strong>rehabilitacji pooperacyjnej</strong> — np. po artroskopii kolana</li>
-                    </ul>
-
-                    <h2>Kiedy wybrać osteopatę?</h2>
-                    <p>Osteopatia może pomóc szczególnie, gdy:</p>
-                    <ul>
-                        <li><strong>Przyczyna bólu nie jest jasna</strong> — badania nie wykazują problemów, ale dolegliwości nie ustępują</li>
-                        <li><strong>Leczenie miejscowe nie daje trwałego efektu</strong> — np. ból kolana wraca mimo terapii samego stawu, bo problem leży w biodrze lub miednicy; napięcie karku ustępuje po mobilizacji, ale wraca za kilka dni, bo źródło tkwi w napięciu przepony</li>
-                        <li><strong>Masz kilka dolegliwości jednocześnie</strong> — ból głowy, napięcie karku i problemy trawienne mogą mieć wspólną przyczynę</li>
-                        <li>Dolegliwości mają charakter <strong>funkcjonalny</strong> — np. kolki u niemowlęcia, zaburzenia snu, problemy z koncentracją</li>
-                        <li>Szukasz opieki <strong>w ciąży, po porodzie lub dla dziecka</strong> — osteopatia oferuje bezpieczne, delikatne techniki dostosowane do wrażliwych pacjentów</li>
-                    </ul>
-
-                    <h2>Metody, które się uzupełniają</h2>
-                    <p>Terapia manualna i osteopatia nie wykluczają się wzajemnie — wiele osób łączy oba podejścia w zależności od potrzeb. Zarówno rehabilitacja manualna, jak i terapia osteopatyczna pomagają w odzyskaniu zdrowia i dobrego samopoczucia. Ważne, by trafić do specjalisty, który dokładnie zdiagnozuje przyczynę problemu i dobierze odpowiednie leczenie.</p>
+                <h2 class="blog-section-title" data-i18n="blog.section_comparison">Czym osteopatia różni się od...</h2>
+                <div class="card-grid card-grid--2">
+                    <!-- vs Manual Therapy -->
+                    <a href="/osteopathy-vs-manual-therapy" class="card blog-card">
+                        <span class="blog-category" data-i18n="blog.category_comparison">Porównanie</span>
+                        <h3 class="blog-card-title" data-i18n="article_osteo_manual.hero_title">Czym osteopatia różni się od terapii manualnej?</h3>
+                        <p class="blog-card-desc" data-i18n="article_osteo_manual.hero_subtitle">Porównanie metod, różnice w podejściu i kiedy wybrać odpowiedniego specjalistę</p>
+                        <span class="blog-card-link" data-i18n="blog.read_more">Czytaj &rarr;</span>
+                    </a>
+                    <!-- vs Massage -->
+                    <a href="/osteopathy-vs-massage" class="card blog-card">
+                        <span class="blog-category" data-i18n="blog.category_comparison">Porównanie</span>
+                        <h3 class="blog-card-title" data-i18n="article_osteo_massage.hero_title">Czym osteopatia różni się od masażu leczniczego?</h3>
+                        <p class="blog-card-desc" data-i18n="article_osteo_massage.hero_subtitle">Porównanie metod, różnice w podejściu i kiedy wybrać odpowiedniego specjalistę</p>
+                        <span class="blog-card-link" data-i18n="blog.read_more">Czytaj &rarr;</span>
+                    </a>
+                    <!-- vs Physiotherapy -->
+                    <a href="/osteopathy-vs-physiotherapy" class="card blog-card">
+                        <span class="blog-category" data-i18n="blog.category_comparison">Porównanie</span>
+                        <h3 class="blog-card-title" data-i18n="article_osteo_physio.hero_title">Czym osteopatia różni się od fizjoterapii?</h3>
+                        <p class="blog-card-desc" data-i18n="article_osteo_physio.hero_subtitle">Dwa podejścia do zdrowia — czym się różnią i kiedy się uzupełniają</p>
+                        <span class="blog-card-link" data-i18n="blog.read_more">Czytaj &rarr;</span>
+                    </a>
+                    <!-- vs Chiropractors -->
+                    <a href="/osteopathy-vs-chiropractors" class="card blog-card">
+                        <span class="blog-category" data-i18n="blog.category_comparison">Porównanie</span>
+                        <h3 class="blog-card-title" data-i18n="article_osteo_chiro.hero_title">Czym osteopata różni się od chiropraktyka (kręgarza)?</h3>
+                        <p class="blog-card-desc" data-i18n="article_osteo_chiro.hero_subtitle">Dwie metody pracy z ciałem — różnice w technikach, podejściu i bezpieczeństwie</p>
+                        <span class="blog-card-link" data-i18n="blog.read_more">Czytaj &rarr;</span>
+                    </a>
                 </div>
             </div>
         </section>
 
-        <!-- CTA Section -->
-        <section class="article-cta">
+        <!-- Section: Health & Motherhood -->
+        <section class="blog-section blog-section--alt">
             <div class="container">
-                <div class="cta-content">
-                    <h2 class="cta-title" data-i18n="article_osteo_manual.cta_title">Szukasz terapii manualnej lub osteopatycznej w Warszawie?</h2>
-                    <p class="cta-text" data-i18n="article_osteo_manual.cta_text">Zapraszam na konsultację — ocenię, jak mogę pomóc i wspólnie ustalimy plan dalszego postępowania.</p>
-                    <p class="cta-author" data-i18n="article_osteo_manual.cta_author">Hanna Bykava — osteopata, 15 lat doświadczenia medycznego. Gabinet OsteoJump, Warszawa (Ursus).</p>
-                    <div class="cta-buttons">
-                        <a href="https://booksy.com/pl-pl/262212_osteojump_zdrowie_3_warszawa" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--lg" data-i18n="article_osteo_manual.cta_book">Umów wizytę</a>
-                        <a href="https://wa.me/+48571397199" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--lg" data-i18n="article_osteo_manual.cta_question">Zadaj pytanie</a>
-                    </div>
+                <h2 class="blog-section-title" data-i18n="blog.section_health">Macierzyństwo i zdrowie</h2>
+                <div class="card-grid card-grid--3">
+                    <!-- Pregnancy -->
+                    <a href="/osteopathy-pregnancy" class="card blog-card">
+                        <span class="blog-category" data-i18n="blog.category_pregnancy">Ciąża</span>
+                        <h3 class="blog-card-title" data-i18n="article_osteo_pregnancy.hero_title">Osteopatia w ciąży — co warto wiedzieć</h3>
+                        <p class="blog-card-desc" data-i18n="article_osteo_pregnancy.hero_subtitle">Bezpieczeństwo, pomoc przy bólach i przygotowanie ciała do porodu</p>
+                        <span class="blog-card-link" data-i18n="blog.read_more">Czytaj &rarr;</span>
+                    </a>
+                    <!-- Postpartum -->
+                    <a href="/osteopathy-postpartum" class="card blog-card">
+                        <span class="blog-category" data-i18n="blog.category_pregnancy">Ciąża</span>
+                        <h3 class="blog-card-title" data-i18n="article_osteo_postpartum.hero_title">Osteopatia po porodzie: regeneracja ciała</h3>
+                        <p class="blog-card-desc" data-i18n="article_osteo_postpartum.hero_subtitle">Diastaza, bóle pleców, blizna po cięciu cesarskim</p>
+                        <span class="blog-card-link" data-i18n="blog.read_more">Czytaj &rarr;</span>
+                    </a>
+                    <!-- Preconception -->
+                    <a href="/osteopathy-preconception" class="card blog-card">
+                        <span class="blog-category" data-i18n="blog.category_pregnancy">Ciąża</span>
+                        <h3 class="blog-card-title" data-i18n="article_osteo_preconception.hero_title">Osteopatia przy planowaniu ciąży</h3>
+                        <p class="blog-card-desc" data-i18n="article_osteo_preconception.hero_subtitle">Przygotować ciało do poczęcia i ciąży</p>
+                        <span class="blog-card-link" data-i18n="blog.read_more">Czytaj &rarr;</span>
+                    </a>
+                    <!-- Newborns -->
+                    <a href="/osteopathy-for-newborns" class="card blog-card">
+                        <span class="blog-category" data-i18n="blog.category_newborns">Niemowlęta</span>
+                        <h3 class="blog-card-title" data-i18n="article_osteo_newborn.hero_title">Kiedy noworodek potrzebuje osteopaty?</h3>
+                        <p class="blog-card-desc" data-i18n="article_osteo_newborn.hero_subtitle">O delikatnym podejściu i pracy od pierwszych dni życia</p>
+                        <span class="blog-card-link" data-i18n="blog.read_more">Czytaj &rarr;</span>
+                    </a>
+                    <!-- TMJ -->
+                    <a href="/osteopathy-jaw-pain-tmj" class="card blog-card">
+                        <span class="blog-category" data-i18n="blog.category_health">Zdrowie</span>
+                        <h3 class="blog-card-title" data-i18n="article_osteo_tmj.hero_title">Czy osteopatia pomaga przy bólu szczęki?</h3>
+                        <p class="blog-card-desc" data-i18n="article_osteo_tmj.hero_subtitle">Staw skroniowo-żuchwowy, system kraniosakralny i podejście całościowe</p>
+                        <span class="blog-card-link" data-i18n="blog.read_more">Czytaj &rarr;</span>
+                    </a>
                 </div>
             </div>
         </section>
@@ -243,7 +254,7 @@
 
                 <!-- Social Column -->
                 <div class="footer-column">
-                    <h4 class="footer-title" data-i18n="footer.social_title">Social media</h4>
+                    <h4 class="footer-title" data-i18n="footer.social_title">Media społecznościowe</h4>
                     <div class="footer-social">
                         <a href="https://www.instagram.com/hannabykavaosteopata/" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Instagram PL">
                             <img src="/images/icons/instagram.svg" alt="Instagram">

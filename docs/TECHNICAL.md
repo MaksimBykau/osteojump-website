@@ -125,6 +125,7 @@ make clean
 | `/osteopathy` | `osteopathy/index.html` | `css/osteopathy.css` | `osteopathy_page.*` |
 | `/consultation` | `consultation/index.html` | `css/consultation.css` | `consultation_page.*` |
 | `/appointment` | `appointment/index.html` | `css/appointment.css` | `appointment_page.*` |
+| `/blog` | `blog/index.html` | `css/blog.css` | `blog.*` |
 | `/osteopathy-vs-manual-therapy` | `osteopathy-vs-manual-therapy/index.html` | `css/article.css` | `article_osteo_manual.*` |
 | `/osteopathy-vs-massage` | `osteopathy-vs-massage/index.html` | `css/article.css` | `article_osteo_massage.*` |
 | `/osteopathy-vs-physiotherapy` | `osteopathy-vs-physiotherapy/index.html` | `css/article.css` | `article_osteo_physio.*` |

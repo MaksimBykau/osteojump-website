@@ -1,0 +1,63 @@
+/* Blog Page — specific styles */
+
+.blog-section {
+    padding: var(--spacing-lg) var(--spacing-sm);
+    background: var(--bg-color);
+}
+
+.blog-section--alt {
+    background: var(--section-bg);
+}
+
+.blog-section-title {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: var(--spacing-md);
+    text-align: center;
+}
+
+/* Blog card (extends .card from style.css) */
+.blog-card {
+    display: flex;
+    flex-direction: column;
+    padding: var(--spacing-md);
+    text-decoration: none;
+    color: inherit;
+}
+
+.blog-category {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-xs);
+}
+
+.blog-card-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+.blog-card-desc {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin-bottom: auto;
+}
+
+.blog-card-link {
+    display: inline-block;
+    margin-top: var(--spacing-sm);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.blog-card:hover .blog-card-link {
+    text-decoration: underline;
+}

@@ -10,7 +10,8 @@
         "appointment": "How a Session Works",
         "faq": "FAQ",
         "education": "Education",
-        "location": "Directions"
+        "location": "Directions",
+        "blog": "Blog"
     },
     "hero": {
         "title": "Welcome to OsteoJump",
@@ -498,7 +499,20 @@
         "no_convenient_time_title": "I can't find a convenient time in the schedule",
         "no_convenient_time_answer": "Write or call me — tell me what time works for you. I'll help find options, even if they're not currently shown in the online schedule.",
         "invoice_title": "Can I get a receipt or invoice?",
-        "invoice_answer": "Yes, I provide an invoice (faktura) upon request. You can use it for insurance reimbursement or tax deduction."
+        "invoice_answer": "Yes, I provide an invoice (faktura) upon request. You can use it for insurance reimbursement or tax deduction.",
+        "blog_link": "More articles in our blog →"
+    },
+    "blog": {
+        "title": "Blog — OsteoJump",
+        "hero_title": "Articles about osteopathy",
+        "hero_subtitle": "Comparison of methods, motherhood and health — useful materials from an osteopath",
+        "section_comparison": "How osteopathy differs from...",
+        "section_health": "Motherhood and health",
+        "read_more": "Read →",
+        "category_comparison": "Comparison",
+        "category_pregnancy": "Pregnancy",
+        "category_newborns": "Newborns",
+        "category_health": "Health"
     },
     "landing": {
         "hero": {

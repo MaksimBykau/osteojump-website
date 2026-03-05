@@ -4,6 +4,17 @@
 
 ---
 
+## Session: 2026-03-05 (2)
+
+### FAQ — 3 новых вопроса (беременность)
+- `pregnancy_frequency` — сколько сеансов, рекомендации по триместрам
+- `pregnancy_safety` — безопасность для малыша, противопоказания
+- `birth_types` — остеопатия не выбирает за вас тип родов
+- Все 5 языков, soft-links → `/osteopathy-pregnancy`
+- Контент-план #5 закрыт — все 5 пунктов ГОТОВО
+
+---
+
 ## Session: 2026-03-05
 **Коммит:** `555791d` — Add 3 FAQ questions: pregnancy frequency, safety, birth types
 

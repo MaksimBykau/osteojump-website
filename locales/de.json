@@ -10,7 +10,8 @@
         "appointment": "Wie eine Sitzung abläuft",
         "faq": "FAQ",
         "education": "Ausbildung",
-        "location": "Anfahrt"
+        "location": "Anfahrt",
+        "blog": "Blog"
     },
     "hero": {
         "title": "Willkommen bei OsteoJump",
@@ -498,7 +499,20 @@
         "no_convenient_time_title": "Ich finde keinen passenden Termin im Kalender",
         "no_convenient_time_answer": "Schreiben oder rufen Sie mich an — sagen Sie mir, welche Zeit Ihnen passt. Ich helfe, Optionen zu finden, auch wenn sie noch nicht im Online-Kalender stehen.",
         "invoice_title": "Kann ich eine Quittung oder Rechnung bekommen?",
-        "invoice_answer": "Ja, ich stelle auf Wunsch eine Rechnung (faktura) aus. Sie können diese für Versicherungserstattung oder Steuerabzug verwenden."
+        "invoice_answer": "Ja, ich stelle auf Wunsch eine Rechnung (faktura) aus. Sie können diese für Versicherungserstattung oder Steuerabzug verwenden.",
+        "blog_link": "Mehr Artikel in unserem Blog →"
+    },
+    "blog": {
+        "title": "Blog — OsteoJump",
+        "hero_title": "Artikel über Osteopathie",
+        "hero_subtitle": "Methodenvergleich, Mutterschaft und Gesundheit — nützliche Materialien von einer Osteopathin",
+        "section_comparison": "Wie unterscheidet sich Osteopathie von...",
+        "section_health": "Mutterschaft und Gesundheit",
+        "read_more": "Lesen →",
+        "category_comparison": "Vergleich",
+        "category_pregnancy": "Schwangerschaft",
+        "category_newborns": "Säuglinge",
+        "category_health": "Gesundheit"
     },
     "landing": {
         "hero": {

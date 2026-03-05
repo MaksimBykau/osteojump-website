@@ -543,6 +543,34 @@ const pageMeta = {
     },
   },
 
+  blog: {
+    pl: {
+      description: 'Artykuły o osteopatii — porównanie metod, ciąża, macierzyństwo i zdrowie. Blog osteopaty Hanny Bykavej, OsteoJump Warszawa.',
+      ogTitle: 'Blog — OsteoJump Warszawa',
+      ogDescription: 'Artykuły o osteopatii: porównanie metod, ciąża, macierzyństwo i zdrowie.',
+    },
+    en: {
+      description: 'Articles about osteopathy — comparison of methods, pregnancy, motherhood and health. Blog of osteopath Hanna Bykava, OsteoJump Warsaw.',
+      ogTitle: 'Blog — OsteoJump Warsaw',
+      ogDescription: 'Articles about osteopathy: comparison of methods, pregnancy, motherhood and health.',
+    },
+    ru: {
+      description: 'Статьи об остеопатии — сравнение методов, беременность, материнство и здоровье. Блог остеопата Анны Быковой, OsteoJump Варшава.',
+      ogTitle: 'Блог — OsteoJump Варшава',
+      ogDescription: 'Статьи об остеопатии: сравнение методов, беременность, материнство и здоровье.',
+    },
+    uk: {
+      description: 'Статті про остеопатію — порівняння методів, вагітність, материнство та здоров\'я. Блог остеопата Анни Бикової, OsteoJump Варшава.',
+      ogTitle: 'Блог — OsteoJump Варшава',
+      ogDescription: 'Статті про остеопатію: порівняння методів, вагітність, материнство та здоров\'я.',
+    },
+    de: {
+      description: 'Artikel über Osteopathie — Methodenvergleich, Schwangerschaft, Mutterschaft und Gesundheit. Blog der Osteopathin Hanna Bykava, OsteoJump Warschau.',
+      ogTitle: 'Blog — OsteoJump Warschau',
+      ogDescription: 'Artikel über Osteopathie: Methodenvergleich, Schwangerschaft, Mutterschaft und Gesundheit.',
+    },
+  },
+
   appointment: {
     pl: {
       description: 'Jak przebiega wizyta u osteopaty — rozmowa, diagnostyka, praca z ciałem. 55 minut, łagodne techniki. Osteopata Warszawa, OsteoJump.',

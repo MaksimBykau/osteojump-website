@@ -47,6 +47,7 @@ const PAGES = {
   'osteopathy-pregnancy': 'osteopathy-pregnancy/index.html',
   'osteopathy-postpartum': 'osteopathy-postpartum/index.html',
   'osteopathy-preconception': 'osteopathy-preconception/index.html',
+  'blog':          'blog/index.html',
 };
 
 // Static asset directories to copy
@@ -79,6 +80,7 @@ const SITEMAP_PRIORITY = {
   'osteopathy-pregnancy': '0.7',
   'osteopathy-postpartum': '0.6',
   'osteopathy-preconception': '0.5',
+  'blog': '0.6',
 };
 
 // 301-style redirects: old slug → new slug (meta refresh for GitHub Pages)

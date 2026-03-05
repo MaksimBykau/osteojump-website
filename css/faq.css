@@ -278,6 +278,24 @@
     box-shadow: 0 0 0 2px var(--primary-color);
 }
 
+/* Blog link at bottom of FAQ */
+.faq-blog-link {
+    max-width: 800px;
+    margin: var(--spacing-lg) auto 0;
+    text-align: center;
+}
+
+.faq-blog-link a {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.faq-blog-link a:hover {
+    text-decoration: underline;
+}
+
 /* ============================================
    Responsive Styles
    ============================================ */
