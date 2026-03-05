@@ -79,9 +79,8 @@
     --hero-padding-top: 12vh;
     --hero-padding-bottom: 6vh;
     --hero-height: 75vh;
-    /* 75% of available viewport after header */
-    --hero-image-max-height: calc((100vh - var(--header-height)) * 0.75);
-    --hero-image-max-height: calc((100dvh - var(--header-height)) * 0.75);
+    /* Photo must fit inside hero section (height minus padding) */
+    --hero-image-max-height: calc(var(--hero-height) - var(--hero-padding-top) - var(--hero-padding-bottom));
 }
 
 html {
