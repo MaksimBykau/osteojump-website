@@ -4,6 +4,39 @@
 
 ---
 
+## Session: 2026-03-11 — SEO: исправление дублирования языковых версий
+
+**Коммиты:**
+- `15dce77` — Fix SEO: add trailing slash to all canonical, hreflang, og:url, sitemap URLs
+- `88cb675` — Fix SEO: add trailing slashes to all internal page links
+- `3bf1a3e` — Fix SEO: add translated image alt texts for all languages
+- `57c8a05` — Fix SEO: translate keywords per language, document SEO technical rules
+
+**Проблемы:**
+- Google считал EN/RU/UK/DE версии дублями PL → не индексировал
+- Три причины дублирования: broken canonical (без trailing slash), польские alt тексты на всех языках, польские keywords на всех языках
+
+**Исправления:**
+- Canonical и hreflang URL — добавлен trailing slash везде (build.js, sitemap, nav)
+- Alt тексты — `data-i18n-alt` атрибут на img, ключи в locale JSON (секция `img`)
+- Keywords — `keywordsDefaults` в meta.js, применяются в build.js (шаг 4)
+- Задокументировано в `docs/SEO.md` (раздел "Технические правила")
+
+---
+
+## Session: 2026-03-05 — Страница «Блог»
+
+**Коммит:** `d65ee6c` — Add blog page: hub for all 9 articles with nav integration
+
+- Создана `/blog` — единая точка входа ко всем 9 статьям (2 секции: сравнения + материнство)
+- Карточки переиспользуют существующие i18n ключи `article_osteo_*.hero_title/hero_subtitle`
+- Новые i18n ключи: `nav.blog`, `blog.*`, `faq.blog_link` — все 5 языков
+- «Блог» добавлен в nav всех 21 страницы (header + footer)
+- Ссылка «Больше статей» добавлена в конец FAQ
+- 105 страниц + 45 redirects = 150 итого
+
+---
+
 ## Session: 2026-03-05 (2)
 
 ### FAQ — 3 новых вопроса (беременность)
