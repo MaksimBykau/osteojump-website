@@ -825,5 +825,76 @@
         "cta_author": "Hanna Bykava — Osteopathin, ehemalige Hebamme, Mutter. Praxis OsteoJump, Warschau (Ursus).",
         "cta_book": "Termin buchen",
         "cta_question": "Frage stellen"
+    },
+    "img": {
+        "hero": "Osteopathin Hanna Bykava — OsteoJump Warschau",
+        "awards": {
+            "logo": "Orły Medycyny (Adler der Medizin)",
+            "gold_medal": "Goldmedaille Orły Medycyny 2025",
+            "laureate": "Orły Medycyny 2025 Preisträgerin"
+        },
+        "about": {
+            "office": "Osteopathin Hanna Bykava in der Praxis — individuelle Betreuung jedes Patienten",
+            "mother1": "Hanna Bykava mit ihrer Tochter — der Weg zur Osteopathie",
+            "mother2": "Hanna mit einem Säugling — Inspiration für die Arbeit mit Neugeborenen",
+            "mother3": "Mutterschaft und Osteopathie — persönliche Erfahrung",
+            "mother4": "Hanna Bykava — Osteopathin und Mutter",
+            "work": "Osteopathische Beratung — Gespräch mit dem Patienten"
+        },
+        "work": {
+            "consultation": "Patientenkonsultation — osteopathische Anamnese",
+            "diagnostics": "Osteopathische Diagnostik — Körperbewertung",
+            "bodywork": "Körperarbeit — osteopathische Techniken",
+            "manual": "Osteopathische Techniken — manuelle Behandlung",
+            "craniosacral": "Craniosakrale Therapie — Arbeit mit dem Schädel",
+            "visceral": "Viszerale Techniken — Arbeit mit inneren Organen",
+            "end_session": "Ende einer osteopathischen Sitzung"
+        },
+        "patients": {
+            "adult1": "Osteopathie für Erwachsene — Behandlung von Rückenschmerzen",
+            "adult2": "Osteopathische Sitzung — Körperarbeit",
+            "adult3": "Osteopathische Behandlung für Erwachsene",
+            "adult4": "Osteopathie — sanfte manuelle Techniken",
+            "child1": "Osteopathie für Säuglinge",
+            "child2": "Pädiatrische Osteopathie — sanfte Techniken",
+            "child3": "Osteopathische Sitzung mit einem Kind",
+            "child4": "Craniosakrale Osteopathie für Kinder",
+            "pregnant1": "Osteopathie für Schwangere",
+            "pregnant2": "Osteopathie in der Schwangerschaft — sichere Techniken",
+            "pregnant3": "Osteopathische Sitzung während der Schwangerschaft",
+            "pregnant4": "Osteopathie nach der Geburt"
+        },
+        "prices": {
+            "adult": "Osteopathie für Erwachsene — Behandlungssitzung",
+            "child": "Osteopathie für Kinder — sanfte Arbeit mit einem Säugling",
+            "pregnant": "Osteopathie für Schwangere — sichere Techniken",
+            "pair": "Osteopathie für Paare — Familienpaket",
+            "mother_child": "Osteopathie für Mutter und Kind — gemeinsamer Besuch",
+            "family": "Familien-Osteopathie-Paket — 3 Personen"
+        },
+        "education": {
+            "hero": "Hanna Bykava — Studentin an der Warsaw Osteopathic Medicine Academy",
+            "hero_reviews": "Hanna Bykava — Preisträgerin Orły Medycyny 2025"
+        },
+        "location": {
+            "building": "OsteoJump Osteopathiepraxis — Siłaczki 3/9, Warschau",
+            "door": "Tür des Büros 212 — OsteoJump",
+            "corridor": "Korridor im 2. Stockwerk — links abbiegen",
+            "corridor2": "Korridor zur osteopathischen Praxis",
+            "elevator_buttons": "Aufzugknöpfe — 2. Stockwerk",
+            "entrance": "Gebäudeeingang — hölzernes Vordach",
+            "elevator": "Aufzug im Gebäude — Richtung zur Praxis"
+        },
+        "diplomas": {
+            "cst1": "Upledger Institute Zertifikat — CranioSacral Therapy 1",
+            "cst2": "Upledger Institute Zertifikat — CranioSacral Therapy 2",
+            "ser1": "Upledger Institute Zertifikat — SomatoEmotional Release 1",
+            "cst_pregnancy": "Upledger Institute Zertifikat — CST in der Schwangerschaft",
+            "cst_pediatrics": "CST Pediatrics Zertifikat — craniosakrale Therapie für Kinder",
+            "vm1": "Barral Institute Zertifikat — Visceral Manipulation 1",
+            "kinesiotaping": "Kinesiotaping-Zertifikat 2022",
+            "medical_college": "Diplom des Minsker Staatlichen Medizinischen Kollegs 2009",
+            "medical_university": "Diplom der Belarussischen Staatlichen Medizinischen Universität 2015"
+        }
     }
 }

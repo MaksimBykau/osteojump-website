@@ -825,5 +825,76 @@
         "cta_author": "Hanna Bykava — osteopata, była położna, mama. Gabinet OsteoJump, Warszawa (Ursus).",
         "cta_book": "Umów wizytę",
         "cta_question": "Zadaj pytanie"
+    },
+    "img": {
+        "hero": "Osteopata Hanna Bykava — OsteoJump Warszawa",
+        "awards": {
+            "logo": "Orły Medycyny",
+            "gold_medal": "Złoty medal Orły Medycyny 2025",
+            "laureate": "Laureat Orły Medycyny 2025"
+        },
+        "about": {
+            "office": "Osteopata Hanna Bykava w gabinecie — indywidualne podejście do pacjenta",
+            "mother1": "Hanna Bykava z córką — droga do osteopatii",
+            "mother2": "Hanna z dzieckiem — inspiracja do pracy z niemowlętami",
+            "mother3": "Macierzyństwo i osteopatia — osobiste doświadczenie",
+            "mother4": "Hanna Bykava — osteopata i mama",
+            "work": "Konsultacja osteopatyczna — rozmowa z pacjentem"
+        },
+        "work": {
+            "consultation": "Rozmowa z pacjentem — wywiad osteopatyczny",
+            "diagnostics": "Diagnostyka osteopatyczna — badanie ciała",
+            "bodywork": "Praca z ciałem — techniki osteopatyczne",
+            "manual": "Techniki osteopatyczne — leczenie manualne",
+            "craniosacral": "Terapia kraniosakralna — praca z czaszką",
+            "visceral": "Techniki wisceralne — praca z narządami",
+            "end_session": "Zakończenie sesji osteopatycznej"
+        },
+        "patients": {
+            "adult1": "Osteopatia dla dorosłych — leczenie bólu pleców",
+            "adult2": "Sesja osteopatyczna — praca z ciałem",
+            "adult3": "Leczenie osteopatyczne dorosłych",
+            "adult4": "Osteopatia — łagodne techniki manualne",
+            "child1": "Osteopatia dla niemowląt",
+            "child2": "Osteopatia dziecięca — delikatne techniki",
+            "child3": "Sesja osteopatyczna z dzieckiem",
+            "child4": "Osteopatia kraniosakralna dla dzieci",
+            "pregnant1": "Osteopatia dla kobiet w ciąży",
+            "pregnant2": "Osteopatia w ciąży — bezpieczne techniki",
+            "pregnant3": "Sesja osteopatyczna w ciąży",
+            "pregnant4": "Osteopatia po porodzie"
+        },
+        "prices": {
+            "adult": "Osteopatia dla dorosłych — sesja leczenia",
+            "child": "Osteopatia dla dzieci — delikatna praca z niemowlęciem",
+            "pregnant": "Osteopatia dla kobiet w ciąży — bezpieczne techniki",
+            "pair": "Osteopatia dla par — pakiet rodzinny",
+            "mother_child": "Osteopatia mama i dziecko — wizyta razem",
+            "family": "Osteopatia dla rodziny — pakiet dla 3 osób"
+        },
+        "education": {
+            "hero": "Hanna Bykava — studentka Warsaw Osteopathic Medicine Academy",
+            "hero_reviews": "Hanna Bykava — laureat Orły Medycyny 2025"
+        },
+        "location": {
+            "building": "Budynek gabinetu osteopatycznego OsteoJump — Siłaczki 3/9, Warszawa",
+            "door": "Drzwi gabinetu 212 — OsteoJump",
+            "corridor": "Korytarz na 2 piętrze — skręt w lewo",
+            "corridor2": "Korytarz prowadzący do gabinetu osteopatycznego",
+            "elevator_buttons": "Przyciski windy — 2 piętro",
+            "entrance": "Wejście do budynku — drewniany daszek",
+            "elevator": "Winda w budynku — kierunek do gabinetu"
+        },
+        "diplomas": {
+            "cst1": "Certyfikat Upledger Institute — CranioSacral Therapy 1",
+            "cst2": "Certyfikat Upledger Institute — CranioSacral Therapy 2",
+            "ser1": "Certyfikat Upledger Institute — SomatoEmotional Release 1",
+            "cst_pregnancy": "Certyfikat Upledger Institute — CST w ciąży",
+            "cst_pediatrics": "Certyfikat CST Pediatrics — terapia kraniosakralna dzieci",
+            "vm1": "Certyfikat Barral Institute — Visceral Manipulation 1",
+            "kinesiotaping": "Certyfikat kinesiotaping 2022",
+            "medical_college": "Dyplom Mińskiego Państwowego Kolegium Medycznego 2009",
+            "medical_university": "Dyplom Białoruskiego Państwowego Uniwersytetu Medycznego 2015"
+        }
     }
 }

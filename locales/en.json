@@ -825,5 +825,76 @@
         "cta_author": "Hanna Bykava — osteopath, former midwife, mother. OsteoJump practice, Warsaw (Ursus).",
         "cta_book": "Book appointment",
         "cta_question": "Ask a question"
+    },
+    "img": {
+        "hero": "Osteopath Hanna Bykava — OsteoJump Warsaw",
+        "awards": {
+            "logo": "Orły Medycyny (Eagles of Medicine)",
+            "gold_medal": "Gold Medal Orły Medycyny 2025",
+            "laureate": "Orły Medycyny 2025 Laureate"
+        },
+        "about": {
+            "office": "Osteopath Hanna Bykava in the clinic — individual approach to each patient",
+            "mother1": "Hanna Bykava with her daughter — the path to osteopathy",
+            "mother2": "Hanna with an infant — inspiration for working with newborns",
+            "mother3": "Motherhood and osteopathy — personal experience",
+            "mother4": "Hanna Bykava — osteopath and mother",
+            "work": "Osteopathic consultation — talking with a patient"
+        },
+        "work": {
+            "consultation": "Patient consultation — osteopathic interview",
+            "diagnostics": "Osteopathic diagnostics — body assessment",
+            "bodywork": "Bodywork — osteopathic techniques",
+            "manual": "Osteopathic techniques — manual treatment",
+            "craniosacral": "Craniosacral therapy — working with the skull",
+            "visceral": "Visceral techniques — working with internal organs",
+            "end_session": "End of an osteopathic session"
+        },
+        "patients": {
+            "adult1": "Osteopathy for adults — back pain treatment",
+            "adult2": "Osteopathic session — bodywork",
+            "adult3": "Osteopathic treatment for adults",
+            "adult4": "Osteopathy — gentle manual techniques",
+            "child1": "Osteopathy for infants",
+            "child2": "Pediatric osteopathy — gentle techniques",
+            "child3": "Osteopathic session with a child",
+            "child4": "Craniosacral osteopathy for children",
+            "pregnant1": "Osteopathy for pregnant women",
+            "pregnant2": "Osteopathy during pregnancy — safe techniques",
+            "pregnant3": "Osteopathic session during pregnancy",
+            "pregnant4": "Postpartum osteopathy"
+        },
+        "prices": {
+            "adult": "Osteopathy for adults — treatment session",
+            "child": "Osteopathy for children — gentle work with an infant",
+            "pregnant": "Osteopathy for pregnant women — safe techniques",
+            "pair": "Osteopathy for couples — family package",
+            "mother_child": "Osteopathy for mother and child — joint visit",
+            "family": "Family osteopathy package — 3 people"
+        },
+        "education": {
+            "hero": "Hanna Bykava — student at Warsaw Osteopathic Medicine Academy",
+            "hero_reviews": "Hanna Bykava — Orły Medycyny 2025 Laureate"
+        },
+        "location": {
+            "building": "OsteoJump osteopathic clinic building — Siłaczki 3/9, Warsaw",
+            "door": "Office 212 door — OsteoJump",
+            "corridor": "2nd floor corridor — turn left",
+            "corridor2": "Corridor leading to the osteopathic clinic",
+            "elevator_buttons": "Elevator buttons — 2nd floor",
+            "entrance": "Building entrance — wooden canopy",
+            "elevator": "Building elevator — direction to the clinic"
+        },
+        "diplomas": {
+            "cst1": "Upledger Institute Certificate — CranioSacral Therapy 1",
+            "cst2": "Upledger Institute Certificate — CranioSacral Therapy 2",
+            "ser1": "Upledger Institute Certificate — SomatoEmotional Release 1",
+            "cst_pregnancy": "Upledger Institute Certificate — CST in Pregnancy",
+            "cst_pediatrics": "CST Pediatrics Certificate — craniosacral therapy for children",
+            "vm1": "Barral Institute Certificate — Visceral Manipulation 1",
+            "kinesiotaping": "Kinesiotaping Certificate 2022",
+            "medical_college": "Diploma from Minsk State Medical College 2009",
+            "medical_university": "Diploma from Belarusian State Medical University 2015"
+        }
     }
 }

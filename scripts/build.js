@@ -232,6 +232,15 @@ function processPage(slug, lang, translations) {
     }
   });
 
+  // 2b. Fill [data-i18n-alt] img alt attributes
+  $('[data-i18n-alt]').each(function () {
+    const key = $(this).attr('data-i18n-alt');
+    const value = getTranslation(translations, key);
+    if (value !== null) {
+      $(this).attr('alt', value);
+    }
+  });
+
   // 3. Fill [data-i18n-html] elements
   $('[data-i18n-html]').each(function () {
     const key = $(this).attr('data-i18n-html');
