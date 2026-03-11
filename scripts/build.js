@@ -163,8 +163,6 @@ function isInternalPageLink(href) {
  * E.g. "/about" → "/en/about", "/" → "/en/", "/faq#session" → "/en/faq#session"
  */
 function rewriteHref(href, lang) {
-  if (lang === DEFAULT_LANG) return href;
-
   // Parse hash and query
   let hash = '';
   let query = '';
@@ -189,7 +187,12 @@ function rewriteHref(href, lang) {
   const slug = normalized.replace(/^\//, '');
 
   if (slug === '' || PAGE_SLUGS.has(slug)) {
-    const newPath = slug === '' ? `/${lang}/` : `/${lang}/${slug}`;
+    let newPath;
+    if (lang === DEFAULT_LANG) {
+      newPath = slug === '' ? '/' : `/${slug}/`;
+    } else {
+      newPath = slug === '' ? `/${lang}/` : `/${lang}/${slug}/`;
+    }
     return newPath + query + hash;
   }
 
@@ -276,15 +279,13 @@ function processPage(slug, lang, translations) {
     canonical.after(`\n    <link rel="alternate" hreflang="${l}" href="${url}">`);
   });
 
-  // 9. Rewrite internal links for non-default languages
-  if (lang !== DEFAULT_LANG) {
-    $('a[href]').each(function () {
-      const href = $(this).attr('href');
-      if (isInternalPageLink(href)) {
-        $(this).attr('href', rewriteHref(href, lang));
-      }
-    });
-  }
+  // 9. Rewrite internal links (add trailing slashes, prefix for non-default languages)
+  $('a[href]').each(function () {
+    const href = $(this).attr('href');
+    if (isInternalPageLink(href)) {
+      $(this).attr('href', rewriteHref(href, lang));
+    }
+  });
 
   // 10. Normalize relative paths to absolute paths
   //     Subpages use "../css/", "../js/" — convert to "/css/", "/js/"
@@ -349,8 +350,8 @@ function processPage(slug, lang, translations) {
   if (lang !== DEFAULT_LANG) {
     // The action bar buttons use JS navigation (main.js), so we add data attributes
     // that i18n-static.js or main.js can use
-    $('[id="actionContacts"]').attr('data-static-href', `/${lang}/contacts`);
-    $('[id="actionDirections"]').attr('data-static-href', `/${lang}/location`);
+    $('[id="actionContacts"]').attr('data-static-href', `/${lang}/contacts/`);
+    $('[id="actionDirections"]').attr('data-static-href', `/${lang}/location/`);
   }
 
   // 17. Rewrite img src to .webp (JPG/JPEG/PNG → WebP)
@@ -542,7 +543,7 @@ function build() {
     for (const lang of LANGUAGES) {
       const prefix = lang === DEFAULT_LANG ? '' : lang;
       const oldPath = path.join(DIST, prefix, oldSlug, 'index.html');
-      const newUrl = lang === DEFAULT_LANG ? `/${newSlug}` : `/${lang}/${newSlug}`;
+      const newUrl = lang === DEFAULT_LANG ? `/${newSlug}/` : `/${lang}/${newSlug}/`;
       const canonicalUrl = `${SITE_URL}${newUrl}`;
 
       fs.mkdirSync(path.dirname(oldPath), { recursive: true });
