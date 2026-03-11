@@ -100,6 +100,33 @@
 
 - [ ] **Responsive images** — srcset для разных размеров экранов
 
+## Технические правила (выработаны 2026-03-11)
+
+### Canonical и trailing slash
+- Canonical ВСЕГДА должен включать trailing slash и совпадать с URL страницы
+- Внутренние ссылки в навигации ВСЕГДА со trailing slash (`/contacts/`, не `/contacts`)
+- Без trailing slash → сервер делает redirect → Google видит redirect loop если canonical тоже без slash
+
+### Image alt тексты
+- Alt тексты ДОЛЖНЫ быть на языке страницы (не польские на всех версиях)
+- Используем `data-i18n-alt="key"` атрибут на img тегах
+- Ключи добавлены в locale JSON файлы под секцией `"img": {...}`
+- Нарушение: Google видит идентичные alt тексты → считает языковые версии дублями PL → не индексирует
+
+### Keywords meta
+- Keywords ДОЛЖНЫ быть на языке страницы (используем keywordsDefaults в meta.js)
+- Google игнорирует keywords для ранжирования, но одинаковые keywords на всех языках — лишний сигнал дублирования
+
+### "Alternate page with proper canonical tag" в GSC
+- Этот статус для языковых hreflang страниц — НОРМАЛЬНО, не требует действий
+- Google говорит: "there is nothing you need to do"
+- НО если canonical указывает на ДРУГОЙ URL (не на себя) → реальная проблема
+
+### Мультиязычный сайт и индексация
+- Если Google считает языковую версию дублём → статус "Crawled, not indexed"
+- Сигналы дублирования: одинаковые alt тексты, одинаковые keywords, broken canonical
+- Все сигналы исправлены: alt (data-i18n-alt), keywords (keywordsDefaults), canonical (trailing slash)
+
 ## Инструменты проверки
 
 - Google Search Console: проверка индексации, запросы

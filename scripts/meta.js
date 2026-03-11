@@ -609,4 +609,13 @@ const ogLocaleMap = {
   de: 'de_DE',
 };
 
-module.exports = { pageMeta, ogLocaleMap, SITE_URL };
+// Default keywords per language (used when pageMeta doesn't define page-specific keywords)
+const keywordsDefaults = {
+  pl: 'osteopata Warszawa, osteopata dziecięcy, osteopata dla kobiet w ciąży, terapia kraniosakralna, Hanna Bykava',
+  en: 'osteopath Warsaw, pediatric osteopath Warsaw, osteopath pregnancy, craniosacral therapy, Hanna Bykava',
+  ru: 'остеопат Варшава, детский остеопат, остеопат для беременных Варшава, краниосакральная терапия, Ганна Быкава',
+  uk: 'остеопат Варшава, дитячий остеопат, остеопат для вагітних, краніосакральна терапія, Ганна Бикова',
+  de: 'Osteopath Warschau, Kinderosteopathie, Osteopathie Schwangerschaft, Kraniosakraltherapie, Hanna Bykava',
+};
+
+module.exports = { pageMeta, ogLocaleMap, SITE_URL, keywordsDefaults };

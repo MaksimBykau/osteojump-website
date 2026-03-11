@@ -13,7 +13,7 @@
 const fs = require('fs');
 const path = require('path');
 const cheerio = require('cheerio');
-const { pageMeta, ogLocaleMap, SITE_URL } = require('./meta');
+const { pageMeta, ogLocaleMap, SITE_URL, keywordsDefaults } = require('./meta');
 
 // ---------------------------------------------------------------------------
 // Configuration
@@ -256,6 +256,12 @@ function processPage(slug, lang, translations) {
     $('meta[name="description"]').attr('content', meta.description);
     $('meta[property="og:title"]').attr('content', meta.ogTitle);
     $('meta[property="og:description"]').attr('content', meta.ogDescription);
+  }
+
+  // Set keywords (language-specific)
+  const keywords = meta?.keywords || keywordsDefaults[lang];
+  if (keywords) {
+    $('meta[name="keywords"]').attr('content', keywords);
   }
 
   // 5. Set og:url
