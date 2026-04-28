@@ -2,8 +2,13 @@
 <html lang="pl">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="refresh" content="0; url=/?utm_source=youtube&utm_medium=video">
 <title>OsteoJump</title>
+<script>
+  var params = new URLSearchParams(window.location.search);
+  params.set('utm_source', 'youtube');
+  params.set('utm_medium', 'video');
+  window.location.replace('/?' + params.toString());
+</script>
 </head>
 <body>
 <a href="/?utm_source=youtube&utm_medium=video">→ osteojump.pl</a>
