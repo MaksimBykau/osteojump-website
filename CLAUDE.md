@@ -13,6 +13,7 @@
 - SEO-оптимизация → прочитай `docs/SEO.md` (стратегия, чеклист, что сделано/что делать)
 - Написание/редактирование текстов → прочитай `docs/strategist/writing-style.md` и `docs/strategist/doctor-profile.md`
 - Новая страница или секция → прочитай `docs/TECHNICAL.md` (включая Page Map), **после — обнови Page Map**
+- Аналитика / новые кликабельные элементы → прочитай `docs/ANALYTICS.md`
 - Работа с переводами → прочитай `docs/TRANSLATE.md`
 - Работа со стилями/вёрсткой → CSS rules ниже в этом файле
 - Деплой → прочитай `docs/DEPLOYMENT.md`

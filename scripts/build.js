@@ -407,7 +407,10 @@ function processPage(slug, lang, translations) {
       })
     </script>`);
 
-  // 20. Generate FAQPage schema for FAQ page
+  // 20. Inject analytics.js
+  $('body').append('\n    <script src="/js/analytics.js"></script>');
+
+  // 21. Generate FAQPage schema for FAQ page
   if (slug === 'faq') {
     const faqItems = [];
     $('.faq-item').each(function () {
@@ -487,6 +490,11 @@ function copyAssets() {
   }
 
   // Copy HugeIcons CSS link is external, no need to copy
+
+  // Copy UTM redirect pages (yt/, tg/, ads/ etc.) verbatim — not multilingual
+  for (const dir of ['yt']) {
+    copyDirRecursive(path.join(ROOT, dir), path.join(DIST, dir));
+  }
 }
 
 // ---------------------------------------------------------------------------

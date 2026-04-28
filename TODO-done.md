@@ -1,5 +1,13 @@
 # Выполненные задачи
 
+## 2026-04
+
+- [x] Трекинг кликов через PostHog: js/analytics.js (2026-04-28)
+  - 11 событий: click_booking, click_whatsapp, click_phone, click_telegram, click_email, click_social, click_maps, click_nav, click_lang, click_faq, click_fixed_bar
+  - Свойства: page, lang, location. data-track-location добавлен на секции всех 21 страниц
+- [x] Редирект /yt/ с UTM для YouTube-трафика (2026-04-28)
+  - /yt/index.html → /?utm_source=youtube&utm_medium=video. Шаблон для /tg/, /ads/
+
 ## 2026-03
 
 - [x] Контент-план "Беременность, роды, дети": 4 статьи + 3 FAQ-вопроса (2026-03-05)
