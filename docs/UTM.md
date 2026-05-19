@@ -48,9 +48,14 @@ PostHog подхватывает их автоматически и сохран
 
 **Google Ads** — устанавливается через "Суффикс конечного URL" в настройках аккаунта:
 ```
-utm_source=google&utm_medium=cpc&utm_campaign={campaignname}&utm_content={adgroupname}&utm_term={keyword}
+utm_source=google&utm_medium=cpc&utm_campaign={campaignid}&utm_content={adgroupid}&utm_term={keyword}
 ```
-`{campaignname}`, `{adgroupname}`, `{keyword}` — ValueTrack-параметры, Google подставляет автоматически.
+
+`{campaignid}`, `{adgroupid}`, `{keyword}` — это **ValueTrack-параметры**, Google подставляет их автоматически. В UTM попадёт числовой ID кампании/группы — соответствие ID → название смотри в интерфейсе Google Ads.
+
+**Важно:** параметров `{campaignname}` и `{adgroupname}` в ValueTrack **не существует** — Google поддерживает только ID. Если использовать несуществующий параметр, в UTM попадёт литералом `{campaignname}` и аналитика поломается.
+
+Полный список ValueTrack-параметров: [support.google.com/google-ads/answer/2375447](https://support.google.com/google-ads/answer/2375447).
 
 ---
 
@@ -61,19 +66,26 @@ utm_source=google&utm_medium=cpc&utm_campaign={campaignname}&utm_content={adgrou
 https://osteojump.pl/?utm_source=booksy&utm_medium=referral
 ```
 
-**Google Maps** (ссылка на сайт в карточке):
+**Google Business Profile** (ссылка на сайт в карточке организации, отображается в Google Maps и поиске):
 ```
-https://osteojump.pl/?utm_source=google_maps&utm_medium=referral
+https://osteojump.pl/?utm_source=google_profile&utm_medium=referral
 ```
 
 ---
 
 ### Соцсети
 
-**Instagram** — несколько профилей разделяем через `utm_content`:
+**Instagram** — несколько профилей разделяем через `utm_content` (по языку аудитории или handle):
 ```
-https://osteojump.pl/?utm_source=instagram&utm_medium=social&utm_content=main
-https://osteojump.pl/?utm_source=instagram&utm_medium=social&utm_content=profile2
+https://osteojump.pl/?utm_source=instagram&utm_medium=social&utm_content=hannabykavaosteopata
+https://osteojump.pl/?utm_source=instagram&utm_medium=social&utm_content=bykova_anna_osteopat
+https://osteojump.pl/?utm_source=instagram&utm_medium=social&utm_content=osteojump
+```
+
+**Facebook** — два профиля (польский и русский), различаем через `utm_content` по языку:
+```
+https://osteojump.pl/?utm_source=facebook&utm_medium=social&utm_content=pl
+https://osteojump.pl/?utm_source=facebook&utm_medium=social&utm_content=ru
 ```
 
 **Telegram**:
@@ -114,6 +126,12 @@ https://osteojump.pl/?utm_source=telegram&utm_medium=social
 
 ---
 
+### В UTM приходит литерал `{campaignname}` (а не значение)
+
+Значит, использован несуществующий ValueTrack-параметр. У Google Ads нет `{campaignname}` и `{adgroupname}` — только числовые ID `{campaignid}` и `{adgroupid}`. Замени в суффиксе URL в настройках аккаунта.
+
+---
+
 ### Как разделить несколько профилей одной платформы
 
 Используй `utm_content`:
@@ -142,8 +160,8 @@ HogQL-запрос — топ источников за 30 дней:
 
 ```sql
 SELECT
-  properties.$utm_source AS source,
-  properties.$utm_medium AS medium,
+  properties.utm_source AS source,
+  properties.utm_medium AS medium,
   count() AS sessions
 FROM events
 WHERE event = '$pageview'
@@ -156,9 +174,9 @@ ORDER BY sessions DESC
 
 ```sql
 SELECT
-  properties.$utm_source AS source,
-  properties.$utm_medium AS medium,
-  properties.$utm_campaign AS campaign,
+  properties.utm_source AS source,
+  properties.utm_medium AS medium,
+  properties.utm_campaign AS campaign,
   count() AS views
 FROM events
 WHERE event = '$pageview'
@@ -172,8 +190,8 @@ ORDER BY views DESC
 
 ```sql
 SELECT
-  properties.$utm_source AS source,
-  properties.$utm_medium AS medium,
+  properties.utm_source AS source,
+  properties.utm_medium AS medium,
   count() AS bookings
 FROM events
 WHERE event = 'click_booking'
@@ -197,7 +215,28 @@ ORDER BY bookings DESC
 
 **Insights → Trends:**
 - Событие: `$pageview`
-- Breakdown: `UTM Source` (свойство `$utm_source`)
+- Breakdown: `UTM Source` (свойство `utm_source`)
 - Период: последние 30 дней
 
 Покажет график посещений в разбивке по источникам.
+
+---
+
+## Имена UTM-свойств в PostHog (важно!)
+
+В posthog-js 1.374+ UTM-параметры хранятся **БЕЗ префикса `$`**:
+
+| Поле в HogQL/SQL | Что это |
+|---|---|
+| `properties.utm_source` | Источник текущего события (pageview) |
+| `properties.utm_medium` | Канал |
+| `properties.utm_campaign` | Кампания |
+| `properties.utm_content` | Контент / объявление / профиль |
+| `properties.utm_term` | Ключевое слово |
+| `properties.$session_entry_utm_source` | Источник **первого** pageview в сессии (с префиксом `$`) |
+| `properties.$session_entry_utm_medium` | Канал первой страницы сессии |
+| `properties.$session_entry_utm_campaign` | Кампания первой страницы сессии |
+
+**Не используй `properties.$utm_source`** — в новой версии posthog-js этого поля нет, вернёт пусто.
+
+Для атрибуции по источнику первого визита — используй `$session_entry_utm_*`.

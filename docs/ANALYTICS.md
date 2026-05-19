@@ -2,6 +2,15 @@
 
 Трекинг реализован через PostHog в `js/analytics.js`. Инжектируется на все страницы через `build.js` (шаг 20).
 
+## PostHog MCP плагин
+
+**ВСЕГДА используй PostHog MCP плагин** для любой работы с аналитикой — запросы, воронки, дашборды, алерты.
+
+Плагин установлен: `claude plugin install posthog`
+Slash-команды: `/posthog:insights`, `/posthog:flags`, `/posthog:errors`, `/posthog:experiments`
+
+Вместо анализа CSV-экспортов — запускай HogQL-запросы напрямую через MCP.
+
 ## Архитектура
 
 Один delegated click listener (capture phase) на `document`. Классифицирует клики по href-паттернам (ссылки) и id/class (кнопки).

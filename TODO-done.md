@@ -1,5 +1,19 @@
 # Выполненные задачи
 
+## 2026-05
+
+- [x] UTM-ссылки в Booksy и Google Business Profile (2026-05-19)
+  - Booksy: `?utm_source=booksy&utm_medium=referral`
+  - Google Business Profile: `?utm_source=google_profile&utm_medium=referral` (обновлена дока — раньше было `google_maps`)
+- [x] UTM-ссылки в Facebook (2026-05-19)
+  - Два профиля (польский, русский), разделение через `utm_content=pl` / `utm_content=ru`. Добавлен раздел Facebook в `docs/UTM.md`.
+- [x] Google Ads UTM-суффикс через ValueTrack (2026-05-19)
+  - `utm_source=google&utm_medium=cpc&utm_campaign={campaignid}&utm_content={adgroupid}&utm_term={keyword}` в настройках аккаунта. Проверка показала 3/3 URL валидны.
+- [x] Выключен AI Max в Google Ads кампаниях (2026-05-19)
+  - Кампании `23732985811` (Беременность) и `23739543823` — отключена опция «Оптимизировать кампанию с помощью AI Max». Причина: AI Max расширял Search-кампании на мусорные display-площадки (`gbapkfree.com`, `gpspain.com`), приводил бот-трафик с `gad_source=5` и игнорировал часть account-level tracking template (битые `{campaignname}` в UTM). Перепроверить через 1-3 дня — должны исчезнуть мусорные referrer'ы и `gad_source=5`.
+- [x] Уточнены имена UTM-свойств в PostHog (2026-05-19)
+  - Подозревали, что UTM не парсится — оказалось, что в posthog-js 1.374+ UTM хранятся **без префикса `$`**: `properties.utm_source` (а не `$utm_source`). Сессионные UTM первой страницы — `properties.$session_entry_utm_*` (с префиксом). Обновил `docs/UTM.md` с правильным синтаксисом и таблицей всех имён свойств.
+
 ## 2026-04
 
 - [x] Трекинг кликов через PostHog: js/analytics.js (2026-04-28)
