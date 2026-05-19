@@ -4,6 +4,28 @@
 
 ---
 
+## Session: 2026-05-19 — UTM-метки, Google Ads cleanup, PostHog аудит
+
+**Коммит:** `6866bd3` — Update UTM docs after Google Ads + PostHog audit
+
+**Что сделали:**
+- Google Ads UTM-суффикс на уровне аккаунта через ValueTrack (`{campaignid}`, `{adgroupid}`, `{keyword}` — числовые ID, не `{campaignname}` которого не существует)
+- Добавлены UTM-ссылки: Booksy, Google Business Profile (`utm_source=google_profile`), Facebook (`utm_content=pl/ru` для двух профилей)
+- Выключен AI Max в кампаниях `23732985811` и `23739543823` — он расширял Search на мусорные display-площадки (`gbapkfree.com`, `gpspain.com`), приводил bot-трафик с `gad_source=5` и ломал tracking template (битые `{campaignname}` в UTM)
+- Раскопали, что в posthog-js 1.374+ UTM хранятся **без префикса `$`**: `properties.utm_source` (а не `$utm_source`). Сессионные UTM первой страницы — `properties.$session_entry_utm_*`. Это не баг, а изменение схемы в новой версии SDK.
+
+**Документация:**
+- `docs/UTM.md` — добавлен раздел Facebook, актуализированы Instagram handle'ы, добавлена таблица имён UTM-свойств в HogQL
+- `docs/ANALYTICS.md` — добавлен раздел про PostHog MCP плагин
+- `CLAUDE.md` — ссылка на PostHog MCP плагин
+
+**Открытые задачи (в `TODO.md`):**
+- Перепроверить через 1-3 дня, что AI Max-выключение убрало bot-трафик
+- Перепроверить `utm_source=ig` через 2-3 недели (за последние 7 дней не встречался)
+- Добавить GA4 (давно висит)
+
+---
+
 ## Session: 2026-03-11 — SEO: исправление дублирования языковых версий
 
 **Коммиты:**

@@ -1,29 +1,27 @@
-# Session: 2026-03-11
+# Session: 2026-05-19
 
 ## Последний коммит
-`57c8a05` — Fix SEO: translate keywords per language, document SEO technical rules
+`6866bd3` — Update UTM docs after Google Ads + PostHog audit
 
 ## Что сделали за сессию
 
-### SEO — исправление дублирования языковых версий
-Google не индексировал EN/RU/UK/DE страницы (статус "Crawled, not indexed") из-за трёх проблем дублирования:
+### UTM-разметка для всех источников трафика
+- Google Ads: суффикс на уровне аккаунта через ValueTrack-параметры (числовые ID кампаний/групп — `{campaignid}`/`{adgroupid}`, а не `{campaignname}` которого не существует)
+- Booksy: `?utm_source=booksy&utm_medium=referral`
+- Google Business Profile: `?utm_source=google_profile&utm_medium=referral`
+- Facebook (2 профиля): `?utm_source=facebook&utm_medium=social&utm_content=pl/ru`
+- Instagram: уже было настроено, добавил handle-based `utm_content`
 
-1. **Canonical без trailing slash** → redirect loop
-   - Исправлено: canonical, hreflang, og:url, sitemap — все URL со trailing slash
-   - Внутренние ссылки в навигации тоже приведены к trailing slash
+### Выключен AI Max в Google Ads
+Был основным источником проблем: расширял Search-кампании на мусорные display-площадки (`gbapkfree.com`, `gpspain.com`), приводил bot-трафик с `gad_source=5`, ломал tracking template. Отключён в кампаниях `23732985811` (Беременность) и `23739543823`.
 
-2. **Polish alt тексты на всех языках**
-   - Исправлено: `data-i18n-alt` атрибут на img, переводы в locale JSON (`img` секция)
-   - build.js уже обрабатывал `data-i18n-alt` в шаге 2b
-
-3. **Polish keywords на всех языках**
-   - Исправлено: `keywordsDefaults` в meta.js (5 языков), применяется в build.js (шаг 4)
-
-4. **Задокументированы технические правила** в `docs/SEO.md`
+### PostHog: разобрались с UTM-свойствами
+В posthog-js 1.374+ UTM хранятся **без префикса `$`**: `properties.utm_source`, `properties.utm_medium`, и т.д. Сессионные первой страницы — с префиксом: `$session_entry_utm_source`. Не баг, изменение схемы SDK. Обновил `docs/UTM.md` с таблицей правильных имён.
 
 ## Открытые задачи
 - См. `TODO.md`
 
 ## Следующие шаги
-- Подождать переиндексацию Google (1-4 недели) и проверить GSC
-- ZnanyLekarz — зарегистрироваться после диплома (июнь 2026)
+- Через 1-3 дня перепроверить, что после выключения AI Max исчезли мусорные referrer'ы (`gbapkfree.com`, `gpspain.com`) и `gad_source=5`
+- Через 2-3 недели — проверить, не вернётся ли `utm_source=ig` (за последние 7 дней не встречался)
+- Подумать про добавление GA4 (давно висит в TODO)
