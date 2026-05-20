@@ -132,6 +132,10 @@
         "award_line2": "in Warschau",
         "award_description": "Diese Auszeichnung wird für hohe Bewertungen im medizinischen Bereich verliehen. Vielen Dank an alle Kunden für Ihr Vertrauen und Ihre Bewertungen!",
         "award_link": "Auf orlymedycyny.pl ansehen",
+        "firma_zaufania_title": "Firma Godna Zaufania 2026",
+        "firma_zaufania_description": "Das Zertifikat Firma Godna Zaufania 2026 wird nach positiver Verifizierung der Online-Bewertungen verliehen. Ein Zeichen des Vertrauens für Patienten — Bestätigung von Zuverlässigkeit, professionellem Vorgehen und hohen Servicestandards.",
+        "hero_title": "Diese Auszeichnungen werden für hohe Bewertungen im medizinischen Bereich, Bestätigung der Zuverlässigkeit, des professionellen Vorgehens und hoher Arbeitsstandards verliehen.",
+        "hero_text": "Vielen Dank an alle Kunden für Ihr Vertrauen und Ihre Bewertungen!",
         "featured_title": "Ausführliche Bewertungen",
         "short_title": "Kundeneindrücke",
         "cta_thanks_title": "Vielen Dank für Ihre Bewertungen!",
@@ -833,7 +837,8 @@
             "logo": "Orły Medycyny (Adler der Medizin)",
             "gold_medal": "Goldmedaille Orły Medycyny 2025",
             "laureate": "Orły Medycyny 2025 Preisträgerin",
-            "firma_zaufania": "Firma Godna Zaufania 2026 — Zertifikat"
+            "firma_zaufania": "Firma Godna Zaufania 2026 — Zertifikat",
+            "firma_photo": "Firma Godna Zaufania 2026 Medaille"
         },
         "about": {
             "office": "Osteopathin Hanna Bykava in der Praxis — individuelle Betreuung jedes Patienten",

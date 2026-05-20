@@ -11,6 +11,20 @@
     background: var(--gradient-hero);
 }
 
+.reviews-hero-title,
+.reviews-hero-text {
+    font-size: clamp(1.05rem, 2vw, 1.25rem);
+    font-weight: 400;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+    max-width: 500px;
+}
+
+.reviews-hero-text {
+    margin-top: var(--spacing-sm);
+}
+
 /* ============================================
    Rating Stats Section (blue block)
    ============================================ */
@@ -138,6 +152,68 @@
     filter: drop-shadow(0 4px 8px var(--gold-10));
 }
 
+/* ============================================
+   Awards Stack Section (Orły + Firma Godna)
+   ============================================ */
+.reviews-awards {
+    padding: var(--spacing-lg) var(--spacing-sm);
+    background-color: var(--section-bg);
+}
+
+.awards-stack {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    gap: var(--spacing-md);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.award-item {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--spacing-sm);
+    text-align: center;
+}
+
+.award-item .award-link-block {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+@media (min-width: 1024px) {
+    .awards-stack {
+        flex-direction: row;
+        gap: var(--spacing-lg);
+        max-width: 1000px;
+    }
+
+    .award-item {
+        flex: 1 1 0;
+        min-width: 0;
+    }
+}
+
+.award-item .award-description {
+    margin: 0;
+    max-width: 500px;
+}
+
+/* Firma award block — neutral primary-blue accent (not gold) */
+.award-link-block--firma:hover {
+    border-color: var(--primary-color);
+    background-color: var(--primary-color-05);
+}
+
+.award-logo--firma {
+    height: clamp(110px, 14vw, 150px);
+    width: auto;
+}
+
 /* Award title */
 .award-title {
     font-size: clamp(1.25rem, 2.5vw, 1.5rem);
@@ -145,6 +221,10 @@
     color: var(--gold-dark);
     text-align: center;
     line-height: 1.4;
+}
+
+.award-title--firma {
+    color: var(--text-color);
 }
 
 .award-subtitle {

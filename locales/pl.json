@@ -132,6 +132,10 @@
         "award_line2": "w Warszawie",
         "award_description": "Ta nagroda jest przyznawana za wysokie oceny w dziedzinie medycyny. Dziękuję wszystkim klientom za zaufanie i opinie!",
         "award_link": "Zobacz na orlymedycyny.pl",
+        "firma_zaufania_title": "Firma Godna Zaufania 2026",
+        "firma_zaufania_description": "Certyfikat Firma Godna Zaufania 2026 — przyznawany po pozytywnej weryfikacji opinii online. To znak zaufania dla pacjentów: potwierdzenie rzetelności, profesjonalnego podejścia i wysokich standardów obsługi.",
+        "hero_title": "Te nagrody przyznawane są za wysokie oceny w dziedzinie medycyny, potwierdzenie rzetelności, profesjonalnego podejścia i wysokich standardów pracy.",
+        "hero_text": "Dziękuję wszystkim klientom za zaufanie i opinie!",
         "featured_title": "Szczegółowe opinie",
         "short_title": "Wrażenia klientów",
         "cta_thanks_title": "Dziękuję za Wasze opinie!",
@@ -833,7 +837,8 @@
             "logo": "Orły Medycyny",
             "gold_medal": "Złoty medal Orły Medycyny 2025",
             "laureate": "Laureat Orły Medycyny 2025",
-            "firma_zaufania": "Firma Godna Zaufania 2026 — certyfikat"
+            "firma_zaufania": "Firma Godna Zaufania 2026 — certyfikat",
+            "firma_photo": "Medal Firma Godna Zaufania 2026"
         },
         "about": {
             "office": "Osteopata Hanna Bykava w gabinecie — indywidualne podejście do pacjenta",
