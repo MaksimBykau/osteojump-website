@@ -120,10 +120,10 @@
         "title": "Opinie o osteopacie Warszawa — OsteoJump",
         "hero_title": "Opinie",
         "hero_rating": "Wszystkie opinie na 5.0",
-        "hero_platforms": "100+ na Instagram • 40+ na Booksy • 10+ na Google",
+        "hero_platforms": "100+ na Instagram • 50+ na Booksy • 10+ na Google",
         "platforms": {
             "instagram": "100+ na Instagram",
-            "booksy": "40+ na Booksy",
+            "booksy": "50+ na Booksy",
             "google": "10+ na Google"
         },
         "award_title": "Orły Medycyny 2025",
@@ -611,7 +611,7 @@
             },
             "experience": {
                 "title": "Doświadczenie",
-                "text": "15 lat w medycynie, 7 lat w osteopatii. Ponad 1000 pacjentów"
+                "text": "15 lat w medycynie, 8 lat w osteopatii. Ponad 1000 pacjentów"
             },
             "complex": {
                 "title": "Trudne przypadki",

@@ -120,10 +120,10 @@
         "title": "Отзывы об остеопате Варшава — OsteoJump",
         "hero_title": "Отзывы",
         "hero_rating": "Все отзывы на 5.0",
-        "hero_platforms": "100+ в Instagram • 40+ на Booksy • 10+ на Google",
+        "hero_platforms": "100+ в Instagram • 50+ на Booksy • 10+ на Google",
         "platforms": {
             "instagram": "100+ в Instagram",
-            "booksy": "40+ на Booksy",
+            "booksy": "50+ на Booksy",
             "google": "10+ на Google"
         },
         "award_title": "Orły Medycyny 2025",
@@ -611,7 +611,7 @@
             },
             "experience": {
                 "title": "Опыт",
-                "text": "15 лет в медицине, 7 лет в остеопатии. Более 1000 пациентов"
+                "text": "15 лет в медицине, 8 лет в остеопатии. Более 1000 пациентов"
             },
             "complex": {
                 "title": "Сложные случаи",
