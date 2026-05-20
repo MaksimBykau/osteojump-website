@@ -568,6 +568,7 @@
             "osteopathy": "Jahre in der Osteopathie",
             "patients": "Patienten",
             "award": "Orły Medycyny 2025 Preisträgerin",
+            "firma_zaufania": "Firma Godna Zaufania 2026",
             "reviews_btn": "Alle Bewertungen lesen →",
             "review1": "Anna ist eine ausgezeichnete Spezialistin, eine echte Fachfrau und ein sehr angenehmer Mensch.",
             "review2": "Anna hat leichte Hände!! Die ganze Sitzung war ein Vergnügen!",
@@ -831,7 +832,8 @@
         "awards": {
             "logo": "Orły Medycyny (Adler der Medizin)",
             "gold_medal": "Goldmedaille Orły Medycyny 2025",
-            "laureate": "Orły Medycyny 2025 Preisträgerin"
+            "laureate": "Orły Medycyny 2025 Preisträgerin",
+            "firma_zaufania": "Firma Godna Zaufania 2026 — Zertifikat"
         },
         "about": {
             "office": "Osteopathin Hanna Bykava in der Praxis — individuelle Betreuung jedes Patienten",

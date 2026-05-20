@@ -64,6 +64,9 @@
     if (href.indexOf('orlymedycyny.pl') !== -1) {
       return { event: 'click_social', props: { platform: 'orly_medycyny' } };
     }
+    if (href.indexOf('firmagodnazaufania.pl') !== -1) {
+      return { event: 'click_social', props: { platform: 'firma_godna_zaufania' } };
+    }
     // Internal nav: only links inside .nav-menu or .footer-nav
     if (href.indexOf('/') === 0 && anchor.closest('.nav-menu, .footer-nav')) {
       var dest = href.replace(/^\//, '').replace(/\/$/, '').replace(/^(en|ru|uk|de)(\/|$)/, '').replace(/\/$/, '') || 'home';

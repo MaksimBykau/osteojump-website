@@ -2862,40 +2862,31 @@ body {
     margin-bottom: var(--spacing-md);
 }
 
-/* Stats row - horizontal layout */
+/* Reusable card for stats-row & award blocks in hero — unified padding, border, hover */
+.stats-card {
+    text-decoration: none;
+    color: inherit;
+    padding: var(--spacing-md);
+    border-radius: var(--radius-md);
+    border: 2px solid transparent;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.stats-card:hover {
+    border-color: var(--primary-color);
+    background-color: var(--primary-color-05);
+}
+
+/* Stats row - horizontal layout (extends .stats-card) */
 .stats-row {
     display: flex;
     justify-content: center;
     align-items: flex-end;
     gap: var(--spacing-lg);
     flex-wrap: wrap;
-    text-decoration: none;
-    color: inherit;
-    padding: var(--spacing-md);
-    border-radius: var(--radius-md);
-    border: 2px solid transparent;
-    transition: border-color 0.2s ease, background-color 0.2s ease;
 }
 
-.stats-row:hover {
-    border-color: var(--primary-color);
-    background-color: var(--primary-color-05);
-}
-
-/* Award as stat item */
-.stat-item--award {
-    text-decoration: none;
-    color: inherit;
-    padding: var(--spacing-md);
-    border-radius: var(--radius-md);
-    border: 2px solid transparent;
-    transition: border-color 0.2s ease, background-color 0.2s ease;
-}
-
-.stat-item--award:hover {
-    border-color: var(--primary-color);
-    background-color: var(--primary-color-05);
-}
+/* Award stat — modifier of .stat-item. Visual chrome via .stats-card class on HTML. */
 
 .stat-award-images {
     display: flex;
@@ -2909,6 +2900,10 @@ body {
 .stat-award-images .stats-award-logo {
     height: 80px;
     width: auto;
+}
+
+.stat-award-images .stats-award-logo--firma {
+    height: 95px;
 }
 
 .stat-award-images .stats-medal {
@@ -3052,16 +3047,35 @@ body {
         gap: var(--spacing-xs);
     }
 
+    .stats-card {
+        padding: var(--spacing-sm);
+    }
+
     .stats-row {
         gap: var(--spacing-sm);
+        row-gap: var(--spacing-sm);
     }
 
     .stats-row .stat-item {
-        min-width: 70px;
+        min-width: 60px;
+    }
+
+    .stats-row .stat-number {
+        height: auto;
+        font-size: clamp(1.5rem, 6vw, 1.875rem);
+    }
+
+    .stat-award-images {
+        height: auto;
+        margin-bottom: 0.25em;
     }
 
     .stat-award-images .stats-award-logo {
         height: 55px;
+    }
+
+    .stat-award-images .stats-award-logo--firma {
+        height: 65px;
     }
 
     .stat-award-images .stats-medal {

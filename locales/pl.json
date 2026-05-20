@@ -568,6 +568,7 @@
             "osteopathy": "lat w osteopatii",
             "patients": "pacjentów",
             "award": "Laureat Orły Medycyny 2025",
+            "firma_zaufania": "Firma Godna Zaufania 2026",
             "reviews_btn": "Czytaj wszystkie opinie →",
             "review1": "Anna to świetna specjalistka, prawdziwy profesjonalista i bardzo miła osoba.",
             "review2": "Anna ma lekkie ręce!! Cała sesja to sama przyjemność!",
@@ -831,7 +832,8 @@
         "awards": {
             "logo": "Orły Medycyny",
             "gold_medal": "Złoty medal Orły Medycyny 2025",
-            "laureate": "Laureat Orły Medycyny 2025"
+            "laureate": "Laureat Orły Medycyny 2025",
+            "firma_zaufania": "Firma Godna Zaufania 2026 — certyfikat"
         },
         "about": {
             "office": "Osteopata Hanna Bykava w gabinecie — indywidualne podejście do pacjenta",
