@@ -8,8 +8,9 @@ html {
     scroll-margin-top: 5rem;
 }
 
-/* All in-article links share the warm hero palette */
-.article-content a {
+/* All in-article links + CTA author link share the warm hero palette */
+.article-content a,
+.cta-author a {
     color: #b06a4d;
     text-decoration: none;
     border-bottom: 1px dashed rgba(196, 122, 90, 0.55);
@@ -17,7 +18,9 @@ html {
 }
 
 .article-content a:hover,
-.article-content a:focus {
+.article-content a:focus,
+.cta-author a:hover,
+.cta-author a:focus {
     color: #8d543e;
     border-bottom-color: #8d543e;
 }
