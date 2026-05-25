@@ -45,7 +45,6 @@ const PAGES = {
   'osteopathy-jaw-pain-tmj': 'osteopathy-jaw-pain-tmj/index.html',
   'osteopathy-for-newborns': 'osteopathy-for-newborns/index.html',
   'osteopathy-pregnancy': 'osteopathy-pregnancy/index.html',
-  'osteopathy-pregnancy-2': 'osteopathy-pregnancy-2/index.html',
   'osteopathy-postpartum': 'osteopathy-postpartum/index.html',
   'osteopathy-preconception': 'osteopathy-preconception/index.html',
   'blog':          'blog/index.html',
@@ -58,9 +57,6 @@ const ASSET_FILES = ['CNAME', 'robots.txt', '404.html', 'site.webmanifest'];
 
 // Internal page slugs (for link rewriting — don't rewrite links to these as assets)
 const PAGE_SLUGS = new Set(Object.keys(PAGES).filter(s => s !== ''));
-
-// Slugs to skip when generating sitemap.xml (experimental / noindex pages)
-const SITEMAP_EXCLUDE = new Set(['osteopathy-pregnancy-2']);
 
 // Priority map for sitemap
 const SITEMAP_PRIORITY = {
@@ -511,7 +507,6 @@ function generateSitemap() {
   xml += '        xmlns:xhtml="http://www.w3.org/1999/xhtml">\n';
 
   for (const slug of Object.keys(PAGES)) {
-    if (SITEMAP_EXCLUDE.has(slug)) continue;
     for (const lang of LANGUAGES) {
       const url = getPageUrl(slug, lang);
       const priority = SITEMAP_PRIORITY[slug] || '0.5';

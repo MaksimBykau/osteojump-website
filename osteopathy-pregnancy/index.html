@@ -23,8 +23,11 @@
     <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/images/apple-icon.png">
     <link rel="manifest" href="/site.webmanifest">
+    <link rel="preload" as="image" href="/images/about/pregnant.webp" type="image/webp" fetchpriority="high">
+
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/article.css">
+    <link rel="stylesheet" href="../css/article-hero-v2.css">
     <style>
         body:not(.i18n-ready) { visibility: hidden; }
         body.i18n-ready { visibility: visible; }
@@ -33,7 +36,6 @@
     </style>
     <script src="../js/clean-url.js"></script>
     <script>
-        // Quick language detection and set title immediately to prevent flickering
         (function() {
             const supportedLangs = ['ru', 'en', 'de', 'pl', 'uk'];
             const savedLang = localStorage.getItem('language');
@@ -105,11 +107,44 @@
     </header>
 
     <main class="main">
-        <!-- Hero Section -->
-        <section class="article-hero" data-track-location="hero">
+        <!-- Hero v2 — experimental -->
+        <section class="hero-v2" data-track-location="hero">
             <div class="container">
-                <h1 class="article-hero-title" data-i18n="article_osteo_pregnancy.hero_title">Osteopatia w ciąży — co warto wiedzieć</h1>
-                <p class="article-hero-subtitle" data-i18n="article_osteo_pregnancy.hero_subtitle">Bezpieczeństwo, pomoc przy bólach i przygotowanie ciała do porodu — od specjalistki z doświadczeniem położnej</p>
+                <div class="section-layout section-layout--img-left">
+                    <div class="hero-photo-wrapper">
+                        <picture>
+                            <source srcset="/images/about/pregnant.webp" type="image/webp">
+                            <img id="heroV2Image" class="photo-portrait" src="/images/about/pregnant.jpg" alt="Hanna Bykava — osteopata podczas pracy z kobietą w ciąży" data-i18n-alt="article_osteo_pregnancy.hero_v2_image_alt" loading="eager" fetchpriority="high" width="400" height="533">
+                        </picture>
+                    </div>
+                    <div class="section-content hero-v2-content">
+                        <h1 class="hero-v2-title" data-i18n="article_osteo_pregnancy.hero_v2_title">Wsparcie dla Twojego ciała w ciąży</h1>
+                        <p class="hero-v2-subtitle" data-i18n="article_osteo_pregnancy.hero_v2_subtitle">Pomogę Ci z bólami pleców, miednicy, obrzękami i przygotuję ciało do porodu — delikatnie i bezpiecznie dla Ciebie i maluszka.</p>
+                        <div class="hero-v2-rating">
+                            <span class="rating-stars" aria-hidden="true">★★★★★</span>
+                            <span class="hero-v2-rating__text" data-i18n="reviews.hero_rating">Wszystkie opinie na 5.0</span>
+                        </div>
+                        <ul class="hero-v2-trust">
+                            <li data-i18n-html="article_osteo_pregnancy.hero_v2_trust_experience"><strong>8+ lat</strong> praktyki</li>
+                            <li data-i18n="article_osteo_pregnancy.hero_v2_trust_midwife">Doświadczenie położnej</li>
+                            <li data-i18n="article_osteo_pregnancy.hero_v2_trust_mom">Sama mama</li>
+                        </ul>
+                        <div class="hero-v2-buttons">
+                            <a href="https://booksy.com/pl-pl/262212_osteojump_zdrowie_3_warszawa" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--lg" data-i18n="article_osteo_pregnancy.cta_book">Umów wizytę</a>
+                            <a href="/contacts" class="btn btn--outline btn--lg" data-i18n="article_osteo_pregnancy.cta_question">Zadaj pytanie</a>
+                        </div>
+                        <p class="hero-v2-meta" data-i18n="article_osteo_pregnancy.hero_v2_meta">Hanna Bykava · gabinet OsteoJump · Warszawa (Ursus)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Doctor's quote — warm reassurance immediately under the hero -->
+        <section class="doctor-quote">
+            <div class="container">
+                <div class="doctor-quote-content">
+                    <p class="doctor-quote-text" data-i18n="article_osteo_pregnancy.doctor_quote_text">Pracuję z ciepłem i troską, w spokojnej i przyjemnej atmosferze, bez pośpiechu, zawsze bardzo uważnie i profesjonalnie, używam bardzo łagodnych, delikatnych technik, które pomogą Tobie i Twojemu maluszkowi.</p>
+                </div>
             </div>
         </section>
 
@@ -128,7 +163,6 @@
                 <div class="cta-content">
                     <h2 class="cta-title" data-i18n="article_osteo_pregnancy.cta_title">Spodziewasz się maluszka?</h2>
                     <p class="cta-text" data-i18n="article_osteo_pregnancy.cta_text">Umów się na wizytę — delikatnie i troskliwie pomogę Twojemu ciału dostosować się do zmian i przygotować się do porodu.</p>
-                    <p class="cta-author" data-i18n-html="article_osteo_pregnancy.cta_author">Hanna Bykava — osteopata, była położna, mama. Certyfikat terapii kraniosakralnej dla ciężarnych i porodu. Gabinet OsteoJump, Warszawa (Ursus).</p>
                     <div class="cta-buttons">
                         <a href="https://booksy.com/pl-pl/262212_osteojump_zdrowie_3_warszawa" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--lg" data-i18n="article_osteo_pregnancy.cta_book">Umów wizytę</a>
                         <a href="/contacts" class="btn btn--outline btn--lg" data-i18n="article_osteo_pregnancy.cta_question">Zadaj pytanie</a>
@@ -221,5 +255,62 @@
 
     <script src="../js/i18n.js"></script>
     <script src="../js/main.js"></script>
+
+    <!-- Scroll-spy: update URL hash to the currently visible section -->
+    <script>
+    (function () {
+        function init() {
+            var headings = document.querySelectorAll('.article-content h2[id]');
+            if (!headings.length) return;
+
+            var threshold = 100; // px from top of viewport (just under sticky header)
+            var lastId = null;
+            var ticking = false;
+
+            function updateActiveAnchor() {
+                ticking = false;
+                var activeId = null;
+                for (var i = 0; i < headings.length; i++) {
+                    if (headings[i].getBoundingClientRect().top <= threshold) {
+                        activeId = headings[i].id;
+                    } else {
+                        break;
+                    }
+                }
+                if (activeId && '#' + activeId !== location.hash) {
+                    history.replaceState(null, '', '#' + activeId);
+                    lastId = activeId;
+                } else if (!activeId && location.hash && lastId) {
+                    // scrolled above the first H2 — clear the hash without jumping
+                    history.replaceState(null, '', location.pathname + location.search);
+                    lastId = null;
+                }
+            }
+
+            window.addEventListener('scroll', function () {
+                if (!ticking) {
+                    requestAnimationFrame(updateActiveAnchor);
+                    ticking = true;
+                }
+            }, { passive: true });
+
+            // Run once on load in case the user opens the page deep-linked
+            updateActiveAnchor();
+        }
+
+        // Wait for i18n to render the article content (h2 ids live inside translated HTML)
+        if (document.body.classList.contains('i18n-ready')) {
+            init();
+        } else {
+            var observer = new MutationObserver(function () {
+                if (document.body.classList.contains('i18n-ready')) {
+                    observer.disconnect();
+                    init();
+                }
+            });
+            observer.observe(document.body, { attributes: true, attributeFilter: ['class'] });
+        }
+    })();
+    </script>
 </body>
 </html>
