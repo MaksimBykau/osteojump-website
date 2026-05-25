@@ -864,3 +864,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+
+
+// Make any [data-href] element navigate when its non-interactive area is clicked.
+// Inner <a>/<button>/form controls keep their own behaviour and are not intercepted.
+(function () {
+    document.addEventListener('click', function (e) {
+        if (e.target.closest('a, button, input, textarea, label, select')) return;
+        var card = e.target.closest('[data-href]');
+        if (!card) return;
+        var href = card.getAttribute('data-href');
+        if (href) window.location.href = href;
+    });
+})();

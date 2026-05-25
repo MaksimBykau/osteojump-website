@@ -62,7 +62,8 @@
             "title": "Osteopathy for Pregnant Women",
             "description": "Safe and gentle work during pregnancy. Help with back pain, swelling, and preparing the body for childbirth.",
             "duration": "55 min",
-            "price_eur": "(~60 EUR)"
+            "price_eur": "(~60 EUR)",
+            "more_link": "Learn more →"
         },
         "family_title": "Family Packages",
         "family_subtitle": "Save when booking together",
@@ -295,7 +296,8 @@
         "booksy_rating": "on Booksy — all reviews are positive",
         "approach_brief_text1": "Every session begins with a conversation and hands-on diagnosis. I work gently, using cranial, visceral, and structural techniques — depending on what you specifically need.",
         "approach_brief_text2": "My goal is not to force the body, but to help it restore balance. After the session, I explain what I found and what you can do at home.",
-        "approach_more_link": "Learn more about sessions"
+        "approach_more_link": "Learn more about sessions",
+        "mothers_more": "Learn more →"
     },
     "appointment_page": {
         "title": "Osteopath session — how it works | OsteoJump",

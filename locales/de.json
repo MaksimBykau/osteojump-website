@@ -62,7 +62,8 @@
             "title": "Osteopathie für Schwangere",
             "description": "Sanfte und sichere Arbeit während der Schwangerschaft. Hilfe bei Rückenschmerzen, Schwellungen, Vorbereitung des Körpers auf die Geburt.",
             "duration": "55 Min",
-            "price_eur": "(~60 EUR)"
+            "price_eur": "(~60 EUR)",
+            "more_link": "Mehr erfahren →"
         },
         "family_title": "Familienpakete",
         "family_subtitle": "Sparen bei gemeinsamer Buchung",
@@ -295,7 +296,8 @@
         "booksy_rating": "auf Booksy — alle Bewertungen sind positiv",
         "approach_brief_text1": "Jede Sitzung beginnt mit einem Gespräch und Handdiagnose. Ich arbeite sanft und verwende kraniale, viszerale und strukturelle Techniken — je nachdem, was Sie speziell brauchen.",
         "approach_brief_text2": "Mein Ziel ist es nicht, den Körper zu zwingen, sondern ihm zu helfen, das Gleichgewicht wiederherzustellen. Nach der Sitzung erkläre ich, was ich gefunden habe und was Sie zu Hause tun können.",
-        "approach_more_link": "Mehr über Sitzungen erfahren"
+        "approach_more_link": "Mehr über Sitzungen erfahren",
+        "mothers_more": "Mehr erfahren →"
     },
     "appointment_page": {
         "title": "Osteopathie-Sitzung — wie sie abläuft | OsteoJump",

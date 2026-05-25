@@ -182,6 +182,17 @@ body {
     transform: translateX(4px);
 }
 
+/* Clickable card — paired with data-href + main.js handler. Reusable across pages. */
+.clickable-card {
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.clickable-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
 /* Card Base */
 .card {
     background: var(--bg-color);
