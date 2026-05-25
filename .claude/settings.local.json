@@ -138,7 +138,10 @@
       "Bash(osascript -e 'id of app \"iTerm2\"')",
       "Bash(/opt/homebrew/bin/hs -c 'hs.reload\\(\\)')",
       "Bash(/opt/homebrew/bin/hs -c 'return \"alive: \" .. tostring\\(hs.application.frontmostApplication\\(\\):bundleID\\(\\)\\)')",
-      "Bash(claude plugin *)"
+      "Bash(claude plugin *)",
+      "Bash(claude mcp *)",
+      "Bash(security find-generic-password *)",
+      "Bash(security dump-keychain *)"
     ]
   }
 }

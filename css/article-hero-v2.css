@@ -1,0 +1,241 @@
+/* Smooth scroll for in-page anchors in the symptom list */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Offset anchored H2s so the sticky header doesn't cover them on jump */
+.article-content h2[id] {
+    scroll-margin-top: 5rem;
+}
+
+/* All in-article links share the warm hero palette */
+.article-content a {
+    color: #b06a4d;
+    text-decoration: none;
+    border-bottom: 1px dashed rgba(196, 122, 90, 0.55);
+    transition: color 0.15s ease, border-bottom-color 0.15s ease;
+}
+
+.article-content a:hover,
+.article-content a:focus {
+    color: #8d543e;
+    border-bottom-color: #8d543e;
+}
+
+/* Hero v2 — experimental conversion-focused hero for osteopathy-pregnancy-2.
+   Layout & photo framing come from style.css (.section-layout--img-left,
+   .hero-photo-wrapper, .photo-portrait). This file holds only page-specific tokens. */
+
+/* Same vertical rhythm as .about-hero — uses --hero-padding-* tokens from style.css */
+.hero-v2 {
+    background: linear-gradient(180deg, #fdf8f5 0%, #f7eee8 100%);
+    padding: var(--hero-padding-top) var(--spacing-sm) var(--hero-padding-bottom);
+    overflow: hidden;
+}
+
+.hero-v2-title {
+    font-size: clamp(2rem, 5vw, 2.75rem);
+    font-weight: 700;
+    color: var(--text-color);
+    line-height: 1.15;
+    margin: 0 0 0.75rem;
+    text-wrap: balance;
+}
+
+.hero-v2-subtitle {
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin: 0 0 2rem;
+    max-width: 450px;
+}
+
+/* Rating block — stars stacked above the rating text, the whole thing centered */
+.hero-v2-rating {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    margin: 0 0 0.875rem;
+    text-align: center;
+}
+
+.hero-v2-rating .rating-stars {
+    color: var(--star-color);
+    font-size: 1.5rem;
+    letter-spacing: 0.1em;
+    line-height: 1;
+}
+
+.hero-v2-rating__text {
+    font-size: 1.125rem;
+    color: var(--text-color);
+}
+
+/* Trust badges — chip-style pills in a single centered row (wraps on narrow screens) */
+.hero-v2-trust {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.hero-v2-trust li {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.5rem 0.95rem;
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(196, 122, 90, 0.18);
+    border-radius: 999px;
+    font-size: 0.875rem;
+    color: var(--text-color);
+    line-height: 1;
+    white-space: nowrap;
+    box-shadow: 0 1px 3px rgba(120, 80, 60, 0.06);
+}
+
+.hero-v2-trust strong {
+    color: var(--text-color);
+    font-weight: normal;
+}
+
+.hero-v2-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    margin: 0 0 0.875rem;
+}
+
+.hero-v2-buttons .btn {
+    width: 100%;
+    justify-content: center;
+}
+
+.hero-v2-buttons .btn--primary {
+    background-color: #c47a5a;
+    border-color: #c47a5a;
+    color: #fff;
+    font-weight: 600;
+    box-shadow: 0 6px 16px rgba(196, 122, 90, 0.35);
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+}
+
+.hero-v2-buttons .btn--primary:hover,
+.hero-v2-buttons .btn--primary:focus {
+    background-color: #b06a4d;
+    border-color: #b06a4d;
+    transform: translateY(-1px);
+    box-shadow: 0 10px 22px rgba(176, 106, 77, 0.4);
+}
+
+.hero-v2-buttons .btn--outline {
+    border: 2px solid #c47a5a;
+    color: #b06a4d;
+    background: rgba(255, 255, 255, 0.7);
+    font-weight: 600;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.hero-v2-buttons .btn--outline:hover,
+.hero-v2-buttons .btn--outline:focus {
+    background-color: #c47a5a;
+    color: #fff;
+}
+
+.hero-v2-meta {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Tablet and up */
+@media (min-width: 768px) {
+    .hero-v2 {
+        padding: var(--spacing-lg) 0;
+    }
+
+    .hero-v2-buttons {
+        flex-direction: row;
+        gap: var(--spacing-sm);
+    }
+
+    .hero-v2-buttons .btn {
+        width: auto;
+        flex: 0 1 auto;
+        min-width: 180px;
+    }
+}
+
+
+
+/* Doctor's quote — warm reassurance block right under the hero */
+.doctor-quote {
+    padding: var(--spacing-md) 0;
+    background: #fff;
+}
+
+/* When the article body follows the quote directly, drop its own top padding —
+   the quote already gives the breathing room. */
+.doctor-quote + .article-body {
+    padding-top: 0;
+}
+
+.doctor-quote-content {
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.doctor-quote-text {
+    font-size: clamp(1.0625rem, 2.2vw, 1.3125rem);
+    line-height: 1.6;
+    color: var(--text-color);
+    font-style: italic;
+    margin: 0;
+}
+
+.doctor-quote-text::before,
+.doctor-quote-text::after {
+    color: #c47a5a;
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 700;
+    font-size: 1.4em;
+    line-height: 0;
+    font-style: normal;
+}
+
+.doctor-quote-text::before {
+    content: "\201C";
+    margin-right: 0.12em;
+    vertical-align: -0.2em;
+}
+
+.doctor-quote-text::after {
+    content: "\201D";
+    margin-left: 0.12em;
+    vertical-align: -0.35em;
+}
+
+@media (min-width: 768px) {
+    .doctor-quote {
+        padding: var(--spacing-lg) 0 var(--spacing-md);
+    }
+}
+
+/* Inline images inside the article body — center .photo-portrait between paragraphs */
+.article-content picture {
+    display: block;
+    text-align: center;
+    margin: var(--spacing-md) 0;
+}
+
+.article-content .photo-portrait {
+    display: block;
+    margin: 0 auto;
+    object-position: center 30%;
+}

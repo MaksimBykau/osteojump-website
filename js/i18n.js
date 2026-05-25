@@ -122,6 +122,13 @@ class I18n {
             element.innerHTML = translation;
         });
 
+        // Handle alt attributes (data-i18n-alt) — used for translated image descriptions
+        document.querySelectorAll('[data-i18n-alt]').forEach(element => {
+            const key = element.getAttribute('data-i18n-alt');
+            const translation = this.translate(key);
+            if (translation && translation !== key) element.setAttribute('alt', translation);
+        });
+
         // Update HTML lang attribute
         document.documentElement.lang = this.currentLang;
     }
