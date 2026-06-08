@@ -79,7 +79,7 @@
   // Returns { event, props } or null. props must NOT include location.
   function classifyButton(btn) {
     if (btn.id === 'actionBook') {
-      return { event: 'click_booking', props: { href: 'https://cdl.booksy.com/hwJaWJhtmNb' } };
+      return { event: 'click_booking', props: { href: 'https://osteojump.booksy.com/h' } };
     }
     if (btn.id === 'actionContacts') {
       return { event: 'click_fixed_bar', props: { action: 'contacts' } };

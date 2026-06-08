@@ -2,6 +2,16 @@
 
 Лог ключевых решений по проекту. Append-only — только дописывай новые записи.
 
+## 2026-06
+
+- **Booksy Boost link** — все CTA записи переведены на boost-ссылку `https://osteojump.booksy.com/h` (включён Boost в Booksy для атрибуции конверсий). Заменено во всех страницах и в фикс-баре (`js/main.js`, `js/analytics.js`).
+  - **Старые ссылки (для отката):**
+    - Профиль записи: `https://booksy.com/pl-pl/262212_osteojump_zdrowie_3_warszawa` (использовался на главной, /prices, /consultation, /appointment, /osteopathy и во всех статьях).
+    - Deep-ссылка фикс-бара: `https://cdl.booksy.com/hwJaWJhtmNb` (использовалась в /contacts, `js/main.js`, `js/analytics.js`).
+  - **Кнопка «Отзывы на Booksy»** (`reviews/index.html`): старая ссылка `https://booksy.com/pl-pl/185614_osteojump_osteopatia_3_warszawa#ba_s=seo` (профиль `185614`) оказалась битой; запись и отзывы ведут на одну и ту же страницу, поэтому кнопку оставили, а ссылку поменяли на рабочий boost-URL `https://osteojump.booksy.com/h`.
+  - **НЕ менялось намеренно:**
+    - JSON-LD `sameAs` в `index.html` — оставлен канонический профиль `262212` (структурированные данные для SEO, не CTA).
+
 ## 2026-03
 
 - **PostHog вместо GA4** — выбран PostHog (EU Cloud) для аналитики. Причины: cookieless_mode: 'always' (не нужен cookie-баннер, GDPR-compliant без согласия), данные в Европе, бесплатно до 1M событий/мес. Инжектится через build.js — только в продакшене, исходные HTML чистые.

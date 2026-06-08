@@ -535,7 +535,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (actionBook) {
         actionBook.addEventListener('click', () => {
-            window.open('https://cdl.booksy.com/hwJaWJhtmNb', '_blank', 'noopener,noreferrer');
+            window.open('https://osteojump.booksy.com/h', '_blank', 'noopener,noreferrer');
         });
     }
 
