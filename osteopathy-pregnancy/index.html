@@ -36,6 +36,7 @@
     </style>
     <script src="../js/clean-url.js"></script>
     <script>
+        // Quick language detection and set title immediately to prevent flickering
         (function() {
             const supportedLangs = ['ru', 'en', 'de', 'pl', 'uk'];
             const savedLang = localStorage.getItem('language');

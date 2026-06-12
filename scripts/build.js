@@ -340,10 +340,18 @@ function processPage(slug, lang, translations) {
     }
   });
 
-  // 13. Remove the inline "Quick language detection" script
+  // 13. Remove the inline "Quick language detection" script.
+  // Match by the comment marker, but also fall back to a behavioral signature
+  // (reads the saved language and overwrites <html lang>) so a page that drops
+  // the comment can't silently ship the detector and break the language switcher.
   $('script:not([src])').each(function () {
     const content = $(this).html();
-    if (content && content.includes('Quick language detection')) {
+    if (!content) return;
+    const isLangDetector =
+      content.includes('Quick language detection') ||
+      (content.includes("localStorage.getItem('language')") &&
+        content.includes('documentElement.lang'));
+    if (isLangDetector) {
       $(this).remove();
     }
   });
