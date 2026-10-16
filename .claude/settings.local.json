@@ -141,7 +141,8 @@
       "Bash(claude plugin *)",
       "Bash(claude mcp *)",
       "Bash(security find-generic-password *)",
-      "Bash(security dump-keychain *)"
+      "Bash(security dump-keychain *)",
+      "mcp__playwright__browser_network_request"
     ]
   }
 }

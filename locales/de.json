@@ -332,7 +332,7 @@
     "education": {
         "title": "Ausbildung der Osteopathin — OsteoJump",
         "page_title": "Ausbildung & Zertifikate",
-        "hero_text": "Ausgebildet am <a href=\"https://www.upledger.com/\" target=\"_blank\" rel=\"noopener\">Upledger Institute</a>, <a href=\"https://www.barralinstitute.com/\" target=\"_blank\" rel=\"noopener\">Barral Institute</a>, schließe die <a href=\"https://woma.edu.pl/\" target=\"_blank\" rel=\"noopener\">Warsaw Osteopathic Medicine Academy</a> ab.",
+        "hero_text": "Ausgebildet am <a href=\"https://www.upledger.com/\" target=\"_blank\" rel=\"noopener\">Upledger Institute</a>, <a href=\"https://www.barralinstitute.com/\" target=\"_blank\" rel=\"noopener\">Barral Institute</a>, schloss die <a href=\"https://woma.edu.pl/\" target=\"_blank\" rel=\"noopener\">Warsaw Osteopathic Medicine Academy</a> ab.",
         "next_link": "Wie ein Termin abläuft →",
         "diplomas_title": "Diplome & Zertifikate",
         "col_education": "Ausbildung",
@@ -343,7 +343,7 @@
         "edu2_title": "Belarussische Staatliche Medizinische Universität",
         "edu2_subtitle": "Präventivmedizin",
         "edu3_title": "Warschauer Medizinische Akademie",
-        "edu3_subtitle": "Doktor der Osteopathie",
+        "edu3_subtitle": "Diplom in Osteopathie (D.O.)",
         "exp1_title": "Entbindungsklinik",
         "exp1_subtitle": "Hebamme",
         "exp2_title": "Sport- und Wellnesszentrum",
@@ -911,7 +911,8 @@
             "vm1": "Barral Institute Zertifikat — Visceral Manipulation 1",
             "kinesiotaping": "Kinesiotaping-Zertifikat 2022",
             "medical_college": "Diplom des Minsker Staatlichen Medizinischen Kollegs 2009",
-            "medical_university": "Diplom der Belarussischen Staatlichen Medizinischen Universität 2015"
+            "medical_university": "Diplom der Belarussischen Staatlichen Medizinischen Universität 2015",
+            "woma": "Diplom der Warsaw Osteopathic Medicine Academy — Diploma in Osteopathy (D.O.)"
         }
     }
 }

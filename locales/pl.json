@@ -332,7 +332,7 @@
     "education": {
         "title": "Wykształcenie osteopaty — OsteoJump",
         "page_title": "Wykształcenie i certyfikaty",
-        "hero_text": "Uczyłam się w <a href=\"https://www.upledger.com/\" target=\"_blank\" rel=\"noopener\">Upledger Institute</a>, <a href=\"https://www.barralinstitute.com/\" target=\"_blank\" rel=\"noopener\">Barral Institute</a>, kończę <a href=\"https://woma.edu.pl/\" target=\"_blank\" rel=\"noopener\">Warsaw Osteopathic Medicine Academy</a>.",
+        "hero_text": "Uczyłam się w <a href=\"https://www.upledger.com/\" target=\"_blank\" rel=\"noopener\">Upledger Institute</a>, <a href=\"https://www.barralinstitute.com/\" target=\"_blank\" rel=\"noopener\">Barral Institute</a>, ukończyłam <a href=\"https://woma.edu.pl/\" target=\"_blank\" rel=\"noopener\">Warsaw Osteopathic Medicine Academy</a>.",
         "next_link": "Jak przebiega wizyta →",
         "diplomas_title": "Dyplomy i certyfikaty",
         "col_education": "Wykształcenie",
@@ -343,7 +343,7 @@
         "edu2_title": "Białoruski Państwowy Uniwersytet Medyczny",
         "edu2_subtitle": "Medycyna prewencyjna",
         "edu3_title": "Warszawska Akademia Medyczna",
-        "edu3_subtitle": "Doktor osteopatii",
+        "edu3_subtitle": "Dyplom osteopaty (D.O.)",
         "exp1_title": "Szpital położniczy",
         "exp1_subtitle": "Położna",
         "exp2_title": "Ośrodek sportowo-rekreacyjny",
@@ -911,7 +911,8 @@
             "vm1": "Certyfikat Barral Institute — Visceral Manipulation 1",
             "kinesiotaping": "Certyfikat kinesiotaping 2022",
             "medical_college": "Dyplom Mińskiego Państwowego Kolegium Medycznego 2009",
-            "medical_university": "Dyplom Białoruskiego Państwowego Uniwersytetu Medycznego 2015"
+            "medical_university": "Dyplom Białoruskiego Państwowego Uniwersytetu Medycznego 2015",
+            "woma": "Dyplom Warsaw Osteopathic Medicine Academy — Diploma in Osteopathy (D.O.)"
         }
     }
 }

@@ -332,7 +332,7 @@
     "education": {
         "title": "Освіта остеопата — OsteoJump",
         "page_title": "Освіта та сертифікати",
-        "hero_text": "Навчалася в <a href=\"https://www.upledger.com/\" target=\"_blank\" rel=\"noopener\">Upledger Institute</a>, <a href=\"https://www.barralinstitute.com/\" target=\"_blank\" rel=\"noopener\">Barral Institute</a>, закінчую <a href=\"https://woma.edu.pl/\" target=\"_blank\" rel=\"noopener\">Warsaw Osteopathic Medicine Academy</a>.",
+        "hero_text": "Навчалася в <a href=\"https://www.upledger.com/\" target=\"_blank\" rel=\"noopener\">Upledger Institute</a>, <a href=\"https://www.barralinstitute.com/\" target=\"_blank\" rel=\"noopener\">Barral Institute</a>, закінчила <a href=\"https://woma.edu.pl/\" target=\"_blank\" rel=\"noopener\">Warsaw Osteopathic Medicine Academy</a>.",
         "next_link": "Як проходить прийом →",
         "diplomas_title": "Дипломи та сертифікати",
         "col_education": "Освіта",
@@ -343,7 +343,7 @@
         "edu2_title": "Білоруський державний медичний університет",
         "edu2_subtitle": "Медико-профілактична справа",
         "edu3_title": "Варшавська медична академія",
-        "edu3_subtitle": "Доктор остеопатії",
+        "edu3_subtitle": "Диплом остеопата (D.O.)",
         "exp1_title": "Пологовий будинок",
         "exp1_subtitle": "Акушерка",
         "exp2_title": "Фізкультурно-оздоровчий комплекс",
@@ -911,7 +911,8 @@
             "vm1": "Сертифікат Barral Institute — Visceral Manipulation 1",
             "kinesiotaping": "Сертифікат кінезіотейпування 2022",
             "medical_college": "Диплом Мінського державного медичного коледжу 2009",
-            "medical_university": "Диплом Білоруського державного медичного університету 2015"
+            "medical_university": "Диплом Білоруського державного медичного університету 2015",
+            "woma": "Диплом Warsaw Osteopathic Medicine Academy — Доктор остеопатії (D.O.)"
         }
     }
 }
